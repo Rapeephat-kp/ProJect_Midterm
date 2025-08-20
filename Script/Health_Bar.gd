@@ -18,4 +18,4 @@ func _process(delta: float) -> void:
 		update_health_bar()
 
 func update_health_bar():
-	value = Main_player.current_health
+	value = Gamemanager.get_player_health()

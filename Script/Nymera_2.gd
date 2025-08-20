@@ -113,12 +113,23 @@ func movement():
 
 func _on_hit_box_area_entered(area: Area2D) -> void:
 	if area.is_in_group("Mon_hit"):
-		current_health -= 15
+		Gamemanager.set_player_health(Gamemanager.get_player_health() - 15)
 		Idle_Sprite.visible = false
 		Action_Sprite.visible = true
 		Jump_Sprite.visible = false
 		Jump2_Sprite.visible = false
+		
+		var knockback_force = randf_range(700,1500) 
+		if area.global_position.x < global_position.x:
+			velocity.x = knockback_force
+		else:
+			velocity.x = -knockback_force
+		velocity.y = -150
+
+		await get_tree().create_timer(0.3).timeout
+		velocity = Vector2.ZERO
+		
 		print("ouch")
-		Action_Sprite.play("Hurt")
-		await get_tree().create_timer(1).timeout
+		$AnimationPlayer.play("Hurt")
+		await get_tree().create_timer(0.6).timeout
 		

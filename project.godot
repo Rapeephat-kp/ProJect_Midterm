@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="projectGameDevelopment_Midterm"
-run/main_scene="uid://cgve34lntntl0"
+run/main_scene="uid://dp5cs5qk2bf64"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 boot_splash/image="uid://di8b57pn7mcu5"
 
@@ -20,6 +20,11 @@ boot_splash/image="uid://di8b57pn7mcu5"
 Gamemanager="*res://Script/game_manager.gd"
 JsonData="*res://Script/JSONDatat.gd"
 PlayerInventory="*res://Script/Player_Inventory.gd"
+
+[display]
+
+window/size/viewport_width=1920
+window/size/viewport_height=1080
 
 [global_group]
 

@@ -9,6 +9,7 @@ const JUMP_VELOCITY = -250.0
 @onready var Idel_E = $Idel_Sprite
 @onready var Action_Sprite = $Action_Sprite
 var is_attacking = false
+var is_hurt = false
 
 #for_movement
 func _physics_process(delta: float) -> void:
@@ -67,7 +68,15 @@ func get_attack_status():
 	return is_attacking
 
 func _on_elendros_hit_box_area_entered(area: Area2D) -> void:
-	if area.is_in_group("Mon_hit"):
+	if area.is_in_group("Mon_hit") and not is_hurt:
+		is_hurt = true
 		$AnimationPlayer.play("hurt")
-		$AnimationPlayer.play("hurt")
-		current_health -= 15
+
+		var knockback_dir = (global_position - area.global_position).normalized()
+		velocity.x = knockback_dir.x * 300
+		velocity.y = -150
+
+		Gamemanager.set_player_health(Gamemanager.get_player_health() - 15)
+
+		await get_tree().create_timer(0.3).timeout
+		is_hurt = false

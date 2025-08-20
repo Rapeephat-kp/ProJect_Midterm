@@ -1,37 +1,108 @@
-[gd_scene load_steps=4 format=3 uid="uid://dp5cs5qk2bf64"]
+[gd_scene load_steps=9 format=3 uid="uid://dp5cs5qk2bf64"]
 
+[ext_resource type="Script" uid="uid://dhepn5gfj3djx" path="res://Scene/main.gd" id="1_ow1sv"]
 [ext_resource type="Texture2D" uid="uid://skwubifcy71r" path="res://Asset_Midterm/Tile_Map/Fantasy Swamp Forest/Free/BG_3/BG_3.png" id="1_r34rm"]
 [ext_resource type="Texture2D" uid="uid://byk3vy2oruw1d" path="res://Asset_Midterm/Tile_Map/Fantasy Swamp Forest/Free/BG_2/BG_2.png" id="2_2wwxx"]
 [ext_resource type="Texture2D" uid="uid://cv5ru2joj0lkf" path="res://Asset_Midterm/Tile_Map/Fantasy Swamp Forest/Free/BG_1/BG_1.png" id="3_3amdw"]
+[ext_resource type="Texture2D" uid="uid://dkyfygbi0dekj" path="res://Asset_Midterm/UI/UI/Button_52x14.png" id="4_2wwxx"]
+[ext_resource type="FontFile" uid="uid://bdl4qpamcrivq" path="res://Fonts/OBGB.TTF" id="5_3amdw"]
+[ext_resource type="Texture2D" uid="uid://cpiygmk8swnkf" path="res://Splash/The_Champingnon-removebg-preview.png" id="6_1xcnr"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3amdw"]
+texture = ExtResource("4_2wwxx")
 
 [node name="Main" type="Node2D"]
 position = Vector2(32, -144)
 scale = Vector2(1.85157, 1.85157)
+script = ExtResource("1_ow1sv")
 
-[node name="Parallax2D3" type="Parallax2D" parent="."]
-repeat_size = Vector2(1800, 0)
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Control" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+metadata/_edit_use_anchors_ = true
+
+[node name="Parallax2D3" type="Parallax2D" parent="CanvasLayer/Control"]
+modulate = Color(0.690196, 0.760784, 0.796078, 1)
+scale = Vector2(2.97157, 2.97157)
+scroll_offset = Vector2(-3300.83, -741)
+repeat_size = Vector2(1928.61, 0)
 autoscroll = Vector2(20, 0)
 repeat_times = 2
 
-[node name="Bg3" type="Sprite2D" parent="Parallax2D3"]
+[node name="Bg3" type="Sprite2D" parent="CanvasLayer/Control/Parallax2D3"]
 position = Vector2(900, 272)
 scale = Vector2(0.941406, 1)
 texture = ExtResource("1_r34rm")
 
-[node name="Parallax2D2" type="Parallax2D" parent="."]
-repeat_size = Vector2(1600, 0)
+[node name="Parallax2D2" type="Parallax2D" parent="CanvasLayer/Control"]
+modulate = Color(0.690196, 0.760784, 0.796078, 1)
+scale = Vector2(2.97157, 2.97157)
+scroll_offset = Vector2(-4722.51, -740)
+repeat_size = Vector2(1770, 0)
 autoscroll = Vector2(25, 0)
 repeat_times = 2
 
-[node name="Bg2" type="Sprite2D" parent="Parallax2D2"]
-position = Vector2(848, 272)
+[node name="Bg2" type="Sprite2D" parent="CanvasLayer/Control/Parallax2D2"]
+position = Vector2(1142, 272)
 texture = ExtResource("2_2wwxx")
 
-[node name="Parallax2D" type="Parallax2D" parent="."]
-repeat_size = Vector2(1700, 0)
+[node name="Parallax2D" type="Parallax2D" parent="CanvasLayer/Control"]
+modulate = Color(0.690196, 0.760784, 0.796078, 1)
+scale = Vector2(2.97157, 2.97157)
+scroll_offset = Vector2(-5019.67, -740)
+repeat_size = Vector2(1887, 0)
 autoscroll = Vector2(30, 0)
 repeat_times = 2
 
-[node name="Bg1" type="Sprite2D" parent="Parallax2D"]
-position = Vector2(896, 272)
+[node name="Bg1" type="Sprite2D" parent="CanvasLayer/Control/Parallax2D"]
+position = Vector2(1494.67, 272)
 texture = ExtResource("3_3amdw")
+
+[node name="Button" type="Button" parent="CanvasLayer/Control"]
+modulate = Color(0.396078, 0.160784, 0.0509804, 1)
+layout_mode = 0
+offset_left = -285.0
+offset_top = 235.0
+offset_right = -254.0
+offset_bottom = 243.0
+scale = Vector2(17.76, 17.76)
+theme_override_styles/normal = SubResource("StyleBoxTexture_3amdw")
+
+[node name="Label" type="Label" parent="CanvasLayer/Control"]
+modulate = Color(1, 0.870588, 0.678431, 1)
+custom_minimum_size = Vector2(1, 1)
+offset_left = -137.0
+offset_top = 265.0
+offset_right = -72.0
+offset_bottom = 285.0
+scale = Vector2(3.89221, 3.89221)
+theme_override_fonts/font = ExtResource("5_3amdw")
+text = "Start"
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="TheChampingnon-removebg-preview" type="Sprite2D" parent="CanvasLayer/Control"]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(12.0001, -160)
+scale = Vector2(1.85157, 1.85157)
+texture = ExtResource("6_1xcnr")
+
+[node name="TheChampingnon-removebg-preview2" type="Sprite2D" parent="CanvasLayer/Control"]
+position = Vector2(25, -167)
+scale = Vector2(1.85157, 1.85157)
+texture = ExtResource("6_1xcnr")
+
+[connection signal="pressed" from="CanvasLayer/Control/Button" to="." method="_on_button_pressed"]

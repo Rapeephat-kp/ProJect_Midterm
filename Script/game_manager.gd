@@ -2,12 +2,24 @@ extends Node2D
 
 class_name GameManager
 
-var coin = 0
 var Wood = 0
 var player = 2
+var current_main_player_hp = 0
+var coins = 0
 
 
+func all_reset():
+	current_main_player_hp = 0
+	var coins = 0
+
+func set_player_health(hp):
+	current_main_player_hp = hp
+	
+func get_player_health():
+	return current_main_player_hp
+	
 func set_p(p):
 	player = p
+	
 func get_p():
 	return player
