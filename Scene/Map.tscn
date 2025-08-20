@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=4 uid="uid://cgve34lntntl0"]
+[gd_scene load_steps=42 format=4 uid="uid://cgve34lntntl0"]
 
 [ext_resource type="Script" uid="uid://dovacsfio8kkv" path="res://Script/Test_map.gd" id="1_ddblf"]
 [ext_resource type="Texture2D" uid="uid://c02hk8gklv3yv" path="res://Asset_Midterm/UI/UI/ValueBar_128x16.png" id="2_04dgn"]
@@ -20,6 +20,7 @@
 [ext_resource type="FontFile" uid="uid://bdl4qpamcrivq" path="res://Fonts/OBGB.TTF" id="13_rmglj"]
 [ext_resource type="Texture2D" uid="uid://dkyfygbi0dekj" path="res://Asset_Midterm/UI/UI/Button_52x14.png" id="13_sw748"]
 [ext_resource type="Texture2D" uid="uid://v7p21xrmkms4" path="res://Asset_Midterm/UI/UI/MenusIcons_34x34.png" id="17_fhsea"]
+[ext_resource type="PackedScene" uid="uid://ckk8xxea62en7" path="res://Scene/Main_Char_Scene/Elendros.tscn" id="21_rmglj"]
 
 [sub_resource type="Animation" id="Animation_etu1s"]
 resource_name = "Close"
@@ -51,10 +52,26 @@ tracks/0/keys = {
 "values": [Vector2(-143, 550), Vector2(-143, -89), Vector2(-143, -82)]
 }
 
+[sub_resource type="Animation" id="Animation_pt3qq"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Setting_UI/Setting_Panel_Bg:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-143, 550)]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_etu1s"]
 _data = {
 &"Close": SubResource("Animation_etu1s"),
-&"Open": SubResource("Animation_sw748")
+&"Open": SubResource("Animation_sw748"),
+&"RESET": SubResource("Animation_pt3qq")
 }
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_sw748"]
@@ -1281,9 +1298,9 @@ grow_vertical = 2
 [node name="Setting_Panel_Bg" type="Panel" parent="CanvasUI/Setting_UI"]
 layout_mode = 0
 offset_left = -143.0
-offset_top = -23.0
+offset_top = 550.0
 offset_right = -47.0
-offset_bottom = 62.0
+offset_bottom = 635.0
 scale = Vector2(3, 3)
 theme_override_styles/panel = SubResource("StyleBoxFlat_rmglj")
 
@@ -1370,9 +1387,6 @@ metadata/_edit_lock_ = true
 [node name="Mushroom" parent="." instance=ExtResource("13_ddblf")]
 position = Vector2(38, 290)
 
-[node name="Nymera" parent="." instance=ExtResource("13_04dgn")]
-position = Vector2(109, 286)
-
 [node name="Logs_all" type="Node2D" parent="."]
 
 [node name="Logs" parent="Logs_all" instance=ExtResource("2_k4ih1")]
@@ -1380,6 +1394,13 @@ position = Vector2(188, 310)
 
 [node name="Logs2" parent="Logs_all" instance=ExtResource("2_k4ih1")]
 position = Vector2(245, 310)
+
+[node name="Nymera" parent="." instance=ExtResource("13_04dgn")]
+visible = false
+position = Vector2(109, 286)
+
+[node name="Elendros" parent="." groups=["Player"] instance=ExtResource("21_rmglj")]
+position = Vector2(122, 258)
 
 [connection signal="pressed" from="CanvasUI/Setting_Button/Setting_Button" to="CanvasUI/Setting" method="_on_setting_button_pressed"]
 [connection signal="pressed" from="CanvasUI/Setting_UI/Setting_Panel_Bg/Resume_Button" to="CanvasUI/Setting" method="_on_resume_button_pressed"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=171 format=3 uid="uid://dkshrpsvngsmf"]
+[gd_scene load_steps=163 format=3 uid="uid://dkshrpsvngsmf"]
 
 [ext_resource type="Texture2D" uid="uid://d3e1g02l1dm3r" path="res://Asset_Midterm/Main_character/Nymera/idle and  alter/itch jump sheet-Sheet.png" id="1_4jw1g"]
 [ext_resource type="Script" uid="uid://csgbyw0tc4t2i" path="res://Script/Nymera_2.gd" id="1_cnoqx"]
@@ -22,7 +22,6 @@
 [ext_resource type="Texture2D" uid="uid://dr3an2rjwfr6q" path="res://Asset_Midterm/Main_character/Nymera/sliced_frames/frame_16.png" id="20_6rnic"]
 [ext_resource type="Texture2D" uid="uid://csm5r4ioaxj6w" path="res://Asset_Midterm/Main_character/Nymera/sliced_frames/frame_17.png" id="21_wmhfl"]
 [ext_resource type="Texture2D" uid="uid://ba72mbsrgmatv" path="res://Asset_Midterm/Main_character/Nymera/Red hood free (zipped) Folder/red hood itch free Copy-Sheet.png" id="22_1vdyt"]
-[ext_resource type="Texture2D" uid="uid://17dhh4vl3peq" path="res://Asset_Midterm/Main_character/Nymera/idle and  alter/itch hurt 2 sheet-Sheet.png" id="23_kbxhg"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_y3opc"]
 atlas = ExtResource("1_4jw1g")
@@ -641,34 +640,6 @@ region = Rect2(896, 1197, 112, 133)
 atlas = ExtResource("22_1vdyt")
 region = Rect2(1008, 1197, 112, 133)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_6rnic"]
-atlas = ExtResource("23_kbxhg")
-region = Rect2(0, 0, 80, 80)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_wmhfl"]
-atlas = ExtResource("23_kbxhg")
-region = Rect2(80, 0, 80, 80)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_1vdyt"]
-atlas = ExtResource("23_kbxhg")
-region = Rect2(160, 0, 80, 80)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_734ua"]
-atlas = ExtResource("23_kbxhg")
-region = Rect2(240, 0, 80, 80)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_dsinq"]
-atlas = ExtResource("23_kbxhg")
-region = Rect2(320, 0, 80, 80)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_slb1k"]
-atlas = ExtResource("23_kbxhg")
-region = Rect2(400, 0, 80, 80)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_kah1t"]
-atlas = ExtResource("23_kbxhg")
-region = Rect2(480, 0, 80, 80)
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_hxk4d"]
 atlas = ExtResource("22_1vdyt")
 region = Rect2(112, 0, 112, 133)
@@ -820,32 +791,6 @@ animations = [{
 "loop": false,
 "name": &"Attack 2",
 "speed": 25.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_6rnic")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_wmhfl")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_1vdyt")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_734ua")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_dsinq")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_slb1k")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_kah1t")
-}],
-"loop": false,
-"name": &"Hurt",
-"speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -1093,9 +1038,7 @@ drag_vertical_enabled = true
 visible = false
 position = Vector2(13, 2)
 sprite_frames = SubResource("SpriteFrames_4vgj3")
-animation = &"Hurt"
-frame = 6
-frame_progress = 1.0
+animation = &"Attack 1"
 flip_h = true
 metadata/_edit_lock_ = true
 

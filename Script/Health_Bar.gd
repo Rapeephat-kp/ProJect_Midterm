@@ -1,20 +1,21 @@
 extends TextureProgressBar
 
-@export var player1 : Elendros
-@export var player2 : Nymera
-
 var Main_player
 
 func _ready() -> void:
-	var current_player = get_node("../../Game_manager")
+	var current_player = Gamemanager
 	var p_value = current_player.get_p()
 	if p_value == 1:
-		Main_player = get_node("../../Elendros")
+		Main_player = get_node("../../../Elendros")
+		Main_player.visible = true
+		$"../../../Nymera".queue_free()
 	elif p_value == 2:
-		Main_player = get_node("../../Nymera")
-
+		Main_player = get_node("../../../Nymera")
+		Main_player.visible = true
+		$"../../../Elendros".queue_free()
 func _process(delta: float) -> void:
-		update()
+	if Main_player:
+		update_health_bar()
 
-func update():
+func update_health_bar():
 	value = Main_player.current_health

@@ -42,7 +42,6 @@ func movement():
 			Idle_Sprite.visible = false
 			Action_Sprite.visible = false
 			Jump2_Sprite.visible = false
-			Jump_Sprite.visible = false
 			Jump_Sprite.visible = true
 			Jump_Sprite.play("Jump")
 			is_jumping = true
@@ -115,6 +114,11 @@ func movement():
 func _on_hit_box_area_entered(area: Area2D) -> void:
 	if area.is_in_group("Mon_hit"):
 		current_health -= 15
-		$Action_Sprite.play("Hurt")
-		await get_tree().create_timer(0.35).timeout
+		Idle_Sprite.visible = false
+		Action_Sprite.visible = true
+		Jump_Sprite.visible = false
+		Jump2_Sprite.visible = false
+		print("ouch")
+		Action_Sprite.play("Hurt")
+		await get_tree().create_timer(1).timeout
 		
