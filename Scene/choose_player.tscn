@@ -1,6 +1,16 @@
-[gd_scene load_steps=2 format=3 uid="uid://dojir8maradd1"]
+[gd_scene load_steps=8 format=3 uid="uid://dojir8maradd1"]
 
 [ext_resource type="Script" uid="uid://br3agbx2aibvw" path="res://Scene/choose_player.gd" id="1_hjpbw"]
+[ext_resource type="StyleBox" uid="uid://b5bgnb18smebi" path="res://Scene/Elendors_hover.tres" id="2_ag6i8"]
+[ext_resource type="StyleBox" uid="uid://b6ybeu3s5kjqs" path="res://Scene/Elendros.tres" id="3_70qnk"]
+[ext_resource type="Texture2D" uid="uid://yx305n16dygh" path="res://Asset_Midterm/Tile_Map/GothicVania-town-files/GothicVania-town-files/PNG/environment/church-preview-big.png" id="3_ag6i8"]
+[ext_resource type="Texture2D" uid="uid://q3s1a5fpkwu8" path="res://Asset_Midterm/UI/Player_UI/Char design4_20250820104850.png" id="3_i477x"]
+[ext_resource type="StyleBox" uid="uid://pm8biavnq6lc" path="res://Scene/Nymera.tres" id="5_70qnk"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_70qnk"]
+texture = ExtResource("3_i477x")
+region_rect = Rect2(547, 285, 644.558, 1064.8)
+modulate_color = Color(0.713726, 0.713726, 0.713726, 1)
 
 [node name="Choose_player" type="Node2D"]
 script = ExtResource("1_hjpbw")
@@ -8,18 +18,31 @@ script = ExtResource("1_hjpbw")
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="Elendros" type="Button" parent="CanvasLayer"]
-offset_left = 723.0
-offset_top = 266.0
-offset_right = 799.0
-offset_bottom = 297.0
-text = "Elendros"
+offset_left = 536.0
+offset_top = 120.0
+offset_right = 944.0
+offset_bottom = 727.0
+focus_mode = 0
+theme_override_styles/hover = ExtResource("2_ag6i8")
+theme_override_styles/pressed = ExtResource("2_ag6i8")
+theme_override_styles/normal = ExtResource("3_70qnk")
+
+[node name="Polygon2D" type="Polygon2D" parent="CanvasLayer"]
+position = Vector2(0.055323, 80)
+scale = Vector2(1.57534, 1)
+texture = ExtResource("3_ag6i8")
+polygon = PackedVector2Array(1.80603, 0.241846, 766.781, 573.47, -0.40741, 574.934)
+uv = PackedVector2Array(1.80603, 0.241846, 766.781, 573.47, -0.40741, 574.934)
 
 [node name="Nymera" type="Button" parent="CanvasLayer"]
-offset_left = 161.0
-offset_top = 263.0
-offset_right = 240.0
-offset_bottom = 294.0
-text = "Nymera"
+offset_left = 224.0
+offset_top = 191.0
+offset_right = 512.0
+offset_bottom = 647.0
+focus_mode = 0
+theme_override_styles/hover = ExtResource("5_70qnk")
+theme_override_styles/pressed = ExtResource("5_70qnk")
+theme_override_styles/normal = SubResource("StyleBoxTexture_70qnk")
 
 [connection signal="pressed" from="CanvasLayer/Elendros" to="." method="_on_elendros_pressed"]
 [connection signal="pressed" from="CanvasLayer/Nymera" to="." method="_on_nymera_pressed"]
