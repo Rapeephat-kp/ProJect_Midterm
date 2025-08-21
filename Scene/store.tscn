@@ -64,6 +64,7 @@ grow_vertical = 2
 
 [node name="Default" type="TextureRect" parent="Control"]
 material = SubResource("ShaderMaterial_5oqxb")
+layout_mode = 0
 offset_left = 21.0002
 offset_top = 24.0001
 offset_right = 2321.0
@@ -179,5 +180,14 @@ position = Vector2(328, 148)
 enabled = false
 zoom = Vector2(2.5, 2.5)
 
+[node name="Exit" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 56.0
+offset_top = 53.0
+offset_right = 190.0
+offset_bottom = 187.0
+
 [connection signal="pressed" from="Control/HP_Potion" to="." method="_on_hp_potion_pressed"]
+[connection signal="pressed" from="Control/HP_Potion/Panel/Hp_Buy" to="." method="_on_hp_buy_pressed"]
 [connection signal="pressed" from="Control/Max_HP_Potion" to="." method="_on_max_hp_potion_pressed"]
+[connection signal="pressed" from="Control/Exit" to="." method="_on_exit_pressed"]

@@ -5,7 +5,7 @@ class_name GameManager
 var Wood = 0
 var player = 2
 var current_main_player_hp = 0
-var coins = 0
+var coins = 100
 
 
 func all_reset():
@@ -23,3 +23,9 @@ func set_p(p):
 	
 func get_p():
 	return player
+
+func get_coin() :
+	return coins
+	
+func set_coin(n_coin) :
+	coins += n_coin
