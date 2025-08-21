@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://dp5cs5qk2bf64"]
+[gd_scene load_steps=11 format=3 uid="uid://dp5cs5qk2bf64"]
 
 [ext_resource type="Script" uid="uid://dhepn5gfj3djx" path="res://Scene/main.gd" id="1_ow1sv"]
 [ext_resource type="Texture2D" uid="uid://skwubifcy71r" path="res://Asset_Midterm/Tile_Map/Fantasy Swamp Forest/Free/BG_3/BG_3.png" id="1_r34rm"]
@@ -7,6 +7,14 @@
 [ext_resource type="Texture2D" uid="uid://dkyfygbi0dekj" path="res://Asset_Midterm/UI/UI/Button_52x14.png" id="4_2wwxx"]
 [ext_resource type="FontFile" uid="uid://bdl4qpamcrivq" path="res://Fonts/OBGB.TTF" id="5_3amdw"]
 [ext_resource type="Texture2D" uid="uid://cpiygmk8swnkf" path="res://Splash/The_Champingnon-removebg-preview.png" id="6_1xcnr"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ow1sv"]
+texture = ExtResource("4_2wwxx")
+modulate_color = Color(0.666667, 0.666667, 0.666667, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_75buv"]
+texture = ExtResource("4_2wwxx")
+modulate_color = Color(0.666667, 0.666667, 0.666667, 1)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3amdw"]
 texture = ExtResource("4_2wwxx")
@@ -79,6 +87,8 @@ offset_top = 235.0
 offset_right = -254.0
 offset_bottom = 243.0
 scale = Vector2(17.76, 17.76)
+theme_override_styles/hover = SubResource("StyleBoxTexture_ow1sv")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_75buv")
 theme_override_styles/normal = SubResource("StyleBoxTexture_3amdw")
 
 [node name="Label" type="Label" parent="CanvasLayer/Control"]

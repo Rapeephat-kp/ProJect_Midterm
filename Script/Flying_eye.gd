@@ -11,7 +11,8 @@ var is_attack = false #เช็คว่าเข้าถึงเขตที
 var is_attacking = false #เช็คว่าตีอยู่มั้ย
 var get_hit = false
 var count = 0
-@export var attack_delay = 0.3
+var is_alive = true
+@export var attack_delay = 0.5
 
 
 
@@ -38,13 +39,15 @@ func _process(delta: float) -> void:
 		$AnimatedSprite2D.modulate = Color("White")
 		
 	if(health <= 0 ):
+		_cancel_attack()
 		dis()
 	
 func dis():
+	is_alive = false
 	velocity.x = 0
 	move_and_slide()
 	$AnimatedSprite2D.play("Died")
-	await get_tree().create_timer(0.5).timeout
+	await get_tree().create_timer(0.6).timeout
 	$AnimatedSprite2D.stop()
 	$Body.disabled = true
 	hide()
@@ -57,12 +60,9 @@ func movement():
 			velocity.x = speed * -status
 			if($AnimatedSprite2D.flip_h):
 				status = 1
-				
 			if !is_on_floor():
 				velocity.y += gravity
-			
 			move_and_slide()
-			
 			if is_on_wall() || time_run > randi_range(5,10):
 				print("ladmfl")
 				speed = -speed
@@ -100,27 +100,38 @@ func follow_player():
 			
 #Attack
 func attack():
-	if player_in_l == true && is_attack == true :
+	if player_in_l and is_attack:
 		is_attacking = true
 		$AnimatedSprite2D.play("attack")
 		velocity.x = 0
 		move_and_slide()
 		await get_tree().create_timer(attack_delay).timeout
+		if get_hit or not is_alive:
+			_cancel_attack()
+			return
 		$attack_zone_left/CollisionShape2D.disabled = false
 		await get_tree().create_timer(0.5).timeout
+		if get_hit or not is_alive:
+			_cancel_attack()
+			return
 		$attack_zone_left/CollisionShape2D.disabled = true
-		is_attacking = false;
-		
-	elif player_in_r == true && is_attack == true:
+		is_attacking = false
+	elif player_in_r and is_attack:
 		is_attacking = true
 		$AnimatedSprite2D.play("attack")
 		velocity.x = 0
 		move_and_slide()
 		await get_tree().create_timer(attack_delay).timeout
+		if get_hit or not is_alive:
+			_cancel_attack()
+			return
 		$attack_zone_right/CollisionShape2D.disabled = false
 		await get_tree().create_timer(0.5).timeout
+		if get_hit or not is_alive:
+			_cancel_attack()
+			return
 		$attack_zone_right/CollisionShape2D.disabled = true
-		is_attacking = false;
+		is_attacking = false
 		
 func _cancel_attack():
 	$attack_zone_right/CollisionShape2D.set_deferred("disabled", true)

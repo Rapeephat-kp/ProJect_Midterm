@@ -242,10 +242,10 @@ animations = [{
 size = Vector2(59, 128)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lonl8"]
-size = Vector2(375, 269)
+size = Vector2(340, 269)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pb54s"]
-size = Vector2(375, 269)
+size = Vector2(342, 269)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_y7owv"]
 size = Vector2(94, 175)
@@ -264,30 +264,26 @@ size = Vector2(59, 127)
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
 modulate = Color(0.674815, 0.674815, 0.674815, 1)
 script = ExtResource("1_lonl8")
-speed = 60
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
 sprite_frames = SubResource("SpriteFrames_06t0d")
-animation = &"Idle"
-frame_progress = 0.0353335
+animation = &"walk"
+flip_h = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
-visible = false
 position = Vector2(0.5, 15)
 shape = SubResource("RectangleShape2D_re6qs")
 
 [node name="Detect_Zone_l" type="Area2D" parent="CharacterBody2D"]
-visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D/Detect_Zone_l"]
-position = Vector2(193.5, -50.5)
+position = Vector2(211, -50.5)
 shape = SubResource("RectangleShape2D_lonl8")
 
 [node name="Detect_zone_r" type="Area2D" parent="CharacterBody2D"]
-visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D/Detect_zone_r"]
-position = Vector2(-195.5, -50.5)
+position = Vector2(-212, -50.5)
 shape = SubResource("RectangleShape2D_pb54s")
 
 [node name="attack_zone_left" type="Area2D" parent="CharacterBody2D" groups=["Mon_hit"]]
@@ -323,6 +319,7 @@ shape = SubResource("RectangleShape2D_6bbs3")
 [connection signal="area_entered" from="CharacterBody2D/Detect_Zone_l" to="CharacterBody2D" method="_on_detect_zone_l_area_entered"]
 [connection signal="area_exited" from="CharacterBody2D/Detect_Zone_l" to="CharacterBody2D" method="_on_detect_zone_l_area_exited"]
 [connection signal="area_entered" from="CharacterBody2D/Detect_zone_r" to="CharacterBody2D" method="_on_detect_zone_r_area_entered"]
+[connection signal="area_exited" from="CharacterBody2D/Detect_zone_r" to="CharacterBody2D" method="_on_detect_zone_r_area_exited"]
 [connection signal="area_entered" from="CharacterBody2D/Area_attack" to="CharacterBody2D" method="_on_area_attack_area_entered"]
 [connection signal="area_exited" from="CharacterBody2D/Area_attack" to="CharacterBody2D" method="_on_area_attack_area_exited"]
 [connection signal="area_entered" from="CharacterBody2D/Hit_box" to="CharacterBody2D" method="_on_hit_box_area_entered"]

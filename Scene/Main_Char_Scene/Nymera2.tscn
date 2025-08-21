@@ -1092,18 +1092,18 @@ animation = &"Jump"
 flip_h = true
 metadata/_edit_lock_ = true
 
-[node name="attack_zone_right" type="Area2D" parent="." groups=["Player", "Player_hit"]]
+[node name="attack_zone_right" type="Area2D" parent="." groups=["Player_hit"]]
 visible = false
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="attack_zone_right" groups=["Player", "Player_hit"]]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="attack_zone_right" groups=["Player_hit"]]
 position = Vector2(-3, 16)
 shape = SubResource("RectangleShape2D_cnoqx")
 disabled = true
 
-[node name="attack_zone_left" type="Area2D" parent="." groups=["Player", "Player_hit"]]
+[node name="attack_zone_left" type="Area2D" parent="." groups=["Player_hit"]]
 visible = false
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="attack_zone_left" groups=["Player", "Player_hit"]]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="attack_zone_left" groups=["Player_hit"]]
 position = Vector2(31, 16)
 shape = SubResource("RectangleShape2D_kbxhg")
 disabled = true

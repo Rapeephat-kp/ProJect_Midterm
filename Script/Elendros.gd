@@ -72,9 +72,15 @@ func _on_elendros_hit_box_area_entered(area: Area2D) -> void:
 		is_hurt = true
 		$AnimationPlayer.play("hurt")
 
-		var knockback_dir = (global_position - area.global_position).normalized()
-		velocity.x = knockback_dir.x * 300
+		var knockback_force = randf_range(700,1500) 
+		if area.global_position.x < global_position.x:
+			velocity.x = knockback_force
+		else:
+			velocity.x = -knockback_force
 		velocity.y = -150
+
+		await get_tree().create_timer(0.3).timeout
+		velocity = Vector2.ZERO
 
 		Gamemanager.set_player_health(Gamemanager.get_player_health() - 15)
 
