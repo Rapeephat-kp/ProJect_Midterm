@@ -1408,8 +1408,10 @@ offset_right = 264.0
 offset_bottom = 208.0
 
 [node name="Button2" type="Button" parent="."]
-offset_right = 8.0
-offset_bottom = 8.0
+offset_left = 400.0
+offset_top = 88.0
+offset_right = 592.0
+offset_bottom = 280.0
 
 [connection signal="pressed" from="CanvasUI/Setting_Button/Setting_Button" to="CanvasUI/Setting" method="_on_setting_button_pressed"]
 [connection signal="pressed" from="CanvasUI/Setting_UI/Setting_Panel_Bg/Resume_Button" to="CanvasUI/Setting" method="_on_resume_button_pressed"]
