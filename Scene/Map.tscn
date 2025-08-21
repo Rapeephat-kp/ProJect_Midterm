@@ -1298,9 +1298,9 @@ grow_vertical = 2
 [node name="Setting_Panel_Bg" type="Panel" parent="CanvasUI/Setting_UI"]
 layout_mode = 0
 offset_left = -143.0
-offset_top = 620.0
+offset_top = 660.0
 offset_right = -47.0
-offset_bottom = 705.0
+offset_bottom = 745.0
 scale = Vector2(3, 3)
 theme_override_styles/panel = SubResource("StyleBoxFlat_rmglj")
 
