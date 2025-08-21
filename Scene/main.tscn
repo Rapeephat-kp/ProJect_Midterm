@@ -84,6 +84,7 @@ theme_override_styles/normal = SubResource("StyleBoxTexture_3amdw")
 [node name="Label" type="Label" parent="CanvasLayer/Control"]
 modulate = Color(1, 0.870588, 0.678431, 1)
 custom_minimum_size = Vector2(1, 1)
+layout_mode = 0
 offset_left = -137.0
 offset_top = 265.0
 offset_right = -72.0
