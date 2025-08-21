@@ -1298,9 +1298,9 @@ grow_vertical = 2
 [node name="Setting_Panel_Bg" type="Panel" parent="CanvasUI/Setting_UI"]
 layout_mode = 0
 offset_left = -143.0
-offset_top = 660.0
+offset_top = 620.0
 offset_right = -47.0
-offset_bottom = 745.0
+offset_bottom = 705.0
 scale = Vector2(3, 3)
 theme_override_styles/panel = SubResource("StyleBoxFlat_rmglj")
 
@@ -1407,7 +1407,12 @@ offset_top = 110.0
 offset_right = 264.0
 offset_bottom = 208.0
 
+[node name="Button2" type="Button" parent="."]
+offset_right = 8.0
+offset_bottom = 8.0
+
 [connection signal="pressed" from="CanvasUI/Setting_Button/Setting_Button" to="CanvasUI/Setting" method="_on_setting_button_pressed"]
 [connection signal="pressed" from="CanvasUI/Setting_UI/Setting_Panel_Bg/Resume_Button" to="CanvasUI/Setting" method="_on_resume_button_pressed"]
 [connection signal="pressed" from="CanvasUI/Setting_UI/Setting_Panel_Bg/Exit_Button" to="CanvasUI/Setting" method="_on_exit_button_pressed"]
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
