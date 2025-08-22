@@ -267,7 +267,9 @@ script = ExtResource("1_lonl8")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
 sprite_frames = SubResource("SpriteFrames_06t0d")
-animation = &"walk"
+animation = &"Idle"
+frame = 3
+frame_progress = 0.975759
 flip_h = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
@@ -315,6 +317,14 @@ visible = false
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D/Hit_box"]
 position = Vector2(1.5, 15.5)
 shape = SubResource("RectangleShape2D_6bbs3")
+
+[node name="Check_floor_l" type="RayCast2D" parent="CharacterBody2D"]
+position = Vector2(46, 70)
+target_position = Vector2(2, 113)
+
+[node name="Check_floor_r" type="RayCast2D" parent="CharacterBody2D"]
+position = Vector2(-52, 68)
+target_position = Vector2(2, 122)
 
 [connection signal="area_entered" from="CharacterBody2D/Detect_Zone_l" to="CharacterBody2D" method="_on_detect_zone_l_area_entered"]
 [connection signal="area_exited" from="CharacterBody2D/Detect_Zone_l" to="CharacterBody2D" method="_on_detect_zone_l_area_exited"]

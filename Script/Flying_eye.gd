@@ -55,6 +55,8 @@ func dis():
 	queue_free()
 	
 func movement():
+	if not is_alive:
+		return
 	if(is_attacking != true):
 		if(player_in_l != true && player_in_r != true):
 			velocity.x = speed * -status
@@ -82,24 +84,32 @@ func movement():
 			attack()
 			
 func follow_player():
-		if(player_in_l == true && player_in_r != true):
-			velocity.x = abs(speed)
-			if(velocity.x > 0):
-				$AnimatedSprite2D.flip_h = false
-			
-		elif(player_in_l != true && player_in_r == true):
-			velocity.x = -(abs(speed))
-			if(velocity.x < 0):
-				$AnimatedSprite2D.flip_h = true
-			
-		if not is_on_floor():
-			velocity.y += gravity
+	if not is_alive:
+		return
 	
-		move_and_slide()
+	var can_forward = $Check_floor_l.is_colliding()
+	var can_backward = $Check_floor_r.is_colliding()
+	
+	if(player_in_l == true && player_in_r != true && can_forward):
+		velocity.x = abs(speed)
+		if(velocity.x > 0):
+			$AnimatedSprite2D.flip_h = false
+			
+	elif(player_in_l != true && player_in_r == true & can_backward):
+		velocity.x = -(abs(speed))
+		if(velocity.x < 0):
+			$AnimatedSprite2D.flip_h = true
+			
+	if not is_on_floor():
+		velocity.y += gravity
+	
+	move_and_slide()
 			
 			
 #Attack
 func attack():
+	if not is_alive:
+		return
 	if player_in_l and is_attack:
 		is_attacking = true
 		$AnimatedSprite2D.play("attack")

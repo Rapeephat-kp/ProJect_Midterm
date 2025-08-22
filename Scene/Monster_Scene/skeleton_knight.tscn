@@ -296,11 +296,11 @@ shape = SubResource("RectangleShape2D_aw7pq")
 metadata/_edit_lock_ = true
 
 [node name="Check_Floor_l" type="RayCast2D" parent="CharacterBody2D"]
-position = Vector2(28, 19)
+position = Vector2(28, 16)
 target_position = Vector2(0, 26)
 
 [node name="Check_Floor_r" type="RayCast2D" parent="CharacterBody2D"]
-position = Vector2(-25, 21)
+position = Vector2(-24, 17)
 scale = Vector2(0.75, 0.75)
 target_position = Vector2(0, 32)
 

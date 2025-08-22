@@ -98,6 +98,7 @@ grow_vertical = 2
 
 [node name="Default" type="TextureRect" parent="CanvasLayer/Control"]
 material = SubResource("ShaderMaterial_5oqxb")
+layout_mode = 0
 offset_left = 16.0
 offset_top = 19.0
 offset_right = 2322.0
@@ -107,6 +108,7 @@ texture = ExtResource("1_6vjxl")
 
 [node name="Blur" type="TextureRect" parent="CanvasLayer/Control"]
 visible = false
+layout_mode = 0
 offset_left = 19.0
 offset_top = 20.0
 offset_right = 4686.0
@@ -115,6 +117,7 @@ scale = Vector2(0.418932, 0.419535)
 texture = ExtResource("2_eci5q")
 
 [node name="HP_Potion" type="Button" parent="CanvasLayer/Control"]
+layout_mode = 0
 offset_left = 563.0
 offset_top = 565.0
 offset_right = 847.0
@@ -281,6 +284,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Blur" type="TextureRect" parent="Control"]
+layout_mode = 0
 offset_left = 19.0
 offset_top = 20.0
 offset_right = 4686.0
@@ -289,6 +293,7 @@ scale = Vector2(0.418932, 0.419535)
 texture = ExtResource("2_eci5q")
 
 [node name="HP_Potion" type="Button" parent="Control"]
+layout_mode = 0
 offset_left = 563.0
 offset_top = 565.0
 offset_right = 847.0
@@ -392,6 +397,7 @@ enabled = false
 zoom = Vector2(2.5, 2.5)
 
 [node name="Panel" type="Panel" parent="Control/Max_HP_Potion"]
+layout_mode = 0
 offset_left = 332.0
 offset_top = 21.0
 offset_right = 663.0
@@ -438,6 +444,7 @@ theme_override_styles/pressed = SubResource("StyleBoxTexture_7js4k")
 theme_override_styles/normal = SubResource("StyleBoxTexture_fejkd")
 
 [node name="Label" type="Label" parent="Control/Max_HP_Potion/Panel/Max_HP_Buy"]
+layout_mode = 0
 offset_left = 52.0
 offset_top = 11.0
 offset_right = 161.0
@@ -446,6 +453,7 @@ theme_override_fonts/font = ExtResource("5_ggf7m")
 text = "350 BUY"
 
 [node name="Label2" type="Label" parent="Control/Max_HP_Potion/Panel/Max_HP_Buy"]
+layout_mode = 0
 offset_left = 91.0
 offset_top = 3.0
 offset_right = 134.0

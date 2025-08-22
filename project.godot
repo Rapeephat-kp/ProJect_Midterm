@@ -21,6 +21,10 @@ Gamemanager="*res://Script/game_manager.gd"
 JsonData="*res://Script/JSONDatat.gd"
 PlayerInventory="*res://Script/Player_Inventory.gd"
 
+[display]
+
+window/stretch/mode="viewport"
+
 [global_group]
 
 Player=""

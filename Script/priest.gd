@@ -15,7 +15,14 @@ var is_alive = true
 var attack_canceled = false
 @export var attack_delay = 0.3
 
+@export var spawn_position: Vector2 
+var returning = false    
+var return_delay = 1.5
+var return_timer = 0.0
+
+
 func _ready() -> void:
+	spawn_position = global_position
 	$AnimatedSprite2D.play(sprite)
 	
 func _process(delta: float) -> void:
@@ -23,7 +30,7 @@ func _process(delta: float) -> void:
 		velocity.x = 0
 		move_and_slide()
 	else:
-		movement()
+		movement(delta)
 	count -= delta
 	time_run += delta
 	if count >= 0:
@@ -43,37 +50,61 @@ func dis():
 	await get_tree().create_timer(0.1).timeout
 	queue_free()
 	
-func movement():
+func movement(delta):
 	if not is_alive:
 		return
-	follow_player()
+	follow_player(delta)
 	if not is_attacking:
 		attack()
 			
-func follow_player():
-	if player_in_l != true && player_in_r != true:
-		velocity.x = 0
-		move_and_slide()
-	if not is_alive:
-		return
-	if not is_attacking:
-		if player_in_l and not player_in_r:
-			$AnimatedSprite2D.play("walk")
-			velocity.x = abs(speed)
-			print(velocity.x)
-			if velocity.x > 0:
+func follow_player(delta):
+	var can_forward = $Check_floor_l.is_colliding()
+	var can_backward = $Check_floor_r.is_colliding()
+	
+	if !is_attacking:
+		if not player_in_l and not player_in_r:
+			if not returning :
+				return_timer += delta
+				velocity.x = 0
+				$AnimatedSprite2D.play("Idle")
+				if return_timer >= return_delay:
+					returning = true
+					return_timer = 0
+			else:
+				var dir = spawn_position - global_position
+				if dir.length() > 5:
+					$AnimatedSprite2D.play("walk")
+					if dir.x > 0 and can_forward:
+						velocity.x = abs(speed)
+						$AnimatedSprite2D.flip_h = false
+					elif dir.x < 0 and can_backward:
+						velocity.x = -abs(speed)
+						$AnimatedSprite2D.flip_h = true
+					else:
+						velocity.x = 0
+						returning = false
+				else:
+					velocity.x = 0
+					$AnimatedSprite2D.play("Idle")
+					returning = false
+		else:
+			returning = false
+			return_timer = 0
+			if player_in_l and not player_in_r and can_forward:
+				$AnimatedSprite2D.play("walk")
+				velocity.x = abs(speed)
 				$AnimatedSprite2D.flip_h = false
-		elif not player_in_l and player_in_r:
-			$AnimatedSprite2D.play("walk")
-			velocity.x = -(abs(speed))
-			print(velocity.x)
-			if velocity.x < 0:
+			elif not player_in_l and player_in_r and can_backward:
+				$AnimatedSprite2D.play("walk")
+				velocity.x = -abs(speed)
 				$AnimatedSprite2D.flip_h = true
-		elif not player_in_l and not player_in_r:
-			$AnimatedSprite2D.play("Idle")
-			velocity.x = 0
+			else:
+				$AnimatedSprite2D.play("Idle")
+				velocity.x = 0
+
 		if not is_on_floor():
 			velocity.y += gravity
+
 		move_and_slide()
 			
 func attack():

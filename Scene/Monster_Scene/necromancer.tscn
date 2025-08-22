@@ -1644,6 +1644,12 @@ position = Vector2(0.5, -3.5)
 shape = SubResource("RectangleShape2D_3gmbx")
 metadata/_edit_lock_ = true
 
+[node name="Check_floor_l" type="RayCast2D" parent="CharacterBody2D"]
+position = Vector2(-17, 4)
+
+[node name="Check_floor_r" type="RayCast2D" parent="CharacterBody2D"]
+position = Vector2(22, 4)
+
 [connection signal="area_entered" from="CharacterBody2D/Detect_Zone_l" to="CharacterBody2D" method="_on_detect_zone_l_area_entered"]
 [connection signal="area_exited" from="CharacterBody2D/Detect_Zone_l" to="CharacterBody2D" method="_on_detect_zone_l_area_exited"]
 [connection signal="area_entered" from="CharacterBody2D/Detect_Zone_r" to="CharacterBody2D" method="_on_detect_zone_r_area_entered"]

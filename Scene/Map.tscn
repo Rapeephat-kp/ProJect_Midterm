@@ -1413,8 +1413,7 @@ offset_bottom = 280.0
 [node name="Monster" type="Node2D" parent="."]
 
 [node name="Skeleton_Knight" parent="." instance=ExtResource("25_7bda8")]
-position = Vector2(-14, 296)
-scale = Vector2(0.6, 0.6)
+position = Vector2(216, 296)
 
 [connection signal="pressed" from="CanvasUI/Setting_Button/Setting_Button" to="CanvasUI/Setting" method="_on_setting_button_pressed"]
 [connection signal="pressed" from="CanvasUI/Setting_UI/Setting_Panel_Bg/Resume_Button" to="CanvasUI/Setting" method="_on_resume_button_pressed"]
