@@ -12,7 +12,7 @@ var is_attacking = false #เช็คว่าตีอยู่มั้ย
 var get_hit = false
 var count = 0
 var is_alive = true
-@export var attack_delay = 0.5
+@export var attack_delay = 0.4
 
 
 
@@ -95,7 +95,7 @@ func follow_player():
 		if(velocity.x > 0):
 			$AnimatedSprite2D.flip_h = false
 			
-	elif(player_in_l != true && player_in_r == true & can_backward):
+	elif(player_in_l != true && player_in_r == true && can_backward):
 		velocity.x = -(abs(speed))
 		if(velocity.x < 0):
 			$AnimatedSprite2D.flip_h = true

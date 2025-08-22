@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://vivs42lcdx01"]
 
-[ext_resource type="Script" uid="uid://blwsjoartka1o" path="res://Scene/item.gd" id="1_m1cbo"]
+[ext_resource type="Script" uid="uid://blwsjoartka1o" path="res://Script/item.gd" id="1_m1cbo"]
 [ext_resource type="Texture2D" uid="uid://cotpdtfxl44hj" path="res://Asset_Midterm/Item/Healing Potion.png" id="2_wncjd"]
 [ext_resource type="FontFile" uid="uid://bdl4qpamcrivq" path="res://Fonts/OBGB.TTF" id="3_2ovjx"]
 

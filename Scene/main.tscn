@@ -1,6 +1,6 @@
 [gd_scene load_steps=11 format=3 uid="uid://dp5cs5qk2bf64"]
 
-[ext_resource type="Script" uid="uid://dhepn5gfj3djx" path="res://Scene/main.gd" id="1_ow1sv"]
+[ext_resource type="Script" uid="uid://dhepn5gfj3djx" path="res://Script/main.gd" id="1_ow1sv"]
 [ext_resource type="Texture2D" uid="uid://skwubifcy71r" path="res://Asset_Midterm/Tile_Map/Fantasy Swamp Forest/Free/BG_3/BG_3.png" id="1_r34rm"]
 [ext_resource type="Texture2D" uid="uid://byk3vy2oruw1d" path="res://Asset_Midterm/Tile_Map/Fantasy Swamp Forest/Free/BG_2/BG_2.png" id="2_2wwxx"]
 [ext_resource type="Texture2D" uid="uid://cv5ru2joj0lkf" path="res://Asset_Midterm/Tile_Map/Fantasy Swamp Forest/Free/BG_1/BG_1.png" id="3_3amdw"]

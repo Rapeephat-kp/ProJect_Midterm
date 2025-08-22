@@ -11,7 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://b241iedr6hbil" path="res://Asset_Midterm/UI/Player_UI/Nymera.png" id="6_fhsea"]
 [ext_resource type="Texture2D" uid="uid://cwgdsshwp7g4x" path="res://Asset_Midterm/UI/Player_UI/Elendros new.png" id="7_76jdi"]
 [ext_resource type="PackedScene" uid="uid://curgl57dutylp" path="res://Scene/game_manager.tscn" id="8_sw748"]
-[ext_resource type="Script" uid="uid://chtw2cfquxn21" path="res://Scene/setting.gd" id="9_sw748"]
+[ext_resource type="Script" uid="uid://chtw2cfquxn21" path="res://Script/setting.gd" id="9_sw748"]
 [ext_resource type="Texture2D" uid="uid://kj2uylw4q1s4" path="res://Asset_Midterm/Tile_Map/GothicVania-town-files/GothicVania-town-files/PNG/environment/layers/tileset.png" id="10_etu1s"]
 [ext_resource type="Texture2D" uid="uid://dbhunppnrcyxg" path="res://Asset_Midterm/Tile_Map/GothicVania-town-files/GothicVania-town-files/PNG/environment/props/props.png" id="11_pt3qq"]
 [ext_resource type="Texture2D" uid="uid://bsbwepfjfx2x6" path="res://Asset_Midterm/Tile_Map/GothicVania-town-files/GothicVania-town-files/PNG/environment/props/houses.png" id="12_fn7c7"]
@@ -19,8 +19,8 @@
 [ext_resource type="FontFile" uid="uid://bdl4qpamcrivq" path="res://Fonts/OBGB.TTF" id="13_rmglj"]
 [ext_resource type="Texture2D" uid="uid://dkyfygbi0dekj" path="res://Asset_Midterm/UI/UI/Button_52x14.png" id="13_sw748"]
 [ext_resource type="Texture2D" uid="uid://v7p21xrmkms4" path="res://Asset_Midterm/UI/UI/MenusIcons_34x34.png" id="17_fhsea"]
+[ext_resource type="PackedScene" uid="uid://bwv23c34bale6" path="res://Scene/Monster_Scene/flying_eye.tscn" id="21_etu1s"]
 [ext_resource type="PackedScene" uid="uid://ckk8xxea62en7" path="res://Scene/Main_Char_Scene/Elendros.tscn" id="21_rmglj"]
-[ext_resource type="PackedScene" uid="uid://b1b5ylcgaaepd" path="res://Scene/Monster_Scene/skeleton_knight.tscn" id="25_7bda8"]
 
 [sub_resource type="Animation" id="Animation_etu1s"]
 resource_name = "Close"
@@ -1412,8 +1412,8 @@ offset_bottom = 280.0
 
 [node name="Monster" type="Node2D" parent="."]
 
-[node name="Skeleton_Knight" parent="." instance=ExtResource("25_7bda8")]
-position = Vector2(216, 296)
+[node name="Flying_eye" parent="." instance=ExtResource("21_etu1s")]
+position = Vector2(217, 288)
 
 [connection signal="pressed" from="CanvasUI/Setting_Button/Setting_Button" to="CanvasUI/Setting" method="_on_setting_button_pressed"]
 [connection signal="pressed" from="CanvasUI/Setting_UI/Setting_Panel_Bg/Resume_Button" to="CanvasUI/Setting" method="_on_resume_button_pressed"]

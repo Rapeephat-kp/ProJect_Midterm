@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://blnr4rw8u7jcc" path="res://Script/inventory.gd" id="1_2xn8i"]
 [ext_resource type="Texture2D" uid="uid://m8j48x433ipv" path="res://Asset_Midterm/UI/UI/HotkeyBox_34x34.png" id="1_iwsio"]
-[ext_resource type="Script" uid="uid://cmqmblqjxv0ax" path="res://Script/Slot.gd" id="2_2xn8i"]
+[ext_resource type="Script" uid="uid://cmqmblqjxv0ax" path="res://Scene/Slot.gd" id="2_2xn8i"]
 [ext_resource type="Texture2D" uid="uid://bhj8y8hjedetd" path="res://Asset_Midterm/UI/UI/TopPatternPanel_02_33x15.png" id="2_fa215"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2xn8i"]

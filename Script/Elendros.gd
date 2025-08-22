@@ -5,7 +5,7 @@ class_name Elendros
 @export var player_health = 100
 @export var current_health : int = player_health
 const SPEED = 150.0
-const JUMP_VELOCITY = -250.0
+const JUMP_VELOCITY = -270.0
 @onready var Idel_E = $Idel_Sprite
 @onready var Action_Sprite = $Action_Sprite
 var is_attacking = false

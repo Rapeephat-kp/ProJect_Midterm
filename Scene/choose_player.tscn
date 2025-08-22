@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://dojir8maradd1"]
 
-[ext_resource type="Script" uid="uid://br3agbx2aibvw" path="res://Scene/choose_player.gd" id="1_hjpbw"]
+[ext_resource type="Script" uid="uid://br3agbx2aibvw" path="res://Script/choose_player.gd" id="1_hjpbw"]
 [ext_resource type="StyleBox" uid="uid://b5bgnb18smebi" path="res://Scene/Elendors_hover.tres" id="2_ag6i8"]
 [ext_resource type="StyleBox" uid="uid://b6ybeu3s5kjqs" path="res://Scene/Elendros.tres" id="3_70qnk"]
 [ext_resource type="Texture2D" uid="uid://bjianu5yuh6nr" path="res://Asset_Midterm/UI/Player_UI/Game Scene Final2_20250818235203.jpg" id="4_70qnk"]

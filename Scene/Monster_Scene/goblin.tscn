@@ -271,6 +271,7 @@ shape = SubResource("RectangleShape2D_x18i0")
 metadata/_edit_lock_ = true
 
 [node name="Detect_Zone_l" type="Area2D" parent="CharacterBody2D"]
+visible = false
 metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D/Detect_Zone_l"]
@@ -279,6 +280,7 @@ shape = SubResource("RectangleShape2D_hnwub")
 metadata/_edit_lock_ = true
 
 [node name="Detect_Zone_r" type="Area2D" parent="CharacterBody2D"]
+visible = false
 metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D/Detect_Zone_r"]

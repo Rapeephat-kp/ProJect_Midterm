@@ -1,23 +1,25 @@
-[gd_scene load_steps=39 format=4 uid="uid://bkj0v6bjttv7y"]
+[gd_scene load_steps=41 format=4 uid="uid://cgve34lntntl0"]
 
-[ext_resource type="Script" uid="uid://dovacsfio8kkv" path="res://Script/Test_map.gd" id="1_4sj8q"]
-[ext_resource type="Script" uid="uid://chtw2cfquxn21" path="res://Scene/setting.gd" id="2_30wcp"]
-[ext_resource type="PackedScene" uid="uid://dkshrpsvngsmf" path="res://Scene/Main_Char_Scene/Nymera2.tscn" id="2_j8iqv"]
-[ext_resource type="PackedScene" uid="uid://ckk8xxea62en7" path="res://Scene/Main_Char_Scene/Elendros.tscn" id="3_a3t51"]
-[ext_resource type="PackedScene" uid="uid://bal4y7qsf3yqg" path="res://Scene/inventory.tscn" id="3_j8iqv"]
-[ext_resource type="Texture2D" uid="uid://c02hk8gklv3yv" path="res://Asset_Midterm/UI/UI/ValueBar_128x16.png" id="4_a3t51"]
-[ext_resource type="Texture2D" uid="uid://dc3wk2ovxupxh" path="res://Asset_Midterm/UI/UI/ValueRed_120x8.png" id="5_8d0kc"]
-[ext_resource type="Script" uid="uid://byvatqq7vympv" path="res://Script/Health_Bar.gd" id="6_n5ya2"]
-[ext_resource type="Texture2D" uid="uid://cj181y6p4ikil" path="res://Asset_Midterm/UI/UI/BlackBigCircleBoxWithBorder_27x27.png" id="7_mejq3"]
-[ext_resource type="Texture2D" uid="uid://b241iedr6hbil" path="res://Asset_Midterm/UI/Player_UI/Nymera.png" id="8_glkhy"]
-[ext_resource type="Texture2D" uid="uid://cwgdsshwp7g4x" path="res://Asset_Midterm/UI/Player_UI/Elendros new.png" id="9_y3p82"]
-[ext_resource type="Texture2D" uid="uid://byicixnbvtqhe" path="res://Asset_Midterm/UI/UI/MenusBox_34x34.png" id="10_benur"]
-[ext_resource type="Texture2D" uid="uid://v7p21xrmkms4" path="res://Asset_Midterm/UI/UI/MenusIcons_34x34.png" id="11_knx5b"]
-[ext_resource type="Texture2D" uid="uid://dkyfygbi0dekj" path="res://Asset_Midterm/UI/UI/Button_52x14.png" id="12_6xw05"]
-[ext_resource type="FontFile" uid="uid://bdl4qpamcrivq" path="res://Fonts/OBGB.TTF" id="13_a0rpn"]
-[ext_resource type="Texture2D" uid="uid://kj2uylw4q1s4" path="res://Asset_Midterm/Tile_Map/GothicVania-town-files/GothicVania-town-files/PNG/environment/layers/tileset.png" id="16_n5ya2"]
-[ext_resource type="Texture2D" uid="uid://dbhunppnrcyxg" path="res://Asset_Midterm/Tile_Map/GothicVania-town-files/GothicVania-town-files/PNG/environment/props/props.png" id="17_mejq3"]
-[ext_resource type="Texture2D" uid="uid://bsbwepfjfx2x6" path="res://Asset_Midterm/Tile_Map/GothicVania-town-files/GothicVania-town-files/PNG/environment/props/houses.png" id="18_glkhy"]
+[ext_resource type="Script" uid="uid://dovacsfio8kkv" path="res://Script/Test_map.gd" id="1_ddblf"]
+[ext_resource type="Texture2D" uid="uid://c02hk8gklv3yv" path="res://Asset_Midterm/UI/UI/ValueBar_128x16.png" id="2_04dgn"]
+[ext_resource type="PackedScene" uid="uid://bal4y7qsf3yqg" path="res://Scene/inventory.tscn" id="2_4hid6"]
+[ext_resource type="PackedScene" uid="uid://bsintr6dnceys" path="res://Scene/logs.tscn" id="2_k4ih1"]
+[ext_resource type="Texture2D" uid="uid://dc3wk2ovxupxh" path="res://Asset_Midterm/UI/UI/ValueRed_120x8.png" id="3_4hid6"]
+[ext_resource type="Texture2D" uid="uid://byicixnbvtqhe" path="res://Asset_Midterm/UI/UI/MenusBox_34x34.png" id="3_76jdi"]
+[ext_resource type="Script" uid="uid://byvatqq7vympv" path="res://Script/Health_Bar.gd" id="4_k4ih1"]
+[ext_resource type="Texture2D" uid="uid://cj181y6p4ikil" path="res://Asset_Midterm/UI/UI/BlackBigCircleBoxWithBorder_27x27.png" id="5_207jd"]
+[ext_resource type="Texture2D" uid="uid://b241iedr6hbil" path="res://Asset_Midterm/UI/Player_UI/Nymera.png" id="6_fhsea"]
+[ext_resource type="Texture2D" uid="uid://cwgdsshwp7g4x" path="res://Asset_Midterm/UI/Player_UI/Elendros new.png" id="7_76jdi"]
+[ext_resource type="PackedScene" uid="uid://curgl57dutylp" path="res://Scene/game_manager.tscn" id="8_sw748"]
+[ext_resource type="Script" uid="uid://chtw2cfquxn21" path="res://Script/setting.gd" id="9_sw748"]
+[ext_resource type="Texture2D" uid="uid://kj2uylw4q1s4" path="res://Asset_Midterm/Tile_Map/GothicVania-town-files/GothicVania-town-files/PNG/environment/layers/tileset.png" id="10_etu1s"]
+[ext_resource type="Texture2D" uid="uid://dbhunppnrcyxg" path="res://Asset_Midterm/Tile_Map/GothicVania-town-files/GothicVania-town-files/PNG/environment/props/props.png" id="11_pt3qq"]
+[ext_resource type="Texture2D" uid="uid://bsbwepfjfx2x6" path="res://Asset_Midterm/Tile_Map/GothicVania-town-files/GothicVania-town-files/PNG/environment/props/houses.png" id="12_fn7c7"]
+[ext_resource type="PackedScene" uid="uid://dkshrpsvngsmf" path="res://Scene/Main_Char_Scene/Nymera2.tscn" id="13_04dgn"]
+[ext_resource type="FontFile" uid="uid://bdl4qpamcrivq" path="res://Fonts/OBGB.TTF" id="13_rmglj"]
+[ext_resource type="Texture2D" uid="uid://dkyfygbi0dekj" path="res://Asset_Midterm/UI/UI/Button_52x14.png" id="13_sw748"]
+[ext_resource type="Texture2D" uid="uid://v7p21xrmkms4" path="res://Asset_Midterm/UI/UI/MenusIcons_34x34.png" id="17_fhsea"]
+[ext_resource type="PackedScene" uid="uid://ckk8xxea62en7" path="res://Scene/Main_Char_Scene/Elendros.tscn" id="21_rmglj"]
 
 [sub_resource type="Animation" id="Animation_etu1s"]
 resource_name = "Close"
@@ -71,62 +73,62 @@ _data = {
 &"RESET": SubResource("Animation_pt3qq")
 }
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cd4aw"]
-texture = ExtResource("11_knx5b")
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_sw748"]
+texture = ExtResource("17_fhsea")
 region_rect = Rect2(110, 7, 20, 20)
 modulate_color = Color(0.654232, 0.654232, 0.654232, 1)
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_32ksl"]
-texture = ExtResource("11_knx5b")
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_etu1s"]
+texture = ExtResource("17_fhsea")
 region_rect = Rect2(110, 7, 20, 20)
 modulate_color = Color(0.654902, 0.654902, 0.654902, 1)
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_weskx"]
-texture = ExtResource("11_knx5b")
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rmglj"]
+texture = ExtResource("17_fhsea")
 region_rect = Rect2(110, 7, 20, 20)
 modulate_color = Color(0.698039, 0.698039, 0.698039, 1)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ly7sg"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rmglj"]
 bg_color = Color(0.509804, 0.396078, 0.243137, 1)
 corner_radius_top_left = 10
 corner_radius_top_right = 10
 corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8ct16"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_etu1s"]
 bg_color = Color(0.239216, 0.196078, 0.223529, 1)
 corner_radius_top_left = 10
 corner_radius_top_right = 10
 corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rk4y1"]
-texture = ExtResource("12_6xw05")
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_pt3qq"]
+texture = ExtResource("13_sw748")
 modulate_color = Color(0.552956, 0.552956, 0.552955, 1)
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ddwa5"]
-texture = ExtResource("12_6xw05")
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fn7c7"]
+texture = ExtResource("13_sw748")
 modulate_color = Color(0.666667, 0.666667, 0.666667, 1)
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rvjc3"]
-texture = ExtResource("12_6xw05")
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7bda8"]
+texture = ExtResource("13_sw748")
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4vt11"]
-texture = ExtResource("12_6xw05")
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_oayv0"]
+texture = ExtResource("13_sw748")
 modulate_color = Color(0.666667, 0.666667, 0.666667, 1)
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wppi3"]
-texture = ExtResource("12_6xw05")
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_j0unp"]
+texture = ExtResource("13_sw748")
 modulate_color = Color(0.666667, 0.666667, 0.666667, 1)
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ikp1t"]
-texture = ExtResource("12_6xw05")
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fdavq"]
+texture = ExtResource("13_sw748")
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_al1ff"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pt3qq"]
 bg_color = Color(0.69462, 0.554322, 0.367857, 1)
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_y3p82"]
-texture = ExtResource("16_n5ya2")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rmglj"]
+texture = ExtResource("10_etu1s")
 2:0/0 = 0
 3:0/0 = 0
 4:0/0 = 0
@@ -262,8 +264,8 @@ texture = ExtResource("16_n5ya2")
 14:5/0 = 0
 15:5/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_benur"]
-texture = ExtResource("17_mejq3")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_etu1s"]
+texture = ExtResource("11_pt3qq")
 2:0/0 = 0
 3:0/0 = 0
 4:0/0 = 0
@@ -378,8 +380,8 @@ texture = ExtResource("17_mejq3")
 19:9/0 = 0
 20:9/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_knx5b"]
-texture = ExtResource("18_glkhy")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pt3qq"]
+texture = ExtResource("12_fn7c7")
 16:0/0 = 0
 17:0/0 = 0
 18:0/0 = 0
@@ -1150,25 +1152,20 @@ texture = ExtResource("18_glkhy")
 64:15/0 = 0
 65:15/0 = 0
 
-[sub_resource type="TileSet" id="TileSet_6xw05"]
+[sub_resource type="TileSet" id="TileSet_iye0r"]
 physics_layer_0/collision_layer = 1
-sources/0 = SubResource("TileSetAtlasSource_y3p82")
-sources/1 = SubResource("TileSetAtlasSource_benur")
-sources/2 = SubResource("TileSetAtlasSource_knx5b")
+sources/0 = SubResource("TileSetAtlasSource_rmglj")
+sources/1 = SubResource("TileSetAtlasSource_etu1s")
+sources/2 = SubResource("TileSetAtlasSource_pt3qq")
 
-[node name="Stage_1_in_the_city" type="Node2D"]
-script = ExtResource("1_4sj8q")
-metadata/_edit_lock_ = true
-
-[node name="Nymera" parent="." instance=ExtResource("2_j8iqv")]
-
-[node name="Elendros" parent="." groups=["Player"] instance=ExtResource("3_a3t51")]
+[node name="Map" type="Node2D"]
+script = ExtResource("1_ddblf")
 
 [node name="CanvasUI" type="CanvasLayer" parent="."]
 
 [node name="Setting" type="Node2D" parent="CanvasUI"]
 position = Vector2(556, 628)
-script = ExtResource("2_30wcp")
+script = ExtResource("9_sw748")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasUI"]
 root_node = NodePath("../Setting")
@@ -1189,7 +1186,7 @@ offset_right = 20.0
 grow_horizontal = 2
 grow_vertical = 0
 
-[node name="Inventory" parent="CanvasUI/Inventory" instance=ExtResource("3_j8iqv")]
+[node name="Inventory" parent="CanvasUI/Inventory" instance=ExtResource("2_4hid6")]
 position = Vector2(-228, -44)
 scale = Vector2(1.5, 1.5)
 
@@ -1207,12 +1204,13 @@ offset_top = 11.0
 offset_right = 170.333
 offset_bottom = 27.0
 value = 100.0
-texture_under = ExtResource("4_a3t51")
-texture_progress = ExtResource("5_8d0kc")
+texture_under = ExtResource("2_04dgn")
+texture_progress = ExtResource("3_4hid6")
 texture_progress_offset = Vector2(4, 4)
 tint_under = Color(0.666569, 0.666569, 0.666569, 1)
 tint_progress = Color(0.825381, 0.446303, 0.441366, 1)
-script = ExtResource("6_n5ya2")
+script = ExtResource("4_k4ih1")
+metadata/_edit_lock_ = true
 
 [node name="TextureRect" type="TextureRect" parent="CanvasUI/Player_show"]
 modulate = Color(0.666667, 0.666667, 0.666667, 1)
@@ -1221,7 +1219,7 @@ offset_left = 5.0
 offset_top = 4.0
 offset_right = 51.0
 offset_bottom = 49.0
-texture = ExtResource("7_mejq3")
+texture = ExtResource("5_207jd")
 metadata/_edit_lock_ = true
 
 [node name="Nymera" type="TextureRect" parent="CanvasUI/Player_show"]
@@ -1233,7 +1231,7 @@ offset_top = -22.0
 offset_right = 4644.33
 offset_bottom = 3258.0
 scale = Vector2(0.0434777, 0.0434777)
-texture = ExtResource("8_glkhy")
+texture = ExtResource("6_fhsea")
 metadata/_edit_lock_ = true
 
 [node name="Elendros" type="TextureRect" parent="CanvasUI/Player_show"]
@@ -1244,7 +1242,7 @@ offset_top = -35.3332
 offset_right = 4620.67
 offset_bottom = 3244.67
 scale = Vector2(0.0508095, 0.0508095)
-texture = ExtResource("9_y3p82")
+texture = ExtResource("7_76jdi")
 metadata/_edit_lock_ = true
 
 [node name="Setting_Bar" type="TextureRect" parent="CanvasUI/Player_show"]
@@ -1268,7 +1266,7 @@ grow_horizontal = 0
 modulate = Color(0.698039, 0.698039, 0.698039, 1)
 position = Vector2(8.49994, 29.5)
 scale = Vector2(2, 2)
-texture = ExtResource("10_benur")
+texture = ExtResource("3_76jdi")
 
 [node name="Setting_Button" type="Button" parent="CanvasUI/Setting_Button"]
 layout_mode = 0
@@ -1278,9 +1276,9 @@ offset_right = 8.0
 offset_bottom = 31.0
 scale = Vector2(2, 2)
 focus_mode = 0
-theme_override_styles/hover = SubResource("StyleBoxTexture_cd4aw")
-theme_override_styles/pressed = SubResource("StyleBoxTexture_32ksl")
-theme_override_styles/normal = SubResource("StyleBoxTexture_weskx")
+theme_override_styles/hover = SubResource("StyleBoxTexture_sw748")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_etu1s")
+theme_override_styles/normal = SubResource("StyleBoxTexture_rmglj")
 
 [node name="Setting_UI" type="Control" parent="CanvasUI"]
 layout_mode = 3
@@ -1299,11 +1297,11 @@ grow_vertical = 2
 [node name="Setting_Panel_Bg" type="Panel" parent="CanvasUI/Setting_UI"]
 layout_mode = 0
 offset_left = -143.0
-offset_top = 660.0
+offset_top = 620.0
 offset_right = -47.0
-offset_bottom = 745.0
+offset_bottom = 705.0
 scale = Vector2(3, 3)
-theme_override_styles/panel = SubResource("StyleBoxFlat_ly7sg")
+theme_override_styles/panel = SubResource("StyleBoxFlat_rmglj")
 
 [node name="Setting_panel_Bg2" type="Panel" parent="CanvasUI/Setting_UI/Setting_Panel_Bg"]
 layout_mode = 0
@@ -1311,7 +1309,7 @@ offset_left = 4.66678
 offset_top = 4.33333
 offset_right = 91.6668
 offset_bottom = 81.3333
-theme_override_styles/panel = SubResource("StyleBoxFlat_8ct16")
+theme_override_styles/panel = SubResource("StyleBoxFlat_etu1s")
 
 [node name="Resume_Button" type="Button" parent="CanvasUI/Setting_UI/Setting_Panel_Bg"]
 modulate = Color(0.666667, 0.666667, 0.666667, 1)
@@ -1321,9 +1319,9 @@ offset_top = 36.0003
 offset_right = 71.6668
 offset_bottom = 48.0003
 focus_mode = 0
-theme_override_styles/hover = SubResource("StyleBoxTexture_rk4y1")
-theme_override_styles/pressed = SubResource("StyleBoxTexture_ddwa5")
-theme_override_styles/normal = SubResource("StyleBoxTexture_rvjc3")
+theme_override_styles/hover = SubResource("StyleBoxTexture_pt3qq")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_fn7c7")
+theme_override_styles/normal = SubResource("StyleBoxTexture_7bda8")
 
 [node name="Label" type="Label" parent="CanvasUI/Setting_UI/Setting_Panel_Bg/Resume_Button"]
 layout_mode = 0
@@ -1332,7 +1330,7 @@ offset_top = 1.99966
 offset_right = 87.3335
 offset_bottom = 21.9997
 scale = Vector2(0.387, 0.387)
-theme_override_fonts/font = ExtResource("13_a0rpn")
+theme_override_fonts/font = ExtResource("13_rmglj")
 text = "Resume"
 
 [node name="Exit_Button" type="Button" parent="CanvasUI/Setting_UI/Setting_Panel_Bg"]
@@ -1343,9 +1341,9 @@ offset_top = 52.6664
 offset_right = 71.6668
 offset_bottom = 64.6664
 focus_mode = 0
-theme_override_styles/hover = SubResource("StyleBoxTexture_4vt11")
-theme_override_styles/pressed = SubResource("StyleBoxTexture_wppi3")
-theme_override_styles/normal = SubResource("StyleBoxTexture_ikp1t")
+theme_override_styles/hover = SubResource("StyleBoxTexture_oayv0")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_j0unp")
+theme_override_styles/normal = SubResource("StyleBoxTexture_fdavq")
 
 [node name="Label3" type="Label" parent="CanvasUI/Setting_UI/Setting_Panel_Bg/Exit_Button"]
 layout_mode = 0
@@ -1354,7 +1352,7 @@ offset_top = 2.00003
 offset_right = 66.667
 offset_bottom = 25.0
 scale = Vector2(0.387, 0.387)
-theme_override_fonts/font = ExtResource("13_a0rpn")
+theme_override_fonts/font = ExtResource("13_rmglj")
 text = "Exit"
 
 [node name="Panel" type="Panel" parent="CanvasUI/Setting_UI/Setting_Panel_Bg"]
@@ -1364,7 +1362,7 @@ offset_left = 17.3817
 offset_top = 27.333
 offset_right = 78.3817
 offset_bottom = 28.333
-theme_override_styles/panel = SubResource("StyleBoxFlat_al1ff")
+theme_override_styles/panel = SubResource("StyleBoxFlat_pt3qq")
 
 [node name="Label2" type="Label" parent="CanvasUI/Setting_UI/Setting_Panel_Bg"]
 modulate = Color(0.698039, 0.698039, 0.698039, 1)
@@ -1374,15 +1372,47 @@ offset_top = 10.3333
 offset_right = 112.0
 offset_bottom = 30.3333
 scale = Vector2(0.55, 0.55)
-theme_override_fonts/font = ExtResource("13_a0rpn")
+theme_override_fonts/font = ExtResource("13_rmglj")
 text = "Setting"
 vertical_alignment = 1
 
+[node name="Game_manager" parent="." instance=ExtResource("8_sw748")]
+
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
-tile_map_data = PackedByteArray("AAAAABQAAAAUAAUAAAAGABQAAAAUAAUAAAAHABQAAAAUAAUAAAAIABQAAAAUAAUAAAAJABQAAAAUAAUAAAAKABQAAAAUAAUAAAALABQAAAAUAAUAAAAMABQAAAAUAAUAAAANABQAAAAUAAUAAAAOABQAAAAUAAUAAAAPABQAAAAUAAUAAAAQABQAAAAUAAUAAAARABQAAAAUAAUAAAASABQAAAAUAAUAAAATABQAAAAUAAUAAAAUABQAAAAUAAUAAAAVABQAAAAUAAUAAAAWABQAAAAUAAUAAAAXABQAAAAUAAUAAAAYABQAAAAUAAUAAAAZABQAAAAUAAUAAAAaABQAAAAUAAUAAAAbABQAAAAUAAUAAAAcABQAAAAUAAUAAAAdABQAAAAUAAUAAAAeABQAAAAUAAUAAAAfABQAAAAUAAUAAAAgABQAAAAUAAUAAAAhABQAAAAUAAUAAAAiABQAAAAUAAUAAAAjABQAAAAUAAUAAAAkABQAAAAUAAUAAAAlABQAAAAUAAUAAAAmABQAAAAUAAUAAAAnABQAAAAUAAUAAAAoABQAAAAUAAUAAAApABQAAAAUAAUAAAAqABQAAAAUAAUAAAArABQAAAAUAAUAAAAsABQAAAAUAAUAAAAtABQAAAAUAAUAAAAuABQAAAAUAAUAAAAvABQAAAAUAAUAAAAwABQAAAAUAAUAAAAxABQAAAAUAAUAAAAyABQAAAAUAAUAAAAzABQAAAAUAAUAAAA0ABQAAAAUAAUAAAA1ABQAAAAUAAUAAAA2ABQAAAAUAAUAAAA3ABQAAAAUAAUAAAA4ABQAAAAUAAUAAAA5ABQAAAAUAAUAAAA6ABQAAAAUAAUAAAA7ABQAAAAUAAUAAAA8ABQAAAAUAAUAAAA9ABQAAAAUAAUAAAA+ABQAAAAUAAUAAAA/ABQAAAAUAAUAAABAABQAAAAUAAUAAABBABQAAAAUAAUAAABCABQAAAAUAAUAAABDABQAAAAUAAUAAABEABQAAAAUAAUAAABFABQAAAAUAAUAAABGABQAAAAUAAUAAABHABQAAAAUAAUAAABIABQAAAAUAAUAAABJABQAAAAUAAUAAABKABQAAAAUAAUAAABLABQAAAAUAAUAAABMABQAAAAUAAUAAABNABQAAAAUAAUAAABOABQAAAAUAAUAAABPABQAAAAUAAUAAABQABQAAAAUAAUAAABRABQAAAAUAAUAAABSABQAAAAUAAUAAABTABQAAAAUAAUAAABUABQAAAAUAAUAAABVABQAAAAUAAUAAABXABQAAAAUAAUAAABYABQAAAAUAAUAAABZABQAAAAUAAUAAABaABQAAAAUAAUAAABbABQAAAAUAAUAAABcABQAAAAUAAUAAABWABQAAAAUAAUAAABdABQAAAAUAAUAAABeABQAAAAUAAUAAABfABQAAAAUAAUAAABgABQAAAAUAAUAAABhABQAAAAUAAUAAABiABQAAAAUAAUAAABjABQAAAAUAAUAAABkABQAAAAUAAUAAABlABQAAAAUAAUAAABmABQAAAAUAAUAAABnABQAAAAUAAUAAABoABQAAAAUAAUAAABpABQAAAAUAAUAAABqABQAAAAUAAUAAABrABQAAAAUAAUAAABsABQAAAAUAAUAAABtABQAAAAUAAUAAABuABQAAAAUAAUAAABvABQAAAAUAAUAAABwABQAAAAUAAUAAABxABQAAAAUAAUAAAByABQAAAAUAAUAAABzABQAAAAUAAUAAAB0ABQAAAAUAAUAAAB1ABQAAAAUAAUAAAB2ABQAAAAUAAUAAAB3ABQAAAAUAAUAAAB4ABQAAAAUAAUAAAB5ABQAAAAUAAUAAAB6ABQAAAAUAAUAAAB7ABQAAAAUAAUAAAB8ABQAAAAUAAUAAAB9ABQAAAAUAAUAAAB+ABQAAAAUAAUAAAB/ABQAAAAUAAUAAACAABQAAAAUAAUAAACBABQAAAAUAAUAAACCABQAAAAUAAUAAACDABQAAAAUAAUAAACEABQAAAAUAAUAAACFABQAAAAUAAUAAACGABQAAAAUAAUAAACHABQAAAAUAAUAAACIABQAAAAUAAUAAACJABQAAAAUAAUAAACKABQAAAAUAAUAAACLABQAAAAUAAUAAACMABQAAAAUAAUAAACNABQAAAAUAAUAAACOABQAAAAUAAUAAACPABQAAAAUAAUAAACQABQAAAAUAAUAAACRABQAAAAUAAUAAACSABQAAAAUAAUAAACTABQAAAAUAAUAAACUABQAAAAUAAUAAACVABQAAAAUAAUAAACWABQAAAAUAAUAAACXABQAAAAUAAUAAACYABQAAAAUAAUAAACZABQAAAAUAAUAAACaABQAAAAUAAUAAACbABQAAAAUAAUAAACcABQAAAAUAAUAAACdABQAAAAUAAUAAACeABQAAAAUAAUAAACfABQAAAAUAAUAAACgABQAAAAUAAUAAAChABQAAAAUAAUAAACiABQAAAAUAAUAAAA=")
-tile_set = SubResource("TileSet_6xw05")
+tile_map_data = PackedByteArray("AAAAABQAAAAUAAUAAAAFABQAAAAUAAUAAAAGABQAAAAUAAUAAAAHABQAAAAUAAUAAAAIABQAAAAUAAUAAAAJABQAAAAUAAUAAAAKABQAAAAUAAUAAAALABQAAAAUAAUAAAAMABQAAAAUAAUAAAANABQAAAAUAAUAAAAOABQAAAAUAAUAAAAPABQAAAAUAAUAAAAQABQAAAAUAAUAAAARABQAAAAUAAUAAAASABQAAAAUAAUAAAATABQAAAAUAAUAAAAUABQAAAAUAAUAAAAVABQAAAAUAAUAAAAWABQAAAAUAAUAAAAXABQAAAAUAAUAAAAYABQAAAAUAAUAAAAZABQAAAAUAAUAAAAaABQAAAAUAAUAAAAbABQAAAAUAAUAAAAcABQAAAAUAAUAAAAdABQAAAAUAAUAAAAeABQAAAAUAAUAAAAfABQAAAAUAAUAAAAgABQAAAAUAAUAAAAhABQAAAAUAAUAAAAiABQAAAAUAAUAAAAjABQAAAAUAAUAAAAkABQAAAAUAAUAAAAlABQAAAAUAAUAAAAmABQAAAAUAAUAAAAnABQAAAAUAAUAAAAoABQAAAAUAAUAAAApABQAAAAUAAUAAAAqABQAAAAUAAUAAAArABQAAAAUAAUAAAAsABQAAAAUAAUAAAAtABQAAAAUAAUAAAAuABQAAAAUAAUAAAAvABQAAAAUAAUAAAAwABQAAAAUAAUAAAAxABQAAAAUAAUAAAAyABQAAAAUAAUAAAAzABQAAAAUAAUAAAA0ABQAAAAUAAUAAAA1ABQAAAAUAAUAAAA2ABQAAAAUAAUAAAA3ABQAAAAUAAUAAAA4ABQAAAAUAAUAAAA5ABQAAAAUAAUAAAA6ABQAAAAUAAUAAAA7ABQAAAAUAAUAAAA8ABQAAAAUAAUAAAA9ABQAAAAUAAUAAAA+ABQAAAAUAAUAAAA/ABQAAAAUAAUAAABAABQAAAAUAAUAAABBABQAAAAUAAUAAABCABQAAAAUAAUAAABDABQAAAAUAAUAAABEABQAAAAUAAUAAABFABQAAAAUAAUAAABGABQAAAAUAAUAAABHABQAAAAUAAUAAABIABQAAAAUAAUAAABJABQAAAAUAAUAAABKABQAAAAUAAUAAABLABQAAAAUAAUAAABMABQAAAAUAAUAAABNABQAAAAUAAUAAABOABQAAAAUAAUAAABPABQAAAAUAAUAAABQABQAAAAUAAUAAABRABQAAAAUAAUAAABSABQAAAAUAAUAAABTABQAAAAUAAUAAABUABQAAAAUAAUAAABVABQAAAAUAAUAAABXABQAAAAUAAUAAABYABQAAAAUAAUAAABZABQAAAAUAAUAAABaABQAAAAUAAUAAABbABQAAAAUAAUAAABcABQAAAAUAAUAAABWABQAAAAUAAUAAABdABQAAAAUAAUAAABeABQAAAAUAAUAAABfABQAAAAUAAUAAABgABQAAAAUAAUAAABhABQAAAAUAAUAAABiABQAAAAUAAUAAABjABQAAAAUAAUAAABkABQAAAAUAAUAAABlABQAAAAUAAUAAABmABQAAAAUAAUAAABnABQAAAAUAAUAAABoABQAAAAUAAUAAABpABQAAAAUAAUAAABqABQAAAAUAAUAAABrABQAAAAUAAUAAABsABQAAAAUAAUAAABtABQAAAAUAAUAAABuABQAAAAUAAUAAABvABQAAAAUAAUAAABwABQAAAAUAAUAAABxABQAAAAUAAUAAAByABQAAAAUAAUAAABzABQAAAAUAAUAAAB0ABQAAAAUAAUAAAB1ABQAAAAUAAUAAAB2ABQAAAAUAAUAAAB3ABQAAAAUAAUAAAB4ABQAAAAUAAUAAAB5ABQAAAAUAAUAAAB6ABQAAAAUAAUAAAB7ABQAAAAUAAUAAAB8ABQAAAAUAAUAAAB9ABQAAAAUAAUAAAB+ABQAAAAUAAUAAAB/ABQAAAAUAAUAAACAABQAAAAUAAUAAACBABQAAAAUAAUAAACCABQAAAAUAAUAAACDABQAAAAUAAUAAACEABQAAAAUAAUAAACFABQAAAAUAAUAAACGABQAAAAUAAUAAACHABQAAAAUAAUAAACIABQAAAAUAAUAAACJABQAAAAUAAUAAACKABQAAAAUAAUAAACLABQAAAAUAAUAAACMABQAAAAUAAUAAACNABQAAAAUAAUAAACOABQAAAAUAAUAAACPABQAAAAUAAUAAACQABQAAAAUAAUAAACRABQAAAAUAAUAAACSABQAAAAUAAUAAACTABQAAAAUAAUAAACUABQAAAAUAAUAAACVABQAAAAUAAUAAACWABQAAAAUAAUAAACXABQAAAAUAAUAAACYABQAAAAUAAUAAACZABQAAAAUAAUAAACaABQAAAAUAAUAAACbABQAAAAUAAUAAACcABQAAAAUAAUAAACdABQAAAAUAAUAAACeABQAAAAUAAUAAACfABQAAAAUAAUAAACgABQAAAAUAAUAAAChABQAAAAUAAUAAACiABQAAAAUAAUAAAAEABQAAAAUAAUAAAADABQAAAAUAAUAAAD//xQAAAAUAAUAAAD+/xQAAAAUAAUAAAANABIAAAAUAAUAAAAPABAAAAAUAAUAAAA=")
+tile_set = SubResource("TileSet_iye0r")
 metadata/_edit_lock_ = true
+
+[node name="Logs_all" type="Node2D" parent="."]
+
+[node name="Logs" parent="Logs_all" instance=ExtResource("2_k4ih1")]
+position = Vector2(188, 310)
+
+[node name="Logs2" parent="Logs_all" instance=ExtResource("2_k4ih1")]
+position = Vector2(245, 310)
+
+[node name="Nymera" parent="." instance=ExtResource("13_04dgn")]
+position = Vector2(96, 288)
+
+[node name="Elendros" parent="." groups=["Player"] instance=ExtResource("21_rmglj")]
+position = Vector2(109, 300)
+
+[node name="Button" type="Button" parent="."]
+offset_left = 166.0
+offset_top = 110.0
+offset_right = 264.0
+offset_bottom = 208.0
+
+[node name="Button2" type="Button" parent="."]
+offset_left = 400.0
+offset_top = 88.0
+offset_right = 592.0
+offset_bottom = 280.0
+
+[node name="Monster" type="Node2D" parent="."]
 
 [connection signal="pressed" from="CanvasUI/Setting_Button/Setting_Button" to="CanvasUI/Setting" method="_on_setting_button_pressed"]
 [connection signal="pressed" from="CanvasUI/Setting_UI/Setting_Panel_Bg/Resume_Button" to="CanvasUI/Setting" method="_on_resume_button_pressed"]
 [connection signal="pressed" from="CanvasUI/Setting_UI/Setting_Panel_Bg/Exit_Button" to="CanvasUI/Setting" method="_on_exit_button_pressed"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
