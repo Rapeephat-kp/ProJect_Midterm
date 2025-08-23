@@ -20,22 +20,6 @@ tracks/0/keys = {
 "values": [Color(1, 1, 1, 0)]
 }
 
-[sub_resource type="Animation" id="Animation_gbkcp"]
-resource_name = "disslove 1 s"
-length = 2.0
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Center Buttom/Black Scene:modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1, 2),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 0), Color(0, 0, 0, 1), Color(1, 1, 1, 0)]
-}
-
 [sub_resource type="Animation" id="Animation_7lvy5"]
 resource_name = "disslove 0.5 s"
 length = 0.5
@@ -53,6 +37,21 @@ tracks/0/keys = {
 "values": [Color(1, 1, 1, 0), Color(0, 0, 0, 1)]
 }
 
+[sub_resource type="Animation" id="Animation_gbkcp"]
+resource_name = "disslove 1 s"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Center Buttom/Black Scene:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.466667, 0.933333),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(0, 0, 0, 1), Color(1, 1, 1, 0)]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_cv4e2"]
 _data = {
 &"RESET": SubResource("Animation_jiq3i"),
@@ -60,7 +59,7 @@ _data = {
 &"disslove 1 s": SubResource("Animation_gbkcp")
 }
 
-[node name="Scene Transition" type="Node2D"]
+[node name="Scene Transition" type="CanvasLayer"]
 script = ExtResource("1_2y8kt")
 
 [node name="Center Buttom" type="Control" parent="."]
