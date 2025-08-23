@@ -20,6 +20,7 @@ boot_splash/image="uid://di8b57pn7mcu5"
 Gamemanager="*res://Script/game_manager.gd"
 JsonData="*res://Script/JSONDatat.gd"
 PlayerInventory="*res://Script/Player_Inventory.gd"
+AudioManager="*res://Scene/audio_manager.tscn"
 
 [display]
 
