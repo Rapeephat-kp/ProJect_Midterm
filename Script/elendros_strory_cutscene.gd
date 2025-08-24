@@ -1,11 +1,12 @@
 extends Node2D
 
+
 @onready var charName = $"CanvasLayer/Center Buttom/CharName"
 @onready var phase = $"CanvasLayer/Center Buttom/Phase"
 @onready var nextButton: Button = $"CanvasLayer/Center Buttom/NextButton"
 @onready var auto_button: Button = $"CanvasLayer/Center Buttom/AutoButton"
-
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
+
 
 @onready var timer: Timer = $Timer
 var autoplay = false
@@ -18,7 +19,7 @@ var curr = 0
 var end = 10
 '''
 func _ready() -> void:
-	$AnimationPlayer.play("Nymera Scene")
+	$AnimationPlayer.play("Elendros Scene")
 	
 
 func _process(delta: float) -> void:
@@ -26,16 +27,16 @@ func _process(delta: float) -> void:
 		visible_character = phase.visible_characters
 		AudioManager.set_stream("res://SFX/keyboard-typing-one-short.mp3")
 		AudioManager.play_stream()
-		
+	
 	#change style of auto button
 	var style = StyleBoxFlat.new()
-	style.bg_color = Color.html("84002d98")
+	style.bg_color = Color.html("346846db")
 	if autoplay == false:
 		$Timer.start()
 		auto_button.remove_theme_stylebox_override("normal")
 	elif autoplay == true:
 		auto_button.add_theme_stylebox_override("normal", style)
-		
+	
 func pause():
 	animation_player.pause()
 	if autoplay == true:
@@ -62,6 +63,7 @@ func transition_scene() -> void:
 	SceneTransition.play1s()
 	await get_tree().create_timer(1).timeout
 '''
+
 
 func _on_timer_timeout() -> void:
 	print("timeout")

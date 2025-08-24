@@ -1,8 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://y2k6vypt0cs6"]
+[gd_scene load_steps=3 format=3 uid="uid://y2k6vypt0cs6"]
 
 [ext_resource type="Script" uid="uid://bn3of4qf8xhpy" path="res://Script/audio_manager.gd" id="1_uux71"]
+[ext_resource type="AudioStream" uid="uid://xpfhp547m7l3" path="res://SFX/keyboard-typing-one-short.mp3" id="2_fmqd6"]
 
 [node name="AudioManager" type="Node2D"]
 script = ExtResource("1_uux71")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_fmqd6")

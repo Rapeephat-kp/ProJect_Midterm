@@ -1,0 +1,848 @@
+[gd_scene load_steps=16 format=3 uid="uid://wpfuhudkegvs"]
+
+[ext_resource type="Script" uid="uid://cpowbuqg5062u" path="res://Script/elendros_strory_cutscene.gd" id="1_nln4g"]
+[ext_resource type="Texture2D" uid="uid://gu7et57sdpp0" path="res://Elendros Story/Elendros Scene 1.JPG" id="1_wgeag"]
+[ext_resource type="Texture2D" uid="uid://gs51fdgk4wy0" path="res://Elendros Story/Elendros Scene 2.jpg" id="2_nln4g"]
+[ext_resource type="Texture2D" uid="uid://c2j5xlpu04ruo" path="res://Elendros Story/Elendros Scene 3.JPG" id="3_7j5sg"]
+[ext_resource type="Texture2D" uid="uid://v835a1c3r1td" path="res://Elendros Story/Elendros Scene 4.JPG" id="4_ahpng"]
+[ext_resource type="Texture2D" uid="uid://b2w2qi5ed2rft" path="res://Elendros Story/Elendros Scene 5.JPG" id="5_b813g"]
+[ext_resource type="FontFile" uid="uid://c17gxuusjhucp" path="res://Font/Seraphine DEMO VERSION.ttf" id="7_3581o"]
+[ext_resource type="AudioStream" uid="uid://cvp75pe1mnx2i" path="res://SFX/run.ogg" id="8_6e4ey"]
+[ext_resource type="AudioStream" uid="uid://bhon07bgqsgb7" path="res://SFX/crowd-panic-scream.ogg" id="9_nln4g"]
+[ext_resource type="AudioStream" uid="uid://dap7lxt1grq0e" path="res://SFX/earth-rumble.ogg" id="10_7j5sg"]
+[ext_resource type="AudioStream" uid="uid://bae70sj61q086" path="res://SFX/wood-break.ogg" id="10_nln4g"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7tmix"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="Animation" id="Animation_wgeag"]
+resource_name = "Elendros Scene"
+length = 90.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/Center Buttom/CharName:text")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.466667, 4.44495, 17.3907, 18.1834, 19.7757, 22.7017, 25.7486, 27.8876, 31.9167, 32.6318, 35.1333, 38.9146, 40.1286, 41.9447, 43.7842, 47.2277, 49.16, 54.3762),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": ["Villager", "Elendros", "Elendros's Father", "Elendros's Mother", "Young Elendros", "Elendros's Father", "Young Elendros", "Elendros's Mother", "", "Elendros's Father", "Elendros's Mother", "", "?????", "Young Elendros", "Elendros's Mother", "Elendros's Father", "Young Elendros", "Elendros"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CanvasLayer/Center Buttom/CharName:visible_ratio")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CanvasLayer/Control Center/ElendrosScene1:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.266667, 34.9487),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CanvasLayer/Center Buttom/Phase:text")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.466667, 1.44362, 4.44495, 9.00007, 11.9655, 17.3667, 18.1834, 19.7757, 22.7, 25.7496, 27.8887, 32.6333, 35.1333, 40.1286, 41.9447, 43.7842, 47.2333, 49.1657, 54.3818, 59.5096, 63.6896, 70.9795, 77.3679, 84.6466),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": ["Elendros !", "That brat again—he’s stealing things !", "Hah! Catch me if you can!", "[ They’re back again… ]", "[ The “Unders,” from the Toxic Underground City… ]", "I’m home!", "Welcome back, dear.", "Mom, you cooked so much today!", "Wow, it all looks delicious.", "Mom’s cooking is the best !", "Come on, everyone, eat while it’s still hot.", "What on earth is happening?", "Mushrooms are sprouting everywhere !
+", "###########
+", "I’m scared…
+", "Don’t be afraid. Dad and Mom will protect you.
+", "Elendros ! Run ! Get out of here ! !
+", "No ! You have to come with me !
+
+", "[ From that day on… I was the only one left alive. ]
+
+", "[ And now, it’s happening again. ]", "[ Giant mushrooms erupt from underground, and the toxic gas from the Underground City seeps up through the cracks. ]", "[ That’s why the “Unders” come up—they need the gas to breathe. ]", "[ But this time will be different. I’ve grown stronger. I can fight them now. ]", "[ The “Unders”… will pay for what they did. ]"]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("CanvasLayer/Control Center/Black Scene:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.0666667, 0.733333, 6.88408, 7.37794, 9, 9.78121, 15.0361, 15.53, 20.7667, 21.4, 31.4329, 31.9268, 40.0333, 40.8145, 51.606, 52.1481, 54.3333, 55.4333, 76.5913, 77.3528, 78.0728),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("CanvasLayer/Center Buttom/Phase:visible_ratio")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0.453483, 1, 1.06667, 1.13333, 1.45043, 2.50514, 2.78505, 4.23333, 4.3, 4.36667, 4.44495, 4.99077, 5.33333, 6.83333, 6.93333, 7.00529, 9.00007, 11.7, 11.8, 11.908, 11.9655, 14.8333, 14.9333, 15.0089, 17.3667, 17.3718, 17.9, 18, 18.108, 18.1667, 19.5667, 19.6333, 19.6667, 19.7746, 19.9565, 20.1933, 22.2333, 22.3333, 22.4333, 22.7, 22.8667, 23.1194, 24.4667, 25.526, 25.6333, 25.7333, 27.6333, 27.7667, 27.8333, 27.9, 28.4842, 28.843, 31.0333, 31.1333, 31.2333, 32.6333, 34.9206, 35.0206, 35.1447, 38.7441, 38.8441, 38.9176, 40.0159, 40.14, 41.6, 41.7, 41.8319, 41.956, 43.4161, 43.5161, 43.6714, 43.7955, 44.9812, 45.3667, 47.0667, 47.1667, 47.239, 47.676, 47.9754, 48.1533, 48.4527, 49, 49.1, 49.1714, 49.4402, 49.7439, 51.2667, 51.3667, 51.5667, 54.3667, 55.6107, 56.9907, 59.2667, 59.3667, 59.4944, 60.9544, 61.4244, 63.4333, 63.5333, 63.6744, 70.7333, 70.8333, 70.9643, 73.5096, 74.3496, 75.9, 76, 76.1182, 77.3528, 79.4947, 80.3333, 82.3168, 83.1, 84.3667, 84.4667, 84.6314, 86.7733, 87),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 1.0, 1.0, 0.0, 0.0, 0.403142, 0.403142, 1.0, 1.0, 0.0, 0.0, 0.238515, 0.238515, 1.0, 1.0, 0.0, 0.0, 1.0, 1.0, 0.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 1.0, 1.0, 0.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.170788, 0.170788, 1.0, 1.0, 0.0, 0.0, 0.170788, 0.170788, 1.0, 1.0, 0.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.217123, 0.217123, 1.0, 1.0, 0.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 1.0, 1.0, 1.0, 0.0, 1.0, 1.0, 1.0, 0.0, 0.362454, 0.362454, 1.0, 1.0, 0.0, 0.299302, 0.299302, 0.471571, 0.471571, 1.0, 1.0, 0.0, 0.179782, 0.179782, 1.0, 1.0, 0.0, 0.0, 0.355433, 0.355433, 1.0, 1.0, 0.0, 0.297959, 0.297959, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 0.515697, 0.515697, 1.0, 1.0, 0.0, 0.0, 0.433958, 0.433958, 0.712326, 0.712326, 1.0, 1.0, 0.0, 1.0, 1.0]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("CanvasLayer/Center Buttom:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 0.737755, 6.88838, 7.38224, 9.0043, 9.7855, 15.0404, 15.5343, 17.1563, 17.9376, 31.4372, 31.9311, 32.1521, 32.6333, 51.6061, 52.1481, 54.3333, 55.4333, 76.6, 77.3614, 78.0814),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/7/type = "method"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath(".")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(1.03333, 4.26667, 6.9, 11.7667, 14.9, 17.9333, 19.6, 22.3, 24.8, 27.7, 31.1, 34.9667, 38.8, 41.6333, 43.5, 47.1, 49.0333, 51.3333, 59.3333, 63.5, 70.8, 75.9667, 84.4, 86.8667),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"values": [{
+"args": [],
+"method": &"pause"
+}, {
+"args": [],
+"method": &"pause"
+}, {
+"args": [],
+"method": &"pause"
+}, {
+"args": [],
+"method": &"pause"
+}, {
+"args": [],
+"method": &"pause"
+}, {
+"args": [],
+"method": &"pause"
+}, {
+"args": [],
+"method": &"pause"
+}, {
+"args": [],
+"method": &"pause"
+}, {
+"args": [],
+"method": &"pause"
+}, {
+"args": [],
+"method": &"pause"
+}, {
+"args": [],
+"method": &"pause"
+}, {
+"args": [],
+"method": &"pause"
+}, {
+"args": [],
+"method": &"pause"
+}, {
+"args": [],
+"method": &"pause"
+}, {
+"args": [],
+"method": &"pause"
+}, {
+"args": [],
+"method": &"pause"
+}, {
+"args": [],
+"method": &"pause"
+}, {
+"args": [],
+"method": &"pause"
+}, {
+"args": [],
+"method": &"pause"
+}, {
+"args": [],
+"method": &"pause"
+}, {
+"args": [],
+"method": &"pause"
+}, {
+"args": [],
+"method": &"pause"
+}, {
+"args": [],
+"method": &"pause"
+}, {
+"args": [],
+"method": &"pause"
+}]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("CanvasLayer/Control Center/ElendrosScene2:visible")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 7.3779, 34.9487, 52.5847, 77.3428),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [false, true, false, true, false]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("AudioStreamPlayer:stream")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(7.37794, 31.9177),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [ExtResource("10_7j5sg"), ExtResource("10_nln4g")]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("AudioStreamPlayer:playing")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(7.37794, 10.4907, 31.9177, 35.6953, 35.7136, 39.4915),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [true, false, true, true, true, false]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("AudioStreamPlayer2:stream")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(7.38525),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("9_nln4g")]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("AudioStreamPlayer2:playing")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(7.4, 10.4688),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("AudioStreamPlayer:volume_db")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(10.1537),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-11.277]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("AudioStreamPlayer2:volume_db")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(10.1537),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-13.783]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("CanvasLayer/Control Center/Label:visible")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(0, 15.758, 52.4058),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, true]
+}
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("CanvasLayer/Control Center/Label:modulate")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(15.7527, 16.2333, 17.3404, 17.8333, 52.4005, 52.8811, 54.3333, 54.5667),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/17/type = "value"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("CanvasLayer/Control Center/ElendrosScene3:visible")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"times": PackedFloat32Array(0, 20.5097, 34.9487),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
+}
+tracks/18/type = "value"
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/path = NodePath("CanvasLayer/Control Center/ElendrosScene4:visible")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = {
+"times": PackedFloat32Array(0, 34.9487, 52.5796),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
+}
+tracks/19/type = "value"
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/path = NodePath("CanvasLayer/Control Center/Label:text")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/keys = {
+"times": PackedFloat32Array(15.6596, 52.3073),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": ["Ten Years Ago........", "Ten Years Later........"]
+}
+tracks/20/type = "value"
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/path = NodePath("CanvasLayer/Control Center/ElendrosScene5:visible")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/keys = {
+"times": PackedFloat32Array(0, 77.3428),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+
+[sub_resource type="Animation" id="Animation_3nisc"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/Control Center/ElendrosScene1:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CanvasLayer/Control Center/ElendrosScene3:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CanvasLayer/Control Center/ElendrosScene4:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.001),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CanvasLayer/Control Center/ElendrosScene5:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.001),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("CanvasLayer/Control Center/Black Scene:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("CanvasLayer/Control Center/Black Scene:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("AudioStreamPlayer:playing")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("AudioStreamPlayer:stream_paused")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("CanvasLayer/Center Buttom/CharName:text")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [""]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("CanvasLayer/Center Buttom/Phase:text")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [""]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("CanvasLayer/Center Buttom/Phase:visible_ratio")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("CanvasLayer/Control Center/ElendrosScene2:visible")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("CanvasLayer/Center Buttom:modulate")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("AudioStreamPlayer2:stream")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("8_6e4ey")]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("AudioStreamPlayer2:playing")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("CanvasLayer/Control Center/ElendrosScene4:position")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 0)]
+}
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("CanvasLayer/Center Buttom/CharName:visible_ratio")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/17/type = "value"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("AudioStreamPlayer:stream")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("10_7j5sg")]
+}
+tracks/18/type = "value"
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/path = NodePath("AudioStreamPlayer:volume_db")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-11.277]
+}
+tracks/19/type = "value"
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/path = NodePath("AudioStreamPlayer2:volume_db")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-13.783]
+}
+tracks/20/type = "value"
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/path = NodePath("CanvasLayer/Control Center/Label:visible")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/21/type = "value"
+tracks/21/imported = false
+tracks/21/enabled = true
+tracks/21/path = NodePath("CanvasLayer/Control Center/Label:modulate")
+tracks/21/interp = 1
+tracks/21/loop_wrap = true
+tracks/21/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/22/type = "value"
+tracks/22/imported = false
+tracks/22/enabled = true
+tracks/22/path = NodePath("CanvasLayer/Control Center/Label:text")
+tracks/22/interp = 1
+tracks/22/loop_wrap = true
+tracks/22/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["Ten Years Ago........"]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_6fu1o"]
+_data = {
+&"Elendros Scene": SubResource("Animation_wgeag"),
+&"RESET": SubResource("Animation_3nisc")
+}
+
+[node name="Elendros Strory Cutscene" type="Node2D"]
+script = ExtResource("1_nln4g")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Control Center" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+metadata/_edit_use_anchors_ = true
+
+[node name="ElendrosScene1" type="Sprite2D" parent="CanvasLayer/Control Center"]
+visible = false
+scale = Vector2(0.845, 0.845)
+texture = ExtResource("1_wgeag")
+
+[node name="ElendrosScene2" type="Sprite2D" parent="CanvasLayer/Control Center"]
+scale = Vector2(0.845, 0.845)
+texture = ExtResource("2_nln4g")
+
+[node name="ElendrosScene3" type="Sprite2D" parent="CanvasLayer/Control Center"]
+visible = false
+scale = Vector2(0.845, 0.845)
+texture = ExtResource("3_7j5sg")
+
+[node name="ElendrosScene4" type="Sprite2D" parent="CanvasLayer/Control Center"]
+visible = false
+position = Vector2(1, 0)
+scale = Vector2(0.84, 0.84)
+texture = ExtResource("4_ahpng")
+
+[node name="ElendrosScene5" type="Sprite2D" parent="CanvasLayer/Control Center"]
+visible = false
+scale = Vector2(0.845, 0.845)
+texture = ExtResource("5_b813g")
+
+[node name="Black Scene" type="Panel" parent="CanvasLayer/Control Center"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -960.0
+offset_top = -540.0
+offset_right = 960.0
+offset_bottom = 540.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_7tmix")
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="CanvasLayer/Control Center"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -73.5
+offset_top = -17.5
+offset_right = 73.5
+offset_bottom = 17.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("7_3581o")
+theme_override_font_sizes/font_size = 60
+text = "Ten Years Ago........"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Center Buttom" type="Control" parent="CanvasLayer"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 3
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+metadata/_edit_use_anchors_ = true
+
+[node name="Panel" type="Panel" parent="CanvasLayer/Center Buttom"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -884.0
+offset_top = -337.0
+offset_right = 632.0
+offset_bottom = -39.0
+grow_horizontal = 2
+grow_vertical = 0
+metadata/_edit_use_anchors_ = true
+
+[node name="CharName" type="Label" parent="CanvasLayer/Center Buttom"]
+layout_mode = 0
+offset_left = -843.0
+offset_top = -306.0
+offset_right = -669.0
+offset_bottom = -226.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("7_3581o")
+theme_override_font_sizes/font_size = 60
+visible_characters = 0
+visible_ratio = 0.0
+metadata/_edit_use_anchors_ = true
+
+[node name="NextButton" type="Button" parent="CanvasLayer/Center Buttom"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 647.0
+offset_top = -337.0
+offset_right = 911.0
+offset_bottom = -249.0
+grow_horizontal = 0
+grow_vertical = 2
+focus_mode = 0
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 0
+theme_override_fonts/font = ExtResource("7_3581o")
+theme_override_font_sizes/font_size = 50
+action_mode = 0
+text = "  Next"
+alignment = 0
+icon_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Phase" type="RichTextLabel" parent="CanvasLayer/Center Buttom"]
+layout_mode = 0
+offset_left = -770.0
+offset_top = -208.0
+offset_right = 605.0
+offset_bottom = -69.0
+theme_override_fonts/normal_font = ExtResource("7_3581o")
+theme_override_font_sizes/normal_font_size = 40
+scroll_active = false
+visible_characters = 0
+visible_ratio = 0.0
+metadata/_edit_use_anchors_ = true
+
+[node name="AutoButton" type="Button" parent="CanvasLayer/Center Buttom"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 647.0
+offset_top = -236.0
+offset_right = 911.0
+offset_bottom = -148.0
+grow_horizontal = 0
+grow_vertical = 2
+focus_mode = 0
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 0
+theme_override_fonts/font = ExtResource("7_3581o")
+theme_override_font_sizes/font_size = 50
+text = "Auto Play"
+icon_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Top Right" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -40.0
+offset_bottom = 40.0
+grow_horizontal = 0
+metadata/_edit_use_anchors_ = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_6fu1o")
+}
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("10_7j5sg")
+volume_db = -11.277
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_6e4ey")
+volume_db = -13.783
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 3.0
+autostart = true
+
+[connection signal="pressed" from="CanvasLayer/Center Buttom/NextButton" to="." method="_on_next_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/Center Buttom/AutoButton" to="." method="_on_auto_button_pressed"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
