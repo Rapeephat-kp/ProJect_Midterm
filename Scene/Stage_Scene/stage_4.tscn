@@ -676,7 +676,7 @@ texture = ExtResource("2_cxndp")
 sources/0 = SubResource("TileSetAtlasSource_nex8c")
 sources/1 = SubResource("TileSetAtlasSource_cxndp")
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7srci"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1q6cl"]
 texture = ExtResource("1_nex8c")
 0:0/0 = 0
 4:0/0 = 0
@@ -1007,7 +1007,7 @@ texture = ExtResource("1_nex8c")
 8:33/0 = 0
 9:33/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0nguc"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2vi4a"]
 texture = ExtResource("2_cxndp")
 0:0/0 = 0
 6:0/0 = 0
@@ -1478,7 +1478,7 @@ texture = ExtResource("2_cxndp")
 8:33/0 = 0
 9:33/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_s3jh5"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_yvnx5"]
 texture = ExtResource("3_1q6cl")
 2:0/0 = 0
 3:0/0 = 0
@@ -1640,9 +1640,9 @@ texture = ExtResource("3_1q6cl")
 
 [sub_resource type="TileSet" id="TileSet_ya18l"]
 physics_layer_0/collision_layer = 1
-sources/0 = SubResource("TileSetAtlasSource_7srci")
-sources/1 = SubResource("TileSetAtlasSource_0nguc")
-sources/2 = SubResource("TileSetAtlasSource_s3jh5")
+sources/0 = SubResource("TileSetAtlasSource_1q6cl")
+sources/1 = SubResource("TileSetAtlasSource_2vi4a")
+sources/2 = SubResource("TileSetAtlasSource_yvnx5")
 
 [sub_resource type="Gradient" id="Gradient_yvnx5"]
 offsets = PackedFloat32Array(0.0433071, 1)

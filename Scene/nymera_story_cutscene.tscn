@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://bucntrh77oq4f" path="res://Nymera story/Nymera Scene 4.JPG" id="5_jefor"]
 [ext_resource type="Texture2D" uid="uid://cdrncb835xq6d" path="res://Nymera story/Nymera Scene 5.JPG" id="6_ypn4r"]
 [ext_resource type="Texture2D" uid="uid://cbicagshhdkdo" path="res://Nymera story/Nymera Scene 6.JPG" id="7_quvvj"]
-[ext_resource type="FontFile" uid="uid://c17gxuusjhucp" path="res://Font/Seraphine DEMO VERSION.ttf" id="8_a0elx"]
+[ext_resource type="FontFile" uid="uid://c17gxuusjhucp" path="res://SFX/Seraphine DEMO VERSION.ttf" id="8_a0elx"]
 [ext_resource type="AudioStream" uid="uid://bsvxdlf4cbcro" path="res://SFX/door open.ogg" id="9_a0elx"]
 [ext_resource type="AudioStream" uid="uid://cvp75pe1mnx2i" path="res://SFX/run.ogg" id="9_jefor"]
 [ext_resource type="AudioStream" uid="uid://dt4lt1mxvadj8" path="res://SFX/breathing female.ogg" id="11_ypn4r"]
@@ -637,6 +637,7 @@ scale = Vector2(0.845, 0.845)
 texture = ExtResource("6_ypn4r")
 
 [node name="NymeraScene6" type="Sprite2D" parent="CanvasLayer/Control Center"]
+visible = false
 scale = Vector2(0.845, 0.845)
 texture = ExtResource("7_quvvj")
 
@@ -763,7 +764,7 @@ libraries = {
 }
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("11_ypn4r")
+stream = ExtResource("9_a0elx")
 volume_db = -27.566
 
 [node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="."]

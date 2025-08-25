@@ -299,10 +299,12 @@ metadata/_edit_lock_ = true
 [node name="Camera2D" type="Camera2D" parent="Idel_Sprite"]
 position = Vector2(1, -20)
 zoom = Vector2(3, 3)
+limit_left = -100
+limit_smoothed = true
+position_smoothing_enabled = true
+rotation_smoothing_enabled = true
 drag_horizontal_enabled = true
 drag_vertical_enabled = true
-drag_top_margin = 0.8
-drag_bottom_margin = 0.8
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." groups=["Player"]]
 position = Vector2(1, 0)
