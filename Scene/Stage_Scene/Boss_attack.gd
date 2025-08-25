@@ -25,25 +25,21 @@ func show_warning(telegraph_time: float):
 			alpha = fade_in_alpha
 		sprite.modulate.a = alpha
 		await get_tree().create_timer(0.02).timeout
-
-	# รอ telegraph_time ให้ผู้เล่นเห็นตำแหน่ง
+		
 	await get_tree().create_timer(telegraph_time).timeout
-
-	# Fade out: fade_in_alpha -> 0
+	
 	while alpha > 0.0:
 		alpha -= fade_step
 		if alpha < 0.0:
 			alpha = 0.0
 		sprite.modulate.a = alpha
 		await get_tree().create_timer(0.02).timeout
-
-	# เปิด hitbox + แสดง effect
+		
 	sprite.modulate.a = 0
 	hitbox.disabled = false
 	effect.visible = true
-	effect.play("attack_1")  # ตรวจสอบชื่อ animation
-
-	# รอ 0.5 วิ ให้ hitbox + effect ทำงาน
+	effect.play("attack_1") 
+	
 	await get_tree().create_timer(0.5).timeout
 	hitbox.disabled = true
 	effect.stop()
