@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://bucntrh77oq4f" path="res://Nymera story/Nymera Scene 4.JPG" id="5_jefor"]
 [ext_resource type="Texture2D" uid="uid://cdrncb835xq6d" path="res://Nymera story/Nymera Scene 5.JPG" id="6_ypn4r"]
 [ext_resource type="Texture2D" uid="uid://cbicagshhdkdo" path="res://Nymera story/Nymera Scene 6.JPG" id="7_quvvj"]
-[ext_resource type="FontFile" uid="uid://c17gxuusjhucp" path="res://SFX/Seraphine DEMO VERSION.ttf" id="8_a0elx"]
+[ext_resource type="FontFile" uid="uid://c17gxuusjhucp" path="res://Font/Seraphine DEMO VERSION.ttf" id="8_a0elx"]
 [ext_resource type="AudioStream" uid="uid://bsvxdlf4cbcro" path="res://SFX/door open.ogg" id="9_a0elx"]
 [ext_resource type="AudioStream" uid="uid://cvp75pe1mnx2i" path="res://SFX/run.ogg" id="9_jefor"]
 [ext_resource type="AudioStream" uid="uid://dt4lt1mxvadj8" path="res://SFX/breathing female.ogg" id="11_ypn4r"]

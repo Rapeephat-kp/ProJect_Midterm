@@ -12,11 +12,12 @@ func _ready() -> void:
 		$CanvasUI/Player_show/Nymera.visible = true
 func _process(delta: float):
 	$CanvasUI/Inventory/Inventory.initialize_inventory()
-
+	$CanvasUI/Player_show/Coins/Coin_Amount.text = str(Gamemanager.get_coin())
+	$CanvasUI/Player_show/Coins/Coin_Amount2.text = str(Gamemanager.get_coin())
 
 func _on_button_pressed() -> void:
 	get_tree().change_scene_to_file("res://Scene/stage_1_in_the_city.tscn")
 
 
 func _on_button_2_pressed() -> void:
-	get_tree().change_scene_to_file("res://Scene/store.tscn")
+	get_tree().change_scene_to_file("res://Scene/Stage_Scene/stage_6.tscn")

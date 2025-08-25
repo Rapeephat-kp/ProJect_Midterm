@@ -1,4 +1,4 @@
-[gd_scene load_steps=42 format=4 uid="uid://cgve34lntntl0"]
+[gd_scene load_steps=44 format=4 uid="uid://cgve34lntntl0"]
 
 [ext_resource type="Script" uid="uid://dovacsfio8kkv" path="res://Script/Test_map.gd" id="1_ddblf"]
 [ext_resource type="Texture2D" uid="uid://c02hk8gklv3yv" path="res://Asset_Midterm/UI/UI/ValueBar_128x16.png" id="2_04dgn"]
@@ -13,14 +13,16 @@
 [ext_resource type="PackedScene" uid="uid://curgl57dutylp" path="res://Scene/game_manager.tscn" id="8_sw748"]
 [ext_resource type="Script" uid="uid://chtw2cfquxn21" path="res://Script/setting.gd" id="9_sw748"]
 [ext_resource type="Texture2D" uid="uid://kj2uylw4q1s4" path="res://Asset_Midterm/Tile_Map/GothicVania-town-files/GothicVania-town-files/PNG/environment/layers/tileset.png" id="10_etu1s"]
+[ext_resource type="Texture2D" uid="uid://bhmhd4fyqm4g" path="res://Asset_Midterm/UI/UI/CoinIcon_16x18.png" id="10_pt3qq"]
 [ext_resource type="Texture2D" uid="uid://dbhunppnrcyxg" path="res://Asset_Midterm/Tile_Map/GothicVania-town-files/GothicVania-town-files/PNG/environment/props/props.png" id="11_pt3qq"]
 [ext_resource type="Texture2D" uid="uid://bsbwepfjfx2x6" path="res://Asset_Midterm/Tile_Map/GothicVania-town-files/GothicVania-town-files/PNG/environment/props/houses.png" id="12_fn7c7"]
 [ext_resource type="PackedScene" uid="uid://dkshrpsvngsmf" path="res://Scene/Main_Char_Scene/Nymera2.tscn" id="13_04dgn"]
 [ext_resource type="FontFile" uid="uid://bdl4qpamcrivq" path="res://Fonts/OBGB.TTF" id="13_rmglj"]
 [ext_resource type="Texture2D" uid="uid://dkyfygbi0dekj" path="res://Asset_Midterm/UI/UI/Button_52x14.png" id="13_sw748"]
 [ext_resource type="Texture2D" uid="uid://v7p21xrmkms4" path="res://Asset_Midterm/UI/UI/MenusIcons_34x34.png" id="17_fhsea"]
-[ext_resource type="PackedScene" uid="uid://bwv23c34bale6" path="res://Scene/Monster_Scene/flying_eye.tscn" id="21_etu1s"]
 [ext_resource type="PackedScene" uid="uid://ckk8xxea62en7" path="res://Scene/Main_Char_Scene/Elendros.tscn" id="21_rmglj"]
+[ext_resource type="PackedScene" uid="uid://6se7shbfwfuh" path="res://Scene/item/coin.tscn" id="22_etu1s"]
+[ext_resource type="PackedScene" uid="uid://bdjmgj6vn70u6" path="res://Scene/item/barrel.tscn" id="23_pt3qq"]
 
 [sub_resource type="Animation" id="Animation_etu1s"]
 resource_name = "Close"
@@ -1252,6 +1254,43 @@ offset_left = 6.66667
 offset_right = 46.6667
 offset_bottom = 40.0
 
+[node name="Coins" type="TextureRect" parent="CanvasUI/Player_show"]
+layout_mode = 0
+offset_left = 51.6667
+offset_top = 29.3333
+offset_right = 67.6667
+offset_bottom = 47.3333
+texture = ExtResource("10_pt3qq")
+
+[node name="Label" type="Label" parent="CanvasUI/Player_show/Coins"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = -4.33333
+offset_right = 56.0
+offset_bottom = 18.6667
+theme_override_colors/font_color = Color(0.572549, 0.454902, 0.254902, 1)
+text = ": "
+
+[node name="Coin_Amount" type="Label" parent="CanvasUI/Player_show/Coins"]
+layout_mode = 0
+offset_left = 22.3333
+offset_right = 115.333
+offset_bottom = 16.0
+theme_override_colors/font_color = Color(0.447059, 0.356863, 0.196078, 1)
+theme_override_fonts/font = ExtResource("13_rmglj")
+theme_override_font_sizes/font_size = 12
+text = "144"
+
+[node name="Coin_Amount2" type="Label" parent="CanvasUI/Player_show/Coins"]
+layout_mode = 0
+offset_left = 23.0
+offset_right = 116.0
+offset_bottom = 16.0
+theme_override_colors/font_color = Color(0.847475, 0.711393, 0.48763, 1)
+theme_override_fonts/font = ExtResource("13_rmglj")
+theme_override_font_sizes/font_size = 12
+text = "144"
+
 [node name="Setting_Button" type="Control" parent="CanvasUI"]
 layout_mode = 3
 anchors_preset = 1
@@ -1298,9 +1337,9 @@ grow_vertical = 2
 [node name="Setting_Panel_Bg" type="Panel" parent="CanvasUI/Setting_UI"]
 layout_mode = 0
 offset_left = -143.0
-offset_top = 620.0
+offset_top = -82.0
 offset_right = -47.0
-offset_bottom = 705.0
+offset_bottom = 3.0
 scale = Vector2(3, 3)
 theme_override_styles/panel = SubResource("StyleBoxFlat_rmglj")
 
@@ -1399,21 +1438,25 @@ position = Vector2(96, 288)
 position = Vector2(109, 300)
 
 [node name="Button" type="Button" parent="."]
-offset_left = 166.0
-offset_top = 110.0
-offset_right = 264.0
-offset_bottom = 208.0
+offset_left = 224.0
+offset_top = 147.0
+offset_right = 322.0
+offset_bottom = 245.0
+metadata/_edit_lock_ = true
 
 [node name="Button2" type="Button" parent="."]
-offset_left = 400.0
+offset_left = 408.0
 offset_top = 88.0
-offset_right = 592.0
+offset_right = 600.0
 offset_bottom = 280.0
 
 [node name="Monster" type="Node2D" parent="."]
 
-[node name="Flying_eye" parent="." instance=ExtResource("21_etu1s")]
-position = Vector2(217, 288)
+[node name="Coin" parent="Monster" instance=ExtResource("22_etu1s")]
+position = Vector2(328, 304)
+
+[node name="Barrel" parent="." instance=ExtResource("23_pt3qq")]
+position = Vector2(216, 306)
 
 [connection signal="pressed" from="CanvasUI/Setting_Button/Setting_Button" to="CanvasUI/Setting" method="_on_setting_button_pressed"]
 [connection signal="pressed" from="CanvasUI/Setting_UI/Setting_Panel_Bg/Resume_Button" to="CanvasUI/Setting" method="_on_resume_button_pressed"]
