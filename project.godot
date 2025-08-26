@@ -21,6 +21,7 @@ Gamemanager="*res://Script/game_manager.gd"
 JsonData="*res://Script/JSONDatat.gd"
 PlayerInventory="*res://Script/Player_Inventory.gd"
 AudioManager="*res://Scene/audio_manager.tscn"
+SceneTransition="*res://Scene/scene_transition.tscn"
 
 [display]
 

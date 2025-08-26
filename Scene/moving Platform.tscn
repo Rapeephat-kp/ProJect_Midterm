@@ -1,0 +1,80 @@
+[gd_scene load_steps=7 format=3 uid="uid://cjuqyquignn6p"]
+
+[ext_resource type="Script" uid="uid://c6an00gebma2p" path="res://Script/Moving platform.gd" id="1_ghgc8"]
+[ext_resource type="Texture2D" uid="uid://bjoc2gctj3hdg" path="res://Asset_Midterm/Tile_Map/Fantasy Swamp Forest/Free/Terrain-and-Props-OLD.png" id="2_n7huj"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_goowj"]
+size = Vector2(76, 14)
+
+[sub_resource type="Animation" id="Animation_n7huj"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PathFollow2D:progress_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_xvro2"]
+resource_name = "move"
+length = 2.0
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PathFollow2D:progress_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(-1.55, -1.55),
+"update": 0,
+"values": [0.0, 1.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_goowj"]
+_data = {
+&"RESET": SubResource("Animation_n7huj"),
+&"move": SubResource("Animation_xvro2")
+}
+
+[node name="Path2D" type="Path2D"]
+script = ExtResource("1_ghgc8")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="."]
+position = Vector2(5.62414, 0)
+progress = 5.59344
+rotates = false
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="PathFollow2D"]
+remote_path = NodePath("../../AnimatableBody2D")
+
+[node name="AnimatableBody2D" type="AnimatableBody2D" parent="."]
+position = Vector2(5.62414, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="AnimatableBody2D"]
+position = Vector2(-19, 0)
+texture = ExtResource("2_n7huj")
+region_enabled = true
+region_rect = Rect2(77.2582, -0.510917, 38.9719, 15.6636)
+
+[node name="Sprite2D2" type="Sprite2D" parent="AnimatableBody2D"]
+position = Vector2(19, 0)
+texture = ExtResource("2_n7huj")
+region_enabled = true
+region_rect = Rect2(77.2582, -0.510917, 38.9719, 15.6636)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatableBody2D"]
+shape = SubResource("RectangleShape2D_goowj")
+one_way_collision = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_goowj")
+}

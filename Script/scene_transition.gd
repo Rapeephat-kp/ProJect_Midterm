@@ -1,6 +1,7 @@
 extends CanvasLayer
 
 
-func play1s():
+func change_scene(target : String):
 	$AnimationPlayer.play("disslove 1 s")
-	print("play 1s")
+	get_tree().change_scene_to_file(target)
+	$AnimationPlayer.play_backwards("disslove 1 s")
