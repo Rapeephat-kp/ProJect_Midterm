@@ -10,8 +10,7 @@ extends Node2D
 
 func _ready():
 	hitbox.add_to_group("Mon_hit")
-	sprite.texture = preload("res://Asset_Midterm/BG/1x1_#FFFFFFFF.png")
-	sprite.scale = Vector2(50, 50)
+	sprite.scale = Vector2(1.04, 1.04)
 	sprite.modulate.a = 0.0
 	hitbox.disabled = true
 	effect.visible = false

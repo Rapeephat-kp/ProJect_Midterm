@@ -1,6 +1,6 @@
 extends Node2D
 
-@export var coin_drop_rate: float = 0.3   
+@export var coin_drop_rate: float = 0.4  
 var hit_count = 3
 var CoinScene = preload("res://Scene/item/coin.tscn")
 

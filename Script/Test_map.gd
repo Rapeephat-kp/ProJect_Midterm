@@ -1,7 +1,6 @@
 extends Node2D
 
 func _ready() -> void:
-	
 	print(Gamemanager.get_p())
 	var p_value = Gamemanager.get_p()
 	if p_value == 1:
