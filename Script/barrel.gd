@@ -2,18 +2,20 @@ extends Node2D
 
 @export var coin_drop_rate: float = 0.4  
 var hit_count = 3
+var Box_break = false
 var CoinScene = preload("res://Scene/item/coin.tscn")
 
 func _on_area_2d_area_entered(area: Area2D) -> void:
 	if area.is_in_group("Player_hit"):
 		hit_count -= 1
 	
-	if hit_count <= 0:
+	if hit_count <= 0 && !Box_break:
 		$AnimatedSprite2D.play("broke")
 		
 		# สุ่มโอกาสออกเหรียญ
 		if randf() < coin_drop_rate:
 			spawn_coin()
+		Box_break = true
 		
 		await get_tree().create_timer(0.5).timeout
 		$AnimatedSprite2D.visible = false
