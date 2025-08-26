@@ -1069,6 +1069,7 @@ frame_progress = 0.685349
 metadata/_edit_lock_ = true
 
 [node name="Camera2D" type="Camera2D" parent="Idle_Sprite"]
+visible = false
 position = Vector2(0, -22)
 zoom = Vector2(4, 4)
 limit_left = -100

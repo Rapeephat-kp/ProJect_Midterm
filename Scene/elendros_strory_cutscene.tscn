@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://c2j5xlpu04ruo" path="res://Elendros Story/Elendros Scene 3.JPG" id="3_7j5sg"]
 [ext_resource type="Texture2D" uid="uid://v835a1c3r1td" path="res://Elendros Story/Elendros Scene 4.JPG" id="4_ahpng"]
 [ext_resource type="Texture2D" uid="uid://b2w2qi5ed2rft" path="res://Elendros Story/Elendros Scene 5.JPG" id="5_b813g"]
-[ext_resource type="FontFile" uid="uid://c17gxuusjhucp" path="res://SFX/Seraphine DEMO VERSION.ttf" id="7_3581o"]
+[ext_resource type="FontFile" uid="uid://c17gxuusjhucp" path="res://Font/Seraphine DEMO VERSION.ttf" id="7_3581o"]
 [ext_resource type="AudioStream" uid="uid://cvp75pe1mnx2i" path="res://SFX/run.ogg" id="8_6e4ey"]
 [ext_resource type="AudioStream" uid="uid://bhon07bgqsgb7" path="res://SFX/crowd-panic-scream.ogg" id="9_nln4g"]
 [ext_resource type="AudioStream" uid="uid://dap7lxt1grq0e" path="res://SFX/earth-rumble.ogg" id="10_7j5sg"]

@@ -1,0 +1,136 @@
+[gd_scene load_steps=20 format=3 uid="uid://d1lya3nui5fbc"]
+
+[ext_resource type="Texture2D" uid="uid://c8ughlfrvdq2f" path="res://Asset_Midterm/Effect_Fighting/Effect and FX Pixel Part 12 Free/586.png" id="1_n52d3"]
+[ext_resource type="Script" uid="uid://1ha10u0v44w5" path="res://Scene/Stage_Scene/Boss_attack.gd" id="2_xh12s"]
+[ext_resource type="Texture2D" uid="uid://bloobbvjt3455" path="res://Asset_Midterm/BG/1x1_#FFFFFFFF.png" id="3_p62uk"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cacnk"]
+size = Vector2(59, 61.25)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p62uk"]
+atlas = ExtResource("1_n52d3")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n2dc3"]
+atlas = ExtResource("1_n52d3")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q13as"]
+atlas = ExtResource("1_n52d3")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gkdv0"]
+atlas = ExtResource("1_n52d3")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3pyla"]
+atlas = ExtResource("1_n52d3")
+region = Rect2(256, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ux56e"]
+atlas = ExtResource("1_n52d3")
+region = Rect2(320, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s8ivy"]
+atlas = ExtResource("1_n52d3")
+region = Rect2(384, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0j5it"]
+atlas = ExtResource("1_n52d3")
+region = Rect2(448, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qt1o7"]
+atlas = ExtResource("1_n52d3")
+region = Rect2(512, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ck6tn"]
+atlas = ExtResource("1_n52d3")
+region = Rect2(576, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sim5w"]
+atlas = ExtResource("1_n52d3")
+region = Rect2(640, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_inma8"]
+atlas = ExtResource("1_n52d3")
+region = Rect2(704, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rf86m"]
+atlas = ExtResource("1_n52d3")
+region = Rect2(768, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5a6d4"]
+atlas = ExtResource("1_n52d3")
+region = Rect2(832, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_rh2vm"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p62uk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n2dc3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q13as")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gkdv0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3pyla")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ux56e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s8ivy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0j5it")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qt1o7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ck6tn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sim5w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_inma8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rf86m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5a6d4")
+}],
+"loop": true,
+"name": &"attack_1",
+"speed": 15.0
+}]
+
+[node name="BossAttack" type="Node2D"]
+script = ExtResource("2_xh12s")
+
+[node name="Caution" type="Sprite2D" parent="."]
+modulate = Color(1, 0, 0.0166664, 0.0352941)
+position = Vector2(0.249999, 0)
+scale = Vector2(50, 50)
+texture = ExtResource("3_p62uk")
+
+[node name="Attack_area" type="Area2D" parent="." groups=["Mon_hit"]]
+position = Vector2(98.2857, -112.893)
+scale = Vector2(0.571429, 0.641437)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Attack_area" groups=["Mon_hit"]]
+position = Vector2(-171.5, 176.816)
+shape = SubResource("RectangleShape2D_cacnk")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_rh2vm")
+animation = &"attack_1"
+frame_progress = 0.287333
