@@ -62,7 +62,9 @@ func dis():
 		queue_free()
 	
 func movement():
-	if(is_attacking != true):
+	var can_forward = $Check_floor_l.is_colliding()
+	var can_backward = $Check_floor_r.is_colliding()
+	if(is_attacking != true && can_forward && can_backward):
 		if(player_in_l != true && player_in_r != true):
 			velocity.x = speed * -status
 			if($AnimatedSprite2D.flip_h):

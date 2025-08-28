@@ -1771,7 +1771,7 @@ tile_map_data = PackedByteArray("AAAJAA0AAAABAB0AAAAgAA0AAAAHAB4AAAAsAAUAAAAHAB4
 tile_set = SubResource("TileSet_4rwu7")
 
 [node name="Marker2D" type="Marker2D" parent="."]
-position = Vector2(284, 127)
+position = Vector2(1696, -5)
 
 [node name="CharacterBody2D" parent="Marker2D" instance=ExtResource("9_ryywy")]
 

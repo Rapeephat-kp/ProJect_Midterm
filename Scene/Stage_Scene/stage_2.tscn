@@ -1542,7 +1542,7 @@ sources/0 = SubResource("TileSetAtlasSource_3uip0")
 sources/1 = SubResource("TileSetAtlasSource_n1gas")
 sources/2 = SubResource("TileSetAtlasSource_c1ahl")
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kfp2j"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wm8jf"]
 texture = ExtResource("8_h04rl")
 1:0/size_in_atlas = Vector2i(5, 5)
 1:0/0 = 0
@@ -1563,7 +1563,7 @@ texture = ExtResource("8_h04rl")
 16:6/size_in_atlas = Vector2i(5, 4)
 16:6/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dou3h"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8irac"]
 texture = ExtResource("4_samr5")
 1:29/size_in_atlas = Vector2i(6, 5)
 1:29/0 = 0
@@ -1653,8 +1653,8 @@ texture = ExtResource("4_samr5")
 17:18/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_62h7d"]
-sources/0 = SubResource("TileSetAtlasSource_kfp2j")
-sources/1 = SubResource("TileSetAtlasSource_dou3h")
+sources/0 = SubResource("TileSetAtlasSource_wm8jf")
+sources/1 = SubResource("TileSetAtlasSource_8irac")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pgqbn"]
 texture = ExtResource("12_h04rl")
@@ -1943,7 +1943,7 @@ tile_map_data = PackedByteArray("AAAJAA0AAAABAB0AAAAcAA0AAAAHAB4AAAA=")
 tile_set = SubResource("TileSet_wm8jf")
 
 [node name="Marker2D" type="Marker2D" parent="."]
-position = Vector2(270, 88)
+position = Vector2(314, 128)
 
 [node name="CharacterBody2D" parent="Marker2D" instance=ExtResource("9_pgqbn")]
 
@@ -1965,6 +1965,7 @@ metadata/_edit_lock_ = true
 color = Color(0.103743, 0.103744, 0.103744, 1)
 
 [node name="Monsters" type="Node2D" parent="."]
+metadata/_edit_lock_ = true
 
 [node name="Necromancer" parent="Monsters" instance=ExtResource("12_kqfwp")]
 position = Vector2(1151, 87)
@@ -1989,6 +1990,7 @@ position = Vector2(1081, 213)
 scale = Vector2(0.3, 0.3)
 
 [node name="Moving platform" type="Node2D" parent="."]
+metadata/_edit_lock_ = true
 
 [node name="Path2D" parent="Moving platform" instance=ExtResource("16_h04rl")]
 position = Vector2(1317, 237)

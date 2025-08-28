@@ -859,7 +859,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bn6tl"]
-size = Vector2(20, 33)
+size = Vector2(20, 30.5)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_mv1ke"]
 atlas = ExtResource("1_4jw1g")
@@ -1089,7 +1089,8 @@ flip_h = true
 metadata/_edit_lock_ = true
 
 [node name="Body" type="CollisionShape2D" parent="." groups=["Player"]]
-position = Vector2(14, 15)
+visible = false
+position = Vector2(14, 14.25)
 shape = SubResource("RectangleShape2D_bn6tl")
 
 [node name="Jump2_Sprite" type="AnimatedSprite2D" parent="."]
@@ -1119,6 +1120,7 @@ disabled = true
 [node name="Hit_box" type="Area2D" parent="." groups=["Player"]]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hit_box" groups=["Player"]]
+visible = false
 position = Vector2(14, 15)
 shape = SubResource("RectangleShape2D_bylnv")
 
