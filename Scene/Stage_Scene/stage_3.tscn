@@ -1,7 +1,7 @@
 [gd_scene load_steps=33 format=4 uid="uid://cpq4qkq1b6ka6"]
 
 [ext_resource type="Texture2D" uid="uid://skwubifcy71r" path="res://Asset_Midterm/Tile_Map/Fantasy Swamp Forest/Free/BG_3/BG_3.png" id="1_a24hx"]
-[ext_resource type="Script" uid="uid://bsskijfieg6i7" path="res://Script/Stage/stage_3.gd" id="1_oj7rm"]
+[ext_resource type="Script" path="res://Script/Stage/stage_3.gd" id="1_oj7rm"]
 [ext_resource type="Texture2D" uid="uid://byk3vy2oruw1d" path="res://Asset_Midterm/Tile_Map/Fantasy Swamp Forest/Free/BG_2/BG_2.png" id="2_1ygwt"]
 [ext_resource type="Texture2D" uid="uid://cv5ru2joj0lkf" path="res://Asset_Midterm/Tile_Map/Fantasy Swamp Forest/Free/BG_1/BG_1.png" id="3_637vt"]
 [ext_resource type="Texture2D" uid="uid://bjoc2gctj3hdg" path="res://Asset_Midterm/Tile_Map/Fantasy Swamp Forest/Free/Terrain-and-Props-OLD.png" id="4_a7c6i"]
