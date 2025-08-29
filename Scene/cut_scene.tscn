@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://b3o40bijrx1ou"]
+[gd_scene load_steps=18 format=3 uid="uid://b3o40bijrx1ou"]
 
 [ext_resource type="Texture2D" uid="uid://dkyfygbi0dekj" path="res://Asset_Midterm/UI/UI/Button_52x14.png" id="1_kxtd3"]
 [ext_resource type="Script" uid="uid://dkr4a1gyp0ljc" path="res://Script/cut_scene.gd" id="1_w1y33"]
@@ -105,10 +105,22 @@ tracks/4/keys = {
 "update": 0,
 "values": [0.0]
 }
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("CanvasLayer/Control:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
 
 [sub_resource type="Animation" id="Animation_w1y33"]
 resource_name = "Stage 1 1-2 Nymera"
-length = 60.0
+length = 70.0
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -128,10 +140,10 @@ tracks/1/path = NodePath("CanvasLayer/Control/Setting_Panel_Bg/CharacterName:tex
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 3.22967, 6.19472),
-"transitions": PackedFloat32Array(1, 1, 1),
+"times": PackedFloat32Array(0, 3.22967, 6.19472, 11.4504, 17.1126, 25.3665, 31.4, 36, 38.9669, 49.3673, 52.3708, 60.5003, 63.3792),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 1,
-"values": ["Explorer", "Nymera", "Explorer"]
+"values": ["Explorer", "Nymera", "Explorer", "Nymera", "Explorer", "Nymera", "Explorer", "Nymera", "Explorer", "Nymera", "Explorer", "Nymera", "Explorer"]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
@@ -152,11 +164,30 @@ tracks/3/path = NodePath("CanvasLayer/Control/Setting_Panel_Bg/Phase:text")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
-"times": PackedFloat32Array(0, 1.1, 1.6, 3.22501, 6.19168),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0, 1.1, 1.6, 3.22501, 6.19168, 11.4544, 17.12, 25.3586, 31.3846, 35.9914, 38.9603, 49.367, 52.3773, 60.5068, 63.3858),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 1,
 "values": ["Whoa there!", "Hey!", "Are you alright!?", "Stay back! Don’t come any closer…!", "Easy, easy. I’m not your enemy. You look like you just came out of hell. What happened in the city?
-"]
+", "The city… it’s been overrun. Giant mushrooms, 
+monsters… the “Unders.” They’re everywhere!
+
+", "The Unders? …So it’s true, then. 
+The rumors weren’t just stories.
+
+", "My father—he disappeared. There were signs of a fight. He might still be alive!
+
+
+", "I see… So you’re running not just to escape, but to find someone.
+
+", "Exactly. I can’t turn back now.
+
+", "Hah, I like that fire in your eyes. Then let me come 
+with you. I’ve crossed many lands, and if the Unders 
+are involved, you’ll need someone who knows the wilds.
+
+", "Why would you help me? You don’t even know me.", "True. But I do know this. \"no one survives the Unders 
+alone.\" And besides… an explorer’s path is always 
+more interesting with a companion.", "…Alright. But don’t slow me down.", "Then lead the way, partner. Adventure waits for no one."]
 }
 tracks/4/type = "value"
 tracks/4/imported = false
@@ -165,10 +196,10 @@ tracks/4/path = NodePath("CanvasLayer/Control/Setting_Panel_Bg/Phase:visible_rat
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
-"times": PackedFloat32Array(0, 1, 1.04817, 1.1, 1.5, 1.54246, 1.6, 3.13333, 3.17579, 3.22501, 4.23333, 4.43333, 6.06667, 6.13333, 6.19168, 11.3333, 11.3972),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0, 1, 1.04817, 1.1, 1.5, 1.54246, 1.6, 3.13333, 3.17579, 3.22501, 4.23333, 4.43333, 6.06667, 6.13333, 6.19168, 11.3333, 11.3972, 11.4544, 16.9667, 17.0395, 17.12, 24.9955, 25.185, 25.3586, 31.0814, 31.2425, 31.3846, 35.7336, 35.8967, 35.9914, 38.7669, 38.8892, 38.9603, 49.1336, 49.2659, 49.367, 52.1673, 52.2573, 52.3773, 60.3949, 60.4571, 60.5068, 63.2579, 63.312, 63.3858, 67, 67.0769),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 0,
-"values": [0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 0.323438, 0.323438, 1.0, 1.0, 0.0, 1.0, 1.0]
+"values": [0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 0.323438, 0.323438, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0]
 }
 tracks/5/type = "method"
 tracks/5/imported = false
@@ -177,9 +208,39 @@ tracks/5/path = NodePath(".")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
-"times": PackedFloat32Array(1.0166, 1.5179, 3.1495, 6.1, 11.3667),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"times": PackedFloat32Array(1.0166, 1.5179, 3.1495, 6.1, 11.3667, 17, 25.0667, 31.1728, 35.8003, 38.8336, 49.1669, 52.2003, 60.4246, 63.288, 67.0333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "values": [{
+"args": [],
+"method": &"pause"
+}, {
+"args": [],
+"method": &"pause"
+}, {
+"args": [],
+"method": &"pause"
+}, {
+"args": [],
+"method": &"pause"
+}, {
+"args": [],
+"method": &"pause"
+}, {
+"args": [],
+"method": &"pause"
+}, {
+"args": [],
+"method": &"pause"
+}, {
+"args": [],
+"method": &"pause"
+}, {
+"args": [],
+"method": &"pause"
+}, {
+"args": [],
+"method": &"pause"
+}, {
 "args": [],
 "method": &"pause"
 }, {
@@ -197,10 +258,154 @@ tracks/5/keys = {
 }]
 }
 
+[sub_resource type="Animation" id="Animation_tkbrc"]
+resource_name = "Stage 1 1-2 Elendros"
+length = 80.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/Control/Setting_Panel_Bg/CharacterName:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CanvasLayer/Control/Setting_Panel_Bg/CharacterName:text")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 3.22967, 6.19472, 11.4504, 17.1126, 25.3665, 35.3272, 42.8331, 48.5268, 58.9272, 61.9306, 70.0601, 72.9391),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": ["Explorer", "Elendros", "Explorer", "Elendros", "Explorer", "Elendros", "Explorer", "Elendros", "Explorer", "Elendros", "Explorer", "Elendros", "Explorer"]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CanvasLayer/Control/Setting_Panel_Bg/Phase:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CanvasLayer/Control/Setting_Panel_Bg/Phase:text")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 1.1, 1.6, 3.22501, 6.19168, 11.4544, 17.12, 25.3586, 35.3117, 42.8245, 48.5201, 58.9268, 61.9372, 70.0667, 72.9456),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": ["Whoa there!", "Hey!", "Are you alright!?", "Stay back! Don’t come any closer…!", "Easy, easy. I’m not your enemy. You look like you just came out of hell. What happened in the city?
+", "The city… it’s been overrun. Giant mushrooms, 
+monsters… the “Unders.” They’re everywhere!
+
+", "The Unders? …So it’s true, then. 
+The rumors weren’t just stories.
+
+", "Ten years ago… the Unders took everything from me.
+My parents—gone before my eyes.
+
+
+", "…So you’re not just running to survive. You’re chasing vengeance.
+
+", "That’s right. I swore that one day I’d make them pay. And I won’t turn back now.", "Hah, I like that fire in your eyes. Then let me come 
+with you. I’ve crossed many lands, and if the Unders 
+are involved, you’ll need someone who knows the wilds.
+
+", "Why would you help me? You don’t even know me.", "True. But I do know this. \"no one survives the Unders 
+alone.\" And besides… an explorer’s path is always 
+more interesting with a companion.", "…Alright. But don’t slow me down.", "Then lead the way, partner. Adventure waits for no one."]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("CanvasLayer/Control/Setting_Panel_Bg/Phase:visible_ratio")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 1, 1.04817, 1.1, 1.5, 1.54246, 1.6, 3.13333, 3.17579, 3.22501, 4.23333, 4.43333, 6.06667, 6.13333, 6.19168, 11.3333, 11.3972, 11.4544, 16.9667, 17.0395, 17.12, 24.9955, 25.185, 25.3586, 35.0086, 35.1696, 35.3117, 42.5667, 42.7297, 42.8245, 48.3667, 48.489, 48.5201, 58.6935, 58.8257, 58.9268, 61.7272, 61.8172, 61.9372, 69.9547, 70.0169, 70.0667, 72.8178, 72.8718, 72.9456, 76.5598, 76.6368),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 0.323438, 0.323438, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0]
+}
+tracks/5/type = "method"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath(".")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(1.0166, 1.5179, 3.1495, 6.1, 11.3667, 17, 25.0667, 35.1, 42.6333, 48.4333, 58.7268, 61.7601, 69.9845, 72.8478, 76.5932),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"values": [{
+"args": [],
+"method": &"pause"
+}, {
+"args": [],
+"method": &"pause"
+}, {
+"args": [],
+"method": &"pause"
+}, {
+"args": [],
+"method": &"pause"
+}, {
+"args": [],
+"method": &"pause"
+}, {
+"args": [],
+"method": &"pause"
+}, {
+"args": [],
+"method": &"pause"
+}, {
+"args": [],
+"method": &"pause"
+}, {
+"args": [],
+"method": &"pause"
+}, {
+"args": [],
+"method": &"pause"
+}, {
+"args": [],
+"method": &"pause"
+}, {
+"args": [],
+"method": &"pause"
+}, {
+"args": [],
+"method": &"pause"
+}, {
+"args": [],
+"method": &"pause"
+}, {
+"args": [],
+"method": &"pause"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_0only"]
+resource_name = "Stage 1 2-2"
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_tkbrc"]
 _data = {
 &"RESET": SubResource("Animation_88s7j"),
-&"Stage 1 1-2 Nymera": SubResource("Animation_w1y33")
+&"Stage 1 1-2 Elendros": SubResource("Animation_tkbrc"),
+&"Stage 1 1-2 Nymera": SubResource("Animation_w1y33"),
+&"Stage 1 2-2": SubResource("Animation_0only")
 }
 
 [node name="CutScene" type="Node2D"]
@@ -209,6 +414,7 @@ script = ExtResource("1_w1y33")
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="Control" type="Control" parent="CanvasLayer"]
+visible = false
 layout_mode = 3
 anchors_preset = 8
 anchor_left = 0.5
@@ -350,6 +556,7 @@ scale = Vector2(0.55, 0.55)
 theme_override_fonts/normal_font = ExtResource("2_f3ubt")
 theme_override_font_sizes/normal_font_size = 15
 text = "Whoa there!"
+scroll_active = false
 visible_characters = 0
 visible_ratio = 0.0
 
