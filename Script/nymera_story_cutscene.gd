@@ -57,11 +57,6 @@ func _on_auto_button_pressed() -> void:
 	autoplay = not autoplay
 	print(autoplay)
 
-'''
-func transition_scene() -> void:
-	SceneTransition.play1s()
-	await get_tree().create_timer(1).timeout
-'''
 
 func _on_timer_timeout() -> void:
 	print("timeout")

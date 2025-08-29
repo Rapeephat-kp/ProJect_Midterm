@@ -1,0 +1,366 @@
+[gd_scene load_steps=16 format=3 uid="uid://b3o40bijrx1ou"]
+
+[ext_resource type="Texture2D" uid="uid://dkyfygbi0dekj" path="res://Asset_Midterm/UI/UI/Button_52x14.png" id="1_kxtd3"]
+[ext_resource type="Script" uid="uid://dkr4a1gyp0ljc" path="res://Script/cut_scene.gd" id="1_w1y33"]
+[ext_resource type="FontFile" uid="uid://bdl4qpamcrivq" path="res://Fonts/OBGB.TTF" id="2_f3ubt"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_31a1h"]
+bg_color = Color(0.509804, 0.396078, 0.243137, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sxeg3"]
+bg_color = Color(0.239216, 0.196078, 0.223529, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_piy08"]
+texture = ExtResource("1_kxtd3")
+modulate_color = Color(0.666667, 0.666667, 0.666667, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tbuqy"]
+texture = ExtResource("1_kxtd3")
+modulate_color = Color(0.666667, 0.666667, 0.666667, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_kmo0v"]
+texture = ExtResource("1_kxtd3")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_pmo56"]
+texture = ExtResource("1_kxtd3")
+modulate_color = Color(0.666667, 0.666667, 0.666667, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_b3yuy"]
+texture = ExtResource("1_kxtd3")
+modulate_color = Color(0.666667, 0.666667, 0.666667, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_n08jo"]
+texture = ExtResource("1_kxtd3")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tse6q"]
+bg_color = Color(0.69462, 0.554322, 0.367857, 1)
+
+[sub_resource type="Animation" id="Animation_88s7j"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/Control/Setting_Panel_Bg/CharacterName:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CanvasLayer/Control/Setting_Panel_Bg/CharacterName:text")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["Nymera"]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CanvasLayer/Control/Setting_Panel_Bg/Phase:text")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["Whoa there!"]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CanvasLayer/Control/Setting_Panel_Bg/Phase:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("CanvasLayer/Control/Setting_Panel_Bg/Phase:visible_ratio")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_w1y33"]
+resource_name = "Stage 1 1-2 Nymera"
+length = 60.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/Control/Setting_Panel_Bg/CharacterName:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CanvasLayer/Control/Setting_Panel_Bg/CharacterName:text")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 3.22967, 6.19472),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": ["Explorer", "Nymera", "Explorer"]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CanvasLayer/Control/Setting_Panel_Bg/Phase:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CanvasLayer/Control/Setting_Panel_Bg/Phase:text")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 1.1, 1.6, 3.22501, 6.19168),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": ["Whoa there!", "Hey!", "Are you alright!?", "Stay back! Don’t come any closer…!", "Easy, easy. I’m not your enemy. You look like you just came out of hell. What happened in the city?
+"]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("CanvasLayer/Control/Setting_Panel_Bg/Phase:visible_ratio")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 1, 1.04817, 1.1, 1.5, 1.54246, 1.6, 3.13333, 3.17579, 3.22501, 4.23333, 4.43333, 6.06667, 6.13333, 6.19168, 11.3333, 11.3972),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 0.323438, 0.323438, 1.0, 1.0, 0.0, 1.0, 1.0]
+}
+tracks/5/type = "method"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath(".")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(1.0166, 1.5179, 3.1495, 6.1, 11.3667),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"values": [{
+"args": [],
+"method": &"pause"
+}, {
+"args": [],
+"method": &"pause"
+}, {
+"args": [],
+"method": &"pause"
+}, {
+"args": [],
+"method": &"pause"
+}, {
+"args": [],
+"method": &"pause"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_tkbrc"]
+_data = {
+&"RESET": SubResource("Animation_88s7j"),
+&"Stage 1 1-2 Nymera": SubResource("Animation_w1y33")
+}
+
+[node name="CutScene" type="Node2D"]
+script = ExtResource("1_w1y33")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Control" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -158.0
+offset_right = 20.0
+offset_bottom = -118.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Setting_Panel_Bg" type="Panel" parent="CanvasLayer/Control"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -728.0
+offset_top = -135.0
+offset_right = -309.0
+offset_bottom = -55.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(3, 3)
+theme_override_styles/panel = SubResource("StyleBoxFlat_31a1h")
+
+[node name="Setting_panel_Bg2" type="Panel" parent="CanvasLayer/Control/Setting_Panel_Bg"]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 3.0
+offset_right = 416.0
+offset_bottom = 77.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_sxeg3")
+
+[node name="Next_Button" type="Button" parent="CanvasLayer/Control/Setting_Panel_Bg"]
+modulate = Color(0.666667, 0.666667, 0.666667, 1)
+layout_mode = 0
+offset_left = 435.0
+offset_top = 33.0
+offset_right = 484.0
+offset_bottom = 45.0
+focus_mode = 0
+theme_override_styles/hover = SubResource("StyleBoxTexture_piy08")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_tbuqy")
+theme_override_styles/normal = SubResource("StyleBoxTexture_kmo0v")
+
+[node name="Label" type="Label" parent="CanvasLayer/Control/Setting_Panel_Bg/Next_Button"]
+layout_mode = 0
+offset_left = 10.3335
+offset_top = 1.99966
+offset_right = 87.3335
+offset_bottom = 21.9997
+scale = Vector2(0.387, 0.387)
+theme_override_fonts/font = ExtResource("2_f3ubt")
+text = "NExt"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Autoplay_Button" type="Button" parent="CanvasLayer/Control/Setting_Panel_Bg"]
+modulate = Color(0.666667, 0.666667, 0.666667, 1)
+layout_mode = 0
+offset_left = 435.0
+offset_top = 50.0
+offset_right = 484.0
+offset_bottom = 62.0
+focus_mode = 0
+theme_override_styles/hover = SubResource("StyleBoxTexture_piy08")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_tbuqy")
+theme_override_styles/normal = SubResource("StyleBoxTexture_kmo0v")
+
+[node name="Label" type="Label" parent="CanvasLayer/Control/Setting_Panel_Bg/Autoplay_Button"]
+layout_mode = 0
+offset_left = 4.66663
+offset_top = 1.99966
+offset_right = 107.667
+offset_bottom = 21.9997
+scale = Vector2(0.387, 0.387)
+theme_override_fonts/font = ExtResource("2_f3ubt")
+text = "AutoPlay"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Skip_Button" type="Button" parent="CanvasLayer/Control/Setting_Panel_Bg"]
+modulate = Color(0.666667, 0.666667, 0.666667, 1)
+layout_mode = 0
+offset_left = 434.667
+offset_top = 66.6661
+offset_right = 483.667
+offset_bottom = 78.6661
+focus_mode = 0
+theme_override_styles/hover = SubResource("StyleBoxTexture_pmo56")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_b3yuy")
+theme_override_styles/normal = SubResource("StyleBoxTexture_n08jo")
+
+[node name="Label3" type="Label" parent="CanvasLayer/Control/Setting_Panel_Bg/Skip_Button"]
+layout_mode = 0
+offset_left = 14.667
+offset_top = 2.00057
+offset_right = 66.667
+offset_bottom = 25.0006
+scale = Vector2(0.387, 0.387)
+theme_override_fonts/font = ExtResource("2_f3ubt")
+text = "Skip"
+vertical_alignment = 1
+
+[node name="Line" type="Panel" parent="CanvasLayer/Control/Setting_Panel_Bg"]
+modulate = Color(0.698039, 0.698039, 0.698039, 1)
+layout_mode = 0
+offset_left = 17.0
+offset_top = 27.0
+offset_right = 134.0
+offset_bottom = 28.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_tse6q")
+
+[node name="CharacterName" type="Label" parent="CanvasLayer/Control/Setting_Panel_Bg"]
+modulate = Color(0.698039, 0.698039, 0.698039, 1)
+layout_mode = 0
+offset_left = 17.0
+offset_top = 10.3333
+offset_right = 113.0
+offset_bottom = 34.3333
+scale = Vector2(0.55, 0.55)
+theme_override_fonts/font = ExtResource("2_f3ubt")
+theme_override_font_sizes/font_size = 20
+text = "Nymera"
+vertical_alignment = 1
+
+[node name="Phase" type="RichTextLabel" parent="CanvasLayer/Control/Setting_Panel_Bg"]
+modulate = Color(0.698039, 0.698039, 0.698039, 1)
+layout_mode = 0
+offset_left = 29.0
+offset_top = 33.0
+offset_right = 694.0
+offset_bottom = 101.0
+scale = Vector2(0.55, 0.55)
+theme_override_fonts/normal_font = ExtResource("2_f3ubt")
+theme_override_font_sizes/normal_font_size = 15
+text = "Whoa there!"
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_tkbrc")
+}
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 4.0
+
+[connection signal="pressed" from="CanvasLayer/Control/Setting_Panel_Bg/Next_Button" to="." method="_on_next_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/Setting_Panel_Bg/Autoplay_Button" to="." method="_on_auto_button_pressed"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

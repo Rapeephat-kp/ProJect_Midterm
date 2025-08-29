@@ -1,4 +1,4 @@
-[gd_scene load_steps=67 format=4 uid="uid://kvx2t085cbwy"]
+[gd_scene load_steps=68 format=4 uid="uid://kvx2t085cbwy"]
 
 [ext_resource type="Texture2D" uid="uid://csm1chwn2sopr" path="res://Asset_Midterm/Tile_Map/New GothicVania/PNG/environment/layers/background.png" id="1_bi5f7"]
 [ext_resource type="Script" uid="uid://nvlhavv32s4c" path="res://Script/Stage/stage_2.gd" id="1_wm8jf"]
@@ -19,6 +19,7 @@
 [ext_resource type="PackedScene" uid="uid://bwv23c34bale6" path="res://Scene/Monster_Scene/flying_eye.tscn" id="15_7t14p"]
 [ext_resource type="PackedScene" uid="uid://cjuqyquignn6p" path="res://Scene/moving Platform.tscn" id="16_h04rl"]
 [ext_resource type="PackedScene" uid="uid://cf2v0xh2idmq5" path="res://Scene/Monster_Scene/preist.tscn" id="16_pgqbn"]
+[ext_resource type="PackedScene" uid="uid://2fjun6uswfsc" path="res://Scene/NPC/explorer.tscn" id="19_8irac"]
 [ext_resource type="Script" uid="uid://chtw2cfquxn21" path="res://Script/setting.gd" id="20_0n311"]
 [ext_resource type="PackedScene" uid="uid://bal4y7qsf3yqg" path="res://Scene/inventory.tscn" id="21_88bii"]
 [ext_resource type="Texture2D" uid="uid://c02hk8gklv3yv" path="res://Asset_Midterm/UI/UI/ValueBar_128x16.png" id="22_uouwv"]
@@ -1746,6 +1747,12 @@ texture = ExtResource("4_samr5")
 [sub_resource type="TileSet" id="TileSet_wm8jf"]
 sources/0 = SubResource("TileSetAtlasSource_j2rfv")
 
+[sub_resource type="Curve2D" id="Curve2D_h04rl"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 36, 5, 0, 0, 0, 0, 36, -191, 0, 0, 0, 0, 36, 5)
+}
+point_count = 3
+
 [sub_resource type="Gradient" id="Gradient_yvnx5"]
 offsets = PackedFloat32Array(0.0433071, 1)
 colors = PackedColorArray(0.999999, 0.876938, 0.740762, 1, 0, 0, 0, 0)
@@ -1757,12 +1764,6 @@ height = 100
 fill = 1
 fill_from = Vector2(0.487179, 0.525641)
 fill_to = Vector2(0.666667, 0)
-
-[sub_resource type="Curve2D" id="Curve2D_h04rl"]
-_data = {
-"points": PackedVector2Array(0, 0, 0, 0, 36, 5, 0, 0, 0, 0, 36, -191, 0, 0, 0, 0, 36, 5)
-}
-point_count = 3
 
 [sub_resource type="Animation" id="Animation_etu1s"]
 resource_name = "Close"
@@ -1887,7 +1888,7 @@ texture = ExtResource("1_bi5f7")
 centered = false
 
 [node name="Parallax2D2" type="Parallax2D" parent="parallax bg"]
-scroll_scale = Vector2(0.9, 1)
+scroll_scale = Vector2(0.95, 1)
 repeat_size = Vector2(384, 0)
 repeat_times = 3
 
@@ -1945,23 +1946,8 @@ tile_set = SubResource("TileSet_wm8jf")
 [node name="Marker2D" type="Marker2D" parent="."]
 position = Vector2(314, 128)
 
-[node name="CharacterBody2D" parent="Marker2D" instance=ExtResource("9_pgqbn")]
-
-[node name="PointLight2D" type="PointLight2D" parent="Marker2D/CharacterBody2D"]
-position = Vector2(13, 16)
-scale = Vector2(2.60938, 1.96809)
-texture = SubResource("GradientTexture2D_bi5f7")
-metadata/_edit_lock_ = true
-
-[node name="Nymera" parent="Marker2D" instance=ExtResource("13_8irac")]
-
-[node name="PointLight2D" type="PointLight2D" parent="Marker2D/Nymera"]
-position = Vector2(13, 16)
-scale = Vector2(2.60938, 1.96809)
-texture = SubResource("GradientTexture2D_bi5f7")
-metadata/_edit_lock_ = true
-
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
+visible = false
 color = Color(0.103743, 0.103744, 0.103744, 1)
 
 [node name="Monsters" type="Node2D" parent="."]
@@ -1986,8 +1972,13 @@ position = Vector2(2224, 221)
 position = Vector2(3289, 227)
 
 [node name="Preist" parent="Monsters" instance=ExtResource("16_pgqbn")]
-position = Vector2(1081, 213)
+position = Vector2(1080, 210)
 scale = Vector2(0.3, 0.3)
+
+[node name="NPC" type="Node2D" parent="."]
+
+[node name="Explorer" parent="NPC" instance=ExtResource("19_8irac")]
+position = Vector2(696, 228)
 
 [node name="Moving platform" type="Node2D" parent="."]
 metadata/_edit_lock_ = true
@@ -2287,6 +2278,26 @@ scale = Vector2(0.55, 0.55)
 theme_override_fonts/font = ExtResource("31_k2f5k")
 text = "Setting"
 vertical_alignment = 1
+
+[node name="Main Character" type="Node2D" parent="."]
+
+[node name="Elendros" parent="Main Character" instance=ExtResource("9_pgqbn")]
+position = Vector2(314, 128)
+
+[node name="PointLight2D" type="PointLight2D" parent="Main Character/Elendros"]
+position = Vector2(13, 16)
+scale = Vector2(2.60938, 1.96809)
+texture = SubResource("GradientTexture2D_bi5f7")
+metadata/_edit_lock_ = true
+
+[node name="Nymera" parent="Main Character" instance=ExtResource("13_8irac")]
+position = Vector2(314, 128)
+
+[node name="PointLight2D" type="PointLight2D" parent="Main Character/Nymera"]
+position = Vector2(13, 16)
+scale = Vector2(2.60938, 1.96809)
+texture = SubResource("GradientTexture2D_bi5f7")
+metadata/_edit_lock_ = true
 
 [connection signal="pressed" from="CanvasUI/Setting_Button/Setting_Button" to="CanvasUI/Setting" method="_on_setting_button_pressed"]
 [connection signal="pressed" from="CanvasUI/Setting_UI/Setting_Panel_Bg/Resume_Button" to="CanvasUI/Setting" method="_on_resume_button_pressed"]

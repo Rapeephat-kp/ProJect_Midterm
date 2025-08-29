@@ -1181,7 +1181,7 @@ position = Vector2(245, 310)
 [node name="Nymera" parent="." instance=ExtResource("13_04dgn")]
 position = Vector2(96, 288)
 
-[node name="Elendros" parent="." groups=["Player"] instance=ExtResource("21_rmglj")]
+[node name="Elendros" parent="." instance=ExtResource("21_rmglj")]
 position = Vector2(109, 300)
 
 [node name="Button" type="Button" parent="."]
