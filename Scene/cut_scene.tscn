@@ -1,11 +1,7 @@
-<<<<<<< Updated upstream
 [gd_scene load_steps=18 format=3 uid="uid://b3o40bijrx1ou"]
-=======
-[gd_scene load_steps=16 format=3 uid="uid://bk06202t200c6"]
->>>>>>> Stashed changes
 
 [ext_resource type="Texture2D" uid="uid://dkyfygbi0dekj" path="res://Asset_Midterm/UI/UI/Button_52x14.png" id="1_kxtd3"]
-[ext_resource type="Script" path="res://Script/cut_scene.gd" id="1_w1y33"]
+[ext_resource type="Script" uid="uid://dkr4a1gyp0ljc" path="res://Script/cut_scene.gd" id="1_w1y33"]
 [ext_resource type="FontFile" uid="uid://bdl4qpamcrivq" path="res://Fonts/OBGB.TTF" id="2_f3ubt"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_31a1h"]
