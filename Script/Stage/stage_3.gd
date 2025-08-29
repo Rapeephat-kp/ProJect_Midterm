@@ -22,13 +22,13 @@ func _on_water_area_entered(area: Area2D) -> void:
 func _on_left_area_entered(area: Area2D) -> void:
 	if area.is_in_group("Player"):
 		#$"map bounds/left/Label".visible = true
-		$CanvasLayer/Control/Label.visible = true
+		$Label.visible = true
 
 
 func _on_left_area_exited(area: Area2D) -> void:
 	if area.is_in_group("Player"):
 		#$"map bounds/left/Label".visible = false
-		$CanvasLayer/Control/Label.visible = false
+		$Label.visible = false
 
 func _on_right_area_entered(area: Area2D) -> void:
 	pass # Replace with function body.

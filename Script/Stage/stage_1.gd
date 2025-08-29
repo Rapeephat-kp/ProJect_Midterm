@@ -22,7 +22,7 @@ func _ready() -> void:
 	elif p_value == 2:
 		elendrosProfile.visible = false
 		nymeraProfile.visible = true
-	#CutSceneManager.stage1_part1()
+	CutSceneManager.stage1_part1()
 func _process(delta: float):
 	inventory.initialize_inventory()
 	
