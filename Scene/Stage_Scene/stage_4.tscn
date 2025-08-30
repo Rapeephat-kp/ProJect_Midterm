@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=4 uid="uid://i8edr6jev5a4"]
+[gd_scene load_steps=25 format=4 uid="uid://i8edr6jev5a4"]
 
 [ext_resource type="Texture2D" uid="uid://skwubifcy71r" path="res://Asset_Midterm/Tile_Map/Fantasy Swamp Forest/Free/BG_3/BG_3.png" id="1_2vi4a"]
 [ext_resource type="Texture2D" uid="uid://byk3vy2oruw1d" path="res://Asset_Midterm/Tile_Map/Fantasy Swamp Forest/Free/BG_2/BG_2.png" id="2_yvnx5"]
@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://kj2uylw4q1s4" path="res://Asset_Midterm/Tile_Map/GothicVania-town-files/GothicVania-town-files/PNG/environment/layers/tileset.png" id="7_tyw1r"]
 [ext_resource type="PackedScene" uid="uid://cjuqyquignn6p" path="res://Scene/moving Platform.tscn" id="8_yvnx5"]
 [ext_resource type="PackedScene" uid="uid://6se7shbfwfuh" path="res://Scene/item/coin.tscn" id="9_gyy0o"]
+[ext_resource type="PackedScene" uid="uid://bwv23c34bale6" path="res://Scene/Monster_Scene/flying_eye.tscn" id="11_ogmt2"]
 
 [sub_resource type="Curve2D" id="Curve2D_gyy0o"]
 _data = {
@@ -1149,7 +1150,7 @@ tile_set = SubResource("TileSet_8oy5t")
 metadata/_edit_lock_ = true
 
 [node name="Nymera" parent="." instance=ExtResource("4_2vi4a")]
-position = Vector2(48, 168)
+position = Vector2(776, -67)
 
 [node name="PointLight2D" type="PointLight2D" parent="Nymera"]
 position = Vector2(13, 16)
@@ -1165,3 +1166,6 @@ color = Color(0.230315, 0.230315, 0.230315, 1)
 
 [node name="Coin" parent="Coins" instance=ExtResource("9_gyy0o")]
 position = Vector2(1383, -58)
+
+[node name="Flying_eye" parent="." instance=ExtResource("11_ogmt2")]
+position = Vector2(1000, 24)

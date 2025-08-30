@@ -44,7 +44,7 @@ _data = {
 &"move": SubResource("Animation_xvro2")
 }
 
-[node name="Path2D" type="Path2D"]
+[node name="Path2D" type="Path2D" groups=["Moving_Platform"]]
 script = ExtResource("1_ghgc8")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="."]
@@ -70,7 +70,7 @@ texture = ExtResource("2_n7huj")
 region_enabled = true
 region_rect = Rect2(77.2582, -0.510917, 38.9719, 15.6636)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatableBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatableBody2D" groups=["Moving_Platform"]]
 shape = SubResource("RectangleShape2D_goowj")
 one_way_collision = true
 

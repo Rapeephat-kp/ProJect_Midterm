@@ -55,6 +55,8 @@ func dis():
 	queue_free()
 	
 func movement():
+	var can_forward = $Check_floor_l.is_colliding()
+	var can_backward = $Check_floor_r.is_colliding()
 	if not is_alive:
 		return
 	if(is_attacking != true):
@@ -65,7 +67,7 @@ func movement():
 			if !is_on_floor():
 				velocity.y += gravity
 			move_and_slide()
-			if is_on_wall() || time_run > randi_range(5,10):
+			if is_on_wall() || time_run > randi_range(5,10 ) || !can_backward || !can_forward:
 				print("ladmfl")
 				speed = -speed
 				velocity.x = speed 

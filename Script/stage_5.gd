@@ -11,4 +11,4 @@ func _ready() -> void:
 		$CanvasUI/Player_show/Nymera.visible = true
 func _process(delta: float):
 	$CanvasUI/Inventory/Inventory.initialize_inventory()
-	if 
+	
