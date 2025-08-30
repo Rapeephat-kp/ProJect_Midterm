@@ -1,14 +1,65 @@
-[gd_scene load_steps=38 format=3 uid="uid://2fjun6uswfsc"]
+[gd_scene load_steps=46 format=3 uid="uid://2fjun6uswfsc"]
 
 [ext_resource type="Script" uid="uid://bjtnpb1x0g87w" path="res://Script/explorer.gd" id="1_nolqn"]
 [ext_resource type="Texture2D" uid="uid://dt3n8nndgu2s1" path="res://Asset_Midterm/NPC/Explorer/Idle_2.png" id="2_lcb7x"]
 [ext_resource type="Texture2D" uid="uid://cw2mntjmfva6w" path="res://Asset_Midterm/NPC/Explorer/Idle_3.png" id="3_o6ldv"]
 [ext_resource type="Texture2D" uid="uid://dil2dhnuu1qfm" path="res://Asset_Midterm/NPC/Explorer/Idle.png" id="4_7hclo"]
 [ext_resource type="Texture2D" uid="uid://m8j48x433ipv" path="res://Asset_Midterm/UI/UI/HotkeyBox_34x34.png" id="5_880fn"]
+[ext_resource type="Texture2D" uid="uid://dsc62i8veqs87" path="res://Asset_Midterm/NPC/Merchant/Idle.png" id="5_lcb7x"]
 [ext_resource type="FontFile" uid="uid://bdl4qpamcrivq" path="res://Fonts/OBGB.TTF" id="6_5ondl"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nolqn"]
 size = Vector2(30, 63.3333)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o6ldv"]
+atlas = ExtResource("5_lcb7x")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7hclo"]
+atlas = ExtResource("5_lcb7x")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_880fn"]
+atlas = ExtResource("5_lcb7x")
+region = Rect2(256, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5ondl"]
+atlas = ExtResource("5_lcb7x")
+region = Rect2(384, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_072cb"]
+atlas = ExtResource("5_lcb7x")
+region = Rect2(512, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ulxer"]
+atlas = ExtResource("5_lcb7x")
+region = Rect2(640, 0, 128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_67b1i"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o6ldv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7hclo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_880fn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5ondl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_072cb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ulxer")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_trpf1"]
 atlas = ExtResource("2_lcb7x")
@@ -218,7 +269,7 @@ size = Vector2(208, 64)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_o2wtl"]
 size = Vector2(242, 64)
 
-[node name="Explorer" type="Node2D"]
+[node name="explorer" type="Node2D"]
 process_thread_group = 2
 process_thread_group_order = 0
 process_thread_messages = 0
@@ -233,7 +284,25 @@ position = Vector2(0, 3.33333)
 shape = SubResource("RectangleShape2D_nolqn")
 one_way_collision = true
 
+[node name="Explorer" type="Node2D" parent="CharacterBody2D"]
+
+[node name="Merchant" type="Node2D" parent="CharacterBody2D"]
+visible = false
+
+[node name="MerchantFlipL" type="AnimatedSprite2D" parent="CharacterBody2D/Merchant"]
+position = Vector2(3.33333, -26.6667)
+sprite_frames = SubResource("SpriteFrames_67b1i")
+animation = &"idle"
+
+[node name="MerchantFlipR" type="AnimatedSprite2D" parent="CharacterBody2D/Merchant"]
+visible = false
+position = Vector2(-3.33333, -26.6667)
+sprite_frames = SubResource("SpriteFrames_67b1i")
+animation = &"idle"
+flip_h = true
+
 [node name="ExplorerFlipL" type="AnimatedSprite2D" parent="CharacterBody2D"]
+modulate = Color(0.848271, 0.631008, 0.591957, 1)
 position = Vector2(-8, -27)
 sprite_frames = SubResource("SpriteFrames_072cb")
 animation = &"greeting"
@@ -242,6 +311,7 @@ flip_h = true
 
 [node name="ExplorerFlipR" type="AnimatedSprite2D" parent="CharacterBody2D"]
 visible = false
+modulate = Color(0.848271, 0.631008, 0.591957, 1)
 position = Vector2(8.33333, -27)
 sprite_frames = SubResource("SpriteFrames_072cb")
 animation = &"greeting"

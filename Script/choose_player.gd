@@ -5,7 +5,9 @@ func _on_nymera_pressed() -> void:
 	Gamemanager.set_player_health(100)
 	print(Gamemanager.get_p())
 	#get_tree().change_scene_to_file("res://Scene/Map.tscn")
-	get_tree().change_scene_to_file("res://Scene/nymera_story_cutscene.tscn")
+	get_tree().change_scene_to_file("res://Scene/Stage_Scene/stage_1.tscn")
+	#get_tree().change_scene_to_file("res://Scene/nymera_story_cutscene.tscn")
+	
 func _on_elendros_pressed() -> void:
 	Gamemanager.set_p(1)
 	Gamemanager.set_player_health(100)

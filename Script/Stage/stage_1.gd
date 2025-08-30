@@ -12,6 +12,7 @@ extends Node2D
 
 
 func _ready() -> void:
+	#Gamemanager.set_currentScene("Stage 1")
 	elendros.position = spawn_point.position
 	nymera.position = spawn_point.position
 	print(Gamemanager.get_p())
@@ -22,7 +23,8 @@ func _ready() -> void:
 	elif p_value == 2:
 		elendrosProfile.visible = false
 		nymeraProfile.visible = true
-	CutSceneManager.stage1_part1()
+	
+	#CutSceneManager.stage1_part1()
 func _process(delta: float):
 	inventory.initialize_inventory()
 	
@@ -37,3 +39,15 @@ func _on_fallzone_area_entered(area: Area2D) -> void:
 	if area.is_in_group("Player"):
 		elendros.position = spawn_point.position
 		nymera.position = spawn_point.position
+
+
+func _on_interact_1_area_entered(area: Area2D) -> void:
+	Gamemanager.set_currentScene("Stage 1-1")
+	print(Gamemanager.get_currentScene())
+
+func _on_interact_2_area_entered(area: Area2D) -> void:
+	Gamemanager.set_currentScene("Stage 1-2")
+
+
+func _on_interact_mer_area_entered(area: Area2D) -> void:
+	Gamemanager.set_currentScene("Stage 3")

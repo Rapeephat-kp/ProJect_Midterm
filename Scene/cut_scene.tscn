@@ -646,6 +646,18 @@ tracks/13/keys = {
 "update": 1,
 "values": [false]
 }
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath(".:visible")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
 
 [sub_resource type="Animation" id="Animation_tkbrc"]
 resource_name = "Stage 1 1-2 Elendros"
@@ -2323,6 +2335,7 @@ _data = {
 }
 
 [node name="CutScene" type="Node2D"]
+visible = false
 script = ExtResource("1_w1y33")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]

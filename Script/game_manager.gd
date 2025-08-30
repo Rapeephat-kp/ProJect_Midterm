@@ -7,6 +7,8 @@ var player = 2
 var current_main_player_hp = 0
 var coins = 0
 
+#Manage Cutscene
+var currentscene = ""
 
 func all_reset():
 	current_main_player_hp = 0
@@ -29,3 +31,9 @@ func get_coin() :
 	
 func set_coin(n_coin) :
 	coins += n_coin
+
+func set_currentScene(curScene : String):
+	currentscene = curScene
+	
+func get_currentScene():
+	return currentscene

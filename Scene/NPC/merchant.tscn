@@ -1,0 +1,217 @@
+[gd_scene load_steps=27 format=3 uid="uid://bufdadlu37p7q"]
+
+[ext_resource type="Script" uid="uid://b1jjcurkh2fbw" path="res://Script/merchant.gd" id="1_xokjd"]
+[ext_resource type="Texture2D" uid="uid://dsc62i8veqs87" path="res://Asset_Midterm/NPC/Merchant/Idle.png" id="2_0d0mb"]
+[ext_resource type="Texture2D" uid="uid://de8ugf33tsgq" path="res://Asset_Midterm/NPC/Merchant/Idle_2.png" id="2_02c1y"]
+[ext_resource type="Texture2D" uid="uid://m8j48x433ipv" path="res://Asset_Midterm/UI/UI/HotkeyBox_34x34.png" id="3_02c1y"]
+[ext_resource type="FontFile" uid="uid://bdl4qpamcrivq" path="res://Fonts/OBGB.TTF" id="4_58wvk"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ps1l2"]
+size = Vector2(30, 63.3333)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_58wvk"]
+atlas = ExtResource("2_02c1y")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ps1l2"]
+atlas = ExtResource("2_02c1y")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6l7ci"]
+atlas = ExtResource("2_02c1y")
+region = Rect2(256, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e66ob"]
+atlas = ExtResource("2_02c1y")
+region = Rect2(384, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jrb2w"]
+atlas = ExtResource("2_02c1y")
+region = Rect2(512, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a6sqg"]
+atlas = ExtResource("2_02c1y")
+region = Rect2(640, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6om3u"]
+atlas = ExtResource("2_02c1y")
+region = Rect2(768, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iw8ts"]
+atlas = ExtResource("2_02c1y")
+region = Rect2(896, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7egiy"]
+atlas = ExtResource("2_02c1y")
+region = Rect2(1024, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lrfpg"]
+atlas = ExtResource("2_02c1y")
+region = Rect2(1152, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8mmve"]
+atlas = ExtResource("2_02c1y")
+region = Rect2(1280, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o6ldv"]
+atlas = ExtResource("2_0d0mb")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7hclo"]
+atlas = ExtResource("2_0d0mb")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_880fn"]
+atlas = ExtResource("2_0d0mb")
+region = Rect2(256, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5ondl"]
+atlas = ExtResource("2_0d0mb")
+region = Rect2(384, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_072cb"]
+atlas = ExtResource("2_0d0mb")
+region = Rect2(512, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ulxer"]
+atlas = ExtResource("2_0d0mb")
+region = Rect2(640, 0, 128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6l7ci"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_58wvk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ps1l2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6l7ci")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e66ob")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jrb2w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a6sqg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6om3u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iw8ts")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7egiy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lrfpg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8mmve")
+}],
+"loop": true,
+"name": &"greeting",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o6ldv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7hclo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_880fn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5ondl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_072cb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ulxer")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e66ob"]
+size = Vector2(208, 64)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jrb2w"]
+size = Vector2(242, 64)
+
+[node name="merchant" type="Node2D"]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+script = ExtResource("1_xokjd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+visible = false
+position = Vector2(0, 3.33333)
+shape = SubResource("RectangleShape2D_ps1l2")
+one_way_collision = true
+
+[node name="Merchant" type="Node2D" parent="CharacterBody2D" groups=["Merchant"]]
+
+[node name="MerchantFlipL" type="AnimatedSprite2D" parent="CharacterBody2D/Merchant"]
+position = Vector2(-3, -26.6667)
+sprite_frames = SubResource("SpriteFrames_6l7ci")
+animation = &"greeting"
+flip_h = true
+
+[node name="MerchantFlipR" type="AnimatedSprite2D" parent="CharacterBody2D/Merchant"]
+visible = false
+position = Vector2(8, -26.6667)
+sprite_frames = SubResource("SpriteFrames_6l7ci")
+animation = &"idle"
+
+[node name="detectZone L" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="detectZone L"]
+position = Vector2(-121, 4)
+shape = SubResource("RectangleShape2D_e66ob")
+
+[node name="detectZone R" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="detectZone R"]
+position = Vector2(121, 4)
+shape = SubResource("RectangleShape2D_e66ob")
+
+[node name="interactZone" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="interactZone"]
+position = Vector2(0, 4)
+shape = SubResource("RectangleShape2D_jrb2w")
+
+[node name="buttton guide" type="Sprite2D" parent="."]
+position = Vector2(0, -45)
+scale = Vector2(0.529412, 0.529412)
+texture = ExtResource("3_02c1y")
+
+[node name="Label" type="Label" parent="buttton guide"]
+offset_left = -5.66667
+offset_top = -9.44443
+offset_right = 26.3333
+offset_bottom = 38.5556
+scale = Vector2(0.387, 0.387)
+theme_override_colors/font_shadow_color = Color(0.294118, 0.239216, 0.266667, 1)
+theme_override_constants/shadow_offset_x = 5
+theme_override_fonts/font = ExtResource("4_58wvk")
+theme_override_font_sizes/font_size = 40
+text = "F"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[connection signal="area_entered" from="detectZone L" to="CharacterBody2D" method="_on_detect_zone_l_area_entered"]
+[connection signal="area_exited" from="detectZone L" to="CharacterBody2D" method="_on_detect_zone_l_area_exited"]
+[connection signal="area_entered" from="detectZone R" to="CharacterBody2D" method="_on_detect_zone_r_area_entered"]
+[connection signal="area_exited" from="detectZone R" to="CharacterBody2D" method="_on_detect_zone_r_area_exited"]
+[connection signal="area_entered" from="interactZone" to="CharacterBody2D" method="_on_interact_zone_area_entered"]
+[connection signal="area_exited" from="interactZone" to="CharacterBody2D" method="_on_interact_zone_area_exited"]

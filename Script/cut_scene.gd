@@ -68,8 +68,14 @@ func _on_timer_timeout() -> void:
 	print("timeout")
 	animation_player.play()
 
-func stage1_part1 ():
-	animation_player.play("Stage 1 1-2 Nymera")
+func playAni(AnimationName : String):
+	animation_player.play(AnimationName)
+	animation_player.seek(0,true)
 
+func stopAni():
+	animation_player.play("RESET")
+
+func stage1():
+	animation_player.play("Stage 1 1-2 Elendros")
 
 # Ending Scene
