@@ -87,4 +87,9 @@ func _input(event: InputEvent) -> void:
 				CutSceneManager.playAni("Stage 1 1-2 Nymera")
 		if cutscene == "Stage 1-2":
 			CutSceneManager.playAni("Stage 1 2-2")
-	
+		if cutscene == "Stage 2":
+			CutSceneManager.playAni("Stage 2 with explorer")
+		if cutscene == "Stage 1-2":
+			CutSceneManager.playAni("Stage 1 2-2")
+		if cutscene == "Stage 1-2":
+			CutSceneManager.playAni("Stage 1 2-2")

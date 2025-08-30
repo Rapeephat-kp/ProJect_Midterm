@@ -1,19 +1,65 @@
 extends Node2D
 
+#UI
+@onready var nymeraProfile: TextureRect = $CanvasUI/Player_show/Nymera
+@onready var elendrosProfile: TextureRect = $CanvasUI/Player_show/Elendros
+@onready var inventory: Node2D = $CanvasUI/Inventory/Inventory
 
-# Called when the node enters the scene tree for the first time.
+@onready var elendros: Elendros = $"Main Character/Elendros"
+@onready var nymera: Nymera = $"Main Character/Nymera"
+@onready var spawn_point: Marker2D = $"spawn point"
+
+
+
 func _ready() -> void:
-	pass # Replace with function body.
+	#Gamemanager.set_currentScene("Stage 1")
+	$"Start stage 3/CheckpointAni".play("default")
+	elendros.position = spawn_point.position
+	nymera.position = spawn_point.position
+	print(Gamemanager.get_p())
+	var p_value = Gamemanager.get_p()
+	if p_value == 1:
+		elendrosProfile.visible = true
+		nymeraProfile.visible = false
+	elif p_value == 2:
+		elendrosProfile.visible = false
+		nymeraProfile.visible = true
+	#Bridge
+	$TileMap/Bridge.enabled = true
+	$TileMap/Bridge2.enabled = false
+	#CutSceneManager.stage1_part1()
+func _process(delta: float):
+	inventory.initialize_inventory()
+	
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+func _on_collision_area_entered(area: Area2D) -> void:
+	await get_tree().create_timer(0.5).timeout
+	SceneTransition.change_scene("res://Scene/Stage_Scene/stage_2.tscn")
+
+
+func _on_fallzone_area_entered(area: Area2D) -> void:
+	if area.is_in_group("Player"):
+		elendros.position = spawn_point.position
+		nymera.position = spawn_point.position
+
+
+func _on_interact_1_area_entered(area: Area2D) -> void:
+	Gamemanager.set_currentScene("Stage 1-1")
+	print(Gamemanager.get_currentScene())
+
+func _on_interact_2_area_entered(area: Area2D) -> void:
+	Gamemanager.set_currentScene("Stage 1-2")
+
+
+func _on_interact_mer_area_entered(area: Area2D) -> void:
+	Gamemanager.set_currentScene("Stage 3")
+
 
 
 func _on_water_area_entered(area: Area2D) -> void:
 	if area.is_in_group("Player"):
-		$Nymera.position = $"spawn point".position
+		nymera.position = spawn_point.position
 
 
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=72 format=4 uid="uid://1mjuf2h37kbj"]
+[gd_scene load_steps=72 format=4 uid="uid://c8e7xlnmjjcpb"]
 
 [ext_resource type="Script" uid="uid://basg1pfe5ph52" path="res://Script/stage_5.gd" id="1_hbu84"]
 [ext_resource type="Texture2D" uid="uid://bjoc2gctj3hdg" path="res://Asset_Midterm/Tile_Map/Fantasy Swamp Forest/Free/Terrain-and-Props-OLD.png" id="1_kem2i"]
@@ -21,7 +21,7 @@
 [ext_resource type="Texture2D" uid="uid://byicixnbvtqhe" path="res://Asset_Midterm/UI/UI/MenusBox_34x34.png" id="18_hy2jh"]
 [ext_resource type="Texture2D" uid="uid://v7p21xrmkms4" path="res://Asset_Midterm/UI/UI/MenusIcons_34x34.png" id="19_dba68"]
 [ext_resource type="Texture2D" uid="uid://dkyfygbi0dekj" path="res://Asset_Midterm/UI/UI/Button_52x14.png" id="20_lq0cq"]
-[ext_resource type="Script" uid="uid://dndvdrc5asdq3" path="res://Scene/puzzle.gd" id="21_cx44h"]
+[ext_resource type="Script" path="res://Scene/puzzle.gd" id="21_cx44h"]
 [ext_resource type="Texture2D" uid="uid://cwo8kf15e6ubg" path="res://Asset_Midterm/UI/UI/BottomPatternBG_128x112.png" id="21_uuy1w"]
 [ext_resource type="Texture2D" uid="uid://bg53hghq0u36n" path="res://Asset_Midterm/UI/UI/PatternMiddleBottomBG_199x48.png" id="22_cx44h"]
 [ext_resource type="PackedScene" uid="uid://ckk8xxea62en7" path="res://Scene/Main_Char_Scene/Elendros.tscn" id="22_nv2tu"]
@@ -1877,7 +1877,7 @@ theme_override_styles/normal = SubResource("StyleBoxTexture_lq0cq")
 [node name="Main Character" type="Node2D" parent="."]
 
 [node name="Nymera" parent="Main Character" instance=ExtResource("4_ph7ax")]
-position = Vector2(1615, 1250)
+position = Vector2(1270, 1721)
 
 [node name="PointLight2D" type="PointLight2D" parent="Main Character/Nymera"]
 position = Vector2(13, 16)

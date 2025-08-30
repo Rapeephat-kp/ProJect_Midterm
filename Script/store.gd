@@ -27,4 +27,5 @@ func _on_max_hp_buy_pressed() -> void:
 		Gamemanager.set_coin(-350)
 		
 func _on_exit_pressed() -> void:
-	get_tree().change_scene_to_file("res://Scene/Map.tscn")
+	pass
+	#$".".visible = false

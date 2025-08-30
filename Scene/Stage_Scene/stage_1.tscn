@@ -1,4 +1,4 @@
-[gd_scene load_steps=67 format=4 uid="uid://nu3hhcc1jbow"]
+[gd_scene load_steps=68 format=4 uid="uid://nu3hhcc1jbow"]
 
 [ext_resource type="Texture2D" uid="uid://csm1chwn2sopr" path="res://Asset_Midterm/Tile_Map/New GothicVania/PNG/environment/layers/background.png" id="1_5cgel"]
 [ext_resource type="Script" uid="uid://8nqm0564pcu5" path="res://Script/Stage/stage_1.gd" id="1_r715p"]
@@ -28,6 +28,7 @@
 [ext_resource type="Texture2D" uid="uid://v7p21xrmkms4" path="res://Asset_Midterm/UI/UI/MenusIcons_34x34.png" id="23_13ueo"]
 [ext_resource type="Texture2D" uid="uid://dkyfygbi0dekj" path="res://Asset_Midterm/UI/UI/Button_52x14.png" id="24_70iyf"]
 [ext_resource type="FontFile" uid="uid://bdl4qpamcrivq" path="res://Fonts/OBGB.TTF" id="25_3af3u"]
+[ext_resource type="Texture2D" uid="uid://bhmhd4fyqm4g" path="res://Asset_Midterm/UI/UI/CoinIcon_16x18.png" id="25_ckld8"]
 [ext_resource type="PackedScene" uid="uid://cjuqyquignn6p" path="res://Scene/moving Platform.tscn" id="28_uddwt"]
 [ext_resource type="PackedScene" uid="uid://bufdadlu37p7q" path="res://Scene/NPC/merchant.tscn" id="30_olkyh"]
 
@@ -1916,6 +1917,43 @@ layout_mode = 0
 offset_left = 6.66667
 offset_right = 46.6667
 offset_bottom = 40.0
+
+[node name="Coins" type="TextureRect" parent="CanvasUI/Player_show"]
+layout_mode = 0
+offset_left = 51.6667
+offset_top = 29.3333
+offset_right = 67.6667
+offset_bottom = 47.3333
+texture = ExtResource("25_ckld8")
+
+[node name="Label" type="Label" parent="CanvasUI/Player_show/Coins"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = -4.33333
+offset_right = 56.0
+offset_bottom = 18.6667
+theme_override_colors/font_color = Color(0.572549, 0.454902, 0.254902, 1)
+text = ": "
+
+[node name="Coin_Amount" type="Label" parent="CanvasUI/Player_show/Coins"]
+layout_mode = 0
+offset_left = 22.3333
+offset_right = 115.333
+offset_bottom = 16.0
+theme_override_colors/font_color = Color(0.447059, 0.356863, 0.196078, 1)
+theme_override_fonts/font = ExtResource("25_3af3u")
+theme_override_font_sizes/font_size = 12
+text = "144"
+
+[node name="Coin_Amount2" type="Label" parent="CanvasUI/Player_show/Coins"]
+layout_mode = 0
+offset_left = 23.0
+offset_right = 116.0
+offset_bottom = 16.0
+theme_override_colors/font_color = Color(0.847475, 0.711393, 0.48763, 1)
+theme_override_fonts/font = ExtResource("25_3af3u")
+theme_override_font_sizes/font_size = 12
+text = "144"
 
 [node name="Setting_Button" type="Control" parent="CanvasUI"]
 layout_mode = 3

@@ -5,7 +5,8 @@ extends Node2D
 @onready var phase = $"CanvasLayer/stage cutscene/Setting_Panel_Bg/Phase"
 @onready var next_button: Button = $"CanvasLayer/stage cutscene/Setting_Panel_Bg/Next_Button"
 @onready var autoplay_button: Button = $"CanvasLayer/stage cutscene/Setting_Panel_Bg/Autoplay_Button"
-@onready var skip_button: Button = $"CanvasLayer/stage cutscene/Setting_Panel_Bg/Skip_Button"
+@onready var store_button: Button = $"CanvasLayer/stage cutscene/Setting_Panel_Bg/Store_Button"
+#@onready var store_1: Node2D = $CanvasLayer/Store_1
 
 
 
@@ -20,8 +21,8 @@ var visible_character = 0
 
 func _ready() -> void:
 	#$AnimationPlayer.play("Elendros Ending")
+	#store_1.visible = false
 	pass
-
 func _process(delta: float) -> void:
 	if visible_character != phase.visible_characters:
 		visible_character = phase.visible_characters
@@ -74,8 +75,14 @@ func playAni(AnimationName : String):
 
 func stopAni():
 	animation_player.play("RESET")
-
+	autoplay_button.modulate = "aaaaaa"
+	autoplay = false
 func stage1():
 	animation_player.play("Stage 1 1-2 Elendros")
 
 # Ending Scene
+
+
+func _on_store_button_pressed() -> void:
+	print("In the store")
+	#store_1.visible = true
