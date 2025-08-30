@@ -1,11 +1,15 @@
-[gd_scene load_steps=61 format=4 uid="uid://vie4pnvbwyuv"]
+[gd_scene load_steps=70 format=4 uid="uid://vie4pnvbwyuv"]
 
 [ext_resource type="Script" uid="uid://dovacsfio8kkv" path="res://Script/Test_map.gd" id="1_5yno8"]
 [ext_resource type="Texture2D" uid="uid://b6bs3h20360a8" path="res://Asset_Midterm/Tile_Map/Fantasy Swamp Forest/Free/Terrain_and_Props.png" id="1_87644"]
 [ext_resource type="Texture2D" uid="uid://bjoc2gctj3hdg" path="res://Asset_Midterm/Tile_Map/Fantasy Swamp Forest/Free/Terrain-and-Props-OLD.png" id="2_dkwvw"]
+[ext_resource type="PackedScene" uid="uid://bl8xoik6mi4n1" path="res://Boss_core.tscn" id="2_wxsln"]
+[ext_resource type="PackedScene" uid="uid://boli25irinxgk" path="res://Scene/Monster_Scene/goblin.tscn" id="3_c6eh7"]
 [ext_resource type="Texture2D" uid="uid://t2raqgyaher1" path="res://Asset_Midterm/Tile_Map/New GothicVania/PNG/environment/layers/tileset.png" id="3_pp112"]
 [ext_resource type="Script" uid="uid://dc3fnkmb1y6t4" path="res://Scene/Stage_Scene/Boss.gd" id="4_bddm1"]
 [ext_resource type="Texture2D" uid="uid://ckxems0v2k35f" path="res://Asset_Midterm/Monster/Agis/Agis.png" id="4_pp112"]
+[ext_resource type="PackedScene" uid="uid://cfygwol8blgbs" path="res://Scene/Monster_Scene/mushroom.tscn" id="4_sfbgj"]
+[ext_resource type="PackedScene" uid="uid://b1b5ylcgaaepd" path="res://Scene/Monster_Scene/skeleton_knight.tscn" id="5_emqxx"]
 [ext_resource type="PackedScene" uid="uid://dkshrpsvngsmf" path="res://Scene/Main_Char_Scene/Nymera2.tscn" id="7_1yvbs"]
 [ext_resource type="Script" uid="uid://chtw2cfquxn21" path="res://Script/setting.gd" id="7_4opq4"]
 [ext_resource type="PackedScene" uid="uid://ckk8xxea62en7" path="res://Scene/Main_Char_Scene/Elendros.tscn" id="7_s2t2b"]
@@ -21,6 +25,11 @@
 [ext_resource type="Texture2D" uid="uid://byicixnbvtqhe" path="res://Asset_Midterm/UI/UI/MenusBox_34x34.png" id="17_iup2u"]
 [ext_resource type="Texture2D" uid="uid://v7p21xrmkms4" path="res://Asset_Midterm/UI/UI/MenusIcons_34x34.png" id="18_c6eh7"]
 [ext_resource type="Texture2D" uid="uid://dkyfygbi0dekj" path="res://Asset_Midterm/UI/UI/Button_52x14.png" id="19_sfbgj"]
+[ext_resource type="Texture2D" uid="uid://cphn5s5t5dlce" path="res://Asset_Midterm/UI/UI/ValueBlue_120x8.png" id="21_mmwch"]
+[ext_resource type="Texture2D" uid="uid://bg53hghq0u36n" path="res://Asset_Midterm/UI/UI/PatternMiddleBottomBG_199x48.png" id="22_js130"]
+[ext_resource type="Script" uid="uid://cehioggct0ygu" path="res://Scene/Stage_Scene/Boss_hp_Bar.gd" id="22_o55fe"]
+[ext_resource type="Texture2D" uid="uid://bhj8y8hjedetd" path="res://Asset_Midterm/UI/UI/TopPatternPanel_02_33x15.png" id="23_o55fe"]
+[ext_resource type="FontFile" uid="uid://dbydje27os4iv" path="res://Fonts/AncientModernTales-a7Po.ttf" id="24_iup2u"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bddm1"]
 texture = ExtResource("1_87644")
@@ -1041,7 +1050,7 @@ size = Vector2(20, 18)
 [sub_resource type="CircleShape2D" id="CircleShape2D_wwmu7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2kydf"]
-size = Vector2(974, 558)
+size = Vector2(918, 558)
 
 [sub_resource type="Animation" id="Animation_etu1s"]
 resource_name = "Close"
@@ -1151,6 +1160,8 @@ bg_color = Color(0.69462, 0.554322, 0.367857, 1)
 
 [node name="Stage_6" type="Node2D"]
 script = ExtResource("1_5yno8")
+item_scene = ExtResource("2_wxsln")
+monster_scenes = Array[PackedScene]([ExtResource("3_c6eh7"), ExtResource("4_sfbgj"), ExtResource("5_emqxx")])
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 position = Vector2(243, 615)
@@ -1174,6 +1185,7 @@ frame_progress = 0.939568
 metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Boss"]
+position = Vector2(2, -71)
 shape = SubResource("RectangleShape2D_7ogf8")
 
 [node name="Hit box" type="Area2D" parent="Boss"]
@@ -1184,7 +1196,7 @@ shape = SubResource("CircleShape2D_wwmu7")
 [node name="Area_attack_check" type="Area2D" parent="Boss"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Boss/Area_attack_check"]
-position = Vector2(19, -52)
+position = Vector2(47, -52)
 shape = SubResource("RectangleShape2D_2kydf")
 
 [node name="CanvasUI" type="CanvasLayer" parent="."]
@@ -1439,12 +1451,133 @@ theme_override_fonts/font = ExtResource("16_o55fe")
 text = "Setting"
 vertical_alignment = 1
 
+[node name="Boss_Health_Bar" type="Control" parent="CanvasUI"]
+visible = false
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -18.0
+offset_top = -21.0
+offset_right = 22.0
+offset_bottom = 19.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(5, 5)
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="CanvasUI/Boss_Health_Bar"]
+modulate = Color(0.74558, 0.74558, 0.74558, 1)
+layout_mode = 0
+offset_left = -62.4
+offset_top = -52.6
+offset_right = 65.6
+offset_bottom = -36.6
+value = 100.0
+texture_under = ExtResource("9_5yno8")
+texture_progress = ExtResource("21_mmwch")
+texture_progress_offset = Vector2(4, 4)
+tint_under = Color(0.666667, 0.666667, 0.666667, 1)
+tint_progress = Color(0.506486, 0.211145, 0.85578, 1)
+script = ExtResource("22_o55fe")
+
+[node name="PatternMiddleBottomBg199x48" type="Sprite2D" parent="CanvasUI/Boss_Health_Bar/TextureProgressBar"]
+modulate = Color(0.351563, 0.351563, 0.351563, 1)
+position = Vector2(64.8, -7.8)
+scale = Vector2(0.624121, 0.329167)
+texture = ExtResource("22_js130")
+
+[node name="TopPatternPanel0233x15" type="Sprite2D" parent="CanvasUI/Boss_Health_Bar/TextureProgressBar"]
+modulate = Color(0.485703, 0.485704, 0.485703, 1)
+position = Vector2(64.2, 16.4)
+scale = Vector2(1.075, 1.075)
+texture = ExtResource("23_o55fe")
+
+[node name="Label" type="Label" parent="CanvasUI/Boss_Health_Bar/TextureProgressBar"]
+layout_mode = 0
+offset_left = 38.0
+offset_top = -15.8
+offset_right = 421.0
+offset_bottom = 121.2
+scale = Vector2(0.15, 0.15)
+theme_override_colors/font_color = Color(0.314759, 0.235521, 0.672296, 1)
+theme_override_colors/font_shadow_color = Color(0.0568192, 0.0180075, 0.140476, 1)
+theme_override_colors/font_outline_color = Color(0.180843, 1.57929e-07, 3.00817e-08, 1)
+theme_override_constants/shadow_offset_x = 10
+theme_override_constants/shadow_offset_y = 0
+theme_override_constants/outline_size = 9
+theme_override_fonts/font = ExtResource("24_iup2u")
+theme_override_font_sizes/font_size = 124
+text = "The Agis"
+
 [node name="Main Character" type="Node2D" parent="."]
 
 [node name="Nymera" parent="Main Character" instance=ExtResource("7_1yvbs")]
-position = Vector2(1754, 812)
+position = Vector2(374, 653)
 
 [node name="Elendros" parent="Main Character" instance=ExtResource("7_s2t2b")]
+
+[node name="SpawnMarkers" type="Node2D" parent="."]
+
+[node name="position1" type="Marker2D" parent="SpawnMarkers"]
+position = Vector2(1733, 685)
+
+[node name="position2" type="Marker2D" parent="SpawnMarkers"]
+position = Vector2(1861, 620)
+
+[node name="position3" type="Marker2D" parent="SpawnMarkers"]
+position = Vector2(1843, 721)
+
+[node name="position12" type="Marker2D" parent="SpawnMarkers"]
+position = Vector2(1983, 769)
+
+[node name="position13" type="Marker2D" parent="SpawnMarkers"]
+position = Vector2(1731, 752)
+
+[node name="position4" type="Marker2D" parent="SpawnMarkers"]
+position = Vector2(1956, 688)
+
+[node name="position5" type="Marker2D" parent="SpawnMarkers"]
+position = Vector2(2488, 604)
+
+[node name="position6" type="Marker2D" parent="SpawnMarkers"]
+position = Vector2(2389, 654)
+
+[node name="position7" type="Marker2D" parent="SpawnMarkers"]
+position = Vector2(2267, 699)
+
+[node name="position8" type="Marker2D" parent="SpawnMarkers"]
+position = Vector2(2472, 702)
+
+[node name="position9" type="Marker2D" parent="SpawnMarkers"]
+position = Vector2(2482, 809)
+
+[node name="position10" type="Marker2D" parent="SpawnMarkers"]
+position = Vector2(2262, 792)
+
+[node name="position11" type="Marker2D" parent="SpawnMarkers"]
+position = Vector2(2384, 750)
+
+[node name="MonstersSpawnMarkers" type="Node2D" parent="."]
+
+[node name="Marker2D" type="Marker2D" parent="MonstersSpawnMarkers"]
+position = Vector2(2262, 791)
+
+[node name="Marker2D2" type="Marker2D" parent="MonstersSpawnMarkers"]
+position = Vector2(2384, 749)
+
+[node name="Marker2D3" type="Marker2D" parent="MonstersSpawnMarkers"]
+position = Vector2(1821, 798)
+
+[node name="Marker2D4" type="Marker2D" parent="MonstersSpawnMarkers"]
+position = Vector2(1733, 685)
+
+[node name="Marker2D5" type="Marker2D" parent="MonstersSpawnMarkers"]
+position = Vector2(2013, 841)
+
+[node name="Marker2D6" type="Marker2D" parent="MonstersSpawnMarkers"]
+position = Vector2(2396, 835)
 
 [connection signal="area_entered" from="Boss/Area_attack_check" to="Boss" method="_on_area_attack_check_area_entered"]
 [connection signal="pressed" from="CanvasUI/Setting_Button/Setting_Button" to="CanvasUI/Setting" method="_on_setting_button_pressed"]

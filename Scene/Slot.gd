@@ -39,4 +39,9 @@ func initialize_item(item_name, item_quantity):
 	else:
 		item.set_item(item_name,item_quantity)
 		
-	
+
+func clear_slot():
+	if item:
+		remove_child(item)
+		item.queue_free()
+		item = null

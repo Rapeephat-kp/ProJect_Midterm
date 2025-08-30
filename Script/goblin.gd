@@ -79,8 +79,8 @@ func follow_player(delta):
 					returning = true
 					return_timer = 0
 			else:
-				var dir = spawn_position - global_position
-				if dir.length() > 5:
+				var dir = spawn_position - global_position 
+				if dir.length() > 20:
 					$AnimatedSprite2D.play("Run")
 					if dir.x > 0 and can_forward:
 						velocity.x = abs(speed)
@@ -196,7 +196,7 @@ func _on_area_attack_area_exited(area: Area2D) -> void:
 		
 func _on_hit_box_area_entered(area: Area2D) -> void:
 	if area.is_in_group("Player_hit") && get_hit != true && count <= 0:
-		health -= 15
+		health -= Gamemanager.get_player_dmg()
 		get_hit = true
 		if is_attacking:
 			_cancel_attack() # ปิด hitbox ทันที

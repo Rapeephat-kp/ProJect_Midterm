@@ -5,17 +5,25 @@ class_name GameManager
 var Wood = 0
 var player = 2
 var current_main_player_hp = 0
-var coins = 0
-
+var max_player_health = 100 
+var coins = 200
+var player_dmg = 15
+var Boss_Hp = 100
 #Manage Cutscene
 var currentscene = ""
 
 func all_reset():
 	current_main_player_hp = 0
-	var coins = 0
+	coins = 0
+	player_dmg = 15
+	Boss_Hp = 100
+	coins = 0
+	current_main_player_hp = 0
 
 func set_player_health(hp):
-	current_main_player_hp = hp
+	current_main_player_hp += hp
+	print(current_main_player_hp)
+	print(max_player_health)
 	
 func get_player_health():
 	return current_main_player_hp
@@ -37,3 +45,21 @@ func set_currentScene(curScene : String):
 	
 func get_currentScene():
 	return currentscene
+	
+func get_player_dmg():
+	return player_dmg
+	
+func get_Boss_health():
+	return Boss_Hp
+	
+func set_Boss_Hp(HP):
+	Boss_Hp += HP
+	
+func set_atk(atk):
+	player_dmg += atk
+	
+func get_max_hp():
+	return max_player_health
+
+func set_max_hp(hp):
+	max_player_health += hp

@@ -1,7 +1,7 @@
 extends CharacterBody2D
 class_name Nymera
 
-const SPEED = 150.0
+const SPEED = 400
 const JUMP_VELOCITY = -325.0
 
 @onready var Idle_Sprite = $Idle_Sprite

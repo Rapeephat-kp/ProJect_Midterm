@@ -1,6 +1,6 @@
 [gd_scene load_steps=43 format=4 uid="uid://cgve34lntntl0"]
 
-[ext_resource type="Script" uid="uid://dovacsfio8kkv" path="res://Script/Test_map.gd" id="1_ddblf"]
+[ext_resource type="Script" uid="uid://dxh8rb6jn41qj" path="res://Scene/For_test.gd" id="1_etu1s"]
 [ext_resource type="Texture2D" uid="uid://c02hk8gklv3yv" path="res://Asset_Midterm/UI/UI/ValueBar_128x16.png" id="2_04dgn"]
 [ext_resource type="PackedScene" uid="uid://bal4y7qsf3yqg" path="res://Scene/inventory.tscn" id="2_4hid6"]
 [ext_resource type="PackedScene" uid="uid://bsintr6dnceys" path="res://Scene/logs.tscn" id="2_k4ih1"]
@@ -1161,7 +1161,7 @@ texture = ExtResource("13_sw748")
 bg_color = Color(0.69462, 0.554322, 0.367857, 1)
 
 [node name="Map" type="Node2D"]
-script = ExtResource("1_ddblf")
+script = ExtResource("1_etu1s")
 
 [node name="Game_manager" parent="." instance=ExtResource("8_sw748")]
 
@@ -1178,10 +1178,12 @@ position = Vector2(188, 310)
 [node name="Logs2" parent="Logs_all" instance=ExtResource("2_k4ih1")]
 position = Vector2(245, 310)
 
-[node name="Nymera" parent="." instance=ExtResource("13_04dgn")]
+[node name="Main Character" type="Node2D" parent="."]
+
+[node name="Nymera" parent="Main Character" instance=ExtResource("13_04dgn")]
 position = Vector2(96, 288)
 
-[node name="Elendros" parent="." instance=ExtResource("21_rmglj")]
+[node name="Elendros" parent="Main Character" instance=ExtResource("21_rmglj")]
 position = Vector2(109, 300)
 
 [node name="Button" type="Button" parent="."]

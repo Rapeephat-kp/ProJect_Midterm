@@ -1,6 +1,7 @@
 extends CharacterBody2D
 @export var health = 10
 @export var speed = 40
+var current_speed 
 @export var gravity : float = 30
 @export var sprite = "Run"
 var time_run = 0
@@ -21,6 +22,7 @@ func _ready() -> void:
 	#print(velocity.x)
 	
 func _process(delta: float) -> void:
+	#print(velocity.x)
 	if(health <= 0 ):
 		$AnimatedSprite2D.stop()
 		_cancel_attack()
@@ -62,33 +64,29 @@ func dis():
 		queue_free()
 	
 func movement():
-	var can_forward = $Check_floor_l.is_colliding()
-	var can_backward = $Check_floor_r.is_colliding()
-	if(is_attacking != true && can_forward && can_backward):
-		if(player_in_l != true && player_in_r != true):
-			velocity.x = speed * -status
-			if($AnimatedSprite2D.flip_h):
-				status = 1
-				
-			if !is_on_floor():
-				velocity.y += gravity
-			
+	var can_forward = $Check_floor_r.is_colliding()   # forward = ขวา
+	var can_backward = $Check_floor_l.is_colliding()  # backward = ซ้าย
+	if is_attacking:
+		return
+	if not player_in_l and not player_in_r:
+		velocity.x = speed * status  # forward = ขวา, status = 1 → ขวา, -1 → ซ้าย
+		move_and_slide()
+		if not is_on_floor():
+			velocity.y += gravity
 			move_and_slide()
 			
-			if is_on_wall() || time_run > randi_range(5,10):
-				speed = -speed
-				velocity.x = speed 
-				#print(velocity.x)
-				time_run = 0
-				#print("tm")
-				$AnimatedSprite2D.flip_h = speed > 0
-				
-			$AnimatedSprite2D.flip_h = speed > 0
+		if is_on_wall() or (!can_forward and status == 1) or (!can_backward and status == -1) or time_run > randi_range(5, 10):
+			status *= -1  # สลับทาง
+			velocity.x = speed * status
+			time_run = 0
+
+		$AnimatedSprite2D.flip_h = status == -1  # เดินซ้าย flip_h = true, ขวา flip_h = false
+		if not $AnimatedSprite2D.is_playing() or $AnimatedSprite2D.animation != sprite:
+			$AnimatedSprite2D.play(sprite)
 			
-			if !$AnimatedSprite2D.is_playing() || $AnimatedSprite2D.animation != sprite:
-				$AnimatedSprite2D.play(sprite)
-				
-		elif(player_in_l == true || player_in_r == true):
+		time_run += get_process_delta_time()
+			
+	elif(player_in_l == true || player_in_r == true):
 			follow_player()
 			attack()
 			
@@ -121,7 +119,7 @@ func attack():
 			velocity.x = 0
 			move_and_slide()
 
-			var wait_time = attack_delay - 1.5
+			var wait_time = attack_delay - 2
 			var elapsed = 0.0
 			var step = 0.1
 			while elapsed < wait_time && dis_check != true:
@@ -209,7 +207,7 @@ func _on_area_attack_area_exited(area: Area2D) -> void:
 		
 func _on_hit_box_area_entered(area: Area2D) -> void:
 	if area.is_in_group("Player_hit") && get_hit != true && count <= 0:
-		health -= 15
+		health -= Gamemanager.get_player_dmg()
 		get_hit = true
 		if is_attacking:
 			_cancel_attack() # ปิด hitbox ทันที

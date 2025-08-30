@@ -1,0 +1,66 @@
+[gd_scene load_steps=7 format=3 uid="uid://bl8xoik6mi4n1"]
+
+[ext_resource type="Texture2D" uid="uid://bq46c5oakxhi" path="res://Asset_Midterm/Item/crystal.png" id="1_bw81u"]
+[ext_resource type="Script" uid="uid://cn62ivrwm4kn3" path="res://boss_core.gd" id="1_et3a1"]
+
+[sub_resource type="Animation" id="Animation_bw81u"]
+resource_name = "Move"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0, -2), Vector2(0, 0), Vector2(0, -2)]
+}
+
+[sub_resource type="Animation" id="Animation_et3a1"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, -2)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_52b8f"]
+_data = {
+&"Move": SubResource("Animation_bw81u"),
+&"RESET": SubResource("Animation_et3a1")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bw81u"]
+size = Vector2(6, 13)
+
+[node name="Boss_core" type="Node2D"]
+script = ExtResource("1_et3a1")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(0.78897, 0.175319, 0.175675, 1)
+position = Vector2(0, -2)
+scale = Vector2(0.0175423, 0.0175423)
+texture = ExtResource("1_bw81u")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_52b8f")
+}
+
+[node name="Hit_Box" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hit_Box"]
+position = Vector2(0, -3)
+shape = SubResource("RectangleShape2D_bw81u")
+
+[connection signal="area_entered" from="Hit_Box" to="." method="_on_hit_box_area_entered"]
