@@ -1,4 +1,4 @@
-[gd_scene load_steps=75 format=4 uid="uid://cpq4qkq1b6ka6"]
+[gd_scene load_steps=77 format=4 uid="uid://cpq4qkq1b6ka6"]
 
 [ext_resource type="Texture2D" uid="uid://skwubifcy71r" path="res://Asset_Midterm/Tile_Map/Fantasy Swamp Forest/Free/BG_3/BG_3.png" id="1_a24hx"]
 [ext_resource type="Script" uid="uid://bsskijfieg6i7" path="res://Script/Stage/stage_3.gd" id="1_oj7rm"]
@@ -29,6 +29,7 @@
 [ext_resource type="Texture2D" uid="uid://v7p21xrmkms4" path="res://Asset_Midterm/UI/UI/MenusIcons_34x34.png" id="26_nkven"]
 [ext_resource type="Texture2D" uid="uid://dkyfygbi0dekj" path="res://Asset_Midterm/UI/UI/Button_52x14.png" id="27_6xc28"]
 [ext_resource type="FontFile" uid="uid://bdl4qpamcrivq" path="res://Fonts/OBGB.TTF" id="28_6hwyn"]
+[ext_resource type="PackedScene" uid="uid://bufdadlu37p7q" path="res://Scene/NPC/merchant.tscn" id="30_8swpq"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_u0b7u"]
 texture = ExtResource("4_a7c6i")
@@ -1816,6 +1817,9 @@ texture = ExtResource("27_6xc28")
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_p0vki"]
 bg_color = Color(0.69462, 0.554322, 0.367857, 1)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jr2ay"]
+size = Vector2(243.334, 65)
+
 [node name="stage 3" type="Node2D"]
 script = ExtResource("1_oj7rm")
 
@@ -2249,6 +2253,18 @@ theme_override_fonts/font = ExtResource("28_6hwyn")
 text = "Setting"
 vertical_alignment = 1
 
+[node name="NPC" type="Node2D" parent="."]
+
+[node name="merchant" parent="NPC" instance=ExtResource("30_8swpq")]
+position = Vector2(4748, 228)
+scale = Vector2(0.6, 0.6)
+
+[node name="InteractMer" type="Area2D" parent="NPC/merchant"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NPC/merchant/InteractMer"]
+position = Vector2(0.00012207, 4.1666)
+shape = SubResource("RectangleShape2D_jr2ay")
+
 [connection signal="area_entered" from="map bounds/water" to="." method="_on_water_area_entered"]
 [connection signal="area_entered" from="map bounds/left" to="." method="_on_left_area_entered"]
 [connection signal="area_exited" from="map bounds/left" to="." method="_on_left_area_exited"]
@@ -2256,3 +2272,4 @@ vertical_alignment = 1
 [connection signal="pressed" from="CanvasUI/Setting_Button/Setting_Button" to="CanvasUI/Setting" method="_on_setting_button_pressed"]
 [connection signal="pressed" from="CanvasUI/Setting_UI/Setting_Panel_Bg/Resume_Button" to="CanvasUI/Setting" method="_on_resume_button_pressed"]
 [connection signal="pressed" from="CanvasUI/Setting_UI/Setting_Panel_Bg/Exit_Button" to="CanvasUI/Setting" method="_on_exit_button_pressed"]
+[connection signal="area_entered" from="NPC/merchant/InteractMer" to="." method="_on_interact_mer_area_entered"]

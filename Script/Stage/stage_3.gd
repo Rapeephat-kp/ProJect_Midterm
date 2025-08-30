@@ -37,7 +37,7 @@ func _on_collision_area_entered(area: Area2D) -> void:
 	await get_tree().create_timer(0.5).timeout
 	SceneTransition.change_scene("res://Scene/Stage_Scene/stage_2.tscn")
 
-
+'''
 func _on_fallzone_area_entered(area: Area2D) -> void:
 	if area.is_in_group("Player"):
 		elendros.position = spawn_point.position
@@ -50,7 +50,7 @@ func _on_interact_1_area_entered(area: Area2D) -> void:
 
 func _on_interact_2_area_entered(area: Area2D) -> void:
 	Gamemanager.set_currentScene("Stage 1-2")
-
+'''
 
 func _on_interact_mer_area_entered(area: Area2D) -> void:
 	Gamemanager.set_currentScene("Stage 3")

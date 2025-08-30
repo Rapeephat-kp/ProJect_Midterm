@@ -1,4 +1,4 @@
-[gd_scene load_steps=81 format=4 uid="uid://kvx2t085cbwy"]
+[gd_scene load_steps=82 format=4 uid="uid://kvx2t085cbwy"]
 
 [ext_resource type="Texture2D" uid="uid://csm1chwn2sopr" path="res://Asset_Midterm/Tile_Map/New GothicVania/PNG/environment/layers/background.png" id="1_bi5f7"]
 [ext_resource type="Script" uid="uid://nvlhavv32s4c" path="res://Script/Stage/stage_2.gd" id="1_wm8jf"]
@@ -1751,6 +1751,9 @@ texture = ExtResource("4_samr5")
 [sub_resource type="TileSet" id="TileSet_wm8jf"]
 sources/0 = SubResource("TileSetAtlasSource_j2rfv")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_88bii"]
+size = Vector2(243.334, 65)
+
 [sub_resource type="Curve2D" id="Curve2D_h04rl"]
 _data = {
 "points": PackedVector2Array(0, 0, 0, 0, 36, 5, 0, 0, 0, 0, 36, -191, 0, 0, 0, 0, 36, 5)
@@ -2061,6 +2064,12 @@ scale = Vector2(0.3, 0.3)
 
 [node name="Explorer" parent="NPC" instance=ExtResource("19_8irac")]
 position = Vector2(696, 228)
+
+[node name="Interact" type="Area2D" parent="NPC/Explorer"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NPC/Explorer/Interact"]
+position = Vector2(0.00012207, 4.1666)
+shape = SubResource("RectangleShape2D_88bii")
 
 [node name="Moving platform" type="Node2D" parent="."]
 metadata/_edit_lock_ = true
@@ -2480,6 +2489,7 @@ position = Vector2(4147, 135)
 rotation = -1.5708
 shape = SubResource("WorldBoundaryShape2D_6bxy1")
 
+[connection signal="area_entered" from="NPC/Explorer/Interact" to="." method="_on_interact_area_entered"]
 [connection signal="pressed" from="CanvasUI/Setting_Button/Setting_Button" to="CanvasUI/Setting" method="_on_setting_button_pressed"]
 [connection signal="pressed" from="CanvasUI/Setting_UI/Setting_Panel_Bg/Resume_Button" to="CanvasUI/Setting" method="_on_resume_button_pressed"]
 [connection signal="pressed" from="CanvasUI/Setting_UI/Setting_Panel_Bg/Exit_Button" to="CanvasUI/Setting" method="_on_exit_button_pressed"]

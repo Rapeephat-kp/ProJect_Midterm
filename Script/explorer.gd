@@ -81,15 +81,32 @@ func _input(event: InputEvent) -> void:
 		print(talkable)
 		if cutscene == "Stage 1-1":
 			if Character == 1:
-				#CutSceneManager.stage1()
 				CutSceneManager.playAni("Stage 1 1-2 Elendros")
 			elif Character == 2:
 				CutSceneManager.playAni("Stage 1 1-2 Nymera")
 		if cutscene == "Stage 1-2":
-			CutSceneManager.playAni("Stage 1 2-2")
+			if Character == 1:
+				CutSceneManager.playAni("Stage 1 2-2 Elendros")
+			elif Character == 2:
+				CutSceneManager.playAni("Stage 1 2-2 Nymera")
 		if cutscene == "Stage 2":
-			CutSceneManager.playAni("Stage 2 with explorer")
-		if cutscene == "Stage 1-2":
-			CutSceneManager.playAni("Stage 1 2-2")
-		if cutscene == "Stage 1-2":
-			CutSceneManager.playAni("Stage 1 2-2")
+			if Character == 1:
+				CutSceneManager.playAni("Stage 2 Elendros")
+			elif Character == 2:
+				CutSceneManager.playAni("Stage 2 Nymera")
+		if cutscene == "Stage 3":
+			if Character == 1:
+				CutSceneManager.playAni("Stage 3 Elendros with explorer")
+			elif Character == 2:
+				CutSceneManager.playAni("Stage 3 Nymera with explorer")
+		if cutscene == "Stage 4":
+			if Character == 1:
+				CutSceneManager.playAni("Stage 4 Elendros with explorer")
+			elif Character == 2:
+				CutSceneManager.playAni("Stage 4 Nymera with explorer")
+		if cutscene == "Stage 5":
+			if Character == 1:
+				CutSceneManager.playAni("Stage 5 Elendros with explorer")
+			elif Character == 2:
+				CutSceneManager.playAni("Stage 5 Nymera with explorer")
+		

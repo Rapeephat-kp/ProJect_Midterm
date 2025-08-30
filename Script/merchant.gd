@@ -62,5 +62,17 @@ func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("talk") && talkable == true:
 		print(talkable)
 		if cutscene == "Stage 3":
-			CutSceneManager.playAni("Stage 3 with merchant")
-	
+			if Character == 1:
+				CutSceneManager.playAni("Stage 3 Elendros with merchant")
+			elif Character == 2:
+				CutSceneManager.playAni("Stage 3 Nymera with merchant")
+		if cutscene == "Stage 4":
+			if Character == 1:
+				CutSceneManager.playAni("Stage 4 Elendros with merchant")
+			elif Character == 2:
+				CutSceneManager.playAni("Stage 4 Nymera with merchant")
+		if cutscene == "Stage 5":
+			if Character == 1:
+				CutSceneManager.playAni("Stage 5 Elendros with merchant")
+			elif Character == 2:
+				CutSceneManager.playAni("Stage 5 Nymera with merchant")

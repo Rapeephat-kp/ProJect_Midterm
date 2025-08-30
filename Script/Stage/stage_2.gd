@@ -41,3 +41,9 @@ func _on_fallzone_area_entered(area: Area2D) -> void:
 func _on_checkpoint_area_entered(area: Area2D) -> void:
 	checkpoint_ani.visible = true
 	checkpoint_ani.play("default")
+	await get_tree().create_timer(1).timeout
+	SceneTransition.change_scene("res://Scene/Stage_Scene/stage_3.tscn")
+
+
+func _on_interact_area_entered(area: Area2D) -> void:
+	Gamemanager.set_currentScene("Stage 2")

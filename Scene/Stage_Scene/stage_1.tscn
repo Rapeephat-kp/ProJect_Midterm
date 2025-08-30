@@ -1,4 +1,4 @@
-[gd_scene load_steps=68 format=4 uid="uid://nu3hhcc1jbow"]
+[gd_scene load_steps=67 format=4 uid="uid://nu3hhcc1jbow"]
 
 [ext_resource type="Texture2D" uid="uid://csm1chwn2sopr" path="res://Asset_Midterm/Tile_Map/New GothicVania/PNG/environment/layers/background.png" id="1_5cgel"]
 [ext_resource type="Script" uid="uid://8nqm0564pcu5" path="res://Script/Stage/stage_1.gd" id="1_r715p"]
@@ -30,7 +30,6 @@
 [ext_resource type="FontFile" uid="uid://bdl4qpamcrivq" path="res://Fonts/OBGB.TTF" id="25_3af3u"]
 [ext_resource type="Texture2D" uid="uid://bhmhd4fyqm4g" path="res://Asset_Midterm/UI/UI/CoinIcon_16x18.png" id="25_ckld8"]
 [ext_resource type="PackedScene" uid="uid://cjuqyquignn6p" path="res://Scene/moving Platform.tscn" id="28_uddwt"]
-[ext_resource type="PackedScene" uid="uid://bufdadlu37p7q" path="res://Scene/NPC/merchant.tscn" id="30_olkyh"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ogdj4"]
 texture = ExtResource("4_aplui")
@@ -2133,16 +2132,6 @@ position = Vector2(4147, 135)
 rotation = -1.5708
 shape = SubResource("WorldBoundaryShape2D_olkyh")
 
-[node name="merchant" parent="." instance=ExtResource("30_olkyh")]
-position = Vector2(476, 228)
-scale = Vector2(0.6, 0.6)
-
-[node name="InteractMer" type="Area2D" parent="merchant"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="merchant/InteractMer"]
-position = Vector2(0.00012207, 4.1666)
-shape = SubResource("RectangleShape2D_olkyh")
-
 [connection signal="area_entered" from="NPC/Explorer 1/Interact1" to="." method="_on_interact_1_area_entered"]
 [connection signal="area_entered" from="NPC/Explorer 2/Interact2" to="." method="_on_interact_2_area_entered"]
 [connection signal="pressed" from="CanvasUI/Setting_Button/Setting_Button" to="CanvasUI/Setting" method="_on_setting_button_pressed"]
@@ -2150,4 +2139,3 @@ shape = SubResource("RectangleShape2D_olkyh")
 [connection signal="pressed" from="CanvasUI/Setting_UI/Setting_Panel_Bg/Exit_Button" to="CanvasUI/Setting" method="_on_exit_button_pressed"]
 [connection signal="area_entered" from="End stage" to="." method="_on_collision_area_entered"]
 [connection signal="area_entered" from="map bounds/fallzone" to="." method="_on_fallzone_area_entered"]
-[connection signal="area_entered" from="merchant/InteractMer" to="." method="_on_interact_mer_area_entered"]

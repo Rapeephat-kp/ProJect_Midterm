@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=3 uid="uid://b3o40bijrx1ou"]
+[gd_scene load_steps=38 format=3 uid="uid://b3o40bijrx1ou"]
 
 [ext_resource type="Texture2D" uid="uid://dkyfygbi0dekj" path="res://Asset_Midterm/UI/UI/Button_52x14.png" id="1_kxtd3"]
 [ext_resource type="Script" uid="uid://dkr4a1gyp0ljc" path="res://Script/cut_scene.gd" id="1_w1y33"]
@@ -47,6 +47,299 @@ texture = ExtResource("1_kxtd3")
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tse6q"]
 bg_color = Color(0.69462, 0.554322, 0.367857, 1)
+
+[sub_resource type="Animation" id="Animation_kxtd3"]
+resource_name = "Elendros Ending"
+length = 60.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/Ending cutscene/BG:theme_override_styles/panel:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("2_0only")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CanvasLayer/Ending cutscene/Words/Name:text")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["Elendros
+"]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CanvasLayer/Ending cutscene/Words/Sentence:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 2.36667, 5.03333, 7.63333, 10.0881, 12.0333, 14.7, 17.3, 20.0333, 22.5661, 24.3994, 26.6452, 28.4431, 30.689, 32.3147, 34.5606),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CanvasLayer/Ending cutscene/Words/Sentence:text")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 5.03333, 10.0881, 14.6667, 24.378, 28.4217, 32.2933),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": ["Some stories take a decade to reach their ending.
+
+
+
+", "Some stories take a decade to reach their ending.
+
+
+
+I had wandered alone for so long, 
+haunted by memories of that terrible day ten years ago the day the Unders rose, 
+the toxic gas spread, and my parents… were taken from me. Survival had been my only guide, 
+and vengeance my only companion.
+
+
+
+", "Some stories take a decade to reach their ending.
+
+
+
+I had wandered alone for so long, 
+haunted by memories of that terrible day ten years ago the day the Unders rose, 
+the toxic gas spread, and my parents… were taken from me. Survival had been my only guide, 
+and vengeance my only companion.
+
+
+
+But tonight, as I stand above the ruins of the Toxic Underground City, 
+I feel the weight of that past lift. The Big Boss, the source of the chaos, is no more. 
+The poisonous gas has vanished, and the Unders that once stalked 
+every shadow have returned to the darkness below.
+
+
+
+", "Some stories take a decade to reach their ending.
+
+
+
+I had wandered alone for so long, 
+haunted by memories of that terrible day ten years ago the day the Unders rose, 
+the toxic gas spread, and my parents… were taken from me. Survival had been my only guide, 
+and vengeance my only companion.
+
+
+
+But tonight, as I stand above the ruins of the Toxic Underground City, 
+I feel the weight of that past lift. The Big Boss, the source of the chaos, is no more. 
+The poisonous gas has vanished, and the Unders that once stalked 
+every shadow have returned to the darkness below.
+
+
+
+The world aboveground breathes again. The forest is alive with sound, the rivers clear, 
+and the mushrooms those silent witnesses to life and death return to their natural rhythm. 
+Even the city seems to sigh in relief, free from the grip of fear.", "Though my parents are gone, I feel their presence in the quiet peace that has settled. 
+Their deaths were avenged, their legacy honored. I survived, not just to see this day, 
+but to ensure that the world could continue.
+
+
+
+", "Though my parents are gone, I feel their presence in the quiet peace that has settled. 
+Their deaths were avenged, their legacy honored. I survived, not just to see this day, 
+but to ensure that the world could continue.
+
+
+
+I write these words as a record, a reminder that loss can forge strength, 
+and determination can turn despair into triumph. 
+The forest, the city, and the people will live on and so will their stories.
+
+
+
+
+", "Though my parents are gone, I feel their presence in the quiet peace that has settled. 
+Their deaths were avenged, their legacy honored. I survived, not just to see this day, 
+but to ensure that the world could continue.
+
+
+
+I write these words as a record, a reminder that loss can forge strength, 
+and determination can turn despair into triumph. 
+The forest, the city, and the people will live on and so will their stories.
+
+
+
+The end… or perhaps, the beginning of something new.
+"]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("CanvasLayer/Ending cutscene/Words/Sentence2:text")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.0333333, 2.3, 7.63333, 12.0333, 17.3, 22.2661, 26.6994, 30.689, 34.5606),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": ["
+
+
+", "Some stories take a decade to reach their ending.
+
+
+
+
+
+
+", "Some stories take a decade to reach their ending.
+
+
+
+I had wandered alone for so long, 
+haunted by memories of that terrible day ten years ago the day the Unders rose, 
+the toxic gas spread, and my parents… were taken from me. Survival had been my only guide, 
+and vengeance my only companion.
+
+
+
+
+
+
+", "Some stories take a decade to reach their ending.
+
+
+
+I had wandered alone for so long, 
+haunted by memories of that terrible day ten years ago the day the Unders rose, 
+the toxic gas spread, and my parents… were taken from me. Survival had been my only guide, 
+and vengeance my only companion.
+
+
+
+But tonight, as I stand above the ruins of the Toxic Underground City, 
+I feel the weight of that past lift. The Big Boss, the source of the chaos, is no more. 
+The poisonous gas has vanished, and the Unders that once stalked 
+every shadow have returned to the darkness below.
+
+
+
+", "Some stories take a decade to reach their ending.
+
+
+
+I had wandered alone for so long, 
+haunted by memories of that terrible day ten years ago the day the Unders rose, 
+the toxic gas spread, and my parents… were taken from me. Survival had been my only guide, 
+and vengeance my only companion.
+
+
+
+But tonight, as I stand above the ruins of the Toxic Underground City, 
+I feel the weight of that past lift. The Big Boss, the source of the chaos, is no more. 
+The poisonous gas has vanished, and the Unders that once stalked 
+every shadow have returned to the darkness below.
+
+
+
+The world aboveground breathes again. The forest is alive with sound, the rivers clear, 
+and the mushrooms those silent witnesses to life and death return to their natural rhythm. 
+Even the city seems to sigh in relief, free from the grip of fear.", "", "Though my parents are gone, I feel their presence in the quiet peace that has settled. 
+Their deaths were avenged, their legacy honored. I survived, not just to see this day, 
+but to ensure that the world could continue.
+
+
+
+
+", "Though my parents are gone, I feel their presence in the quiet peace that has settled. 
+Their deaths were avenged, their legacy honored. I survived, not just to see this day, 
+but to ensure that the world could continue.
+
+
+
+I write these words as a record, a reminder that loss can forge strength, 
+and determination can turn despair into triumph. 
+The forest, the city, and the people will live on and so will their stories.
+
+
+
+
+", "Though my parents are gone, I feel their presence in the quiet peace that has settled. 
+Their deaths were avenged, their legacy honored. I survived, not just to see this day, 
+but to ensure that the world could continue.
+
+
+
+I write these words as a record, a reminder that loss can forge strength, 
+and determination can turn despair into triumph. 
+The forest, the city, and the people will live on and so will their stories.
+
+
+
+The end… or perhaps, the beginning of something new.
+"]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("CanvasLayer/Ending cutscene/Words:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("CanvasLayer/Ending cutscene/Words/Sentence2:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(19.9994, 22.5686, 26.6658),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0.954639), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("CanvasLayer/Ending cutscene:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("CanvasLayer/stage cutscene:visible")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
 
 [sub_resource type="Animation" id="Animation_f3ubt"]
 resource_name = "Nymera Ending"
@@ -1022,8 +1315,156 @@ tracks/8/keys = {
 "values": [false]
 }
 
+[sub_resource type="Animation" id="Animation_6ctqn"]
+resource_name = "Stage 1 2-2 Elendros"
+length = 70.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/stage cutscene/Setting_Panel_Bg/CharacterName:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CanvasLayer/stage cutscene/Setting_Panel_Bg/CharacterName:text")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 3.19525, 5.70411, 7.93894, 8.74884, 18.5973, 20.3107, 23.7633, 26.2606, 29.1581, 31.633),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": ["Explorer", "Elendros", "Explorer", "Elendros", "Explorer", "Elendros", "Explorer", "Elendros", "Explorer", "Elendros", "Explorer"]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CanvasLayer/stage cutscene/Setting_Panel_Bg/Phase:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CanvasLayer/stage cutscene/Setting_Panel_Bg/Phase:text")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 3.19525, 5.70411, 7.93894, 8.74884, 16.093, 18.5973, 20.3107, 23.7633, 26.2606, 29.1581, 31.633),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": ["There are too many of them! If we keep running without a plan, we’ll be surrounded!", "Then we fight our way through—until none are left!", "Listen! The sun’s almost down.", "…Damn it.", "At night, the Unders get stronger. Their bodies harden, their reflexes sharpen, and they can sense movement better in the dark.", "If we push on now, we won’t last a minute.", "I can’t just stop here…", "You won’t reach your goal if you don’t survive 
+the night.", "…Fine. We’ll hide. Just until dawn.", "Good. I saw an old chapel at the edge of town—it might hold.", "Then let’s go. But once the sun rises… we move.", "Agreed. Tomorrow, the hunt begins."]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("CanvasLayer/stage cutscene/Setting_Panel_Bg/Phase:visible_ratio")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 3.00072, 3.09367, 3.19525, 5.49473, 5.58767, 5.70411, 7.73333, 7.82628, 7.93894, 8.53333, 8.62628, 8.74884, 15.9, 15.9929, 16.093, 18.3925, 18.4854, 18.5973, 20.1333, 20.2263, 20.3107, 23.6, 23.6929, 23.7633, 26.0628, 26.1557, 26.2606, 28.9667, 29.0596, 29.1581, 31.4576, 31.5505, 31.633, 33.9325, 34.0255),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0]
+}
+tracks/5/type = "method"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath(".")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(3.03333, 5.52734, 7.76595, 8.56595, 15.9326, 18.4251, 20.1659, 23.6326, 26.0954, 28.9993, 31.4902, 33.9651),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"values": [{
+"args": [],
+"method": &"pause"
+}, {
+"args": [],
+"method": &"pause"
+}, {
+"args": [],
+"method": &"pause"
+}, {
+"args": [],
+"method": &"pause"
+}, {
+"args": [],
+"method": &"pause"
+}, {
+"args": [],
+"method": &"pause"
+}, {
+"args": [],
+"method": &"pause"
+}, {
+"args": [],
+"method": &"pause"
+}, {
+"args": [],
+"method": &"pause"
+}, {
+"args": [],
+"method": &"pause"
+}, {
+"args": [],
+"method": &"pause"
+}, {
+"args": [],
+"method": &"pause"
+}]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("CanvasLayer/stage cutscene:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("CanvasLayer/Ending cutscene:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("CanvasLayer/stage cutscene/Setting_Panel_Bg/Store_Button:visible")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
 [sub_resource type="Animation" id="Animation_0only"]
-resource_name = "Stage 1 2-2"
+resource_name = "Stage 1 2-2 Nymera"
 length = 70.0
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -1157,9 +1598,148 @@ tracks/7/keys = {
 "update": 1,
 "values": [false]
 }
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("CanvasLayer/stage cutscene/Setting_Panel_Bg/Store_Button:visible")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_22hos"]
+resource_name = "Stage 2 Elendros"
+length = 20.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/stage cutscene/Setting_Panel_Bg/CharacterName:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CanvasLayer/stage cutscene/Setting_Panel_Bg/CharacterName:text")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 2.42786, 6.23333, 8.46816, 12.5822),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": ["Explorer", "Elendros", "Explorer", "Elendros", "Explorer"]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CanvasLayer/stage cutscene/Setting_Panel_Bg/Phase:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CanvasLayer/stage cutscene/Setting_Panel_Bg/Phase:text")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 2.42786, 6.23333, 8.5, 12.5822, 18.7667),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": ["Hiding… won’t stop them. Not this time.", "If I wait, they’ll overrun the city. I have to fight… I can’t just sit here.", "Are you sure? They’re stronger at night… Every second we stay out there is a risk.", "I know… but if we don’t act, more innocents will die. 
+And I won’t let them get away with this.", "Alright. Then we moved together. Stay sharp—the night belongs to them, but we still have a chance.", "If we push on now, we won’t last a minute."]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("CanvasLayer/stage cutscene/Setting_Panel_Bg/Phase:visible_ratio")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 2.23333, 2.32628, 2.42786, 6.02395, 6.1169, 6.23333, 8.26256, 8.3555, 8.46816, 12.3667, 12.4596, 12.5822, 18.5737, 18.6666, 18.7667),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0]
+}
+tracks/5/type = "method"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath(".")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(2.26595, 6.05656, 8.29517, 12.3993, 18.6063),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"values": [{
+"args": [],
+"method": &"pause"
+}, {
+"args": [],
+"method": &"pause"
+}, {
+"args": [],
+"method": &"pause"
+}, {
+"args": [],
+"method": &"pause"
+}, {
+"args": [],
+"method": &"pause"
+}]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("CanvasLayer/stage cutscene:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("CanvasLayer/Ending cutscene:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("CanvasLayer/stage cutscene/Setting_Panel_Bg/Store_Button:visible")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
 
 [sub_resource type="Animation" id="Animation_x31x6"]
-resource_name = "Stage 2"
+resource_name = "Stage 2 Nymera"
 length = 20.0
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -1285,8 +1865,296 @@ tracks/8/keys = {
 "values": [false]
 }
 
+[sub_resource type="Animation" id="Animation_i5ud0"]
+resource_name = "Stage 3 Elendros with explorer"
+length = 70.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/stage cutscene/Setting_Panel_Bg/CharacterName:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CanvasLayer/stage cutscene/Setting_Panel_Bg/CharacterName:text")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 9.93333, 11.2333, 27.8, 29.5134),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": ["Explorer", "Elendros", "Explorer", "Elendros", "Explorer"]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CanvasLayer/stage cutscene/Setting_Panel_Bg/Phase:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CanvasLayer/stage cutscene/Setting_Panel_Bg/Phase:text")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 3.86667, 10, 11.2333, 19.3874, 27.8, 29.5134),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": ["Morning’s here. The Unders have mostly retreated… for now.", "Keep your eyes open. There’s a traveling merchant who often passes through these woods. Sells potions and other goods.", "A merchant?", "Yeah. And he has a particular fondness for mushrooms—always looking for the unusual ones.", "The path ahead is tricky. The bridge over the river is still broken. We’ll need some wood to patch it before we can cross safely.
+", "Got it. So we gather some supplies first.", "Exactly. Once the bridge is passable, we can continue along the forest trail. If we keep moving carefully, we might spot the merchant soon."]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("CanvasLayer/stage cutscene/Setting_Panel_Bg/Phase:visible_ratio")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 3.67214, 3.76508, 3.86667, 9.79062, 9.88356, 10, 11.0277, 11.1207, 11.2333, 19.1944, 19.2873, 19.3874, 27.5951, 27.6881, 27.8, 29.336, 29.429, 29.5134),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0]
+}
+tracks/5/type = "method"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath(".")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(3.70475, 9.82323, 11.0603, 19.227, 27.6277, 29.3686),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"values": [{
+"args": [],
+"method": &"pause"
+}, {
+"args": [],
+"method": &"pause"
+}, {
+"args": [],
+"method": &"pause"
+}, {
+"args": [],
+"method": &"pause"
+}, {
+"args": [],
+"method": &"pause"
+}, {
+"args": [],
+"method": &"pause"
+}]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("CanvasLayer/stage cutscene:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("CanvasLayer/Ending cutscene:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("CanvasLayer/stage cutscene/Setting_Panel_Bg/Store_Button:visible")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_3fm8w"]
+resource_name = "Stage 3 Elendros with merchant"
+length = 70.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/stage cutscene/Setting_Panel_Bg/CharacterName:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CanvasLayer/stage cutscene/Setting_Panel_Bg/CharacterName:text")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 7.36667, 9.33333, 16.7821, 19.1667, 40.6168, 42.0599, 56.2667, 58.267),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": ["Merchant", "Elendros", "Merchant", "Explorer", "Merchant", "Elendros", "Merchant", "Explorer", "Merchant"]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CanvasLayer/stage cutscene/Setting_Panel_Bg/Phase:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CanvasLayer/stage cutscene/Setting_Panel_Bg/Phase:text")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 1.23333, 7.36667, 9.34599, 16.754, 19.1667, 26.6333, 34.4105, 40.6168, 42.0599, 49.5667, 56.2667, 58.267, 62.2569),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": ["Ah, travelers!", "Welcome, welcome. Looking for potions, remedies… or perhaps something a bit more… unusual?", "What do you mean by unusual?", "Mushrooms, of course! I’ve been fascinated by them for 
+years. Each one has its secrets… some edible, 
+some deadly.", "Sounds like a useful person to know.
+", "Take, for example, the Death Cap (Amanita phalloides). 
+It grows mostly in the rainy season.", "Its cap has no markings at the edges, the stem is solid, and the cup-shaped sheath at its base is hard to remove.", "Eat it, and within six to twenty-four hours, you could face nausea, vomiting, or diarrhea. Very dangerous.", "And the white variant?", "Ah, the White Amanita (White Mushroom, Amanita virosa). Similar in danger, but the cap has striations along the edge", "the stem is hollow, and its sheath is loose and comes off easily. Fascinating, but deadly if handled carelessly.", "You really know your mushrooms.", "Oh, I do more than know. I adore them. Each one tells a story of rain, soil, and survival.", "Keep your eyes open—these woods are full of lessons if you know where to look.
+"]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("CanvasLayer/stage cutscene/Setting_Panel_Bg/Phase:visible_ratio")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 1.0388, 1.13175, 1.23333, 7.15728, 7.25023, 7.36667, 9.14038, 9.23333, 9.34599, 16.5611, 16.654, 16.754, 18.9618, 19.0547, 19.1667, 26.4559, 26.5489, 26.6333, 34.1559, 34.2489, 34.4105, 40.4333, 40.5263, 40.6168, 41.9, 41.993, 42.0599, 49.3667, 49.4596, 49.5655, 56.0667, 56.1596, 56.2667, 58.068, 58.161, 58.267, 62.067, 62.16, 62.2569, 66.0569, 66.1498),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0]
+}
+tracks/5/type = "method"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath(".")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(1.07141, 7.18989, 9.173, 16.5937, 18.9944, 26.4886, 34.2, 40.4895, 41.9561, 49.4228, 56.1228, 58.1241, 62.1231, 66.113),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"values": [{
+"args": [],
+"method": &"pause"
+}, {
+"args": [],
+"method": &"pause"
+}, {
+"args": [],
+"method": &"pause"
+}, {
+"args": [],
+"method": &"pause"
+}, {
+"args": [],
+"method": &"pause"
+}, {
+"args": [],
+"method": &"pause"
+}, {
+"args": [],
+"method": &"pause"
+}, {
+"args": [],
+"method": &"pause"
+}, {
+"args": [],
+"method": &"pause"
+}, {
+"args": [],
+"method": &"pause"
+}, {
+"args": [],
+"method": &"pause"
+}, {
+"args": [],
+"method": &"pause"
+}, {
+"args": [],
+"method": &"pause"
+}, {
+"args": [],
+"method": &"pause"
+}]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("CanvasLayer/stage cutscene:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("CanvasLayer/Ending cutscene:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("CanvasLayer/stage cutscene/Setting_Panel_Bg/Store_Button:visible")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
 [sub_resource type="Animation" id="Animation_ooh41"]
-resource_name = "Stage 3 with explorer"
+resource_name = "Stage 3 Nymera with explorer"
 length = 70.0
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -1416,7 +2284,7 @@ tracks/8/keys = {
 }
 
 [sub_resource type="Animation" id="Animation_jivfq"]
-resource_name = "Stage 3 with merchant"
+resource_name = "Stage 3 Nymera with merchant"
 length = 70.0
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -1573,8 +2441,292 @@ tracks/8/keys = {
 "values": [true]
 }
 
+[sub_resource type="Animation" id="Animation_sjg04"]
+resource_name = "Stage 4 Elendros with explorer"
+length = 70.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/stage cutscene/Setting_Panel_Bg/CharacterName:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CanvasLayer/stage cutscene/Setting_Panel_Bg/CharacterName:text")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 4.0482, 5.73894, 13.4372, 15.1667, 23.6667, 26.514),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": ["Explorer", "Elendros", "Explorer", "Elendros", "Explorer", "Elendros", "Explorer"]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CanvasLayer/stage cutscene/Setting_Panel_Bg/Phase:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CanvasLayer/stage cutscene/Setting_Panel_Bg/Phase:text")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 4.04977, 5.73894, 13.4371, 15.1667, 23.6667, 26.5156),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": ["Be careful. Up ahead, there’s a pit—a hidden entrance.", "A pit? How deep is it?
+", "Deep enough to be dangerous. But it’s not just a hole in the ground… it leads straight to the Toxic Underground City.
+", "The city beneath the poison?
+", "Exactly. It’s where the Unders come from… the source of the gas that’s been spreading. One misstep, and we could fall right in—or worse, get discovered.
+", "Then we have to move carefully.", "Slow and steady. Watch your footing, and stay alert. The night makes them stronger… and the forest is full of surprises."]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("CanvasLayer/stage cutscene/Setting_Panel_Bg/Phase:visible_ratio")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 3.67214, 3.93333, 4.04977, 5.53333, 5.62628, 5.73894, 13.2442, 13.3371, 13.4371, 14.9618, 15.0547, 15.1667, 23.4893, 23.5822, 23.6667, 26.2, 26.2929, 26.5156, 33.1, 33.1929),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0]
+}
+tracks/5/type = "method"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath(".")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(3.8, 5.56595, 13.2768, 14.9944, 23.5219, 26.2433, 33.1427),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"values": [{
+"args": [],
+"method": &"pause"
+}, {
+"args": [],
+"method": &"pause"
+}, {
+"args": [],
+"method": &"pause"
+}, {
+"args": [],
+"method": &"pause"
+}, {
+"args": [],
+"method": &"pause"
+}, {
+"args": [],
+"method": &"pause"
+}, {
+"args": [],
+"method": &"pause"
+}]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("CanvasLayer/stage cutscene:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("CanvasLayer/Ending cutscene:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("CanvasLayer/stage cutscene/Setting_Panel_Bg/Store_Button:visible")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_5pik7"]
+resource_name = "Stage 4 Elendros with merchant"
+length = 70.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/stage cutscene/Setting_Panel_Bg/CharacterName:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CanvasLayer/stage cutscene/Setting_Panel_Bg/CharacterName:text")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 4.36667, 5.2, 20.7333, 22.4358, 41.8, 42.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": ["Merchant", "Elendros", "Merchant", "Elendros", "Merchant", "Elendros", "Merchant"]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CanvasLayer/stage cutscene/Setting_Panel_Bg/Phase:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CanvasLayer/stage cutscene/Setting_Panel_Bg/Phase:text")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 4.36667, 5.21266, 12.6207, 20.7333, 22.4333, 30.2105, 41.8, 42.8, 45.2, 49.3, 54.7333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": ["Ah, we meet again! Care for a word about something… nutritious today?", "Sure.", "Let me tell you about edible mushrooms. For instance, the Champignon / Button Mushroom (Agaricus bisporus)—popular for soups and stir-fries.", "They help cleanse toxins, aid digestion, inhibit cancer cell growth, regulate body fluids, and even relieve allergy symptoms.", "That’s quite a list.", "Indeed! Then there’s the Wood Ear Mushroom (Auricularia auricula-judae). Fantastic in stir-fries and curries.", "Highly valued in medicine—antioxidant properties, strengthens bones and teeth, repairs damaged tissues, improves blood, and boosts energy.", "And… the next one?", "Ah… that one I’ll tell you next time.", "Every mushroom has its story… and its secret.", "If you know where to look, the forest is full of both nourishment and wisdom.
+", "Oh, I do more than know. I adore them. Each one tells a story of rain, soil, and survival."]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("CanvasLayer/stage cutscene/Setting_Panel_Bg/Phase:visible_ratio")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 4.15728, 4.25023, 4.36667, 5.00705, 5.1, 5.21266, 12.4277, 12.5207, 12.6207, 20.5285, 20.6214, 20.7333, 22.2559, 22.3489, 22.4333, 29.9559, 30.0489, 30.2105, 41.6165, 41.7095, 41.8, 42.6401, 42.733, 42.8, 45, 45.093, 45.1988, 49.1, 49.1929, 49.3, 54.5343, 54.6273, 54.7333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0]
+}
+tracks/5/type = "method"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath(".")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(1.07141, 4.18989, 5.03967, 12.4603, 20.5611, 22.2886, 30, 41.6726, 42.6962, 45.0561, 49.1561, 54.5905),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"values": [{
+"args": [],
+"method": &"pause"
+}, {
+"args": [],
+"method": &"pause"
+}, {
+"args": [],
+"method": &"pause"
+}, {
+"args": [],
+"method": &"pause"
+}, {
+"args": [],
+"method": &"pause"
+}, {
+"args": [],
+"method": &"pause"
+}, {
+"args": [],
+"method": &"pause"
+}, {
+"args": [],
+"method": &"pause"
+}, {
+"args": [],
+"method": &"pause"
+}, {
+"args": [],
+"method": &"pause"
+}, {
+"args": [],
+"method": &"pause"
+}, {
+"args": [],
+"method": &"pause"
+}]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("CanvasLayer/stage cutscene:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("CanvasLayer/Ending cutscene:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("CanvasLayer/stage cutscene/Setting_Panel_Bg/Store_Button:visible")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
 [sub_resource type="Animation" id="Animation_bos7i"]
-resource_name = "Stage 4 with explorer"
+resource_name = "Stage 4 Nymera with explorer"
 length = 70.0
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -1710,7 +2862,7 @@ tracks/8/keys = {
 }
 
 [sub_resource type="Animation" id="Animation_7y7ua"]
-resource_name = "Stage 4 with merchant"
+resource_name = "Stage 4 Nymera with merchant"
 length = 70.0
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -1857,8 +3009,295 @@ tracks/8/keys = {
 "values": [true]
 }
 
+[sub_resource type="Animation" id="Animation_3us2n"]
+resource_name = "Stage 5 Elendros with explorer"
+length = 70.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/stage cutscene/Setting_Panel_Bg/CharacterName:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CanvasLayer/stage cutscene/Setting_Panel_Bg/CharacterName:text")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 3.87657, 6.03333, 15.4926, 16.7, 20.3333, 29.7739, 32.0752, 35.6267, 36.5919),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": ["Explorer", "Elendros", "Explorer", "Elendros", "Explorer", "Explorer", "Elendros", "Explorer", "Elendros", "Explorer"]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CanvasLayer/stage cutscene/Setting_Panel_Bg/Phase:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CanvasLayer/stage cutscene/Setting_Panel_Bg/Phase:text")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 3.86667, 6.1, 7.93894, 15.4874, 16.7, 20.3333, 29.7739, 32.0752, 35.6267, 36.5919),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": ["This is where I leave you. Beyond this point, it’s all yours.", "Are you… sure it’s safe to go alone?", "Safe? Not really.", "But necessary. Listen carefully—deep within the Toxic Underground City, there’s someone in charge… The Big Boss.
+", "The Big Boss?
+", "Yes. The ruler of the city. The one responsible for the mushroom crisis.", "The moment they’re gone, the flow of poisonous gas will stop, and the situation aboveground should start to return to normal.", "So, defeating them… that’s the key.", "Exactly. Everything hinges on that. Be careful, and trust your instincts.", "I understand.", "Then… this is goodbye, for now. Keep your wits about you, and may the forest guide you."]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("CanvasLayer/stage cutscene/Setting_Panel_Bg/Phase:visible_ratio")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 3.67214, 3.76508, 3.86667, 5.89061, 5.98356, 6.1, 7.73333, 7.82628, 7.93894, 15.2944, 15.3873, 15.4874, 16.4951, 16.5881, 16.7, 20.0893, 20.1822, 20.3333, 29.5667, 29.6596, 29.7739, 31.9, 31.9929, 32.0752, 35.4644, 35.5574, 35.6267, 36.4333, 36.5263, 36.5919, 38.3942, 38.9903, 43.5, 43.5929),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 0.260901, 0.260901, 1.0, 1.0]
+}
+tracks/5/type = "method"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath(".")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(3.70475, 5.92323, 7.76595, 15.327, 16.5277, 20.1219, 29.5993, 31.9326, 35.497, 36.466, 43.5326),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"values": [{
+"args": [],
+"method": &"pause"
+}, {
+"args": [],
+"method": &"pause"
+}, {
+"args": [],
+"method": &"pause"
+}, {
+"args": [],
+"method": &"pause"
+}, {
+"args": [],
+"method": &"pause"
+}, {
+"args": [],
+"method": &"pause"
+}, {
+"args": [],
+"method": &"pause"
+}, {
+"args": [],
+"method": &"pause"
+}, {
+"args": [],
+"method": &"pause"
+}, {
+"args": [],
+"method": &"pause"
+}, {
+"args": [],
+"method": &"pause"
+}]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("CanvasLayer/stage cutscene:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("CanvasLayer/Ending cutscene:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("CanvasLayer/stage cutscene/Setting_Panel_Bg/Store_Button:visible")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_jl8t6"]
+resource_name = "Stage 5 Elendros with merchant"
+length = 70.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/stage cutscene/Setting_Panel_Bg/CharacterName:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CanvasLayer/stage cutscene/Setting_Panel_Bg/CharacterName:text")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 5.93393, 7.40938, 21.4821, 27.4715, 41.7333, 45.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": ["Merchant", "Elendros", "Merchant", "Elendros", "Merchant", "Elendros", "Merchant"]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CanvasLayer/stage cutscene/Setting_Panel_Bg/Phase:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CanvasLayer/stage cutscene/Setting_Panel_Bg/Phase:text")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 5.93333, 7.40938, 14.046, 21.454, 27.4715, 34.4107, 41.7333, 45.3, 56.4667),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": ["Ah, we meet again! I promised there was one more mushroom to tell you about.", "Yes, the last one!", "The Shiitake Mushroom (Lentinula edodes)—excellent for soups and stir-fries.", "It relieves coughs, reduces phlegm, and helps balance stomach acid. Truly a staple in both cuisine and health.", "That’s remarkable. Seems like these mushrooms are more than just food.
+", "Indeed. Every mushroom has a story, a time, and a place. The forest gives generously if you pay attention.
+", "And knowing them well could make the difference between illness and wellness.
+", "I see… so each type isn’t just food, it’s medicine too.", "Exactly. I travel far and wide, and everywhere I go, the forest teaches something new. Keep your eyes open—you never know what it might offer next.", "the stem is hollow, and its sheath is loose and comes off easily. Fascinating, but deadly if handled carelessly."]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("CanvasLayer/stage cutscene/Setting_Panel_Bg/Phase:visible_ratio")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 5.7388, 5.83175, 5.93333, 7.2, 7.29295, 7.40938, 13.8404, 13.9333, 14.046, 21.2611, 21.354, 21.454, 27.2667, 27.3596, 27.4715, 34.2333, 34.3263, 34.4107, 41.4787, 41.5717, 41.7333, 45.1401, 45.233, 45.3, 56.2667, 56.3596, 56.4655),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0]
+}
+tracks/5/type = "method"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath(".")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(5.77141, 7.23261, 13.873, 21.2937, 27.2993, 34.2659, 41.5228, 45.1962, 56.3228),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"values": [{
+"args": [],
+"method": &"pause"
+}, {
+"args": [],
+"method": &"pause"
+}, {
+"args": [],
+"method": &"pause"
+}, {
+"args": [],
+"method": &"pause"
+}, {
+"args": [],
+"method": &"pause"
+}, {
+"args": [],
+"method": &"pause"
+}, {
+"args": [],
+"method": &"pause"
+}, {
+"args": [],
+"method": &"pause"
+}, {
+"args": [],
+"method": &"pause"
+}]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("CanvasLayer/stage cutscene:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("CanvasLayer/Ending cutscene:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("CanvasLayer/stage cutscene/Setting_Panel_Bg/Store_Button:visible")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
 [sub_resource type="Animation" id="Animation_b8tjy"]
-resource_name = "Stage 5 with explorer"
+resource_name = "Stage 5 Nymera with explorer"
 length = 70.0
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -2004,7 +3443,7 @@ tracks/8/keys = {
 }
 
 [sub_resource type="Animation" id="Animation_ipotq"]
-resource_name = "Stage 5 with merchant"
+resource_name = "Stage 5 Nymera with merchant"
 length = 70.0
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -2144,299 +3583,6 @@ tracks/8/keys = {
 "values": [true]
 }
 
-[sub_resource type="Animation" id="Animation_kxtd3"]
-resource_name = "Elendros Ending"
-length = 60.0
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("CanvasLayer/Ending cutscene/BG:theme_override_styles/panel:texture")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [ExtResource("2_0only")]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("CanvasLayer/Ending cutscene/Words/Name:text")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": ["Elendros
-"]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("CanvasLayer/Ending cutscene/Words/Sentence:modulate")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0, 2.36667, 5.03333, 7.63333, 10.0881, 12.0333, 14.7, 17.3, 20.0333, 22.5661, 24.3994, 26.6452, 28.4431, 30.689, 32.3147, 34.5606),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("CanvasLayer/Ending cutscene/Words/Sentence:text")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0, 5.03333, 10.0881, 14.6667, 24.378, 28.4217, 32.2933),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
-"update": 1,
-"values": ["Some stories take a decade to reach their ending.
-
-
-
-", "Some stories take a decade to reach their ending.
-
-
-
-I had wandered alone for so long, 
-haunted by memories of that terrible day ten years ago the day the Unders rose, 
-the toxic gas spread, and my parents… were taken from me. Survival had been my only guide, 
-and vengeance my only companion.
-
-
-
-", "Some stories take a decade to reach their ending.
-
-
-
-I had wandered alone for so long, 
-haunted by memories of that terrible day ten years ago the day the Unders rose, 
-the toxic gas spread, and my parents… were taken from me. Survival had been my only guide, 
-and vengeance my only companion.
-
-
-
-But tonight, as I stand above the ruins of the Toxic Underground City, 
-I feel the weight of that past lift. The Big Boss, the source of the chaos, is no more. 
-The poisonous gas has vanished, and the Unders that once stalked 
-every shadow have returned to the darkness below.
-
-
-
-", "Some stories take a decade to reach their ending.
-
-
-
-I had wandered alone for so long, 
-haunted by memories of that terrible day ten years ago the day the Unders rose, 
-the toxic gas spread, and my parents… were taken from me. Survival had been my only guide, 
-and vengeance my only companion.
-
-
-
-But tonight, as I stand above the ruins of the Toxic Underground City, 
-I feel the weight of that past lift. The Big Boss, the source of the chaos, is no more. 
-The poisonous gas has vanished, and the Unders that once stalked 
-every shadow have returned to the darkness below.
-
-
-
-The world aboveground breathes again. The forest is alive with sound, the rivers clear, 
-and the mushrooms those silent witnesses to life and death return to their natural rhythm. 
-Even the city seems to sigh in relief, free from the grip of fear.", "Though my parents are gone, I feel their presence in the quiet peace that has settled. 
-Their deaths were avenged, their legacy honored. I survived, not just to see this day, 
-but to ensure that the world could continue.
-
-
-
-", "Though my parents are gone, I feel their presence in the quiet peace that has settled. 
-Their deaths were avenged, their legacy honored. I survived, not just to see this day, 
-but to ensure that the world could continue.
-
-
-
-I write these words as a record, a reminder that loss can forge strength, 
-and determination can turn despair into triumph. 
-The forest, the city, and the people will live on and so will their stories.
-
-
-
-
-", "Though my parents are gone, I feel their presence in the quiet peace that has settled. 
-Their deaths were avenged, their legacy honored. I survived, not just to see this day, 
-but to ensure that the world could continue.
-
-
-
-I write these words as a record, a reminder that loss can forge strength, 
-and determination can turn despair into triumph. 
-The forest, the city, and the people will live on and so will their stories.
-
-
-
-The end… or perhaps, the beginning of something new.
-"]
-}
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("CanvasLayer/Ending cutscene/Words/Sentence2:text")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"times": PackedFloat32Array(0.0333333, 2.3, 7.63333, 12.0333, 17.3, 22.2661, 26.6994, 30.689, 34.5606),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
-"update": 1,
-"values": ["
-
-
-", "Some stories take a decade to reach their ending.
-
-
-
-
-
-
-", "Some stories take a decade to reach their ending.
-
-
-
-I had wandered alone for so long, 
-haunted by memories of that terrible day ten years ago the day the Unders rose, 
-the toxic gas spread, and my parents… were taken from me. Survival had been my only guide, 
-and vengeance my only companion.
-
-
-
-
-
-
-", "Some stories take a decade to reach their ending.
-
-
-
-I had wandered alone for so long, 
-haunted by memories of that terrible day ten years ago the day the Unders rose, 
-the toxic gas spread, and my parents… were taken from me. Survival had been my only guide, 
-and vengeance my only companion.
-
-
-
-But tonight, as I stand above the ruins of the Toxic Underground City, 
-I feel the weight of that past lift. The Big Boss, the source of the chaos, is no more. 
-The poisonous gas has vanished, and the Unders that once stalked 
-every shadow have returned to the darkness below.
-
-
-
-", "Some stories take a decade to reach their ending.
-
-
-
-I had wandered alone for so long, 
-haunted by memories of that terrible day ten years ago the day the Unders rose, 
-the toxic gas spread, and my parents… were taken from me. Survival had been my only guide, 
-and vengeance my only companion.
-
-
-
-But tonight, as I stand above the ruins of the Toxic Underground City, 
-I feel the weight of that past lift. The Big Boss, the source of the chaos, is no more. 
-The poisonous gas has vanished, and the Unders that once stalked 
-every shadow have returned to the darkness below.
-
-
-
-The world aboveground breathes again. The forest is alive with sound, the rivers clear, 
-and the mushrooms those silent witnesses to life and death return to their natural rhythm. 
-Even the city seems to sigh in relief, free from the grip of fear.", "", "Though my parents are gone, I feel their presence in the quiet peace that has settled. 
-Their deaths were avenged, their legacy honored. I survived, not just to see this day, 
-but to ensure that the world could continue.
-
-
-
-
-", "Though my parents are gone, I feel their presence in the quiet peace that has settled. 
-Their deaths were avenged, their legacy honored. I survived, not just to see this day, 
-but to ensure that the world could continue.
-
-
-
-I write these words as a record, a reminder that loss can forge strength, 
-and determination can turn despair into triumph. 
-The forest, the city, and the people will live on and so will their stories.
-
-
-
-
-", "Though my parents are gone, I feel their presence in the quiet peace that has settled. 
-Their deaths were avenged, their legacy honored. I survived, not just to see this day, 
-but to ensure that the world could continue.
-
-
-
-I write these words as a record, a reminder that loss can forge strength, 
-and determination can turn despair into triumph. 
-The forest, the city, and the people will live on and so will their stories.
-
-
-
-The end… or perhaps, the beginning of something new.
-"]
-}
-tracks/5/type = "value"
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/path = NodePath("CanvasLayer/Ending cutscene/Words:modulate")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 1)]
-}
-tracks/6/type = "value"
-tracks/6/imported = false
-tracks/6/enabled = true
-tracks/6/path = NodePath("CanvasLayer/Ending cutscene/Words/Sentence2:modulate")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
-tracks/6/keys = {
-"times": PackedFloat32Array(19.9994, 22.5686, 26.6658),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 0.954639), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
-}
-tracks/7/type = "value"
-tracks/7/imported = false
-tracks/7/enabled = true
-tracks/7/path = NodePath("CanvasLayer/Ending cutscene:visible")
-tracks/7/interp = 1
-tracks/7/loop_wrap = true
-tracks/7/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
-}
-tracks/8/type = "value"
-tracks/8/imported = false
-tracks/8/enabled = true
-tracks/8/path = NodePath("CanvasLayer/stage cutscene:visible")
-tracks/8/interp = 1
-tracks/8/loop_wrap = true
-tracks/8/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_tkbrc"]
 _data = {
 &"Elendros Ending": SubResource("Animation_kxtd3"),
@@ -2444,14 +3590,22 @@ _data = {
 &"RESET": SubResource("Animation_88s7j"),
 &"Stage 1 1-2 Elendros": SubResource("Animation_tkbrc"),
 &"Stage 1 1-2 Nymera": SubResource("Animation_w1y33"),
-&"Stage 1 2-2": SubResource("Animation_0only"),
-&"Stage 2": SubResource("Animation_x31x6"),
-&"Stage 3 with explorer": SubResource("Animation_ooh41"),
-&"Stage 3 with merchant": SubResource("Animation_jivfq"),
-&"Stage 4 with explorer": SubResource("Animation_bos7i"),
-&"Stage 4 with merchant": SubResource("Animation_7y7ua"),
-&"Stage 5 with explorer": SubResource("Animation_b8tjy"),
-&"Stage 5 with merchant": SubResource("Animation_ipotq")
+&"Stage 1 2-2 Elendros": SubResource("Animation_6ctqn"),
+&"Stage 1 2-2 Nymera": SubResource("Animation_0only"),
+&"Stage 2 Elendros": SubResource("Animation_22hos"),
+&"Stage 2 Nymera": SubResource("Animation_x31x6"),
+&"Stage 3 Elendros with explorer": SubResource("Animation_i5ud0"),
+&"Stage 3 Elendros with merchant": SubResource("Animation_3fm8w"),
+&"Stage 3 Nymera with explorer": SubResource("Animation_ooh41"),
+&"Stage 3 Nymera with merchant": SubResource("Animation_jivfq"),
+&"Stage 4 Elendros with explorer": SubResource("Animation_sjg04"),
+&"Stage 4 Elendros with merchant": SubResource("Animation_5pik7"),
+&"Stage 4 Nymera with explorer": SubResource("Animation_bos7i"),
+&"Stage 4 Nymera with merchant": SubResource("Animation_7y7ua"),
+&"Stage 5 Elendros with explorer": SubResource("Animation_3us2n"),
+&"Stage 5 Elendros with merchant": SubResource("Animation_jl8t6"),
+&"Stage 5 Nymera with explorer": SubResource("Animation_b8tjy"),
+&"Stage 5 Nymera with merchant": SubResource("Animation_ipotq")
 }
 
 [node name="CutScene" type="Node2D"]
