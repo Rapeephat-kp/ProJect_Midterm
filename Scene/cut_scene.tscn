@@ -48,6 +48,382 @@ texture = ExtResource("1_kxtd3")
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tse6q"]
 bg_color = Color(0.69462, 0.554322, 0.367857, 1)
 
+[sub_resource type="Animation" id="Animation_f3ubt"]
+resource_name = "Nymera Ending"
+length = 60.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/Ending cutscene/BG:theme_override_styles/panel:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("2_tkbrc")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CanvasLayer/Ending cutscene/Words/Name:text")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["Nymera"]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CanvasLayer/Ending cutscene/Words/Sentence:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 2.36667, 5.03333, 7.63333, 10.0881, 12.0333, 14.7, 17.3, 19.7547, 22.0006, 24.5333, 26.3667, 28.6125, 30.4104, 32.6563, 34.282, 36.5279, 38.3792, 40.625),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CanvasLayer/Ending cutscene/Words/Sentence:text")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 5.03333, 10.0881, 14.6667, 19.7333, 26.3453, 30.389, 34.2606, 38.3578),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": ["It is said that some stories are best told after the storm has passed.
+
+
+
+", "
+
+
+
+The city aboveground slowly began to breathe again. 
+The toxic gas that had choked the streets and driven the mushrooms to madness dissipated, 
+as if it had never been. And the Unders those creatures that once haunted every shadow 
+retreated to the depths from which they came.
+
+
+
+
+", "It is said that some stories are best told after the storm has passed.
+
+
+
+The city aboveground slowly began to breathe again. 
+The toxic gas that had choked the streets and driven the mushrooms to madness dissipated, 
+as if it had never been. And the Unders those creatures that once haunted every shadow 
+retreated to the depths from which they came.
+
+
+
+I found him. My father, alive, weary but safe, waiting where I least expected to see him. 
+The reunion was quiet at first, words unspoken, yet the relief was louder than any shout.
+
+
+
+
+", "It is said that some stories are best told after the storm has passed.
+
+
+
+The city aboveground slowly began to breathe again. 
+The toxic gas that had choked the streets and driven the mushrooms to madness dissipated, 
+as if it had never been. And the Unders those creatures that once haunted every shadow 
+retreated to the depths from which they came.
+
+
+
+I found him. My father, alive, weary but safe, waiting where I least expected to see him. 
+The reunion was quiet at first, words unspoken, yet the relief was louder than any shout.
+
+
+
+
+The forest seemed greener, the river clearer, the air lighter. Even the mushrooms, 
+once tainted by the chaos, returned to their natural rhythm. The Champignon, Wood Ear, 
+and Shiitake flourished once more, reminders of life’s delicate balance.", "It is said that some stories are best told after the storm has passed.
+
+
+
+The city aboveground slowly began to breathe again. 
+The toxic gas that had choked the streets and driven the mushrooms to madness dissipated, 
+as if it had never been. And the Unders those creatures that once haunted every shadow 
+retreated to the depths from which they came.
+
+
+
+I found him. My father, alive, weary but safe, waiting where I least expected to see him. 
+The reunion was quiet at first, words unspoken, yet the relief was louder than any shout.
+
+
+
+
+The forest seemed greener, the river clearer, the air lighter. Even the mushrooms, 
+once tainted by the chaos, returned to their natural rhythm. The Champignon, Wood Ear, 
+and Shiitake flourished once more, reminders of life’s delicate balance.
+
+
+
+I thought of the Underground City and the Big Boss—the source of it all. 
+The struggle was hard, and the night long, but in the end, balance had been restored. 
+The world, though scarred, had a chance to heal.", "Now, I write these words not just to remember.
+
+
+
+", "Now, I write these words not just to remember.
+
+
+
+But to remind anyone who might follow: courage, knowledge, 
+and persistence can turn even the darkest crisis into a story worth telling.
+
+
+
+
+", "Now, I write these words not just to remember.
+
+
+
+But to remind anyone who might follow: courage, knowledge, 
+and persistence can turn even the darkest crisis into a story worth telling.
+
+
+
+
+And as for me… I found my family, the forest’s secrets, 
+and a peace that had seemed impossible in those long, uncertain days.
+
+
+
+
+", "Now, I write these words not just to remember.
+
+
+
+But to remind anyone who might follow: courage, knowledge, 
+and persistence can turn even the darkest crisis into a story worth telling.
+
+
+
+
+And as for me… I found my family, the forest’s secrets, 
+and a peace that had seemed impossible in those long, uncertain days.
+
+
+
+
+The end… or perhaps, a new beginning.
+"]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("CanvasLayer/Ending cutscene/Words/Sentence2:text")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 2.3, 7.63333, 12.0333, 17.3, 22.0006, 24.2333, 28.6667, 32.6563, 36.5279, 40.625),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": ["", "It is said that some stories are best told after the storm has passed.
+
+
+
+", "It is said that some stories are best told after the storm has passed.
+
+
+
+The city aboveground slowly began to breathe again. 
+The toxic gas that had choked the streets and driven the mushrooms to madness dissipated, 
+as if it had never been. And the Unders those creatures that once haunted every shadow
+retreated to the depths from which they came.
+
+
+
+
+
+
+
+
+
+", "It is said that some stories are best told after the storm has passed.
+
+
+
+The city aboveground slowly began to breathe again. 
+The toxic gas that had choked the streets and driven the mushrooms to madness dissipated, 
+as if it had never been. And the Unders—those creatures that once haunted every shadow—
+retreated to the depths from which they came.
+
+
+
+I found him. My father, alive, weary but safe, waiting where I least expected to see him. 
+The reunion was quiet at first, words unspoken, yet the relief was louder than any shout.
+
+
+
+
+", "It is said that some stories are best told after the storm has passed.
+
+
+
+The city aboveground slowly began to breathe again. 
+The toxic gas that had choked the streets and driven the mushrooms to madness dissipated, 
+as if it had never been. And the Unders those creatures that once haunted every shadow 
+retreated to the depths from which they came.
+
+
+
+I found him. My father, alive, weary but safe, waiting where I least expected to see him. 
+The reunion was quiet at first, words unspoken, yet the relief was louder than any shout.
+
+
+
+
+The forest seemed greener, the river clearer, the air lighter. Even the mushrooms, 
+once tainted by the chaos, returned to their natural rhythm. The Champignon, Wood Ear, 
+and Shiitake flourished once more, reminders of life’s delicate balance.", "It is said that some stories are best told after the storm has passed.
+
+
+
+The city aboveground slowly began to breathe again. 
+The toxic gas that had choked the streets and driven the mushrooms to madness dissipated, 
+as if it had never been. And the Unders those creatures that once haunted every shadow 
+retreated to the depths from which they came.
+
+
+
+I found him. My father, alive, weary but safe, waiting where I least expected to see him. 
+The reunion was quiet at first, words unspoken, yet the relief was louder than any shout.
+
+
+
+
+The forest seemed greener, the river clearer, the air lighter. Even the mushrooms, 
+once tainted by the chaos, returned to their natural rhythm. The Champignon, Wood Ear, 
+and Shiitake flourished once more, reminders of life’s delicate balance.
+
+
+
+I thought of the Underground City and the Big Boss—the source of it all. 
+The struggle was hard, and the night long, but in the end, balance had been restored. 
+The world, though scarred, had a chance to heal.", "", "Now, I write these words not just to remember.
+
+
+
+
+
+
+
+", "Now, I write these words not just to remember.
+
+
+
+But to remind anyone who might follow: courage, knowledge, 
+and persistence can turn even the darkest crisis into a story worth telling.
+
+
+
+
+
+
+
+
+
+
+", "Now, I write these words not just to remember.
+
+
+
+But to remind anyone who might follow: courage, knowledge, 
+and persistence can turn even the darkest crisis into a story worth telling.
+
+
+
+
+And as for me… I found my family, the forest’s secrets, 
+and a peace that had seemed impossible in those long, uncertain days.
+
+
+
+
+
+", "Now, I write these words not just to remember.
+
+
+
+But to remind anyone who might follow: courage, knowledge, 
+and persistence can turn even the darkest crisis into a story worth telling.
+
+
+
+
+And as for me… I found my family, the forest’s secrets, 
+and a peace that had seemed impossible in those long, uncertain days.
+
+
+
+
+The end… or perhaps, a new beginning.
+"]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("CanvasLayer/Ending cutscene/Words:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("CanvasLayer/Ending cutscene/Words/Sentence2:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(21.9667, 24.5359, 28.633),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0.954639), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("CanvasLayer/Ending cutscene:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("CanvasLayer/stage cutscene:visible")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
 [sub_resource type="Animation" id="Animation_88s7j"]
 length = 0.001
 tracks/0/type = "value"
@@ -246,6 +622,30 @@ tracks/11/keys = {
 "update": 0,
 "values": [Color(1, 1, 1, 0)]
 }
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("CanvasLayer/Ending cutscene/Words/Sentence2:modulate")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0.954639)]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("CanvasLayer/Ending cutscene:visible")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
 
 [sub_resource type="Animation" id="Animation_tkbrc"]
 resource_name = "Stage 1 1-2 Elendros"
@@ -396,6 +796,18 @@ tracks/6/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [true]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("CanvasLayer/Ending cutscene:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
 }
 
 [sub_resource type="Animation" id="Animation_w1y33"]
@@ -549,6 +961,18 @@ tracks/6/keys = {
 "update": 1,
 "values": [true]
 }
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("CanvasLayer/Ending cutscene:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
 
 [sub_resource type="Animation" id="Animation_0only"]
 resource_name = "Stage 1 2-2"
@@ -673,6 +1097,18 @@ tracks/6/keys = {
 "update": 1,
 "values": [true]
 }
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("CanvasLayer/Ending cutscene:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
 
 [sub_resource type="Animation" id="Animation_x31x6"]
 resource_name = "Stage 2"
@@ -775,6 +1211,18 @@ tracks/6/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [true]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("CanvasLayer/Ending cutscene:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
 }
 
 [sub_resource type="Animation" id="Animation_ooh41"]
@@ -881,6 +1329,18 @@ tracks/6/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [true]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("CanvasLayer/Ending cutscene:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
 }
 
 [sub_resource type="Animation" id="Animation_jivfq"]
@@ -1016,6 +1476,18 @@ tracks/6/keys = {
 "update": 1,
 "values": [true]
 }
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("CanvasLayer/Ending cutscene:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
 
 [sub_resource type="Animation" id="Animation_bos7i"]
 resource_name = "Stage 4 with explorer"
@@ -1127,6 +1599,18 @@ tracks/6/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [true]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("CanvasLayer/Ending cutscene:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
 }
 
 [sub_resource type="Animation" id="Animation_7y7ua"]
@@ -1252,6 +1736,18 @@ tracks/6/keys = {
 "update": 1,
 "values": [true]
 }
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("CanvasLayer/Ending cutscene:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
 
 [sub_resource type="Animation" id="Animation_b8tjy"]
 resource_name = "Stage 5 with explorer"
@@ -1374,6 +1870,18 @@ tracks/6/keys = {
 "update": 1,
 "values": [true]
 }
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("CanvasLayer/Ending cutscene:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
 
 [sub_resource type="Animation" id="Animation_ipotq"]
 resource_name = "Stage 5 with merchant"
@@ -1491,6 +1999,18 @@ tracks/6/keys = {
 "update": 1,
 "values": [true]
 }
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("CanvasLayer/Ending cutscene:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
 
 [sub_resource type="Animation" id="Animation_kxtd3"]
 resource_name = "Elendros Ending"
@@ -1517,35 +2037,8 @@ tracks/1/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": ["Elendros"]
-}
-
-[sub_resource type="Animation" id="Animation_f3ubt"]
-resource_name = "Nymera Ending"
-length = 60.0
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("CanvasLayer/Ending cutscene/BG:theme_override_styles/panel:texture")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [ExtResource("2_tkbrc")]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("CanvasLayer/Ending cutscene/Words/Name:text")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": ["Nymera"]
+"values": ["Elendros
+"]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
@@ -1554,10 +2047,10 @@ tracks/2/path = NodePath("CanvasLayer/Ending cutscene/Words/Sentence:modulate")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0, 2.36667, 5.03333, 7.63333, 10.0881, 12.0333, 14.7, 17.3, 19.7547, 22.0006, 24.116, 26.3667, 28.6125, 30.4104, 32.6563, 34.282, 36.5279, 38.3792, 40.625),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0, 2.36667, 5.03333, 7.63333, 10.0881, 12.0333, 14.7, 17.3, 20.0333, 22.5661, 24.3994, 26.6452, 28.4431, 30.689, 32.3147, 34.5606),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 0,
-"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
@@ -1566,133 +2059,94 @@ tracks/3/path = NodePath("CanvasLayer/Ending cutscene/Words/Sentence:text")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
-"times": PackedFloat32Array(0, 5.03333, 10.0881, 14.6667, 19.7333, 26.3453, 30.389, 34.2606, 38.3578),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0, 5.03333, 10.0881, 14.6667, 24.378, 28.4217, 32.2933),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
 "update": 1,
-"values": ["It is said that some stories are best told after the storm has passed.
+"values": ["Some stories take a decade to reach their ending.
 
 
 
-", "
+", "Some stories take a decade to reach their ending.
 
 
 
-The city aboveground slowly began to breathe again. 
-The toxic gas that had choked the streets and driven the mushrooms to madness dissipated, 
-as if it had never been. And the Unders—those creatures that once haunted every shadow—
-retreated to the depths from which they came.
+I had wandered alone for so long, 
+haunted by memories of that terrible day ten years ago the day the Unders rose, 
+the toxic gas spread, and my parents… were taken from me. Survival had been my only guide, 
+and vengeance my only companion.
 
 
 
+", "Some stories take a decade to reach their ending.
 
-", "It is said that some stories are best told after the storm has passed.
 
 
+I had wandered alone for so long, 
+haunted by memories of that terrible day ten years ago the day the Unders rose, 
+the toxic gas spread, and my parents… were taken from me. Survival had been my only guide, 
+and vengeance my only companion.
 
-The city aboveground slowly began to breathe again. 
-The toxic gas that had choked the streets and driven the mushrooms to madness dissipated, 
-as if it had never been. And the Unders—those creatures that once haunted every shadow—
-retreated to the depths from which they came.
 
 
+But tonight, as I stand above the ruins of the Toxic Underground City, 
+I feel the weight of that past lift. The Big Boss, the source of the chaos, is no more. 
+The poisonous gas has vanished, and the Unders that once stalked 
+every shadow have returned to the darkness below.
 
-I found him. My father, alive, weary but safe, waiting where I least expected to see him. 
-The reunion was quiet at first, words unspoken, yet the relief was louder than any shout.
 
 
+", "Some stories take a decade to reach their ending.
 
 
-", "It is said that some stories are best told after the storm has passed.
 
+I had wandered alone for so long, 
+haunted by memories of that terrible day ten years ago the day the Unders rose, 
+the toxic gas spread, and my parents… were taken from me. Survival had been my only guide, 
+and vengeance my only companion.
 
 
-The city aboveground slowly began to breathe again. 
-The toxic gas that had choked the streets and driven the mushrooms to madness dissipated, 
-as if it had never been. And the Unders—those creatures that once haunted every shadow—
-retreated to the depths from which they came.
 
+But tonight, as I stand above the ruins of the Toxic Underground City, 
+I feel the weight of that past lift. The Big Boss, the source of the chaos, is no more. 
+The poisonous gas has vanished, and the Unders that once stalked 
+every shadow have returned to the darkness below.
 
 
-I found him. My father, alive, weary but safe, waiting where I least expected to see him. 
-The reunion was quiet at first, words unspoken, yet the relief was louder than any shout.
 
+The world aboveground breathes again. The forest is alive with sound, the rivers clear, 
+and the mushrooms those silent witnesses to life and death return to their natural rhythm. 
+Even the city seems to sigh in relief, free from the grip of fear.", "Though my parents are gone, I feel their presence in the quiet peace that has settled. 
+Their deaths were avenged, their legacy honored. I survived, not just to see this day, 
+but to ensure that the world could continue.
 
 
 
-The forest seemed greener, the river clearer, the air lighter. Even the mushrooms, 
-once tainted by the chaos, returned to their natural rhythm. The Champignon, Wood Ear, 
-and Shiitake flourished once more, reminders of life’s delicate balance.", "It is said that some stories are best told after the storm has passed.
+", "Though my parents are gone, I feel their presence in the quiet peace that has settled. 
+Their deaths were avenged, their legacy honored. I survived, not just to see this day, 
+but to ensure that the world could continue.
 
 
 
-The city aboveground slowly began to breathe again. 
-The toxic gas that had choked the streets and driven the mushrooms to madness dissipated, 
-as if it had never been. And the Unders—those creatures that once haunted every shadow—
-retreated to the depths from which they came.
+I write these words as a record, a reminder that loss can forge strength, 
+and determination can turn despair into triumph. 
+The forest, the city, and the people will live on and so will their stories.
 
 
 
-I found him. My father, alive, weary but safe, waiting where I least expected to see him. 
-The reunion was quiet at first, words unspoken, yet the relief was louder than any shout.
 
+", "Though my parents are gone, I feel their presence in the quiet peace that has settled. 
+Their deaths were avenged, their legacy honored. I survived, not just to see this day, 
+but to ensure that the world could continue.
 
 
 
-The forest seemed greener, the river clearer, the air lighter. Even the mushrooms, 
-once tainted by the chaos, returned to their natural rhythm. The Champignon, Wood Ear, 
-and Shiitake flourished once more, reminders of life’s delicate balance.
+I write these words as a record, a reminder that loss can forge strength, 
+and determination can turn despair into triumph. 
+The forest, the city, and the people will live on and so will their stories.
 
 
 
-I thought of the Underground City and the Big Boss—the source of it all. 
-The struggle was hard, and the night long, but in the end, balance had been restored. 
-The world, though scarred, had a chance to heal.", "Now, I write these words not just to remember.
-
-
-
-", "Now, I write these words not just to remember.
-
-
-
-But to remind anyone who might follow: courage, knowledge, 
-and persistence can turn even the darkest crisis into a story worth telling.
-
-
-
-
-", "Now, I write these words not just to remember.
-
-
-
-But to remind anyone who might follow: courage, knowledge, 
-and persistence can turn even the darkest crisis into a story worth telling.
-
-
-
-
-And as for me… I found my family, the forest’s secrets, 
-and a peace that had seemed impossible in those long, uncertain days.
-
-
-
-
-", "Now, I write these words not just to remember.
-
-
-
-But to remind anyone who might follow: courage, knowledge, 
-and persistence can turn even the darkest crisis into a story worth telling.
-
-
-
-
-And as for me… I found my family, the forest’s secrets, 
-and a peace that had seemed impossible in those long, uncertain days.
-
-
-
-
-The end… or perhaps, a new beginning.
+The end… or perhaps, the beginning of something new.
 "]
 }
 tracks/4/type = "value"
@@ -1702,149 +2156,104 @@ tracks/4/path = NodePath("CanvasLayer/Ending cutscene/Words/Sentence2:text")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
-"times": PackedFloat32Array(0, 2.3, 7.63333, 12.0333, 17.3, 22.0006, 26.367, 28.6125, 32.6563, 36.5279, 40.625),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0.0333333, 2.3, 7.63333, 12.0333, 17.3, 22.2661, 26.6994, 30.689, 34.5606),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 1,
-"values": ["", "It is said that some stories are best told after the storm has passed.
+"values": ["
 
 
+", "Some stories take a decade to reach their ending.
 
-", "It is said that some stories are best told after the storm has passed.
 
 
 
-The city aboveground slowly began to breathe again. 
-The toxic gas that had choked the streets and driven the mushrooms to madness dissipated, 
-as if it had never been. And the Unders—those creatures that once haunted every shadow—
-retreated to the depths from which they came.
 
 
+", "Some stories take a decade to reach their ending.
 
 
 
+I had wandered alone for so long, 
+haunted by memories of that terrible day ten years ago the day the Unders rose, 
+the toxic gas spread, and my parents… were taken from me. Survival had been my only guide, 
+and vengeance my only companion.
 
 
 
 
-", "It is said that some stories are best told after the storm has passed.
 
 
+", "Some stories take a decade to reach their ending.
 
-The city aboveground slowly began to breathe again. 
-The toxic gas that had choked the streets and driven the mushrooms to madness dissipated, 
-as if it had never been. And the Unders—those creatures that once haunted every shadow—
-retreated to the depths from which they came.
 
 
+I had wandered alone for so long, 
+haunted by memories of that terrible day ten years ago the day the Unders rose, 
+the toxic gas spread, and my parents… were taken from me. Survival had been my only guide, 
+and vengeance my only companion.
 
-I found him. My father, alive, weary but safe, waiting where I least expected to see him. 
-The reunion was quiet at first, words unspoken, yet the relief was louder than any shout.
 
 
+But tonight, as I stand above the ruins of the Toxic Underground City, 
+I feel the weight of that past lift. The Big Boss, the source of the chaos, is no more. 
+The poisonous gas has vanished, and the Unders that once stalked 
+every shadow have returned to the darkness below.
 
 
-", "It is said that some stories are best told after the storm has passed.
 
+", "Some stories take a decade to reach their ending.
 
 
-The city aboveground slowly began to breathe again. 
-The toxic gas that had choked the streets and driven the mushrooms to madness dissipated, 
-as if it had never been. And the Unders—those creatures that once haunted every shadow—
-retreated to the depths from which they came.
 
+I had wandered alone for so long, 
+haunted by memories of that terrible day ten years ago the day the Unders rose, 
+the toxic gas spread, and my parents… were taken from me. Survival had been my only guide, 
+and vengeance my only companion.
 
 
-I found him. My father, alive, weary but safe, waiting where I least expected to see him. 
-The reunion was quiet at first, words unspoken, yet the relief was louder than any shout.
 
+But tonight, as I stand above the ruins of the Toxic Underground City, 
+I feel the weight of that past lift. The Big Boss, the source of the chaos, is no more. 
+The poisonous gas has vanished, and the Unders that once stalked 
+every shadow have returned to the darkness below.
 
 
 
-The forest seemed greener, the river clearer, the air lighter. Even the mushrooms, 
-once tainted by the chaos, returned to their natural rhythm. The Champignon, Wood Ear, 
-and Shiitake flourished once more, reminders of life’s delicate balance.", "It is said that some stories are best told after the storm has passed.
+The world aboveground breathes again. The forest is alive with sound, the rivers clear, 
+and the mushrooms those silent witnesses to life and death return to their natural rhythm. 
+Even the city seems to sigh in relief, free from the grip of fear.", "", "Though my parents are gone, I feel their presence in the quiet peace that has settled. 
+Their deaths were avenged, their legacy honored. I survived, not just to see this day, 
+but to ensure that the world could continue.
 
 
 
-The city aboveground slowly began to breathe again. 
-The toxic gas that had choked the streets and driven the mushrooms to madness dissipated, 
-as if it had never been. And the Unders—those creatures that once haunted every shadow—
-retreated to the depths from which they came.
 
+", "Though my parents are gone, I feel their presence in the quiet peace that has settled. 
+Their deaths were avenged, their legacy honored. I survived, not just to see this day, 
+but to ensure that the world could continue.
 
 
-I found him. My father, alive, weary but safe, waiting where I least expected to see him. 
-The reunion was quiet at first, words unspoken, yet the relief was louder than any shout.
 
+I write these words as a record, a reminder that loss can forge strength, 
+and determination can turn despair into triumph. 
+The forest, the city, and the people will live on and so will their stories.
 
 
 
-The forest seemed greener, the river clearer, the air lighter. Even the mushrooms, 
-once tainted by the chaos, returned to their natural rhythm. The Champignon, Wood Ear, 
-and Shiitake flourished once more, reminders of life’s delicate balance.
 
+", "Though my parents are gone, I feel their presence in the quiet peace that has settled. 
+Their deaths were avenged, their legacy honored. I survived, not just to see this day, 
+but to ensure that the world could continue.
 
 
-I thought of the Underground City and the Big Boss—the source of it all. 
-The struggle was hard, and the night long, but in the end, balance had been restored. 
-The world, though scarred, had a chance to heal.", "", "Now, I write these words not just to remember.
 
+I write these words as a record, a reminder that loss can forge strength, 
+and determination can turn despair into triumph. 
+The forest, the city, and the people will live on and so will their stories.
 
 
 
-
-
-
-", "Now, I write these words not just to remember.
-
-
-
-But to remind anyone who might follow: courage, knowledge, 
-and persistence can turn even the darkest crisis into a story worth telling.
-
-
-
-
-
-
-
-
-
-
-", "Now, I write these words not just to remember.
-
-
-
-But to remind anyone who might follow: courage, knowledge, 
-and persistence can turn even the darkest crisis into a story worth telling.
-
-
-
-
-And as for me… I found my family, the forest’s secrets, 
-and a peace that had seemed impossible in those long, uncertain days.
-
-
-
-
-
-", "Now, I write these words not just to remember.
-
-
-
-But to remind anyone who might follow: courage, knowledge, 
-and persistence can turn even the darkest crisis into a story worth telling.
-
-
-
-
-And as for me… I found my family, the forest’s secrets, 
-and a peace that had seemed impossible in those long, uncertain days.
-
-
-
-
-The end… or perhaps, a new beginning.
+The end… or perhaps, the beginning of something new.
 "]
 }
 tracks/5/type = "value"
@@ -1858,6 +2267,42 @@ tracks/5/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [Color(1, 1, 1, 1)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("CanvasLayer/Ending cutscene/Words/Sentence2:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(19.9994, 22.5686, 26.6658),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0.954639), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("CanvasLayer/Ending cutscene:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("CanvasLayer/stage cutscene:visible")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_tkbrc"]
@@ -1883,6 +2328,7 @@ script = ExtResource("1_w1y33")
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="Ending cutscene" type="Control" parent="CanvasLayer"]
+visible = false
 layout_mode = 3
 anchors_preset = 8
 anchor_left = 0.5
@@ -2159,19 +2605,6 @@ libraries = {
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 2.0
-
-[node name="Name" type="Label" parent="."]
-visible = false
-offset_left = -480.0
-offset_top = -205.0
-offset_right = 6.10352e-05
-offset_bottom = -25.0
-rotation = -0.186668
-scale = Vector2(0.387, 0.387)
-theme_override_colors/font_color = Color(0.756863, 0.607843, 0.447059, 1)
-theme_override_fonts/font = ExtResource("2_f3ubt")
-theme_override_font_sizes/font_size = 200
-text = "Elendros"
 
 [connection signal="pressed" from="CanvasLayer/stage cutscene/Setting_Panel_Bg/Next_Button" to="." method="_on_next_button_pressed"]
 [connection signal="pressed" from="CanvasLayer/stage cutscene/Setting_Panel_Bg/Autoplay_Button" to="." method="_on_auto_button_pressed"]

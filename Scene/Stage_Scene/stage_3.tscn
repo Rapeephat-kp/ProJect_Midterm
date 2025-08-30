@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=4 uid="uid://dkisgo3eego0l"]
+[gd_scene load_steps=33 format=4 uid="uid://cpq4qkq1b6ka6"]
 
 [ext_resource type="Texture2D" uid="uid://skwubifcy71r" path="res://Asset_Midterm/Tile_Map/Fantasy Swamp Forest/Free/BG_3/BG_3.png" id="1_a24hx"]
 [ext_resource type="Script" uid="uid://bsskijfieg6i7" path="res://Script/Stage/stage_3.gd" id="1_oj7rm"]

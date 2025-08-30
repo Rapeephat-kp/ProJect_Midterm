@@ -19,8 +19,8 @@ var visible_character = 0
 
 
 func _ready() -> void:
-	#$AnimationPlayer.play("Nymera Scene")
-	pass
+	$AnimationPlayer.play("Elendros Ending")
+	
 
 func _process(delta: float) -> void:
 	if visible_character != phase.visible_characters:
