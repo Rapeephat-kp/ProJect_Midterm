@@ -8,7 +8,6 @@ extends Node2D
 
 #Mission
 @onready var bridge: TileMapLayer = $TileMap/Bridge
-@onready var bridge_2: TileMapLayer = $TileMap/Bridge2
 var logs_quantity_require = 3
 
 
@@ -22,7 +21,7 @@ func _ready() -> void:
 	#Mission
 	bridge.collision_enabled = false
 	bridge.modulate = "ffffff39"
-	bridge_2.modulate = "ffffff39"
+	#bridge_2.modulate = "ffffff"
 	
 	
 	
@@ -38,8 +37,8 @@ func _ready() -> void:
 		elendrosProfile.visible = false
 		nymeraProfile.visible = true
 	#Bridge
-	$TileMap/Bridge.enabled = true
-	$TileMap/Bridge2.enabled = false
+	#bridge.enabled = true
+	
 	#CutSceneManager.stage1_part1()
 func _process(delta: float):
 	inventory.refresh_inventory()
@@ -105,7 +104,6 @@ func _on_build_bridge_area_entered(area: Area2D) -> void:
 	if missionCheck() == true:
 		bridge.collision_enabled = true
 		bridge.modulate = "ffffff"
-		bridge_2.modulate = "ffffff"
 		PlayerInventory.remove_item("Logs",logs_quantity_require)
 	#mission fail
 	elif missionCheck() == false:
