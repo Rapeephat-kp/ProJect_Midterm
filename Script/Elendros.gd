@@ -21,22 +21,26 @@ var _poison_tick: float = 0.0
 
 
 func _process(delta: float) -> void:
-	if in_fog:
-		is_poisoned = true
-		poison_timer = poison_duration
-
-	if is_poisoned:
-		poison_timer -= delta
-		_poison_tick -= delta
-
-		if _poison_tick <= 0.0:
-			Gamemanager.set_player_health(-poison_damage)
-			_poison_tick = poison_interval
-
-		if poison_timer <= 0.0:
-			is_poisoned = false
-			print("Poison ended")
-
+	if !Gamemanager.get_player_buff():
+		if in_fog:
+			is_poisoned = true
+			Gamemanager.set_player_debuff(true)
+			poison_timer = poison_duration
+			
+		if is_poisoned:
+			poison_timer -= delta
+			_poison_tick -= delta
+			
+			if _poison_tick <= 0.0:
+				Gamemanager.set_player_health(-poison_damage)
+				_poison_tick = poison_interval
+			
+			if poison_timer <= 0.0:
+				Gamemanager.set_player_debuff(false)
+				is_poisoned = false
+				print("Poison ended")
+		else:
+			in_fog = false
 #for_movement
 func _physics_process(delta: float) -> void:
 	# Add the gravity.

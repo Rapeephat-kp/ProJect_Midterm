@@ -1,10 +1,10 @@
 extends Node2D
-
-
+var button_check = true
+var player
 func _ready() -> void:
-	$CanvasUI/Buff_Debuff_Status/Info_buff.connect("mouse_entered", Callable(self, "_on_button_hovered"))
-	$CanvasUI/Buff_Debuff_Status/Info_buff.connect("mouse_exited", Callable(self, "_on_button_unhovered"))
-	PlayerInventory.add_item("Healing Potion", 1)
+
+	PlayerInventory.add_item("Healing Potion", 1) 
+	PlayerInventory.add_item("Antidote Potion", 1)
 	$CanvasUI/Player_show/Elendros.visible = true
 	$CanvasUI/Player_show/Nymera.visible = false
 	print(Gamemanager.get_p())
@@ -12,23 +12,52 @@ func _ready() -> void:
 	if p_value == 1:
 		$CanvasUI/Player_show/Elendros.visible = true
 		$CanvasUI/Player_show/Nymera.visible = false
+		player = $"Main Character/Elendros"
 	elif p_value == 2:
 		$CanvasUI/Player_show/Elendros.visible = false
 		$CanvasUI/Player_show/Nymera.visible = true
+		player = $"Main Character/Nymera"
 func _process(delta: float):
 	$CanvasUI/Inventory/Inventory.refresh_inventory()
 	$CanvasUI/Player_show/Coins/Coin_Amount.text = str(Gamemanager.get_coin())
-	if $"Main Character/Nymera".get_infected() || $"Main Character/Elendros".get_infected():
-		$CanvasUI/Buff_Debuff_Status/Name.text = "poisoned"
-		$CanvasUI/Buff_Debuff_Status/Name/Info.text = "your hp will decrease for a while..." 
-	elif Gamemanager.get_player_buff():
+	if Gamemanager.get_player_buff():
+		print("in2")
+		$CanvasUI/Buff_Debuff_Status.visible = true
+		$CanvasUI/Buff_Debuff_Status/Debuff.visible = false
+		$CanvasUI/Buff_Debuff_Status/Buff.visible = true
+		$CanvasUI/Buff_Debuff_Status/Info_buff.visible = true
 		$CanvasUI/Buff_Debuff_Status/Name.text = "Poison Immunity"
 		$CanvasUI/Buff_Debuff_Status/Name/Info.text = "Immune to the poison !!!" 
-func _on_button_hovered():
-	if Gamemanager.get_player_buff() || $"Main Character/Nymera".get_infected() || $"Main Character/Elendros".get_infected():
-		$CanvasUI/Buff_Debuff_Status/Panel.visible = true
-		$CanvasUI/Buff_Debuff_Status/Name.visible = true
-func _on_button_unhovered():
-	$CanvasUI/Buff_Debuff_Status/Panel.visible = true
-	$CanvasUI/Buff_Debuff_Status/Name.visible = true
-	
+	elif  Gamemanager.get_player_debuff() && !Gamemanager.get_player_buff():
+		print("in1")
+		$CanvasUI/Buff_Debuff_Status.visible = true
+		$CanvasUI/Buff_Debuff_Status/Debuff.visible = true
+		$CanvasUI/Buff_Debuff_Status/Buff.visible = false
+		$CanvasUI/Buff_Debuff_Status/Info_buff.visible = true
+		$CanvasUI/Buff_Debuff_Status/Name.text = "poisoned"
+		$CanvasUI/Buff_Debuff_Status/Name/Info.text = "your hp will decrease for a while..." 
+		
+	else:
+		$CanvasUI/Buff_Debuff_Status.visible = false
+		$CanvasUI/Buff_Debuff_Status/Debuff.visible = false
+		$CanvasUI/Buff_Debuff_Status/Buff.visible = false
+		$CanvasUI/Buff_Debuff_Status/Info_buff.visible = false
+		
+func _on_info_buff_pressed() -> void:
+	print("in_func")
+	if Gamemanager.get_player_debuff() || Gamemanager.get_player_buff():
+		print("Hovered: Show Panel")
+		$CanvasUI/Buff_Debuff_Status/Panel.visible = button_check
+		$CanvasUI/Buff_Debuff_Status/Name.visible = button_check
+		button_check = !button_check
+
+
+func _on_area_2d_area_entered(area: Area2D) -> void:
+	if area.is_in_group("Player"):
+		player.set_in_fog(true)
+		print("in")
+
+func _on_area_2d_area_exited(area: Area2D) -> void:
+	if area.is_in_group("Player"):
+		player.set_in_fog(false)
+		print("out")

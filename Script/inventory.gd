@@ -82,6 +82,6 @@ func use_item(item):
 		"Atk Potion":
 			Gamemanager.set_atk(15)
 		"Antidote Potion":
-			print("ไม่มีพิษแล้ว")
+			Gamemanager.set_player_buff(5.0)
 		_:
 			print("ไอเท็มไม่รู้จัก:", item.item_name)

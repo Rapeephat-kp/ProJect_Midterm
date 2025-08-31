@@ -83,7 +83,7 @@ func follow_player(delta):
 					return_timer = 0
 			else:
 				var dir = spawn_position - global_position
-				if dir.length() > 20:
+				if dir.length() > 30:
 					$AnimatedSprite2D.play("walk")
 					if dir.x > 0 and can_forward:
 						velocity.x = abs(speed)

@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://bl8xoik6mi4n1"]
+[gd_scene load_steps=9 format=3 uid="uid://bl8xoik6mi4n1"]
 
 [ext_resource type="Texture2D" uid="uid://bq46c5oakxhi" path="res://Asset_Midterm/Item/crystal.png" id="1_bw81u"]
 [ext_resource type="Script" uid="uid://cn62ivrwm4kn3" path="res://boss_core.gd" id="1_et3a1"]
@@ -43,6 +43,16 @@ _data = {
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bw81u"]
 size = Vector2(6, 13)
 
+[sub_resource type="Gradient" id="Gradient_et3a1"]
+offsets = PackedFloat32Array(0.0436508, 1)
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_52b8f"]
+gradient = SubResource("Gradient_et3a1")
+fill = 1
+fill_from = Vector2(0.495726, 0.504274)
+fill_to = Vector2(0.115385, 0.141026)
+
 [node name="Boss_core" type="Node2D"]
 script = ExtResource("1_et3a1")
 
@@ -62,5 +72,10 @@ libraries = {
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hit_Box"]
 position = Vector2(0, -3)
 shape = SubResource("RectangleShape2D_bw81u")
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+position = Vector2(0, -3)
+color = Color(0.949612, 0, 0.178839, 1)
+texture = SubResource("GradientTexture2D_52b8f")
 
 [connection signal="area_entered" from="Hit_Box" to="." method="_on_hit_box_area_entered"]

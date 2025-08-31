@@ -4091,6 +4091,7 @@ text = "Healing Potion"
 
 [node name="description" type="Label" parent="CanvasLayer/Store/Details/Panel"]
 modulate = Color(0.698039, 0.698039, 0.698039, 1)
+layout_mode = 0
 offset_left = 24.0
 offset_top = 64.0
 offset_right = 248.0
@@ -4111,6 +4112,7 @@ text = "testasfasfadadadadasdasdasdadasdadsadadasdadsasdasdadad"
 
 [node name="Line" type="Panel" parent="CanvasLayer/Store/Details/Panel"]
 modulate = Color(0.698039, 0.698039, 0.698039, 1)
+layout_mode = 0
 offset_left = 24.0
 offset_top = 49.0
 offset_right = 307.0
@@ -4118,6 +4120,7 @@ offset_bottom = 52.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_tse6q")
 
 [node name="BuyFailLabel1" type="Label" parent="CanvasLayer/Store/Details/Panel"]
+layout_mode = 0
 offset_left = -44.0
 offset_top = 245.0
 offset_right = 148.0
@@ -4165,6 +4168,7 @@ text = "asdasdasdasdasdasdadasdadadas"
 
 [node name="description" type="Label" parent="CanvasLayer/Store/Details/Panel2"]
 modulate = Color(0.698039, 0.698039, 0.698039, 1)
+layout_mode = 0
 offset_left = 24.0
 offset_top = 64.0
 offset_right = 248.0
@@ -4175,6 +4179,7 @@ text = "Description"
 
 [node name="Line" type="Panel" parent="CanvasLayer/Store/Details/Panel2"]
 modulate = Color(0.698039, 0.698039, 0.698039, 1)
+layout_mode = 0
 offset_left = 24.0
 offset_top = 49.0
 offset_right = 307.0
@@ -4182,6 +4187,7 @@ offset_bottom = 52.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_tse6q")
 
 [node name="BuyFailLabel2" type="Label" parent="CanvasLayer/Store/Details/Panel2"]
+layout_mode = 0
 offset_left = -45.0
 offset_top = 245.0
 offset_right = 147.0

@@ -28,6 +28,7 @@ func _process(delta: float) -> void:
 	if !Gamemanager.get_player_buff():
 		if in_fog:
 			is_poisoned = true
+			Gamemanager.set_player_debuff(true)
 			poison_timer = poison_duration
 
 		if is_poisoned:
@@ -39,9 +40,11 @@ func _process(delta: float) -> void:
 				_poison_tick = poison_interval
 
 			if poison_timer <= 0.0:
+				Gamemanager.set_player_debuff(false)
 				is_poisoned = false
 				print("Poison ended")
-
+		else:
+			in_fog = false
 func _physics_process(delta: float) -> void:
 	if not is_on_floor():
 		velocity += get_gravity() * delta
@@ -156,6 +159,3 @@ func set_in_fog(state: bool):
 		print("Player entered fog")
 	else:
 		print("Player left fog")
-
-func get_infected():
-	return is_poisoned

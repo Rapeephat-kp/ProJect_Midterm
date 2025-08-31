@@ -1,7 +1,7 @@
 extends Node2D
 var health = 50
 func _ready() -> void:
-	pass # Replace with function body.
+	$AnimationPlayer.play("Move")
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

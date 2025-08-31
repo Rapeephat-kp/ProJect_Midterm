@@ -1,7 +1,6 @@
 extends Node2D
 
 class_name GameManager
-
 var Wood = 0
 var player = 2
 var current_main_player_hp = 0
@@ -14,7 +13,7 @@ var currentscene = ""
 var player_debuff = false
 var player_buff = false
 
-
+			
 func all_reset():
 	current_main_player_hp = 0
 	coins = 0
@@ -78,3 +77,6 @@ func get_player_buff():
 
 func get_player_debuff():
 	return player_debuff
+
+func _on_player_buff():
+	player_buff = true

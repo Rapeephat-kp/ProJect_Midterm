@@ -11,7 +11,6 @@ func _ready() -> void:
 		player = $"../Main Character/Elendros"
 	else:
 		player = $"../Main Character/Nymera"
-	$Fog1/Area2D/CollisionShape2D.disabled = true
 	Fog1_size = $Fog1.size
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -26,13 +25,4 @@ func _on_detect_1_area_entered(area: Area2D) -> void:
 	if area.is_in_group("Player"):
 		condition_1 = true
 		$Fog1.visible = true
-		$Fog1/Area2D/CollisionShape2D.disabled = false
-
-func _on_area_2d_area_entered(area: Area2D) -> void:
-	if area.is_in_group("Player"):
-		player.set_in_fog(true)
-
-
-func _on_area_2d_area_exited(area: Area2D) -> void:
-	if area.is_in_group("Player"):
-		player.set_in_fog(false)
+		print("in detect")
