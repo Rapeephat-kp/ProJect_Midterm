@@ -6,9 +6,39 @@ extends Node2D
 @onready var next_button: Button = $"CanvasLayer/stage cutscene/Setting_Panel_Bg/Next_Button"
 @onready var autoplay_button: Button = $"CanvasLayer/stage cutscene/Setting_Panel_Bg/Autoplay_Button"
 @onready var store_button: Button = $"CanvasLayer/stage cutscene/Setting_Panel_Bg/Store_Button"
-#@onready var store_1: Node2D = $CanvasLayer/Store_1
-@onready var store_1_stage_3: Node2D = $"CanvasLayer/Store 1 Stage 3"
-@onready var inventory: Node2D = $"CanvasLayer/Store 1 Stage 3/Inventory/Inventory"
+
+var curScene = ""
+#store
+@onready var store: Node2D = $CanvasLayer/Store
+@onready var inventory: Node2D = $CanvasLayer/Store/Inventory/Inventory
+
+@onready var item_1: TextureRect = $"CanvasLayer/Store/Item 1"
+@onready var item_2: TextureRect = $"CanvasLayer/Store/Item 2"
+@onready var item1_name: Label = $CanvasLayer/Store/Details/Panel/Item1Name
+@onready var info1_des: RichTextLabel = $CanvasLayer/Store/Details/Panel/Info_des
+@onready var item2_name: Label = $CanvasLayer/Store/Details/Panel2/Item2Name
+@onready var info2_des: RichTextLabel = $CanvasLayer/Store/Details/Panel2/Info_des
+@onready var item_1_price: Label = $"CanvasLayer/Store/Buy Button/Item1_Buy/Item1_Price"
+@onready var item_2_price: Label = $"CanvasLayer/Store/Buy Button/Item2_Buy/Item2_Price"
+@onready var buy_fail_label_1: Label = $CanvasLayer/Store/Details/Panel/BuyFailLabel1
+@onready var buy_fail_label_2: Label = $CanvasLayer/Store/Details/Panel2/BuyFailLabel2
+
+
+
+
+var buy_text = " Buy"
+#item price
+var healPotion = 100
+var maxHpPotion = 350
+var atkPotion = 250
+var antidotePotion = 150
+
+
+
+
+#@onready var store_1_stage_3: Node2D = $"CanvasLayer/Store/Store 1 Stage 3"
+@onready var store_2_stage_4: Node2D = $"CanvasLayer/Store/Store 2 Stage 4"
+@onready var store_3_stage_5: Node2D = $"CanvasLayer/Store/Store 3 Stage 5"
 
 
 
@@ -24,35 +54,38 @@ var visible_character = 0
 func _ready() -> void:
 	#$AnimationPlayer.play("Elendros Ending")
 	#store_1.visible = false
+	store.visible = false
+	buy_fail_label_1.visible = false
+	buy_fail_label_2.visible = false
+	'''
 	store_1_stage_3.visible = false
-	
+	store_2_stage_4.visible = false
+	store_3_stage_5.visible = false
+	'''
 func _process(delta: float) -> void:
 	if visible_character != phase.visible_characters:
 		visible_character = phase.visible_characters
 		AudioManager.set_stream("res://SFX/keyboard-typing-one-short.mp3")
 		AudioManager.play_stream()
 		
-	#change style of auto button
-	#var style = StyleBoxTexture.new()
-	#style.texture = "res://.godot/imported/Button_52x14.png-9dc596899a794d2c135512115af19ea8.ctex"
-	#var button_theme = next_button.get_theme_stylebox("normal")
 	if autoplay == false:
 		timer.start()
-		#autoplay_button.remove_theme_stylebox_override("normal")
 		autoplay_button.modulate = "aaaaaa"
-		#autoplay_button.add_theme_stylebox_override("normal",button_theme)
 	elif autoplay == true:
-		#autoplay_button.add_theme_stylebox_override("normal", style)
 		autoplay_button.modulate = "626262"
-		#autoplay_button.add_theme_stylebox_override("normal","e68e8f")
-		#$CanvasLayer/Control/Setting_Panel_Bg/Autoplay_Button/Label.add_theme_color_override("font_color","ffffff")
+		
+		
+		
+		
 func pause():
 	animation_player.pause()
 	if autoplay == true:
 		pass
 	elif autoplay == false:
 		timer.start()
-		
+
+func end():
+	animation_player.play("RESET")		
 		
 		
 func _input(event: InputEvent) -> void:
@@ -91,9 +124,55 @@ func stage1(Character : int):
 
 
 func _on_store_button_pressed() -> void:
-		store_1_stage_3.visible = true
+		set_store()
+			
+			
 
 
+func set_store():
+		curScene = Gamemanager.get_currentScene()
+		store.visible = true
+		buy_fail_label_1.visible = false
+		buy_fail_label_2.visible = false
+		'''
+		store_1_stage_3.visible = false
+		store_2_stage_4.visible = false
+		store_3_stage_5.visible = false
+		'''
+		if curScene == "Stage 3":
+			#Set Item Image
+			item_1.texture = load("res://Asset_Midterm/Item/Pixel_potion_pack/hp_potion.png")
+			item_2.texture = load("res://Asset_Midterm/Item/Pixel_potion_pack/defense_potion.png")
+			#Set details
+			item1_name.text = "Healing Potion"
+			info1_des.text = "Increase HP (+50 HP for each)"
+			item_1_price.text = str(healPotion)+buy_text
+			item2_name.text = "Max HP Potion"
+			info2_des.text = "Increase Maximum of HP (+50 HP for each)"
+			item_2_price.text = str(maxHpPotion)+buy_text
+			
+		elif curScene == "Stage 4":
+			#Set Item Image
+			item_1.texture = load("res://Asset_Midterm/Item/Pixel_potion_pack/defense_potion.png")
+			item_2.texture = load("res://Asset_Midterm/Item/Pixel_potion_pack/fire_potion.png")
+			#Set details
+			item1_name.text = "Max HP Potion"
+			info1_des.text = "Increase Maximum of HP (+50 HP for each)"
+			item_1_price.text = str(maxHpPotion)+buy_text
+			item2_name.text = "ATK Potion"
+			info2_des.text = "Increase Maximum of ATK (+15 atk for each)"
+			item_2_price.text = str(atkPotion)+buy_text
+		if curScene == "Stage 5":
+			#Set Item Image
+			item_1.texture = load("res://Asset_Midterm/Item/Pixel_potion_pack/hp_potion.png")
+			item_2.texture = load("res://Asset_Midterm/Item/Pixel_potion_pack/antidote_potion.png")
+			#Set details
+			item1_name.text = "Healing Potion"
+			info1_des.text = "Increase HP (+50 HP for each)"
+			item_1_price.text = str(healPotion)+buy_text
+			item2_name.text = "Antiodote Potion"
+			info2_des.text = "Protect from poisson gas (duration 1 minute)"
+			item_2_price.text = str(antidotePotion)+buy_text
 func _on_hp_buy_pressed() -> void:
 	if Gamemanager.get_coin() >= 100:
 		inventory.buy_item("Healing Potion", 1)
@@ -102,4 +181,56 @@ func _on_hp_buy_pressed() -> void:
 
 
 func _on_exit_pressed() -> void:
-	store_1_stage_3.visible = false
+	store.visible = false
+
+
+func _on_item_1_buy_pressed() -> void:
+	if curScene == "Stage 3":
+		if Gamemanager.get_coin() >= healPotion:
+			inventory.buy_item("Healing Potion", 1)
+			Gamemanager.set_coin(-1*healPotion)
+		else:
+			buyFail1()
+	elif curScene == "Stage 4":
+		if Gamemanager.get_coin() >= maxHpPotion:
+			inventory.buy_item("Increase Max Hp Potion", 1)
+			Gamemanager.set_coin(-1*maxHpPotion)
+		else:
+			buyFail1()
+	elif curScene == "Stage 5":
+		if Gamemanager.get_coin() >= healPotion:
+			inventory.buy_item("Healing Potion", 1)
+			Gamemanager.set_coin(-1*healPotion)
+		else:
+			buyFail1()
+		
+func _on_item_2_buy_pressed() -> void:
+	if curScene == "Stage 3":
+		if Gamemanager.get_coin() >= maxHpPotion:
+			inventory.buy_item("Increase Max Hp Potion", 1)
+			Gamemanager.set_coin(-1*maxHpPotion)
+		else:
+			buyFail2()
+	elif curScene == "Stage 4":
+		if Gamemanager.get_coin() >= atkPotion:
+			inventory.buy_item("Atk Potion", 1)
+			Gamemanager.set_coin(-1*atkPotion)
+		else:
+			buyFail2()
+	elif curScene == "Stage 5":
+		if Gamemanager.get_coin() >= antidotePotion:
+			inventory.buy_item("Antidote Potion", 1)
+			Gamemanager.set_coin(-1*antidotePotion)
+		else:
+			buyFail2()
+			
+func buyFail1():
+	buy_fail_label_1.visible = true
+	await get_tree().create_timer(5).timeout
+	buy_fail_label_1.visible = false
+	
+func buyFail2():
+	buy_fail_label_2.visible = true
+	await get_tree().create_timer(5).timeout
+	buy_fail_label_2.visible = false
+	

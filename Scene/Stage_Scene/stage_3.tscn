@@ -1,4 +1,4 @@
-[gd_scene load_steps=77 format=4 uid="uid://cpq4qkq1b6ka6"]
+[gd_scene load_steps=79 format=4 uid="uid://cpq4qkq1b6ka6"]
 
 [ext_resource type="Texture2D" uid="uid://skwubifcy71r" path="res://Asset_Midterm/Tile_Map/Fantasy Swamp Forest/Free/BG_3/BG_3.png" id="1_a24hx"]
 [ext_resource type="Script" uid="uid://bsskijfieg6i7" path="res://Script/Stage/stage_3.gd" id="1_oj7rm"]
@@ -30,6 +30,7 @@
 [ext_resource type="Texture2D" uid="uid://dkyfygbi0dekj" path="res://Asset_Midterm/UI/UI/Button_52x14.png" id="27_6xc28"]
 [ext_resource type="FontFile" uid="uid://bdl4qpamcrivq" path="res://Fonts/OBGB.TTF" id="28_6hwyn"]
 [ext_resource type="PackedScene" uid="uid://bufdadlu37p7q" path="res://Scene/NPC/merchant.tscn" id="30_8swpq"]
+[ext_resource type="PackedScene" uid="uid://bsintr6dnceys" path="res://Scene/logs.tscn" id="31_jr2ay"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_u0b7u"]
 texture = ExtResource("4_a7c6i")
@@ -1820,6 +1821,9 @@ bg_color = Color(0.69462, 0.554322, 0.367857, 1)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jr2ay"]
 size = Vector2(243.334, 65)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1bspg"]
+size = Vector2(167, 102)
+
 [node name="stage 3" type="Node2D"]
 script = ExtResource("1_oj7rm")
 
@@ -1892,7 +1896,6 @@ tile_map_data = PackedByteArray("AAAGASsAAAAFAAQAAAAGASoAAAAFAAQAAAAGASkAAAAFAAM
 tile_set = SubResource("TileSet_trpnj")
 
 [node name="Props 2" type="TileMapLayer" parent="TileMap"]
-modulate = Color(0.728822, 0.728822, 0.728822, 1)
 z_index = -5
 scale = Vector2(1.5, 1.5)
 tile_map_data = PackedByteArray("AAD9/wkAAAAFAAoAAAACAAkAAAAJAAAAAAAFAAkAAAABAAoAAAAKAAkAAAABAAQAAAAQAAkAAAALAAQAAAAVAAkAAAANAAcAAAA=")
@@ -1994,6 +1997,7 @@ shape = SubResource("RectangleShape2D_7o2wm")
 
 [node name="Main Character" type="Node2D" parent="."]
 z_index = 10
+position = Vector2(3537, 0)
 
 [node name="Elendros" parent="Main Character" instance=ExtResource("15_7judj")]
 position = Vector2(365, 100)
@@ -2247,7 +2251,7 @@ vertical_alignment = 1
 [node name="NPC" type="Node2D" parent="."]
 
 [node name="merchant" parent="NPC" instance=ExtResource("30_8swpq")]
-position = Vector2(683, 228)
+position = Vector2(4744, 228)
 scale = Vector2(0.6, 0.6)
 
 [node name="InteractMer" type="Area2D" parent="NPC/merchant"]
@@ -2255,6 +2259,24 @@ scale = Vector2(0.6, 0.6)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="NPC/merchant/InteractMer"]
 position = Vector2(0.00012207, 4.1666)
 shape = SubResource("RectangleShape2D_jr2ay")
+
+[node name="Mission" type="Node2D" parent="."]
+
+[node name="Logs" parent="Mission" instance=ExtResource("31_jr2ay")]
+position = Vector2(3992, 238)
+
+[node name="Logs2" parent="Mission" instance=ExtResource("31_jr2ay")]
+position = Vector2(4039, 238)
+
+[node name="Logs3" parent="Mission" instance=ExtResource("31_jr2ay")]
+position = Vector2(3799, 238)
+
+[node name="BuildBridge" type="Area2D" parent="Mission"]
+position = Vector2(4136, 217)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mission/BuildBridge"]
+position = Vector2(-13, -16)
+shape = SubResource("RectangleShape2D_1bspg")
 
 [connection signal="area_entered" from="map bounds/water" to="." method="_on_water_area_entered"]
 [connection signal="area_entered" from="map bounds/left" to="." method="_on_left_area_entered"]
@@ -2264,3 +2286,4 @@ shape = SubResource("RectangleShape2D_jr2ay")
 [connection signal="pressed" from="CanvasUI/Setting_UI/Setting_Panel_Bg/Resume_Button" to="CanvasUI/Setting" method="_on_resume_button_pressed"]
 [connection signal="pressed" from="CanvasUI/Setting_UI/Setting_Panel_Bg/Exit_Button" to="CanvasUI/Setting" method="_on_exit_button_pressed"]
 [connection signal="area_entered" from="NPC/merchant/InteractMer" to="." method="_on_interact_mer_area_entered"]
+[connection signal="area_entered" from="Mission/BuildBridge" to="." method="_on_build_bridge_area_entered"]

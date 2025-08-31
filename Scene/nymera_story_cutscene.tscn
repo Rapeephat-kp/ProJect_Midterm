@@ -161,7 +161,7 @@ tracks/9/path = NodePath(".")
 tracks/9/interp = 1
 tracks/9/loop_wrap = true
 tracks/9/keys = {
-"times": PackedFloat32Array(2.83333, 6.06667, 7.83333, 10.1444, 11.5, 12.2667, 14.6333, 17.9, 19.3395, 21.7667, 24.5, 26.8, 30.5333, 34.3333, 35.9667, 41.4667, 47.0667, 52.5333, 56.5096, 60.6, 62.6667, 66.3333, 69.9783, 73.5963),
+"times": PackedFloat32Array(2.83333, 6.06667, 7.83333, 10.1444, 11.5, 12.2667, 14.6333, 17.9, 19.3395, 21.7667, 24.5, 26.8, 30.5333, 34.3333, 35.9667, 41.4667, 47.0667, 52.5333, 56.5096, 60.6, 62.6667, 66.3333, 69.9783, 74.7),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "values": [{
 "args": [],
@@ -441,7 +441,7 @@ tracks/5/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [true]
+"values": [false]
 }
 tracks/6/type = "value"
 tracks/6/imported = false
@@ -458,31 +458,31 @@ tracks/6/keys = {
 tracks/7/type = "value"
 tracks/7/imported = false
 tracks/7/enabled = true
-tracks/7/path = NodePath("AudioStreamPlayer:playing")
+tracks/7/path = NodePath("AudioStreamPlayer:stream_paused")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [true]
+"values": [false]
 }
 tracks/8/type = "value"
 tracks/8/imported = false
 tracks/8/enabled = true
-tracks/8/path = NodePath("AudioStreamPlayer:stream_paused")
+tracks/8/path = NodePath("CanvasLayer/Center Buttom/CharName:text")
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [false]
+"values": [""]
 }
 tracks/9/type = "value"
 tracks/9/imported = false
 tracks/9/enabled = true
-tracks/9/path = NodePath("CanvasLayer/Center Buttom/CharName:text")
+tracks/9/path = NodePath("CanvasLayer/Center Buttom/Phase:text")
 tracks/9/interp = 1
 tracks/9/loop_wrap = true
 tracks/9/keys = {
@@ -494,98 +494,74 @@ tracks/9/keys = {
 tracks/10/type = "value"
 tracks/10/imported = false
 tracks/10/enabled = true
-tracks/10/path = NodePath("CanvasLayer/Center Buttom/Phase:text")
+tracks/10/path = NodePath("CanvasLayer/Center Buttom/Phase:visible_ratio")
 tracks/10/interp = 1
 tracks/10/loop_wrap = true
 tracks/10/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [""]
+"update": 0,
+"values": [0.0]
 }
 tracks/11/type = "value"
 tracks/11/imported = false
 tracks/11/enabled = true
-tracks/11/path = NodePath("CanvasLayer/Center Buttom/Phase:visible_ratio")
+tracks/11/path = NodePath("CanvasLayer/Control Center/NymeraScene2:visible")
 tracks/11/interp = 1
 tracks/11/loop_wrap = true
 tracks/11/keys = {
-"times": PackedFloat32Array(0),
+"times": PackedFloat32Array(0.001),
 "transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [0.0]
+"update": 1,
+"values": [false]
 }
 tracks/12/type = "value"
 tracks/12/imported = false
 tracks/12/enabled = true
-tracks/12/path = NodePath("CanvasLayer/Control Center/NymeraScene2:visible")
+tracks/12/path = NodePath("CanvasLayer/Center Buttom:modulate")
 tracks/12/interp = 1
 tracks/12/loop_wrap = true
 tracks/12/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
 }
 tracks/13/type = "value"
 tracks/13/imported = false
 tracks/13/enabled = true
-tracks/13/path = NodePath("CanvasLayer/Center Buttom:modulate")
+tracks/13/path = NodePath("AudioStreamPlayer2:stream")
 tracks/13/interp = 1
 tracks/13/loop_wrap = true
 tracks/13/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 0)]
+"times": PackedFloat32Array(0, 0.001),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [ExtResource("9_jefor"), null]
 }
 tracks/14/type = "value"
 tracks/14/imported = false
 tracks/14/enabled = true
-tracks/14/path = NodePath("AudioStreamPlayer:volume_db")
+tracks/14/path = NodePath("CanvasLayer/Control Center/NymeraScene4:position")
 tracks/14/interp = 1
 tracks/14/loop_wrap = true
 tracks/14/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [-27.566]
+"values": [Vector2(1, 0)]
 }
 tracks/15/type = "value"
 tracks/15/imported = false
 tracks/15/enabled = true
-tracks/15/path = NodePath("AudioStreamPlayer2:stream")
+tracks/15/path = NodePath("AudioStreamPlayer:stream")
 tracks/15/interp = 1
 tracks/15/loop_wrap = true
 tracks/15/keys = {
-"times": PackedFloat32Array(0),
+"times": PackedFloat32Array(0.001),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("9_jefor")]
-}
-tracks/16/type = "value"
-tracks/16/imported = false
-tracks/16/enabled = true
-tracks/16/path = NodePath("AudioStreamPlayer2:playing")
-tracks/16/interp = 1
-tracks/16/loop_wrap = true
-tracks/16/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
-}
-tracks/17/type = "value"
-tracks/17/imported = false
-tracks/17/enabled = true
-tracks/17/path = NodePath("CanvasLayer/Control Center/NymeraScene4:position")
-tracks/17/interp = 1
-tracks/17/loop_wrap = true
-tracks/17/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(1, 0)]
+"values": [null]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_6fu1o"]
@@ -617,6 +593,7 @@ scale = Vector2(0.845, 0.845)
 texture = ExtResource("2_jt7fl")
 
 [node name="NymeraScene2" type="Sprite2D" parent="CanvasLayer/Control Center"]
+visible = false
 scale = Vector2(0.845, 0.845)
 texture = ExtResource("3_a0elx")
 
@@ -642,6 +619,7 @@ scale = Vector2(0.845, 0.845)
 texture = ExtResource("7_quvvj")
 
 [node name="Black Scene" type="Panel" parent="CanvasLayer/Control Center"]
+visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -749,6 +727,28 @@ text = " Auto Play"
 alignment = 0
 icon_alignment = 1
 
+[node name="SkipButton" type="Button" parent="CanvasLayer/Center Buttom"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 647.0
+offset_top = -132.0
+offset_right = 911.0
+offset_bottom = -44.0
+grow_horizontal = 0
+grow_vertical = 2
+focus_mode = 0
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 0
+theme_override_fonts/font = ExtResource("8_a0elx")
+theme_override_font_sizes/font_size = 50
+text = " Skip"
+alignment = 0
+icon_alignment = 1
+
 [node name="Top Right" type="Control" parent="CanvasLayer"]
 layout_mode = 3
 anchors_preset = 1
@@ -765,7 +765,6 @@ libraries = {
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("9_a0elx")
-volume_db = -27.566
 
 [node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("9_jefor")
@@ -776,4 +775,5 @@ autostart = true
 
 [connection signal="pressed" from="CanvasLayer/Center Buttom/NextButton" to="." method="_on_next_button_pressed"]
 [connection signal="pressed" from="CanvasLayer/Center Buttom/AutoButton" to="." method="_on_auto_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/Center Buttom/SkipButton" to="." method="_on_skip_button_pressed"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

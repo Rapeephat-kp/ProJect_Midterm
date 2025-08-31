@@ -173,18 +173,21 @@ sprite_frames = SubResource("SpriteFrames_6l7ci")
 animation = &"idle"
 
 [node name="detectZone L" type="Area2D" parent="."]
+visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="detectZone L"]
 position = Vector2(-121, 4)
 shape = SubResource("RectangleShape2D_e66ob")
 
 [node name="detectZone R" type="Area2D" parent="."]
+visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="detectZone R"]
 position = Vector2(121, 4)
 shape = SubResource("RectangleShape2D_e66ob")
 
 [node name="interactZone" type="Area2D" parent="."]
+visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="interactZone"]
 position = Vector2(0, 4)
