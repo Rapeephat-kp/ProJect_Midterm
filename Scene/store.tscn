@@ -1,7 +1,7 @@
 [gd_scene load_steps=26 format=3 uid="uid://c7s5qia3dtyv1"]
 
 [ext_resource type="Texture2D" uid="uid://b1fwdb7wh2oxr" path="res://Asset_Midterm/BG/Merchant Scene.jpg" id="1_6vjxl"]
-[ext_resource type="Script" uid="uid://bpm2p8l2jywm" path="res://Script/store.gd" id="1_smv7e"]
+[ext_resource type="Script" uid="uid://m6q2yfhcdweb" path="res://Script/store.gd" id="1_smv7e"]
 [ext_resource type="Texture2D" uid="uid://cprtxbqccylxo" path="res://Asset_Midterm/BG/Blur Merchant.jpg" id="2_eci5q"]
 [ext_resource type="Texture2D" uid="uid://b5xxgk6flterr" path="res://Asset_Midterm/Item/Pixel_potion_pack/hp_potion.png" id="3_smv7e"]
 [ext_resource type="Texture2D" uid="uid://mfegd3bfkc1i" path="res://Asset_Midterm/Item/Pixel_potion_pack/defense_potion.png" id="4_ggf7m"]

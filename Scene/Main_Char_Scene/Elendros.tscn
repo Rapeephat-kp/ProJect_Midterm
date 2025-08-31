@@ -255,13 +255,11 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ly00p"]
 size = Vector2(8, 36)
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_w7vid"]
-radius = 6.0
-height = 90.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2ncla"]
+size = Vector2(30.9997, 90)
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_yy6k7"]
-radius = 6.0
-height = 90.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_l8ul0"]
+size = Vector2(31.0002, 88.9999)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_so822"]
 size = Vector2(10, 36)
@@ -314,19 +312,18 @@ metadata/_edit_lock_ = true
 [node name="Attack_Zone_Elendros_right" type="Area2D" parent="." groups=["Player_hit"]]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Attack_Zone_Elendros_right" groups=["Player_hit"]]
-position = Vector2(-38, 5)
+position = Vector2(-43, -0.500131)
 rotation = -1.5708
-shape = SubResource("CapsuleShape2D_w7vid")
+shape = SubResource("RectangleShape2D_2ncla")
 disabled = true
 
 [node name="Attack_Zone_Elendros" type="Area2D" parent="." groups=["Player_hit"]]
 
 [node name="Attack_Zone_col" type="CollisionShape2D" parent="Attack_Zone_Elendros" groups=["Player_hit"]]
-position = Vector2(34, 5)
+position = Vector2(46, 0)
 rotation = -1.5708
-shape = SubResource("CapsuleShape2D_yy6k7")
+shape = SubResource("RectangleShape2D_l8ul0")
 disabled = true
-metadata/_edit_lock_ = true
 
 [node name="Elendros_hitBox" type="Area2D" parent="." groups=["Player"]]
 visible = false

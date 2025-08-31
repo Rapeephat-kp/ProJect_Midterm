@@ -11,6 +11,32 @@ const JUMP_VELOCITY = -300.0
 var is_attacking = false
 var is_hurt = false
 
+var is_poisoned: bool = false
+var in_fog: bool = false   
+var poison_timer: float = 0.0
+@export var poison_duration: float = 3.0   
+@export var poison_interval: float = 1.0   
+@export var poison_damage: int = 1
+var _poison_tick: float = 0.0
+
+
+func _process(delta: float) -> void:
+	if in_fog:
+		is_poisoned = true
+		poison_timer = poison_duration
+
+	if is_poisoned:
+		poison_timer -= delta
+		_poison_tick -= delta
+
+		if _poison_tick <= 0.0:
+			Gamemanager.set_player_health(-poison_damage)
+			_poison_tick = poison_interval
+
+		if poison_timer <= 0.0:
+			is_poisoned = false
+			print("Poison ended")
+
 #for_movement
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
@@ -86,3 +112,14 @@ func _on_elendros_hit_box_area_entered(area: Area2D) -> void:
 
 		await get_tree().create_timer(0.3).timeout
 		is_hurt = false
+		
+func set_in_fog(state: bool):
+	in_fog = state
+	if state:
+		_poison_tick = 0.0   
+		print("Player entered fog")
+	else:
+		print("Player left fog")
+
+func get_infected():
+	return is_poisoned

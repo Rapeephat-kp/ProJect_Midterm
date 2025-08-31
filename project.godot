@@ -37,6 +37,7 @@ Player_hit=""
 Mon_hit=""
 Explorer=""
 Merchant=""
+Toxic=""
 
 [input]
 

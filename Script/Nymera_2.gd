@@ -16,6 +16,32 @@ var is_flipped = false
 @export var player_health = 100
 @export var current_health : int = player_health
 
+var is_poisoned: bool = false
+var in_fog: bool = false   
+var poison_timer: float = 0.0
+@export var poison_duration: float = 3.0   
+@export var poison_interval: float = 1.0   
+@export var poison_damage: int = 2
+var _poison_tick: float = 0.0
+
+func _process(delta: float) -> void:
+	if !Gamemanager.get_player_buff():
+		if in_fog:
+			is_poisoned = true
+			poison_timer = poison_duration
+
+		if is_poisoned:
+			poison_timer -= delta
+			_poison_tick -= delta
+
+			if _poison_tick <= 0.0:
+				Gamemanager.set_player_health(-poison_damage)
+				_poison_tick = poison_interval
+
+			if poison_timer <= 0.0:
+				is_poisoned = false
+				print("Poison ended")
+
 func _physics_process(delta: float) -> void:
 	if not is_on_floor():
 		velocity += get_gravity() * delta
@@ -122,3 +148,14 @@ func _on_hit_box_area_entered(area: Area2D) -> void:
 		print("ouch")
 		$AnimationPlayer.play("Hurt")
 		await get_tree().create_timer(0.6).timeout
+
+func set_in_fog(state: bool):
+	in_fog = state
+	if state:
+		_poison_tick = 0.0   
+		print("Player entered fog")
+	else:
+		print("Player left fog")
+
+func get_infected():
+	return is_poisoned

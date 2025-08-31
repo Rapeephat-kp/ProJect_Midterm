@@ -27,7 +27,7 @@
 [ext_resource type="Texture2D" uid="uid://dkyfygbi0dekj" path="res://Asset_Midterm/UI/UI/Button_52x14.png" id="19_sfbgj"]
 [ext_resource type="Texture2D" uid="uid://cphn5s5t5dlce" path="res://Asset_Midterm/UI/UI/ValueBlue_120x8.png" id="21_mmwch"]
 [ext_resource type="Texture2D" uid="uid://bg53hghq0u36n" path="res://Asset_Midterm/UI/UI/PatternMiddleBottomBG_199x48.png" id="22_js130"]
-[ext_resource type="Script" path="res://Scene/Stage_Scene/Boss_hp_Bar.gd" id="22_o55fe"]
+[ext_resource type="Script" uid="uid://cehioggct0ygu" path="res://Scene/Stage_Scene/Boss_hp_Bar.gd" id="22_o55fe"]
 [ext_resource type="Texture2D" uid="uid://bhj8y8hjedetd" path="res://Asset_Midterm/UI/UI/TopPatternPanel_02_33x15.png" id="23_o55fe"]
 [ext_resource type="FontFile" uid="uid://dbydje27os4iv" path="res://Fonts/AncientModernTales-a7Po.ttf" id="24_iup2u"]
 
