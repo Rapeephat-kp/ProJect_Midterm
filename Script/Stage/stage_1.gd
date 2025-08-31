@@ -18,7 +18,7 @@ extends Node2D
 
 
 func _ready() -> void:
-	#Gamemanager.set_currentScene("Stage 1")
+	$"Guide Massage/left".visible = false
 	elendros.position = spawn_point.position
 	nymera.position = spawn_point.position
 	print(Gamemanager.get_p())
@@ -59,3 +59,13 @@ func _on_interact_2_area_entered(area: Area2D) -> void:
 func _on_interact_mer_area_entered(area: Area2D) -> void:
 	Gamemanager.set_currentScene("Stage 3")
 '''
+
+
+func _on_left_area_entered(area: Area2D) -> void:
+	$"Guide Massage/left".visible = true
+
+
+
+
+func _on_left_area_exited(area: Area2D) -> void:
+	$"Guide Massage/left".visible = false

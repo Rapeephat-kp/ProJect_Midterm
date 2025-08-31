@@ -4,10 +4,20 @@ extends Node2D
 var hit_count = 3
 var Box_break = false
 var CoinScene = preload("res://Scene/item/coin.tscn")
+var xAxis = $".".position.x
+@onready var timer: Timer = $Timer
 
 func _on_area_2d_area_entered(area: Area2D) -> void:
 	if area.is_in_group("Player_hit"):
 		hit_count -= 1
+
+		var tween = create_tween()
+		var strength = 10
+		var duration = 0.05
+
+		tween.tween_property(self, "position", position + Vector2(strength, 0), duration).as_relative()
+		tween.tween_property(self, "position", position - Vector2(strength, 0), duration).as_relative()
+		tween.tween_property(self, "position", position, duration)		
 	
 	if hit_count <= 0 && !Box_break:
 		$AnimatedSprite2D.play("broke")
@@ -27,3 +37,9 @@ func spawn_coin():
 	coin.global_position = global_position
 	
 	get_parent().add_child(coin)
+	
+var original_pos = position
+func shake():
+	pass
+func _on_timer_timeout() -> void:
+	pass # Replace with function body.
