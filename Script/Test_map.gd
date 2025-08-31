@@ -88,7 +88,7 @@ func spawn_monster():
 
 
 func _process(delta: float):
-	$CanvasUI/Inventory/Inventory.initialize_inventory()
+	$CanvasUI/Inventory/Inventory.refresh_inventory()
 
 
 func _on_button_pressed() -> void:

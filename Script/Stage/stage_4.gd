@@ -17,14 +17,4 @@ func _ready() -> void:
 func _process(delta: float):
 	$CanvasUI/Inventory/Inventory.refresh_inventory()
 	$CanvasUI/Player_show/Coins/Coin_Amount.text = str(Gamemanager.get_coin())
-	$CanvasUI/Player_show/Coins/Coin_Amount2.text = str(Gamemanager.get_coin())
-
-
-func _on_hp_buy_pressed() -> void:
-	if Gamemanager.get_coin() >= 100:
-		$CanvasUI/Inventory/Inventory.buy_item("Healing Potion", 1)
-		Gamemanager.set_coin(-100)
-		print("Buyyyy")
-
-func _on_exit_pressed() -> void:
-	$CanvasUI/Control.visible = false
+	

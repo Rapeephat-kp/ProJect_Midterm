@@ -1,7 +1,7 @@
 extends CharacterBody2D
 class_name Nymera
 
-const SPEED = 400
+const SPEED = 200
 const JUMP_VELOCITY = -325.0
 
 @onready var Idle_Sprite = $Idle_Sprite
@@ -103,7 +103,7 @@ func movement():
 
 func _on_hit_box_area_entered(area: Area2D) -> void:
 	if area.is_in_group("Mon_hit"):
-		Gamemanager.set_player_health(Gamemanager.get_player_health() - 15)
+		Gamemanager.set_player_health(-15)
 		Idle_Sprite.visible = false
 		Action_Sprite.visible = true
 		Jump_Sprite.visible = false

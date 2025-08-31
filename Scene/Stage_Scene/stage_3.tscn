@@ -2256,7 +2256,7 @@ vertical_alignment = 1
 [node name="NPC" type="Node2D" parent="."]
 
 [node name="merchant" parent="NPC" instance=ExtResource("30_8swpq")]
-position = Vector2(4748, 228)
+position = Vector2(4732, 228)
 scale = Vector2(0.6, 0.6)
 
 [node name="InteractMer" type="Area2D" parent="NPC/merchant"]

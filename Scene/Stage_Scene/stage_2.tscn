@@ -2408,6 +2408,7 @@ text = "Setting"
 vertical_alignment = 1
 
 [node name="Main Character" type="Node2D" parent="."]
+position = Vector2(565, 0)
 
 [node name="Elendros" parent="Main Character" instance=ExtResource("9_pgqbn")]
 position = Vector2(314, 128)

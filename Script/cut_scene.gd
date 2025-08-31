@@ -7,6 +7,8 @@ extends Node2D
 @onready var autoplay_button: Button = $"CanvasLayer/stage cutscene/Setting_Panel_Bg/Autoplay_Button"
 @onready var store_button: Button = $"CanvasLayer/stage cutscene/Setting_Panel_Bg/Store_Button"
 #@onready var store_1: Node2D = $CanvasLayer/Store_1
+@onready var store_1_stage_3: Node2D = $"CanvasLayer/Store 1 Stage 3"
+@onready var inventory: Node2D = $"CanvasLayer/Store 1 Stage 3/Inventory/Inventory"
 
 
 
@@ -22,7 +24,8 @@ var visible_character = 0
 func _ready() -> void:
 	#$AnimationPlayer.play("Elendros Ending")
 	#store_1.visible = false
-	pass
+	store_1_stage_3.visible = false
+	
 func _process(delta: float) -> void:
 	if visible_character != phase.visible_characters:
 		visible_character = phase.visible_characters
@@ -88,5 +91,15 @@ func stage1(Character : int):
 
 
 func _on_store_button_pressed() -> void:
-	print("In the store")
-	#store_1.visible = true
+		store_1_stage_3.visible = true
+
+
+func _on_hp_buy_pressed() -> void:
+	if Gamemanager.get_coin() >= 100:
+		inventory.buy_item("Healing Potion", 1)
+		Gamemanager.set_coin(-100)
+		print("Buyyyy")
+
+
+func _on_exit_pressed() -> void:
+	store_1_stage_3.visible = false
