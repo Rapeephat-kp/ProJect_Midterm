@@ -2110,20 +2110,11 @@ text = ": "
 
 [node name="Coin_Amount" type="Label" parent="CanvasUI/Player_show/Coins"]
 layout_mode = 0
-offset_left = 22.3333
-offset_right = 115.333
-offset_bottom = 16.0
-theme_override_colors/font_color = Color(0.447059, 0.356863, 0.196078, 1)
-theme_override_fonts/font = ExtResource("28_6hwyn")
-theme_override_font_sizes/font_size = 12
-text = "144"
-
-[node name="Coin_Amount2" type="Label" parent="CanvasUI/Player_show/Coins"]
-layout_mode = 0
 offset_left = 23.0
 offset_right = 116.0
 offset_bottom = 16.0
-theme_override_colors/font_color = Color(0.847475, 0.711393, 0.48763, 1)
+theme_override_colors/font_color = Color(0.729412, 0.568627, 0.345098, 1)
+theme_override_colors/font_shadow_color = Color(0.2, 0.180392, 0.14902, 1)
 theme_override_fonts/font = ExtResource("28_6hwyn")
 theme_override_font_sizes/font_size = 12
 text = "144"
@@ -2256,7 +2247,7 @@ vertical_alignment = 1
 [node name="NPC" type="Node2D" parent="."]
 
 [node name="merchant" parent="NPC" instance=ExtResource("30_8swpq")]
-position = Vector2(4732, 228)
+position = Vector2(683, 228)
 scale = Vector2(0.6, 0.6)
 
 [node name="InteractMer" type="Area2D" parent="NPC/merchant"]
