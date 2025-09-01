@@ -4128,7 +4128,7 @@ offset_right = 148.0
 offset_bottom = 268.0
 theme_override_colors/font_color = Color(0.556863, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_f3ubt")
-text = "coins not enogh"
+text = "coins not enough"
 
 [node name="Panel2" type="Panel" parent="CanvasLayer/Store/Details"]
 offset_left = 1463.0
@@ -4195,7 +4195,7 @@ offset_right = 147.0
 offset_bottom = 268.0
 theme_override_colors/font_color = Color(0.556863, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_f3ubt")
-text = "coins not enogh"
+text = "coins not enough"
 
 [node name="Item 1" type="TextureRect" parent="CanvasLayer/Store"]
 offset_left = 537.0

@@ -3,11 +3,11 @@ var button_check = true
 var player
 func _ready() -> void:
 
-	PlayerInventory.add_item("Healing Potion", 1) 
-	PlayerInventory.add_item("Antidote Potion", 1)
+	#PlayerInventory.add_item("Healing Potion", 1) 
+	#PlayerInventory.add_item("Antidote Potion", 1)
 	$CanvasUI/Player_show/Elendros.visible = true
 	$CanvasUI/Player_show/Nymera.visible = false
-	print(Gamemanager.get_p())
+	#print(Gamemanager.get_p())
 	var p_value = Gamemanager.get_p()
 	if p_value == 1:
 		$CanvasUI/Player_show/Elendros.visible = true
@@ -21,7 +21,7 @@ func _process(delta: float):
 	$CanvasUI/Inventory/Inventory.refresh_inventory()
 	$CanvasUI/Player_show/Coins/Coin_Amount.text = str(Gamemanager.get_coin())
 	if Gamemanager.get_player_buff():
-		print("in2")
+		#print("in2")
 		$CanvasUI/Buff_Debuff_Status.visible = true
 		$CanvasUI/Buff_Debuff_Status/Debuff.visible = false
 		$CanvasUI/Buff_Debuff_Status/Buff.visible = true
@@ -29,7 +29,7 @@ func _process(delta: float):
 		$CanvasUI/Buff_Debuff_Status/Name.text = "Poison Immunity"
 		$CanvasUI/Buff_Debuff_Status/Name/Info.text = "Immune to the poison !!!" 
 	elif  Gamemanager.get_player_debuff() && !Gamemanager.get_player_buff():
-		print("in1")
+		#print("in1")
 		$CanvasUI/Buff_Debuff_Status.visible = true
 		$CanvasUI/Buff_Debuff_Status/Debuff.visible = true
 		$CanvasUI/Buff_Debuff_Status/Buff.visible = false
@@ -44,9 +44,9 @@ func _process(delta: float):
 		$CanvasUI/Buff_Debuff_Status/Info_buff.visible = false
 		
 func _on_info_buff_pressed() -> void:
-	print("in_func")
+	#print("in_func")
 	if Gamemanager.get_player_debuff() || Gamemanager.get_player_buff():
-		print("Hovered: Show Panel")
+		#print("Hovered: Show Panel")
 		$CanvasUI/Buff_Debuff_Status/Panel.visible = button_check
 		$CanvasUI/Buff_Debuff_Status/Name.visible = button_check
 		button_check = !button_check
@@ -55,13 +55,18 @@ func _on_info_buff_pressed() -> void:
 func _on_area_2d_area_entered(area: Area2D) -> void:
 	if area.is_in_group("Player"):
 		player.set_in_fog(true)
-		print("in")
+		#print("in")
 
 func _on_area_2d_area_exited(area: Area2D) -> void:
 	if area.is_in_group("Player"):
 		player.set_in_fog(false)
-		print("out")
+		#print("out")
 
 
 func _on_next_area_entered(area: Area2D) -> void:
-	get_tree().change_scene_to_file("res://Scene/Stage_Scene/stage_6.tscn")
+	SceneTransition.change_scene("res://Scene/Stage_Scene/stage_6.tscn")
+	#get_tree().change_scene_to_file("res://Scene/Stage_Scene/stage_6.tscn")
+
+
+func _on_setting_button_mouse_entered() -> void:
+	pass # Replace with function body.
