@@ -45,8 +45,10 @@ func _process(delta: float) -> void:
 				print("Poison ended")
 		else:
 			in_fog = false
+			
 	if Gamemanager.get_player_health() <= 0:
 		SceneTransition.change_scene("res://Scene/game_over.tscn")
+		
 func _physics_process(delta: float) -> void:
 	if not is_on_floor():
 		velocity += get_gravity() * delta
@@ -139,7 +141,7 @@ func _on_hit_box_area_entered(area: Area2D) -> void:
 		Action_Sprite.visible = true
 		Jump_Sprite.visible = false
 		Jump2_Sprite.visible = false
-
+		Gamemanager.achievement_1 = false
 		var knockback_force = randf_range(700, 1500)
 		if area.global_position.x < global_position.x:
 			velocity.x = knockback_force
@@ -150,7 +152,7 @@ func _on_hit_box_area_entered(area: Area2D) -> void:
 		await get_tree().create_timer(0.3).timeout
 		velocity = Vector2.ZERO
 
-		print("ouch")
+		#print("ouch")
 		$AnimationPlayer.play("Hurt")
 		await get_tree().create_timer(0.6).timeout
 

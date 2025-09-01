@@ -41,6 +41,8 @@ func _process(delta: float) -> void:
 				print("Poison ended")
 		else:
 			in_fog = false
+	if Gamemanager.get_player_health() <= 0:
+		SceneTransition.change_scene("res://Scene/game_over.tscn")
 #for_movement
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
@@ -101,7 +103,7 @@ func _on_elendros_hit_box_area_entered(area: Area2D) -> void:
 	if area.is_in_group("Mon_hit") and not is_hurt:
 		is_hurt = true
 		$AnimationPlayer.play("hurt")
-
+		Gamemanager.achievement_1 = false
 		var knockback_force = randf_range(700,1500) 
 		if area.global_position.x < global_position.x:
 			velocity.x = knockback_force

@@ -144,6 +144,9 @@ func spawn_detail_load():
 func set_dead_time(amount : int):
 	player_dead_time += amount
 	
+func get_player_death_time():
+	return  player_dead_time
+	
 func reset_dead_time():
 	player_dead_time = 0
 	
@@ -166,5 +169,5 @@ func reset_all():
 	player_dead_time = 0
 	played_time = 0.0
 	is_timer_running = true
-	achievement_1 = false
-	achievement_2 = false
+	achievement_1 = true
+	achievement_2 = true
