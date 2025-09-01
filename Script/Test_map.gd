@@ -126,6 +126,7 @@ func _process(delta: float):
 		all_invisible()
 		free_all_spawned()
 		stop_fall_attacks()
+		print("cancel")
 		
 func _on_button_pressed() -> void:
 	get_tree().change_scene_to_file("res://Scene/stage_1_in_the_city.tscn")
