@@ -6,6 +6,7 @@ extends Node2D
 @onready var inventory: Node2D = $CanvasUI/Inventory/Inventory
 @onready var coin_amount: Label = $CanvasUI/Player_show/Coins/Coin_Amount
 
+@onready var UI: CanvasLayer = $CanvasUI
 
 
 
@@ -15,21 +16,21 @@ extends Node2D
 @onready var nymera: Nymera = $"Main Character/Nymera"
 @onready var spawn_point: Marker2D = $"spawn point"
 
-
+var player
 
 func _ready() -> void:
 	$"Guide Massage/left".visible = false
-	elendros.position = spawn_point.position
-	nymera.position = spawn_point.position
-	print(Gamemanager.get_p())
 	var p_value = Gamemanager.get_p()
 	if p_value == 1:
+		player = elendros
 		elendrosProfile.visible = true
 		nymeraProfile.visible = false
 	elif p_value == 2:
+		player = nymera
 		elendrosProfile.visible = false
 		nymeraProfile.visible = true
-	
+	player.position = spawn_point.position
+	UI.visible = true
 	#CutSceneManager.stage1_part1()
 func _process(delta: float):
 	inventory.refresh_inventory()

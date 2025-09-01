@@ -6,6 +6,8 @@ extends Node2D
 @onready var inventory: Node2D = $CanvasUI/Inventory/Inventory
 @onready var coin_amount: Label = $CanvasUI/Player_show/Coins/Coin_Amount
 
+@onready var UI: CanvasLayer = $CanvasUI
+
 #Mission
 @onready var bridge: TileMapLayer = $TileMap/Bridge
 var logs_quantity_require = 3
@@ -15,7 +17,9 @@ var logs_quantity_require = 3
 @onready var nymera: Nymera = $"Main Character/Nymera"
 @onready var spawn_point: Marker2D = $"spawn point"
 
+@onready var left_bound: Label = $HintLabel/LeftBound
 
+var player
 
 func _ready() -> void:
 	#Mission
@@ -31,11 +35,14 @@ func _ready() -> void:
 	print(Gamemanager.get_p())
 	var p_value = Gamemanager.get_p()
 	if p_value == 1:
+		player = elendros
 		elendrosProfile.visible = true
 		nymeraProfile.visible = false
 	elif p_value == 2:
+		player = nymera
 		elendrosProfile.visible = false
 		nymeraProfile.visible = true
+	UI.visible = true
 	#Bridge
 	#bridge.enabled = true
 	
@@ -65,14 +72,16 @@ func _on_interact_2_area_entered(area: Area2D) -> void:
 '''
 
 func _on_interact_mer_area_entered(area: Area2D) -> void:
-	Gamemanager.set_currentScene("Stage 3")
+	if area.is_in_group("Player"):
+		Gamemanager.set_currentScene("Stage 3")
 
 
 
 func _on_water_area_entered(area: Area2D) -> void:
 	if area.is_in_group("Player"):
-		nymera.position = spawn_point.position
-
+		player.position = spawn_point.position
+		
+		Gamemanager.set_player_health(-20)
 
 
 
@@ -80,13 +89,13 @@ func _on_water_area_entered(area: Area2D) -> void:
 func _on_left_area_entered(area: Area2D) -> void:
 	if area.is_in_group("Player"):
 		#$"map bounds/left/Label".visible = true
-		$Label.visible = true
+		left_bound.visible = true
 
 
 func _on_left_area_exited(area: Area2D) -> void:
 	if area.is_in_group("Player"):
 		#$"map bounds/left/Label".visible = false
-		$Label.visible = false
+		left_bound.visible = false
 
 func _on_right_area_entered(area: Area2D) -> void:
 	pass # Replace with function body.

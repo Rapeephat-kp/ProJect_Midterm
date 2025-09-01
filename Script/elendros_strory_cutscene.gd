@@ -45,7 +45,7 @@ func pause():
 		$Timer.start()
 		
 func end():
-	get_tree().change_scene_to_file("res://Scene/Stage_Scene/stage_1.tscn")	
+	SceneTransition.change_scene("res://Scene/Stage_Scene/stage_1.tscn")
 		
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("next") && not animation_player.is_playing():

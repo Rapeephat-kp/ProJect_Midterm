@@ -593,7 +593,6 @@ scale = Vector2(0.845, 0.845)
 texture = ExtResource("2_jt7fl")
 
 [node name="NymeraScene2" type="Sprite2D" parent="CanvasLayer/Control Center"]
-visible = false
 scale = Vector2(0.845, 0.845)
 texture = ExtResource("3_a0elx")
 
@@ -603,18 +602,15 @@ scale = Vector2(0.845, 0.845)
 texture = ExtResource("4_ucqpj")
 
 [node name="NymeraScene4" type="Sprite2D" parent="CanvasLayer/Control Center"]
-visible = false
 position = Vector2(1, 0)
 scale = Vector2(0.895559, 0.895559)
 texture = ExtResource("5_jefor")
 
 [node name="NymeraScene5" type="Sprite2D" parent="CanvasLayer/Control Center"]
-visible = false
 scale = Vector2(0.845, 0.845)
 texture = ExtResource("6_ypn4r")
 
 [node name="NymeraScene6" type="Sprite2D" parent="CanvasLayer/Control Center"]
-visible = false
 scale = Vector2(0.845, 0.845)
 texture = ExtResource("7_quvvj")
 
@@ -764,7 +760,7 @@ libraries = {
 }
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("9_a0elx")
+stream = ExtResource("11_ypn4r")
 
 [node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("9_jefor")

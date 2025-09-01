@@ -1844,7 +1844,7 @@ position = Vector2(1306, 124)
 position = Vector2(2091, 222)
 
 [node name="Flying_eye" parent="Monsters" instance=ExtResource("13_ogdj4")]
-position = Vector2(1894, -79)
+position = Vector2(1914, -41)
 
 [node name="Moving platform" type="Node2D" parent="."]
 

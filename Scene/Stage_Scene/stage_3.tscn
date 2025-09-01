@@ -1,4 +1,4 @@
-[gd_scene load_steps=84 format=4 uid="uid://cpq4qkq1b6ka6"]
+[gd_scene load_steps=92 format=4 uid="uid://cpq4qkq1b6ka6"]
 
 [ext_resource type="Texture2D" uid="uid://skwubifcy71r" path="res://Asset_Midterm/Tile_Map/Fantasy Swamp Forest/Free/BG_3/BG_3.png" id="1_a24hx"]
 [ext_resource type="Script" uid="uid://bsskijfieg6i7" path="res://Script/Stage/stage_3.gd" id="1_oj7rm"]
@@ -31,6 +31,12 @@
 [ext_resource type="FontFile" uid="uid://bdl4qpamcrivq" path="res://Fonts/OBGB.TTF" id="28_6hwyn"]
 [ext_resource type="PackedScene" uid="uid://bufdadlu37p7q" path="res://Scene/NPC/merchant.tscn" id="30_8swpq"]
 [ext_resource type="PackedScene" uid="uid://bsintr6dnceys" path="res://Scene/logs.tscn" id="31_jr2ay"]
+[ext_resource type="PackedScene" uid="uid://bdjmgj6vn70u6" path="res://Scene/item/barrel.tscn" id="32_lfk02"]
+[ext_resource type="PackedScene" uid="uid://6se7shbfwfuh" path="res://Scene/item/coin.tscn" id="33_k8oc8"]
+[ext_resource type="PackedScene" uid="uid://cfygwol8blgbs" path="res://Scene/Monster_Scene/mushroom.tscn" id="34_nkven"]
+[ext_resource type="PackedScene" uid="uid://bwv23c34bale6" path="res://Scene/Monster_Scene/flying_eye.tscn" id="35_6xc28"]
+[ext_resource type="PackedScene" uid="uid://b1b5ylcgaaepd" path="res://Scene/Monster_Scene/skeleton_knight.tscn" id="36_6hwyn"]
+[ext_resource type="PackedScene" uid="uid://cjbimk41l2gsd" path="res://Scene/Monster_Scene/necromancer.tscn" id="37_1klxm"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_u0b7u"]
 texture = ExtResource("4_a7c6i")
@@ -1655,9 +1661,13 @@ point_count = 3
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_u0b7u"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_oj7rm"]
-size = Vector2(220, 430.5)
+size = Vector2(220, 198.75)
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_oj7rm"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_iblhf"]
+font = ExtResource("28_6hwyn")
+font_size = 100
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_88bii"]
 atlas = ExtResource("15_sy6uj")
@@ -1770,80 +1780,88 @@ _data = {
 &"RESET": SubResource("Animation_pt3qq")
 }
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jr2ay"]
+[sub_resource type="LabelSettings" id="LabelSettings_nkven"]
+font = ExtResource("28_6hwyn")
+font_size = 50
+font_color = Color(0.729412, 0.568627, 0.345098, 1)
+shadow_size = 10
+shadow_color = Color(0.2, 0.180392, 0.14902, 1)
+shadow_offset = Vector2(7, 0)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6xc28"]
 texture = ExtResource("26_nkven")
 region_rect = Rect2(110, 7, 20, 20)
 modulate_color = Color(0.517647, 0.517647, 0.517647, 1)
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1bspg"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6hwyn"]
 texture = ExtResource("26_nkven")
 region_rect = Rect2(110, 7, 20, 20)
 modulate_color = Color(0.517184, 0.517184, 0.517184, 1)
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_lfk02"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1klxm"]
 texture = ExtResource("26_nkven")
 region_rect = Rect2(110, 7, 20, 20)
 modulate_color = Color(0.698039, 0.698039, 0.698039, 1)
 
-[sub_resource type="LabelSettings" id="LabelSettings_k8oc8"]
+[sub_resource type="LabelSettings" id="LabelSettings_11omo"]
 font = ExtResource("28_6hwyn")
 font_size = 100
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_iblhf"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wvm53"]
 texture = ExtResource("26_nkven")
 region_rect = Rect2(37, 0, 27, 32)
 modulate_color = Color(0.517647, 0.517647, 0.517647, 1)
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_21q0i"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6tlm4"]
 texture = ExtResource("26_nkven")
 region_rect = Rect2(37, 0, 27, 32)
 modulate_color = Color(0.517647, 0.517647, 0.517647, 1)
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_nkven"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dcfbb"]
 texture = ExtResource("26_nkven")
 region_rect = Rect2(37, 0, 27, 32)
 modulate_color = Color(0.698039, 0.698039, 0.698039, 1)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6xc28"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j5d13"]
 bg_color = Color(0.509804, 0.396078, 0.243137, 1)
 corner_radius_top_left = 10
 corner_radius_top_right = 10
 corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6hwyn"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4bo2f"]
 bg_color = Color(0.239216, 0.196078, 0.223529, 1)
 corner_radius_top_left = 10
 corner_radius_top_right = 10
 corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1klxm"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ufexn"]
 texture = ExtResource("27_6xc28")
 modulate_color = Color(0.552956, 0.552956, 0.552955, 1)
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_11omo"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mdywx"]
 texture = ExtResource("27_6xc28")
 modulate_color = Color(0.666667, 0.666667, 0.666667, 1)
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wvm53"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ruytv"]
 texture = ExtResource("27_6xc28")
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6tlm4"]
-texture = ExtResource("27_6xc28")
-modulate_color = Color(0.666667, 0.666667, 0.666667, 1)
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dcfbb"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_c6dvg"]
 texture = ExtResource("27_6xc28")
 modulate_color = Color(0.666667, 0.666667, 0.666667, 1)
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_j5d13"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_p0vki"]
+texture = ExtResource("27_6xc28")
+modulate_color = Color(0.666667, 0.666667, 0.666667, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4s6v6"]
 texture = ExtResource("27_6xc28")
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4bo2f"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mjfhg"]
 bg_color = Color(0.69462, 0.554322, 0.367857, 1)
 
-[sub_resource type="LabelSettings" id="LabelSettings_ufexn"]
+[sub_resource type="LabelSettings" id="LabelSettings_42xf4"]
 font_size = 100
 
 [node name="stage 3" type="Node2D"]
@@ -1931,13 +1949,19 @@ tile_set = SubResource("TileSet_trpnj")
 [node name="spawn point" type="Marker2D" parent="."]
 position = Vector2(517, 58)
 
-[node name="Path2D" parent="." instance=ExtResource("11_6bn82")]
+[node name="MovingPlatforms" type="Node2D" parent="."]
+
+[node name="MovePlatform" parent="MovingPlatforms" instance=ExtResource("11_6bn82")]
 position = Vector2(2735, 237)
 curve = SubResource("Curve2D_oj7rm")
 
-[node name="Path2D2" parent="." instance=ExtResource("11_6bn82")]
+[node name="MovePlatform2" parent="MovingPlatforms" instance=ExtResource("11_6bn82")]
 position = Vector2(3211, 258)
 curve = SubResource("Curve2D_6bn82")
+
+[node name="MovePlatform3" parent="MovingPlatforms" instance=ExtResource("11_6bn82")]
+position = Vector2(3870, 237)
+curve = SubResource("Curve2D_oj7rm")
 
 [node name="map bounds" type="Node2D" parent="."]
 
@@ -1951,7 +1975,7 @@ shape = SubResource("WorldBoundaryShape2D_u0b7u")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="map bounds/left"]
 physics_interpolation_mode = 1
-position = Vector2(15.5, 141)
+position = Vector2(-100.375, 141)
 rotation = 1.5708
 shape = SubResource("RectangleShape2D_oj7rm")
 
@@ -1977,22 +2001,25 @@ position = Vector2(5130, 135)
 rotation = -1.5708
 shape = SubResource("WorldBoundaryShape2D_oj7rm")
 
-[node name="Label" type="Label" parent="."]
+[node name="HintLabel" type="Node2D" parent="."]
+
+[node name="LeftBound" type="Label" parent="HintLabel"]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 144.0
-offset_top = 159.0
-offset_right = 1234.0
-offset_bottom = 318.0
+offset_left = -198.0
+offset_top = 272.0
+offset_right = 1882.0
+offset_bottom = 431.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.2, 0.2)
 theme_override_fonts/font = ExtResource("13_u0b7u")
 theme_override_font_sizes/font_size = 50
 text = "Seem like its not this way"
+label_settings = SubResource("LabelSettings_iblhf")
 horizontal_alignment = 1
 
 [node name="Start stage 3" type="Node2D" parent="."]
@@ -2042,13 +2069,13 @@ shape = SubResource("RectangleShape2D_jr2ay")
 [node name="Mission" type="Node2D" parent="."]
 
 [node name="Logs" parent="Mission" instance=ExtResource("31_jr2ay")]
-position = Vector2(3992, 238)
+position = Vector2(846, -21)
 
 [node name="Logs2" parent="Mission" instance=ExtResource("31_jr2ay")]
-position = Vector2(4039, 238)
+position = Vector2(1687, 59)
 
 [node name="Logs3" parent="Mission" instance=ExtResource("31_jr2ay")]
-position = Vector2(3799, 238)
+position = Vector2(3124, 193)
 
 [node name="BuildBridge" type="Area2D" parent="Mission"]
 position = Vector2(4136, 217)
@@ -2056,6 +2083,73 @@ position = Vector2(4136, 217)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Mission/BuildBridge"]
 position = Vector2(42.25, -16)
 shape = SubResource("RectangleShape2D_1bspg")
+
+[node name="All barrrels" type="Node2D" parent="."]
+
+[node name="Barrel" parent="All barrrels" instance=ExtResource("32_lfk02")]
+position = Vector2(1361, 236)
+
+[node name="Barrel2" parent="All barrrels" instance=ExtResource("32_lfk02")]
+position = Vector2(809, -21)
+
+[node name="Barrel3" parent="All barrrels" instance=ExtResource("32_lfk02")]
+position = Vector2(1640, 220)
+
+[node name="Barrel4" parent="All barrrels" instance=ExtResource("32_lfk02")]
+position = Vector2(2311, 12)
+
+[node name="Barrel5" parent="All barrrels" instance=ExtResource("32_lfk02")]
+position = Vector2(2111, 236)
+
+[node name="Barrel6" parent="All barrrels" instance=ExtResource("32_lfk02")]
+position = Vector2(2925, 236)
+
+[node name="Barrel7" parent="All barrrels" instance=ExtResource("32_lfk02")]
+position = Vector2(2555, 11)
+
+[node name="Barrel8" parent="All barrrels" instance=ExtResource("32_lfk02")]
+position = Vector2(3077, 235)
+
+[node name="Barrel9" parent="All barrrels" instance=ExtResource("32_lfk02")]
+position = Vector2(3212, 12)
+
+[node name="Barrel10" parent="All barrrels" instance=ExtResource("32_lfk02")]
+position = Vector2(3954, 237)
+
+[node name="Coins" type="Node2D" parent="."]
+
+[node name="Coin" parent="Coins" instance=ExtResource("33_k8oc8")]
+position = Vector2(310, 230)
+
+[node name="Coin2" parent="Coins" instance=ExtResource("33_k8oc8")]
+position = Vector2(1018, 167)
+
+[node name="Coin3" parent="Coins" instance=ExtResource("33_k8oc8")]
+position = Vector2(1802, -10)
+
+[node name="Coin4" parent="Coins" instance=ExtResource("33_k8oc8")]
+position = Vector2(3571, -23)
+
+[node name="Coin5" parent="Coins" instance=ExtResource("33_k8oc8")]
+position = Vector2(2118, 56)
+
+[node name="Coin6" parent="Coins" instance=ExtResource("33_k8oc8")]
+position = Vector2(2739, 143)
+
+[node name="Monsters" type="Node2D" parent="."]
+position = Vector2(3571, -23)
+
+[node name="Mushroom" parent="Monsters" instance=ExtResource("34_nkven")]
+position = Vector2(-288, 0)
+
+[node name="Flying_eye" parent="Monsters" instance=ExtResource("35_6xc28")]
+position = Vector2(-1539, 230)
+
+[node name="Skeleton_Knight" parent="Monsters" instance=ExtResource("36_6hwyn")]
+position = Vector2(-2255, 226)
+
+[node name="Necromancer" parent="Monsters" instance=ExtResource("37_1klxm")]
+position = Vector2(219, 254)
 
 [node name="CanvasUI" type="CanvasLayer" parent="."]
 
@@ -2167,14 +2261,16 @@ text = ": "
 
 [node name="Coin_Amount" type="Label" parent="CanvasUI/Player_show/Coins"]
 layout_mode = 0
-offset_left = 22.3333
-offset_right = 115.333
-offset_bottom = 16.0
+offset_left = 23.3333
+offset_right = 143.333
+offset_bottom = 60.0
+scale = Vector2(0.291646, 0.291646)
 theme_override_colors/font_color = Color(0.729412, 0.568627, 0.345098, 1)
 theme_override_colors/font_shadow_color = Color(0.2, 0.180392, 0.14902, 1)
 theme_override_fonts/font = ExtResource("28_6hwyn")
 theme_override_font_sizes/font_size = 12
 text = "144"
+label_settings = SubResource("LabelSettings_nkven")
 
 [node name="Setting_Button" type="Control" parent="CanvasUI"]
 layout_mode = 3
@@ -2201,9 +2297,9 @@ offset_right = 8.0
 offset_bottom = 31.0
 scale = Vector2(2, 2)
 focus_mode = 0
-theme_override_styles/hover = SubResource("StyleBoxTexture_jr2ay")
-theme_override_styles/pressed = SubResource("StyleBoxTexture_1bspg")
-theme_override_styles/normal = SubResource("StyleBoxTexture_lfk02")
+theme_override_styles/hover = SubResource("StyleBoxTexture_6xc28")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_6hwyn")
+theme_override_styles/normal = SubResource("StyleBoxTexture_1klxm")
 
 [node name="Label" type="Label" parent="CanvasUI/Setting_Button"]
 modulate = Color(0.698039, 0.698039, 0.698039, 1)
@@ -2214,7 +2310,7 @@ offset_right = 634.0
 offset_bottom = 136.0
 scale = Vector2(0.234848, 0.234848)
 text = "Setting"
-label_settings = SubResource("LabelSettings_k8oc8")
+label_settings = SubResource("LabelSettings_11omo")
 horizontal_alignment = 2
 
 [node name="Achievement_Button" type="Control" parent="CanvasUI"]
@@ -2240,9 +2336,9 @@ offset_right = -2.0
 offset_bottom = 117.0
 scale = Vector2(2, 2)
 focus_mode = 0
-theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_iblhf")
-theme_override_styles/hover = SubResource("StyleBoxTexture_21q0i")
-theme_override_styles/normal = SubResource("StyleBoxTexture_nkven")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_wvm53")
+theme_override_styles/hover = SubResource("StyleBoxTexture_6tlm4")
+theme_override_styles/normal = SubResource("StyleBoxTexture_dcfbb")
 
 [node name="Label" type="Label" parent="CanvasUI/Achievement_Button"]
 modulate = Color(0.698039, 0.698039, 0.698039, 1)
@@ -2253,7 +2349,7 @@ offset_right = 625.0
 offset_bottom = 225.0
 scale = Vector2(0.234848, 0.234848)
 text = "Achievement"
-label_settings = SubResource("LabelSettings_k8oc8")
+label_settings = SubResource("LabelSettings_11omo")
 horizontal_alignment = 2
 
 [node name="Setting_UI" type="Control" parent="CanvasUI"]
@@ -2277,7 +2373,7 @@ offset_top = 620.0
 offset_right = -47.0
 offset_bottom = 705.0
 scale = Vector2(3, 3)
-theme_override_styles/panel = SubResource("StyleBoxFlat_6xc28")
+theme_override_styles/panel = SubResource("StyleBoxFlat_j5d13")
 
 [node name="Setting_panel_Bg2" type="Panel" parent="CanvasUI/Setting_UI/Setting_Panel_Bg"]
 layout_mode = 0
@@ -2285,7 +2381,7 @@ offset_left = 4.66678
 offset_top = 4.33333
 offset_right = 91.6668
 offset_bottom = 81.3333
-theme_override_styles/panel = SubResource("StyleBoxFlat_6hwyn")
+theme_override_styles/panel = SubResource("StyleBoxFlat_4bo2f")
 
 [node name="Resume_Button" type="Button" parent="CanvasUI/Setting_UI/Setting_Panel_Bg"]
 modulate = Color(0.666667, 0.666667, 0.666667, 1)
@@ -2295,9 +2391,9 @@ offset_top = 36.0003
 offset_right = 71.6668
 offset_bottom = 48.0003
 focus_mode = 0
-theme_override_styles/hover = SubResource("StyleBoxTexture_1klxm")
-theme_override_styles/pressed = SubResource("StyleBoxTexture_11omo")
-theme_override_styles/normal = SubResource("StyleBoxTexture_wvm53")
+theme_override_styles/hover = SubResource("StyleBoxTexture_ufexn")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_mdywx")
+theme_override_styles/normal = SubResource("StyleBoxTexture_ruytv")
 
 [node name="Label" type="Label" parent="CanvasUI/Setting_UI/Setting_Panel_Bg/Resume_Button"]
 layout_mode = 0
@@ -2317,9 +2413,9 @@ offset_top = 52.6664
 offset_right = 71.6668
 offset_bottom = 64.6664
 focus_mode = 0
-theme_override_styles/hover = SubResource("StyleBoxTexture_6tlm4")
-theme_override_styles/pressed = SubResource("StyleBoxTexture_dcfbb")
-theme_override_styles/normal = SubResource("StyleBoxTexture_j5d13")
+theme_override_styles/hover = SubResource("StyleBoxTexture_c6dvg")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_p0vki")
+theme_override_styles/normal = SubResource("StyleBoxTexture_4s6v6")
 
 [node name="Label3" type="Label" parent="CanvasUI/Setting_UI/Setting_Panel_Bg/Exit_Button"]
 layout_mode = 0
@@ -2338,14 +2434,14 @@ offset_left = 17.3817
 offset_top = 27.333
 offset_right = 78.3817
 offset_bottom = 28.333
-theme_override_styles/panel = SubResource("StyleBoxFlat_4bo2f")
+theme_override_styles/panel = SubResource("StyleBoxFlat_mjfhg")
 
 [node name="Label2" type="Label" parent="CanvasUI/Setting_UI/Setting_Panel_Bg"]
 modulate = Color(0.698039, 0.698039, 0.698039, 1)
 layout_mode = 0
-offset_left = 22.0
+offset_left = 23.6667
 offset_top = 10.3333
-offset_right = 112.0
+offset_right = 113.667
 offset_bottom = 30.3333
 scale = Vector2(0.55, 0.55)
 theme_override_fonts/font = ExtResource("28_6hwyn")
@@ -2353,6 +2449,7 @@ text = "Setting"
 vertical_alignment = 1
 
 [node name="Achievement_UI" type="Control" parent="CanvasUI"]
+visible = false
 layout_mode = 3
 anchors_preset = 6
 anchor_left = 1.0
@@ -2372,7 +2469,7 @@ offset_top = -362.0
 offset_right = -836.0
 offset_bottom = -212.0
 scale = Vector2(3, 3)
-theme_override_styles/panel = SubResource("StyleBoxFlat_6xc28")
+theme_override_styles/panel = SubResource("StyleBoxFlat_j5d13")
 
 [node name="Setting_panel_Bg2" type="Panel" parent="CanvasUI/Achievement_UI/Setting_Panel_Bg"]
 layout_mode = 0
@@ -2380,7 +2477,7 @@ offset_left = 5.0
 offset_top = 4.0
 offset_right = 389.0
 offset_bottom = 146.0
-theme_override_styles/panel = SubResource("StyleBoxFlat_6hwyn")
+theme_override_styles/panel = SubResource("StyleBoxFlat_4bo2f")
 
 [node name="Label2" type="Label" parent="CanvasUI/Achievement_UI/Setting_Panel_Bg"]
 modulate = Color(0.698039, 0.698039, 0.698039, 1)
@@ -2398,7 +2495,7 @@ details :
 
 Achievement II :
 details :"
-label_settings = SubResource("LabelSettings_ufexn")
+label_settings = SubResource("LabelSettings_42xf4")
 vertical_alignment = 1
 
 [connection signal="area_entered" from="map bounds/water" to="." method="_on_water_area_entered"]
