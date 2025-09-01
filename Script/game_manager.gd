@@ -26,6 +26,7 @@ var is_timer_running: bool = true
 
 var achievement_1 = false
 var achievement_2 = false
+
 func _process(delta: float) -> void:
 	if is_timer_running:
 		played_time += delta
