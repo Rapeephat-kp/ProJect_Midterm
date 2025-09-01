@@ -1,10 +1,11 @@
-[gd_scene load_steps=55 format=3 uid="uid://b3o40bijrx1ou"]
+[gd_scene load_steps=56 format=3 uid="uid://b3o40bijrx1ou"]
 
 [ext_resource type="Texture2D" uid="uid://dkyfygbi0dekj" path="res://Asset_Midterm/UI/UI/Button_52x14.png" id="1_kxtd3"]
 [ext_resource type="Script" uid="uid://dkr4a1gyp0ljc" path="res://Script/cut_scene.gd" id="1_w1y33"]
 [ext_resource type="Texture2D" uid="uid://ckrv13bc0dr4r" path="res://Asset_Midterm/BG/ending scene elendros.png" id="2_0only"]
 [ext_resource type="FontFile" uid="uid://bdl4qpamcrivq" path="res://Fonts/OBGB.TTF" id="2_f3ubt"]
 [ext_resource type="Texture2D" uid="uid://dtuygsym3wo03" path="res://Asset_Midterm/BG/ending scene.png" id="2_tkbrc"]
+[ext_resource type="FontFile" uid="uid://c4vaek1i4ujie" path="res://Fonts/PRIMAHANDWRITE.ttf" id="4_f3ubt"]
 [ext_resource type="Texture2D" uid="uid://b1fwdb7wh2oxr" path="res://Asset_Midterm/BG/Merchant Scene.jpg" id="5_ipotq"]
 [ext_resource type="Texture2D" uid="uid://cprtxbqccylxo" path="res://Asset_Midterm/BG/Blur Merchant.jpg" id="6_kxtd3"]
 [ext_resource type="Texture2D" uid="uid://b5xxgk6flterr" path="res://Asset_Midterm/Item/Pixel_potion_pack/hp_potion.png" id="7_f3ubt"]
@@ -612,7 +613,7 @@ retreated to the depths from which they came.
 
 The city aboveground slowly began to breathe again. 
 The toxic gas that had choked the streets and driven the mushrooms to madness dissipated, 
-as if it had never been. And the Unders—those creatures that once haunted every shadow—
+as if it had never been. And the Unders those creatures that once haunted every shadow
 retreated to the depths from which they came.
 
 
@@ -3788,14 +3789,14 @@ text = "Elendros"
 
 [node name="Sentence" type="Label" parent="CanvasLayer/Ending cutscene/Words"]
 modulate = Color(1, 1, 1, 0)
-offset_left = -421.628
-offset_top = 5.08976
-offset_right = 18556.4
-offset_bottom = 2737.09
+offset_left = -445.301
+offset_top = 23.6168
+offset_right = 18532.7
+offset_bottom = 2755.62
 scale = Vector2(0.145, 0.145)
 theme_override_colors/font_color = Color(0.443792, 0.336224, 0.217759, 1)
-theme_override_fonts/font = ExtResource("2_f3ubt")
-theme_override_font_sizes/font_size = 100
+theme_override_fonts/font = ExtResource("4_f3ubt")
+theme_override_font_sizes/font_size = 150
 text = "It is said that some stories are best told after the storm has passed.
 
 
@@ -3826,14 +3827,14 @@ The world, though scarred, had a chance to heal.
 
 [node name="Sentence2" type="Label" parent="CanvasLayer/Ending cutscene/Words"]
 modulate = Color(1, 1, 1, 0.954639)
-offset_left = -421.628
-offset_top = 5.08976
-offset_right = 18556.4
-offset_bottom = 2737.09
+offset_left = -445.301
+offset_top = 23.6168
+offset_right = 18532.7
+offset_bottom = 2755.62
 scale = Vector2(0.145, 0.145)
 theme_override_colors/font_color = Color(0.443792, 0.336224, 0.217759, 1)
-theme_override_fonts/font = ExtResource("2_f3ubt")
-theme_override_font_sizes/font_size = 100
+theme_override_fonts/font = ExtResource("4_f3ubt")
+theme_override_font_sizes/font_size = 150
 text = "It is said that some stories are best told after the storm has passed.
 
 
@@ -3864,6 +3865,7 @@ The world, though scarred, had a chance to heal.
 
 [node name="Skip_Button" type="Button" parent="CanvasLayer/Ending cutscene"]
 modulate = Color(0.666667, 0.666667, 0.666667, 1)
+layout_mode = 0
 offset_left = 593.0
 offset_top = 438.0
 offset_right = 642.0

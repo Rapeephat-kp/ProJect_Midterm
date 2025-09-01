@@ -4014,7 +4014,7 @@ point_count = 3
 
 [sub_resource type="Curve2D" id="Curve2D_6bn82"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 6, 0, 0, 0, 0, 0, 177, -1, 0, 0, 0, 0, 6, 0)
+"points": PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 53, 0, 0, 0, 0, 0, 0, 0)
 }
 point_count = 3
 
@@ -4327,6 +4327,7 @@ curve = SubResource("Curve2D_oj7rm")
 [node name="MovePlatform2" parent="MovingPlatforms" instance=ExtResource("11_6bn82")]
 position = Vector2(3211, 258)
 curve = SubResource("Curve2D_6bn82")
+speed = 0.5
 
 [node name="MovePlatform3" parent="MovingPlatforms" instance=ExtResource("11_6bn82")]
 position = Vector2(3870, 237)

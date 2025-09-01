@@ -24,7 +24,8 @@ var current_item: Node = null
 
 
 func _ready() -> void:
-	PlayerInventory.add_item("Healing Potion",5) 
+	Gamemanager.set_scene_spawn("stage_6")
+	#PlayerInventory.add_item("Healing Potion",5) 
 	print(Gamemanager.get_p())
 	var p_value = Gamemanager.get_p()
 	

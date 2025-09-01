@@ -19,6 +19,7 @@ extends Node2D
 var player
 
 func _ready() -> void:
+	Gamemanager.set_scene_spawn("stage_1")
 	$"Guide Massage/left".visible = false
 	var p_value = Gamemanager.get_p()
 	if p_value == 1:

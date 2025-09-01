@@ -22,6 +22,7 @@ var logs_quantity_require = 3
 var player
 
 func _ready() -> void:
+	Gamemanager.set_scene_spawn("stage_3")
 	bridge.collision_enabled = false
 	bridge.modulate = "ffffff39"
 	$"Start stage 3/CheckpointAni".play("default")
