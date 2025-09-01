@@ -23,8 +23,6 @@ var current_item: Node = null
 
 
 func _ready() -> void:
-	Gamemanager.reset_played_time()
-	Gamemanager.resume_timer()
 	PlayerInventory.add_item("Healing Potion",5) 
 	print(Gamemanager.get_p())
 	var p_value = Gamemanager.get_p()

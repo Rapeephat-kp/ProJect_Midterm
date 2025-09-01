@@ -13,10 +13,11 @@ var currentscene = ""
 var player_debuff = false
 var player_buff = false
 
-var scene_spawn_point = ""
+var scene_spawn_point = "stage_1"
 var checkpoint_coin = 0
-var checkpoint_player_hp = 0
-var checkpoint_player_damage = 0
+var checkpoint_player_hp = 100
+var checkpoint_player_max_hp = 100
+var checkpoint_player_damage = 15
 @onready var checkpoint_item_list = { }
 
 var played_time: float = 0.0
@@ -103,6 +104,9 @@ func set_scene_spawn(scene: String):
 	for key in PlayerInventory.inventory.keys():
 		checkpoint_item_list[key] = [PlayerInventory.inventory[key][0], PlayerInventory.inventory[key][1]]
 
+func  get_scene_spawn_point():
+	return str(scene_spawn_point)
+
 func load_checkpoint_inventory(inventory: Dictionary):
 	inventory.clear()
 	for key in checkpoint_item_list.keys():
@@ -125,3 +129,13 @@ func get_played_time_string() -> String:
 	var minutes = (int(played_time) % 3600) / 60
 	var seconds = int(played_time) % 60
 	return "%02d hrs %02d mins %02d secs" % [hours, minutes, seconds]
+
+func spawn_detail_load():
+	current_main_player_hp = checkpoint_player_hp
+	coins =  checkpoint_coin 
+	player_dmg = checkpoint_player_damage
+	max_player_health = checkpoint_player_max_hp
+	load_checkpoint_inventory(checkpoint_item_list)
+	
+	
+	

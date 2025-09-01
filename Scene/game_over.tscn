@@ -1,0 +1,162 @@
+[gd_scene load_steps=15 format=3 uid="uid://60qu6gip1qra"]
+
+[ext_resource type="Texture2D" uid="uid://skwubifcy71r" path="res://Asset_Midterm/Tile_Map/Fantasy Swamp Forest/Free/BG_3/BG_3.png" id="1_mjsgh"]
+[ext_resource type="Script" uid="uid://bj7kn1svj88hh" path="res://Scene/game_over.gd" id="1_qf1nx"]
+[ext_resource type="Texture2D" uid="uid://byk3vy2oruw1d" path="res://Asset_Midterm/Tile_Map/Fantasy Swamp Forest/Free/BG_2/BG_2.png" id="2_xnpu1"]
+[ext_resource type="Texture2D" uid="uid://cv5ru2joj0lkf" path="res://Asset_Midterm/Tile_Map/Fantasy Swamp Forest/Free/BG_1/BG_1.png" id="3_3p3j6"]
+[ext_resource type="FontFile" uid="uid://dbydje27os4iv" path="res://Fonts/AncientModernTales-a7Po.ttf" id="4_3p3j6"]
+[ext_resource type="Texture2D" uid="uid://dkyfygbi0dekj" path="res://Asset_Midterm/UI/UI/Button_52x14.png" id="5_t757r"]
+[ext_resource type="FontFile" uid="uid://bdl4qpamcrivq" path="res://Fonts/OBGB.TTF" id="6_t757r"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qf1nx"]
+texture = ExtResource("5_t757r")
+modulate_color = Color(0.666667, 0.666667, 0.666667, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_up0eu"]
+texture = ExtResource("5_t757r")
+modulate_color = Color(0.666667, 0.666667, 0.666667, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6ly0m"]
+texture = ExtResource("5_t757r")
+
+[sub_resource type="LabelSettings" id="LabelSettings_qf1nx"]
+line_spacing = 0.0
+font = ExtResource("6_t757r")
+font_size = 100
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vw1tr"]
+texture = ExtResource("5_t757r")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_53g77"]
+texture = ExtResource("5_t757r")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6oh06"]
+texture = ExtResource("5_t757r")
+
+[node name="Game_Over" type="Node2D"]
+script = ExtResource("1_qf1nx")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Control" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+metadata/_edit_use_anchors_ = true
+
+[node name="Parallax2D3" type="Parallax2D" parent="CanvasLayer/Control"]
+modulate = Color(0.414274, 0.497046, 0.537846, 1)
+scale = Vector2(2.97157, 2.97157)
+scroll_offset = Vector2(-3300.83, -741)
+repeat_size = Vector2(1928.61, 0)
+autoscroll = Vector2(20, 0)
+repeat_times = 2
+metadata/_edit_lock_ = true
+
+[node name="Bg3" type="Sprite2D" parent="CanvasLayer/Control/Parallax2D3"]
+position = Vector2(900, 272)
+scale = Vector2(0.941406, 1)
+texture = ExtResource("1_mjsgh")
+metadata/_edit_lock_ = true
+
+[node name="Parallax2D2" type="Parallax2D" parent="CanvasLayer/Control"]
+modulate = Color(0.415686, 0.498039, 0.537255, 1)
+scale = Vector2(2.97157, 2.97157)
+scroll_offset = Vector2(-4722.51, -740)
+repeat_size = Vector2(1770, 0)
+autoscroll = Vector2(25, 0)
+repeat_times = 2
+metadata/_edit_lock_ = true
+
+[node name="Bg2" type="Sprite2D" parent="CanvasLayer/Control/Parallax2D2"]
+position = Vector2(1142, 272)
+texture = ExtResource("2_xnpu1")
+metadata/_edit_lock_ = true
+
+[node name="Parallax2D" type="Parallax2D" parent="CanvasLayer/Control"]
+modulate = Color(0.415686, 0.498039, 0.537255, 1)
+scale = Vector2(2.97157, 2.97157)
+scroll_offset = Vector2(-5019.67, -740)
+repeat_size = Vector2(1887, 0)
+autoscroll = Vector2(30, 0)
+repeat_times = 2
+metadata/_edit_lock_ = true
+
+[node name="Bg1" type="Sprite2D" parent="CanvasLayer/Control/Parallax2D"]
+position = Vector2(1494.67, 272)
+texture = ExtResource("3_3p3j6")
+metadata/_edit_lock_ = true
+
+[node name="info" type="Label" parent="CanvasLayer/Control"]
+offset_left = -695.0
+offset_top = -432.0
+offset_right = 3587.0
+offset_bottom = 921.0
+scale = Vector2(0.321279, 0.321279)
+theme_override_colors/font_color = Color(0.698039, 0.698039, 0.698039, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_y = 100
+theme_override_fonts/font = ExtResource("4_3p3j6")
+theme_override_font_sizes/font_size = 1240
+text = "Game Over"
+
+[node name="Respawn" type="Button" parent="CanvasLayer/Control"]
+modulate = Color(0.666667, 0.666667, 0.666667, 1)
+layout_mode = 0
+offset_left = -302.0
+offset_top = 85.0
+offset_right = -269.0
+offset_bottom = 93.0
+scale = Vector2(17.76, 17.76)
+focus_mode = 0
+theme_override_styles/hover = SubResource("StyleBoxTexture_qf1nx")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_up0eu")
+theme_override_styles/normal = SubResource("StyleBoxTexture_6ly0m")
+
+[node name="Label2" type="Label" parent="CanvasLayer/Control/Respawn"]
+offset_left = 5.51746
+offset_top = -0.168945
+offset_right = 565.517
+offset_bottom = 204.831
+scale = Vector2(0.0368765, 0.0368765)
+text = "respawn"
+label_settings = SubResource("LabelSettings_qf1nx")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Main Menu" type="Button" parent="CanvasLayer/Control"]
+modulate = Color(0.666667, 0.666667, 0.666667, 1)
+layout_mode = 0
+offset_left = -306.0
+offset_top = 273.0
+offset_right = -273.0
+offset_bottom = 281.0
+scale = Vector2(17.76, 17.76)
+focus_mode = 0
+theme_override_styles/hover = SubResource("StyleBoxTexture_vw1tr")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_53g77")
+theme_override_styles/normal = SubResource("StyleBoxTexture_6oh06")
+
+[node name="Label2" type="Label" parent="CanvasLayer/Control/Main Menu"]
+offset_left = 5.96847
+offset_top = 0.506758
+offset_right = 725.968
+offset_bottom = 205.507
+scale = Vector2(0.0301195, 0.0301195)
+text = "Main menu"
+label_settings = SubResource("LabelSettings_qf1nx")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="CanvasLayer/Control/Respawn" to="." method="_on_respawn_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/Main Menu" to="." method="_on_main_menu_pressed"]
