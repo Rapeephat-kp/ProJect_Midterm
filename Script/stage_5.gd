@@ -67,5 +67,17 @@ func _on_area_2d_area_exited(area: Area2D) -> void:
 
 
 func _on_next_area_entered(area: Area2D) -> void:
-	SceneTransition.change_scene("res://Scene/Stage_Scene/stage_6.tscn")
+	if area.is_in_group("Player"):
+		await get_tree().create_timer(0.5).timeout
+		SceneTransition.change_scene("res://Scene/Stage_Scene/stage_6.tscn")
 	#get_tree().change_scene_to_file("res://Scene/Stage_Scene/stage_6.tscn")
+
+
+func _on_interact_mer_area_entered(area: Area2D) -> void:
+	if area.is_in_group("Player"):
+		Gamemanager.set_currentScene("Stage 5")
+
+
+func _on_interact_area_entered(area: Area2D) -> void:
+	if area.is_in_group("Player"):
+		Gamemanager.set_currentScene("Stage 5")

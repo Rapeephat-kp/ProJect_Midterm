@@ -244,4 +244,9 @@ func display_Ending(player):
 		animation_player.play("Nymera Ending")
 		
 func toWinScene():
+	stopAni()
 	SceneTransition.change_scene("res://Scene/win_scene.tscn")
+
+
+func _on_skip_button_pressed() -> void:
+	toWinScene()

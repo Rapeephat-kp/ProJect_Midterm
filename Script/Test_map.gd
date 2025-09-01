@@ -7,6 +7,7 @@ var fade_speed: float = 0.5
 @export var monster_scenes: Array[PackedScene]   # เก็บมอนสเตอร์หลายชนิด
 @export var fall_attack: PackedScene
 @onready var player
+@onready var player_spawn_point: Marker2D = $SpawnPoint
 
 var curPlayer
 var gameEnd = true
@@ -28,14 +29,14 @@ func _ready() -> void:
 	var p_value = Gamemanager.get_p()
 	
 	if p_value == 1:
-		player = $"Main Character/Nymera"
+		player = $"Main Character/Elendros"
 		$CanvasUI/Player_show/Elendros.visible = true
 		$CanvasUI/Player_show/Nymera.visible = false
 	elif p_value == 2:
-		player = $"Main Character/Elendros"
+		player = $"Main Character/Nymera"
 		$CanvasUI/Player_show/Elendros.visible = false
 		$CanvasUI/Player_show/Nymera.visible = true
-		
+	player.position = player_spawn_point.position
 	for marker in $SpawnMarkers.get_children():
 		if marker is Marker2D:
 			spawn_points.append(marker.global_position)

@@ -1,4 +1,4 @@
-[gd_scene load_steps=90 format=4 uid="uid://c8e7xlnmjjcpb"]
+[gd_scene load_steps=94 format=4 uid="uid://c8e7xlnmjjcpb"]
 
 [ext_resource type="Script" uid="uid://basg1pfe5ph52" path="res://Script/stage_5.gd" id="1_hbu84"]
 [ext_resource type="Texture2D" uid="uid://bjoc2gctj3hdg" path="res://Asset_Midterm/Tile_Map/Fantasy Swamp Forest/Free/Terrain-and-Props-OLD.png" id="1_kem2i"]
@@ -31,6 +31,8 @@
 [ext_resource type="Texture2D" uid="uid://e6i8ymjcl8ta" path="res://Asset_Midterm/UI/UI/QuitIcon.png" id="25_0pg4j"]
 [ext_resource type="Texture2D" uid="uid://cjnlo8nctekxe" path="res://Asset_Midterm/UI/UI/BuffIcons_16x16.png" id="26_5gbto"]
 [ext_resource type="Texture2D" uid="uid://8m40myvjp4ec" path="res://Asset_Midterm/UI/Hint.png" id="28_hy2jh"]
+[ext_resource type="PackedScene" uid="uid://bufdadlu37p7q" path="res://Scene/NPC/merchant.tscn" id="32_puchm"]
+[ext_resource type="PackedScene" uid="uid://2fjun6uswfsc" path="res://Scene/NPC/explorer.tscn" id="33_3bghf"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ravd8"]
 texture = ExtResource("1_kem2i")
@@ -2589,6 +2591,12 @@ texture = ExtResource("25_0pg4j")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2h62j"]
 size = Vector2(401, 175)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7s4ym"]
+size = Vector2(243.334, 65)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_25yi7"]
+size = Vector2(243.334, 65)
+
 [node name="stage_5" type="Node2D"]
 script = ExtResource("1_hbu84")
 
@@ -3631,6 +3639,27 @@ offset_bottom = 406.0
 theme_override_fonts/font = ExtResource("6_rcg4y")
 text = "Beware Toixc ...."
 
+[node name="NPC" type="Node2D" parent="."]
+
+[node name="merchant" parent="NPC" instance=ExtResource("32_puchm")]
+position = Vector2(713, 172)
+scale = Vector2(0.6, 0.6)
+
+[node name="InteractMer" type="Area2D" parent="NPC/merchant"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NPC/merchant/InteractMer"]
+position = Vector2(0.00012207, 4.1666)
+shape = SubResource("RectangleShape2D_7s4ym")
+
+[node name="Explorer" parent="NPC" instance=ExtResource("33_3bghf")]
+position = Vector2(381, 170)
+
+[node name="Interact" type="Area2D" parent="NPC/Explorer"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NPC/Explorer/Interact"]
+position = Vector2(0.00012207, 4.1666)
+shape = SubResource("RectangleShape2D_25yi7")
+
 [connection signal="area_entered" from="Fog/Fog1/Area2D" to="." method="_on_area_2d_area_entered"]
 [connection signal="area_exited" from="Fog/Fog1/Area2D" to="." method="_on_area_2d_area_exited"]
 [connection signal="area_entered" from="Fog/detect_1" to="Fog" method="_on_detect_1_area_entered"]
@@ -3648,3 +3677,5 @@ text = "Beware Toixc ...."
 [connection signal="pressed" from="CanvasUI/Setting_UI/Setting_Panel_Bg/Exit_Button" to="CanvasUI/Setting" method="_on_exit_button_pressed"]
 [connection signal="pressed" from="Puzzle/Control/Exit" to="Puzzle" method="_on_exit_pressed"]
 [connection signal="area_entered" from="next" to="." method="_on_next_area_entered"]
+[connection signal="area_entered" from="NPC/merchant/InteractMer" to="." method="_on_interact_mer_area_entered"]
+[connection signal="area_entered" from="NPC/Explorer/Interact" to="." method="_on_interact_area_entered"]

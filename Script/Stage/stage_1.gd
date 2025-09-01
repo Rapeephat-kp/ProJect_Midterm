@@ -45,8 +45,7 @@ func _on_collision_area_entered(area: Area2D) -> void:
 
 func _on_fallzone_area_entered(area: Area2D) -> void:
 	if area.is_in_group("Player"):
-		elendros.position = spawn_point.position
-		nymera.position = spawn_point.position
+		player.position = spawn_point.position
 
 
 func _on_interact_1_area_entered(area: Area2D) -> void:

@@ -24,6 +24,7 @@ func _ready() -> void:
 		player = nymera
 		elendrosProfile.visible = false
 		nymeraProfile.visible = true
+	player.position = spawn_point.position
 	checkpoint_ani.visible = false
 func _process(delta: float):
 	inventory.refresh_inventory()

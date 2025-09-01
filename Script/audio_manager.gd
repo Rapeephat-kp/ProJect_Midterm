@@ -12,3 +12,6 @@ func set_and_play(streamPath):
 	var new_stream = load(streamPath)
 	audio.stream = new_stream
 	audio.play()
+
+func stop():
+	audio.stop()

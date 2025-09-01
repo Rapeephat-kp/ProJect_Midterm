@@ -2193,7 +2193,6 @@ scale = Vector2(2.60938, 1.96809)
 texture = SubResource("GradientTexture2D_bi5f7")
 
 [node name="Main Character" type="Node2D" parent="."]
-position = Vector2(565, 0)
 
 [node name="Elendros" parent="Main Character" instance=ExtResource("9_pgqbn")]
 position = Vector2(314, 128)

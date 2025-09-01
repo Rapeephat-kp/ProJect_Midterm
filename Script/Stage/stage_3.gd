@@ -22,16 +22,9 @@ var logs_quantity_require = 3
 var player
 
 func _ready() -> void:
-	#Mission
 	bridge.collision_enabled = false
 	bridge.modulate = "ffffff39"
-	#bridge_2.modulate = "ffffff"
-	
-	
-	
 	$"Start stage 3/CheckpointAni".play("default")
-	#elendros.position = spawn_point.position
-	#nymera.position = spawn_point.position
 	print(Gamemanager.get_p())
 	var p_value = Gamemanager.get_p()
 	if p_value == 1:
@@ -43,10 +36,8 @@ func _ready() -> void:
 		elendrosProfile.visible = false
 		nymeraProfile.visible = true
 	UI.visible = true
-	#Bridge
-	#bridge.enabled = true
+	player.position = spawn_point.position
 	
-	#CutSceneManager.stage1_part1()
 func _process(delta: float):
 	inventory.refresh_inventory()
 	coin_amount.text = str(Gamemanager.get_coin())
@@ -77,8 +68,7 @@ func _on_interact_mer_area_entered(area: Area2D) -> void:
 
 func _on_water_area_entered(area: Area2D) -> void:
 	if area.is_in_group("Player"):
-		player.position = spawn_point.position
-		
+		player.position = $"spawn point".position
 		Gamemanager.set_player_health(-20)
 
 
@@ -117,3 +107,8 @@ func _on_build_bridge_area_entered(area: Area2D) -> void:
 	#mission fail
 	elif missionCheck() == false:
 		print("fail")
+
+
+func _on_interact_area_entered(area: Area2D) -> void:
+	if area.is_in_group("Player"):
+		Gamemanager.set_currentScene("Stage 3")

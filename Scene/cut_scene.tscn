@@ -17,6 +17,17 @@
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_x31x6"]
 texture = ExtResource("2_0only")
 
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_pmo56"]
+texture = ExtResource("1_kxtd3")
+modulate_color = Color(0.666667, 0.666667, 0.666667, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_b3yuy"]
+texture = ExtResource("1_kxtd3")
+modulate_color = Color(0.666667, 0.666667, 0.666667, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_n08jo"]
+texture = ExtResource("1_kxtd3")
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_31a1h"]
 bg_color = Color(0.509804, 0.396078, 0.243137, 1)
 corner_radius_top_left = 10
@@ -30,17 +41,6 @@ corner_radius_top_left = 10
 corner_radius_top_right = 10
 corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_pmo56"]
-texture = ExtResource("1_kxtd3")
-modulate_color = Color(0.666667, 0.666667, 0.666667, 1)
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_b3yuy"]
-texture = ExtResource("1_kxtd3")
-modulate_color = Color(0.666667, 0.666667, 0.666667, 1)
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_n08jo"]
-texture = ExtResource("1_kxtd3")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_piy08"]
 texture = ExtResource("1_kxtd3")
@@ -3862,6 +3862,29 @@ The struggle was hard, and the night long, but in the end, balance had been rest
 The world, though scarred, had a chance to heal.
 "
 
+[node name="Skip_Button" type="Button" parent="CanvasLayer/Ending cutscene"]
+modulate = Color(0.666667, 0.666667, 0.666667, 1)
+offset_left = 593.0
+offset_top = 438.0
+offset_right = 642.0
+offset_bottom = 450.0
+scale = Vector2(7.42312, 7.42312)
+focus_mode = 0
+theme_override_styles/hover = SubResource("StyleBoxTexture_pmo56")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_b3yuy")
+theme_override_styles/normal = SubResource("StyleBoxTexture_n08jo")
+
+[node name="Label3" type="Label" parent="CanvasLayer/Ending cutscene/Skip_Button"]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 2.33333
+offset_right = 109.0
+offset_bottom = 22.3333
+scale = Vector2(0.387, 0.387)
+theme_override_fonts/font = ExtResource("2_f3ubt")
+text = "Skip"
+horizontal_alignment = 1
+
 [node name="stage cutscene" type="Control" parent="CanvasLayer"]
 visible = false
 layout_mode = 3
@@ -4324,6 +4347,7 @@ libraries = {
 [node name="Timer" type="Timer" parent="."]
 wait_time = 2.0
 
+[connection signal="pressed" from="CanvasLayer/Ending cutscene/Skip_Button" to="." method="_on_skip_button_pressed"]
 [connection signal="pressed" from="CanvasLayer/stage cutscene/Setting_Panel_Bg/Store_Button" to="." method="_on_store_button_pressed"]
 [connection signal="pressed" from="CanvasLayer/stage cutscene/Setting_Panel_Bg/Next_Button" to="." method="_on_next_button_pressed"]
 [connection signal="pressed" from="CanvasLayer/stage cutscene/Setting_Panel_Bg/Autoplay_Button" to="." method="_on_auto_button_pressed"]
