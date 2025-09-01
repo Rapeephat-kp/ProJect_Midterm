@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://dp5cs5qk2bf64"]
+[gd_scene load_steps=12 format=3 uid="uid://dp5cs5qk2bf64"]
 
 [ext_resource type="Script" uid="uid://dhepn5gfj3djx" path="res://Script/main.gd" id="1_ow1sv"]
 [ext_resource type="Texture2D" uid="uid://skwubifcy71r" path="res://Asset_Midterm/Tile_Map/Fantasy Swamp Forest/Free/BG_3/BG_3.png" id="1_r34rm"]
@@ -18,6 +18,11 @@ modulate_color = Color(0.666667, 0.666667, 0.666667, 1)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3amdw"]
 texture = ExtResource("4_2wwxx")
+
+[sub_resource type="LabelSettings" id="LabelSettings_ow1sv"]
+line_spacing = 0.0
+font = ExtResource("5_3amdw")
+font_size = 100
 
 [node name="Main" type="Node2D"]
 position = Vector2(32, -144)
@@ -80,30 +85,28 @@ position = Vector2(1494.67, 272)
 texture = ExtResource("3_3amdw")
 
 [node name="Button" type="Button" parent="CanvasLayer/Control"]
-modulate = Color(0.396078, 0.160784, 0.0509804, 1)
+modulate = Color(0.666667, 0.666667, 0.666667, 1)
 layout_mode = 0
 offset_left = -285.0
-offset_top = 235.0
+offset_top = 226.0
 offset_right = -254.0
-offset_bottom = 243.0
+offset_bottom = 234.0
 scale = Vector2(17.76, 17.76)
+focus_mode = 0
 theme_override_styles/hover = SubResource("StyleBoxTexture_ow1sv")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_75buv")
 theme_override_styles/normal = SubResource("StyleBoxTexture_3amdw")
 
-[node name="Label" type="Label" parent="CanvasLayer/Control"]
-modulate = Color(1, 0.870588, 0.678431, 1)
-custom_minimum_size = Vector2(1, 1)
+[node name="Label2" type="Label" parent="CanvasLayer/Control/Button"]
 layout_mode = 0
-offset_left = -137.0
-offset_top = 265.0
-offset_right = -72.0
-offset_bottom = 285.0
-scale = Vector2(3.89221, 3.89221)
-theme_override_fonts/font = ExtResource("5_3amdw")
-text = "Start"
+offset_left = 1.0
+offset_right = 750.0
+offset_bottom = 205.0
+scale = Vector2(0.0391288, 0.0391288)
+text = "START"
+label_settings = SubResource("LabelSettings_ow1sv")
+horizontal_alignment = 1
 vertical_alignment = 1
-autowrap_mode = 3
 
 [node name="TheChampingnon-removebg-preview" type="Sprite2D" parent="CanvasLayer/Control"]
 modulate = Color(0, 0, 0, 1)

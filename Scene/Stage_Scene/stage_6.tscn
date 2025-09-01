@@ -1,4 +1,4 @@
-[gd_scene load_steps=78 format=4 uid="uid://vie4pnvbwyuv"]
+[gd_scene load_steps=84 format=4 uid="uid://vie4pnvbwyuv"]
 
 [ext_resource type="Script" uid="uid://dovacsfio8kkv" path="res://Script/Test_map.gd" id="1_5yno8"]
 [ext_resource type="Texture2D" uid="uid://b6bs3h20360a8" path="res://Asset_Midterm/Tile_Map/Fantasy Swamp Forest/Free/Terrain_and_Props.png" id="1_87644"]
@@ -28,10 +28,10 @@
 [ext_resource type="Texture2D" uid="uid://dkyfygbi0dekj" path="res://Asset_Midterm/UI/UI/Button_52x14.png" id="19_sfbgj"]
 [ext_resource type="Texture2D" uid="uid://cphn5s5t5dlce" path="res://Asset_Midterm/UI/UI/ValueBlue_120x8.png" id="21_mmwch"]
 [ext_resource type="Texture2D" uid="uid://bg53hghq0u36n" path="res://Asset_Midterm/UI/UI/PatternMiddleBottomBG_199x48.png" id="22_js130"]
-[ext_resource type="Script" uid="uid://cehioggct0ygu" path="res://Scene/Stage_Scene/Boss_hp_Bar.gd" id="22_o55fe"]
+[ext_resource type="Script" path="res://Scene/Stage_Scene/Boss_hp_Bar.gd" id="22_o55fe"]
 [ext_resource type="Texture2D" uid="uid://bhj8y8hjedetd" path="res://Asset_Midterm/UI/UI/TopPatternPanel_02_33x15.png" id="23_o55fe"]
 [ext_resource type="FontFile" uid="uid://dbydje27os4iv" path="res://Fonts/AncientModernTales-a7Po.ttf" id="24_iup2u"]
-[ext_resource type="PackedScene" uid="uid://1rxar2jmae1o" path="res://Scene/torch.tscn" id="32_emqxx"]
+[ext_resource type="PackedScene" path="res://Scene/torch.tscn" id="32_emqxx"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sfbgj"]
 texture = ExtResource("2_dkwvw")
@@ -1786,59 +1786,89 @@ _data = {
 &"RESET": SubResource("Animation_pt3qq")
 }
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5yno8"]
+[sub_resource type="LabelSettings" id="LabelSettings_emqxx"]
+font = ExtResource("16_o55fe")
+font_size = 50
+font_color = Color(0.729412, 0.568627, 0.345098, 1)
+shadow_size = 10
+shadow_color = Color(0.2, 0.180392, 0.14902, 1)
+shadow_offset = Vector2(7, 0)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_g6qds"]
 texture = ExtResource("18_c6eh7")
 region_rect = Rect2(110, 7, 20, 20)
-modulate_color = Color(0.654232, 0.654232, 0.654232, 1)
+modulate_color = Color(0.517647, 0.517647, 0.517647, 1)
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wxsln"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ugnlh"]
 texture = ExtResource("18_c6eh7")
 region_rect = Rect2(110, 7, 20, 20)
-modulate_color = Color(0.654902, 0.654902, 0.654902, 1)
+modulate_color = Color(0.517184, 0.517184, 0.517184, 1)
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7ogf8"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_uyf8x"]
 texture = ExtResource("18_c6eh7")
 region_rect = Rect2(110, 7, 20, 20)
 modulate_color = Color(0.698039, 0.698039, 0.698039, 1)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wwmu7"]
+[sub_resource type="LabelSettings" id="LabelSettings_0uyed"]
+font = ExtResource("16_o55fe")
+font_size = 100
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_bv3aw"]
+texture = ExtResource("18_c6eh7")
+region_rect = Rect2(37, 0, 27, 32)
+modulate_color = Color(0.517647, 0.517647, 0.517647, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_k8bou"]
+texture = ExtResource("18_c6eh7")
+region_rect = Rect2(37, 0, 27, 32)
+modulate_color = Color(0.517647, 0.517647, 0.517647, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_bdu3b"]
+texture = ExtResource("18_c6eh7")
+region_rect = Rect2(37, 0, 27, 32)
+modulate_color = Color(0.698039, 0.698039, 0.698039, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lpnye"]
 bg_color = Color(0.509804, 0.396078, 0.243137, 1)
 corner_radius_top_left = 10
 corner_radius_top_right = 10
 corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_01q75"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_y40wa"]
 bg_color = Color(0.239216, 0.196078, 0.223529, 1)
 corner_radius_top_left = 10
 corner_radius_top_right = 10
 corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mmwch"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_lvbj4"]
 texture = ExtResource("19_sfbgj")
 modulate_color = Color(0.552956, 0.552956, 0.552955, 1)
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_js130"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_bg6h0"]
 texture = ExtResource("19_sfbgj")
 modulate_color = Color(0.666667, 0.666667, 0.666667, 1)
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_o55fe"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6g5ei"]
 texture = ExtResource("19_sfbgj")
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_iup2u"]
-texture = ExtResource("19_sfbgj")
-modulate_color = Color(0.666667, 0.666667, 0.666667, 1)
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_c6eh7"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ggbkv"]
 texture = ExtResource("19_sfbgj")
 modulate_color = Color(0.666667, 0.666667, 0.666667, 1)
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_sfbgj"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gp14o"]
+texture = ExtResource("19_sfbgj")
+modulate_color = Color(0.666667, 0.666667, 0.666667, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ya7ab"]
 texture = ExtResource("19_sfbgj")
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_emqxx"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6v1iu"]
 bg_color = Color(0.69462, 0.554322, 0.367857, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_pqj8l"]
+font_size = 100
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_g6qds"]
 distance = 52.0
@@ -1900,6 +1930,66 @@ color = Color(1, 0.188235, 1, 1)
 texture = SubResource("GradientTexture2D_emqxx")
 
 [node name="CanvasUI" type="CanvasLayer" parent="."]
+
+[node name="Boss_Health_Bar" type="Control" parent="CanvasUI"]
+visible = false
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -18.0
+offset_top = -21.0
+offset_right = 22.0
+offset_bottom = 19.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(5, 5)
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="CanvasUI/Boss_Health_Bar"]
+modulate = Color(0.74558, 0.74558, 0.74558, 1)
+layout_mode = 0
+offset_left = -62.4
+offset_top = -52.6
+offset_right = 65.6
+offset_bottom = -36.6
+value = 100.0
+texture_under = ExtResource("9_5yno8")
+texture_progress = ExtResource("21_mmwch")
+texture_progress_offset = Vector2(4, 4)
+tint_under = Color(0.666667, 0.666667, 0.666667, 1)
+tint_progress = Color(0.506486, 0.211145, 0.85578, 1)
+script = ExtResource("22_o55fe")
+
+[node name="PatternMiddleBottomBg199x48" type="Sprite2D" parent="CanvasUI/Boss_Health_Bar/TextureProgressBar"]
+modulate = Color(0.351563, 0.351563, 0.351563, 1)
+position = Vector2(64.8, -7.8)
+scale = Vector2(0.624121, 0.329167)
+texture = ExtResource("22_js130")
+
+[node name="TopPatternPanel0233x15" type="Sprite2D" parent="CanvasUI/Boss_Health_Bar/TextureProgressBar"]
+modulate = Color(0.485703, 0.485704, 0.485703, 1)
+position = Vector2(64.2, 16.4)
+scale = Vector2(1.075, 1.075)
+texture = ExtResource("23_o55fe")
+
+[node name="Label" type="Label" parent="CanvasUI/Boss_Health_Bar/TextureProgressBar"]
+layout_mode = 0
+offset_left = 38.0
+offset_top = -15.8
+offset_right = 421.0
+offset_bottom = 121.2
+scale = Vector2(0.15, 0.15)
+theme_override_colors/font_color = Color(0.314759, 0.235521, 0.672296, 1)
+theme_override_colors/font_shadow_color = Color(0.0568192, 0.0180075, 0.140476, 1)
+theme_override_colors/font_outline_color = Color(0.180843, 1.57929e-07, 3.00817e-08, 1)
+theme_override_constants/shadow_offset_x = 10
+theme_override_constants/shadow_offset_y = 0
+theme_override_constants/outline_size = 9
+theme_override_fonts/font = ExtResource("24_iup2u")
+theme_override_font_sizes/font_size = 124
+text = "The Agis"
 
 [node name="Setting" type="Node2D" parent="CanvasUI"]
 position = Vector2(556, 628)
@@ -2003,19 +2093,22 @@ offset_left = 16.0
 offset_top = -4.33333
 offset_right = 56.0
 offset_bottom = 18.6667
-theme_override_colors/font_color = Color(0.572549, 0.454902, 0.254902, 1)
+theme_override_colors/font_color = Color(0.729412, 0.568627, 0.345098, 1)
+theme_override_colors/font_shadow_color = Color(0.2, 0.180392, 0.14902, 1)
 text = ": "
 
 [node name="Coin_Amount" type="Label" parent="CanvasUI/Player_show/Coins"]
 layout_mode = 0
-offset_left = 23.0
-offset_right = 116.0
-offset_bottom = 16.0
+offset_left = 23.3333
+offset_right = 143.333
+offset_bottom = 60.0
+scale = Vector2(0.291646, 0.291646)
 theme_override_colors/font_color = Color(0.729412, 0.568627, 0.345098, 1)
 theme_override_colors/font_shadow_color = Color(0.2, 0.180392, 0.14902, 1)
 theme_override_fonts/font = ExtResource("16_o55fe")
 theme_override_font_sizes/font_size = 12
 text = "144"
+label_settings = SubResource("LabelSettings_emqxx")
 
 [node name="Setting_Button" type="Control" parent="CanvasUI"]
 layout_mode = 3
@@ -2042,9 +2135,60 @@ offset_right = 8.0
 offset_bottom = 31.0
 scale = Vector2(2, 2)
 focus_mode = 0
-theme_override_styles/hover = SubResource("StyleBoxTexture_5yno8")
-theme_override_styles/pressed = SubResource("StyleBoxTexture_wxsln")
-theme_override_styles/normal = SubResource("StyleBoxTexture_7ogf8")
+theme_override_styles/hover = SubResource("StyleBoxTexture_g6qds")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_ugnlh")
+theme_override_styles/normal = SubResource("StyleBoxTexture_uyf8x")
+
+[node name="Label" type="Label" parent="CanvasUI/Setting_Button"]
+modulate = Color(0.698039, 0.698039, 0.698039, 1)
+layout_mode = 0
+offset_left = -246.0
+offset_top = 16.0
+offset_right = 634.0
+offset_bottom = 136.0
+scale = Vector2(0.234848, 0.234848)
+text = "Setting"
+label_settings = SubResource("LabelSettings_0uyed")
+horizontal_alignment = 2
+
+[node name="Achievement_Button" type="Control" parent="CanvasUI"]
+layout_mode = 3
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -40.0
+offset_bottom = 40.0
+grow_horizontal = 0
+
+[node name="MenusBox34x34" type="Sprite2D" parent="CanvasUI/Achievement_Button"]
+modulate = Color(0.698039, 0.698039, 0.698039, 1)
+position = Vector2(-1.00006, 118)
+scale = Vector2(2, 2)
+texture = ExtResource("17_iup2u")
+
+[node name="Achievement_Button" type="Button" parent="CanvasUI/Achievement_Button"]
+layout_mode = 0
+offset_left = -32.0
+offset_top = 84.0
+offset_right = -2.0
+offset_bottom = 117.0
+scale = Vector2(2, 2)
+focus_mode = 0
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_bv3aw")
+theme_override_styles/hover = SubResource("StyleBoxTexture_k8bou")
+theme_override_styles/normal = SubResource("StyleBoxTexture_bdu3b")
+
+[node name="Label" type="Label" parent="CanvasUI/Achievement_Button"]
+modulate = Color(0.698039, 0.698039, 0.698039, 1)
+layout_mode = 0
+offset_left = -255.0
+offset_top = 105.0
+offset_right = 625.0
+offset_bottom = 225.0
+scale = Vector2(0.234848, 0.234848)
+text = "Achievement"
+label_settings = SubResource("LabelSettings_0uyed")
+horizontal_alignment = 2
 
 [node name="Setting_UI" type="Control" parent="CanvasUI"]
 layout_mode = 3
@@ -2067,7 +2211,7 @@ offset_top = 620.0
 offset_right = -47.0
 offset_bottom = 705.0
 scale = Vector2(3, 3)
-theme_override_styles/panel = SubResource("StyleBoxFlat_wwmu7")
+theme_override_styles/panel = SubResource("StyleBoxFlat_lpnye")
 
 [node name="Setting_panel_Bg2" type="Panel" parent="CanvasUI/Setting_UI/Setting_Panel_Bg"]
 layout_mode = 0
@@ -2075,7 +2219,7 @@ offset_left = 4.66678
 offset_top = 4.33333
 offset_right = 91.6668
 offset_bottom = 81.3333
-theme_override_styles/panel = SubResource("StyleBoxFlat_01q75")
+theme_override_styles/panel = SubResource("StyleBoxFlat_y40wa")
 
 [node name="Resume_Button" type="Button" parent="CanvasUI/Setting_UI/Setting_Panel_Bg"]
 modulate = Color(0.666667, 0.666667, 0.666667, 1)
@@ -2085,9 +2229,9 @@ offset_top = 36.0003
 offset_right = 71.6668
 offset_bottom = 48.0003
 focus_mode = 0
-theme_override_styles/hover = SubResource("StyleBoxTexture_mmwch")
-theme_override_styles/pressed = SubResource("StyleBoxTexture_js130")
-theme_override_styles/normal = SubResource("StyleBoxTexture_o55fe")
+theme_override_styles/hover = SubResource("StyleBoxTexture_lvbj4")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_bg6h0")
+theme_override_styles/normal = SubResource("StyleBoxTexture_6g5ei")
 
 [node name="Label" type="Label" parent="CanvasUI/Setting_UI/Setting_Panel_Bg/Resume_Button"]
 layout_mode = 0
@@ -2107,9 +2251,9 @@ offset_top = 52.6664
 offset_right = 71.6668
 offset_bottom = 64.6664
 focus_mode = 0
-theme_override_styles/hover = SubResource("StyleBoxTexture_iup2u")
-theme_override_styles/pressed = SubResource("StyleBoxTexture_c6eh7")
-theme_override_styles/normal = SubResource("StyleBoxTexture_sfbgj")
+theme_override_styles/hover = SubResource("StyleBoxTexture_ggbkv")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_gp14o")
+theme_override_styles/normal = SubResource("StyleBoxTexture_ya7ab")
 
 [node name="Label3" type="Label" parent="CanvasUI/Setting_UI/Setting_Panel_Bg/Exit_Button"]
 layout_mode = 0
@@ -2128,79 +2272,69 @@ offset_left = 17.3817
 offset_top = 27.333
 offset_right = 78.3817
 offset_bottom = 28.333
-theme_override_styles/panel = SubResource("StyleBoxFlat_emqxx")
+theme_override_styles/panel = SubResource("StyleBoxFlat_6v1iu")
 
 [node name="Label2" type="Label" parent="CanvasUI/Setting_UI/Setting_Panel_Bg"]
 modulate = Color(0.698039, 0.698039, 0.698039, 1)
 layout_mode = 0
-offset_left = 22.0
+offset_left = 23.6667
 offset_top = 10.3333
-offset_right = 112.0
+offset_right = 113.667
 offset_bottom = 30.3333
 scale = Vector2(0.55, 0.55)
 theme_override_fonts/font = ExtResource("16_o55fe")
 text = "Setting"
 vertical_alignment = 1
 
-[node name="Boss_Health_Bar" type="Control" parent="CanvasUI"]
+[node name="Achievement_UI" type="Control" parent="CanvasUI"]
 visible = false
 layout_mode = 3
-anchors_preset = 8
-anchor_left = 0.5
+anchors_preset = 6
+anchor_left = 1.0
 anchor_top = 0.5
-anchor_right = 0.5
+anchor_right = 1.0
 anchor_bottom = 0.5
-offset_left = -18.0
-offset_top = -21.0
-offset_right = 22.0
-offset_bottom = 19.0
-grow_horizontal = 2
+offset_left = -40.0
+offset_top = -20.0
+offset_bottom = 20.0
+grow_horizontal = 0
 grow_vertical = 2
-scale = Vector2(5, 5)
 
-[node name="TextureProgressBar" type="TextureProgressBar" parent="CanvasUI/Boss_Health_Bar"]
-modulate = Color(0.74558, 0.74558, 0.74558, 1)
+[node name="Setting_Panel_Bg" type="Panel" parent="CanvasUI/Achievement_UI"]
 layout_mode = 0
-offset_left = -62.4
-offset_top = -52.6
-offset_right = 65.6
-offset_bottom = -36.6
-value = 100.0
-texture_under = ExtResource("9_5yno8")
-texture_progress = ExtResource("21_mmwch")
-texture_progress_offset = Vector2(4, 4)
-tint_under = Color(0.666667, 0.666667, 0.666667, 1)
-tint_progress = Color(0.506486, 0.211145, 0.85578, 1)
-script = ExtResource("22_o55fe")
+offset_left = -1229.0
+offset_top = -362.0
+offset_right = -836.0
+offset_bottom = -212.0
+scale = Vector2(3, 3)
+theme_override_styles/panel = SubResource("StyleBoxFlat_lpnye")
 
-[node name="PatternMiddleBottomBg199x48" type="Sprite2D" parent="CanvasUI/Boss_Health_Bar/TextureProgressBar"]
-modulate = Color(0.351563, 0.351563, 0.351563, 1)
-position = Vector2(64.8, -7.8)
-scale = Vector2(0.624121, 0.329167)
-texture = ExtResource("22_js130")
-
-[node name="TopPatternPanel0233x15" type="Sprite2D" parent="CanvasUI/Boss_Health_Bar/TextureProgressBar"]
-modulate = Color(0.485703, 0.485704, 0.485703, 1)
-position = Vector2(64.2, 16.4)
-scale = Vector2(1.075, 1.075)
-texture = ExtResource("23_o55fe")
-
-[node name="Label" type="Label" parent="CanvasUI/Boss_Health_Bar/TextureProgressBar"]
+[node name="Setting_panel_Bg2" type="Panel" parent="CanvasUI/Achievement_UI/Setting_Panel_Bg"]
 layout_mode = 0
-offset_left = 38.0
-offset_top = -15.8
-offset_right = 421.0
-offset_bottom = 121.2
-scale = Vector2(0.15, 0.15)
-theme_override_colors/font_color = Color(0.314759, 0.235521, 0.672296, 1)
-theme_override_colors/font_shadow_color = Color(0.0568192, 0.0180075, 0.140476, 1)
-theme_override_colors/font_outline_color = Color(0.180843, 1.57929e-07, 3.00817e-08, 1)
-theme_override_constants/shadow_offset_x = 10
-theme_override_constants/shadow_offset_y = 0
-theme_override_constants/outline_size = 9
-theme_override_fonts/font = ExtResource("24_iup2u")
-theme_override_font_sizes/font_size = 124
-text = "The Agis"
+offset_left = 5.0
+offset_top = 4.0
+offset_right = 389.0
+offset_bottom = 146.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_y40wa")
+
+[node name="Label2" type="Label" parent="CanvasUI/Achievement_UI/Setting_Panel_Bg"]
+modulate = Color(0.698039, 0.698039, 0.698039, 1)
+layout_mode = 0
+offset_left = 59.3333
+offset_top = 18.6667
+offset_right = 1179.33
+offset_bottom = 753.667
+scale = Vector2(0.0910987, 0.0910987)
+theme_override_fonts/font = ExtResource("16_o55fe")
+text = "Achievement I : 
+details :
+
+
+
+Achievement II :
+details :"
+label_settings = SubResource("LabelSettings_pqj8l")
+vertical_alignment = 1
 
 [node name="Main Character" type="Node2D" parent="."]
 
@@ -2382,6 +2516,3 @@ shape = SubResource("WorldBoundaryShape2D_g6qds")
 
 [connection signal="area_entered" from="Boss/Area_attack_check" to="." method="_on_area_attack_check_area_entered"]
 [connection signal="area_entered" from="Boss/Area_attack_check" to="Boss" method="_on_area_attack_check_area_entered"]
-[connection signal="pressed" from="CanvasUI/Setting_Button/Setting_Button" to="CanvasUI/Setting" method="_on_setting_button_pressed"]
-[connection signal="pressed" from="CanvasUI/Setting_UI/Setting_Panel_Bg/Resume_Button" to="CanvasUI/Setting" method="_on_resume_button_pressed"]
-[connection signal="pressed" from="CanvasUI/Setting_UI/Setting_Panel_Bg/Exit_Button" to="CanvasUI/Setting" method="_on_exit_button_pressed"]

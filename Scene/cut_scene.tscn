@@ -4008,6 +4008,7 @@ visible_characters = 0
 visible_ratio = 0.0
 
 [node name="Store" type="Node2D" parent="CanvasLayer"]
+visible = false
 
 [node name="Inventory" type="Control" parent="CanvasLayer/Store"]
 visible = false
@@ -4234,6 +4235,7 @@ offset_left = 363.0
 offset_top = 819.0
 offset_right = 534.0
 offset_bottom = 863.0
+focus_mode = 0
 theme_override_styles/hover = SubResource("StyleBoxTexture_qsoob")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_31a1h")
 theme_override_styles/normal = SubResource("StyleBoxTexture_sxeg3")
@@ -4267,6 +4269,7 @@ offset_left = 1622.0
 offset_top = 819.0
 offset_right = 1793.0
 offset_bottom = 863.0
+focus_mode = 0
 theme_override_styles/hover = SubResource("StyleBoxTexture_qsoob")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_31a1h")
 theme_override_styles/normal = SubResource("StyleBoxTexture_sxeg3")
