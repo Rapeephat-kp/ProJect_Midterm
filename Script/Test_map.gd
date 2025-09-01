@@ -8,6 +8,8 @@ var fade_speed: float = 0.5
 @export var fall_attack: PackedScene
 @onready var player
 
+var curPlayer
+var gameEnd
 var allow_fall_attack: bool = true
 
 var spawn_points: Array = []         
@@ -48,7 +50,7 @@ func _ready() -> void:
 		if marker is Marker2D:
 			attack_spawn_point.append(marker.global_position)
 	spawn_random_item()
-	
+	gameEnd = false
 
 func spawn_random_item():
 	if spawn_points.is_empty():
@@ -129,7 +131,10 @@ func _process(delta: float):
 		free_all_spawned()
 		stop_fall_attacks()
 		print("cancel")
-		SceneTransition.change_scene("res://Scene/win_scene.tscn")
+		#SceneTransition.change_scene("res://Scene/win_scene.tscn")
+		gameEnd = true
+		curPlayer = Gamemanager.get_p()
+		CutSceneManager.display_Ending(curPlayer)
 		
 func _on_button_pressed() -> void:
 	get_tree().change_scene_to_file("res://Scene/stage_1_in_the_city.tscn")

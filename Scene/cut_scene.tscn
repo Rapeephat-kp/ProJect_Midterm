@@ -392,11 +392,14 @@ tracks/9/path = NodePath(".")
 tracks/9/interp = 1
 tracks/9/loop_wrap = true
 tracks/9/keys = {
-"times": PackedFloat32Array(37.2),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(36.0333, 37),
+"transitions": PackedFloat32Array(1, 1),
 "values": [{
 "args": [],
 "method": &"end"
+}, {
+"args": [],
+"method": &"toWinScene"
 }]
 }
 
@@ -782,11 +785,14 @@ tracks/9/path = NodePath(".")
 tracks/9/interp = 1
 tracks/9/loop_wrap = true
 tracks/9/keys = {
-"times": PackedFloat32Array(42.9667),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(42.1, 42.7),
+"transitions": PackedFloat32Array(1, 1),
 "values": [{
 "args": [],
 "method": &"end"
+}, {
+"args": [],
+"method": &"toWinScene"
 }]
 }
 
