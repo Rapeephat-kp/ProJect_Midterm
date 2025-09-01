@@ -52,9 +52,7 @@ func _process(delta: float):
 	coin_amount.text = str(Gamemanager.get_coin())
 	missionCheck()
 
-func _on_collision_area_entered(area: Area2D) -> void:
-	await get_tree().create_timer(0.5).timeout
-	SceneTransition.change_scene("res://Scene/Stage_Scene/stage_2.tscn")
+
 
 '''
 func _on_fallzone_area_entered(area: Area2D) -> void:
@@ -98,7 +96,9 @@ func _on_left_area_exited(area: Area2D) -> void:
 		left_bound.visible = false
 
 func _on_right_area_entered(area: Area2D) -> void:
-	pass # Replace with function body.
+	if area.is_in_group("Player"):
+		await get_tree().create_timer(0.5).timeout
+		SceneTransition.change_scene("res://Scene/Stage_Scene/stage_4.tscn")
 
 func missionCheck():
 	if PlayerInventory.get_item_quantity("Logs") == logs_quantity_require:

@@ -54,6 +54,7 @@ var visible_character = 0
 func _ready() -> void:
 	#$AnimationPlayer.play("Elendros Ending")
 	#store_1.visible = false
+	Gamemanager.set_scene_spawn("Stage_3")
 	store.visible = false
 	buy_fail_label_1.visible = false
 	buy_fail_label_2.visible = false
