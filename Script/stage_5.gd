@@ -61,3 +61,7 @@ func _on_area_2d_area_exited(area: Area2D) -> void:
 	if area.is_in_group("Player"):
 		player.set_in_fog(false)
 		print("out")
+
+
+func _on_next_area_entered(area: Area2D) -> void:
+	get_tree().change_scene_to_file("res://Scene/Stage_Scene/stage_6.tscn")

@@ -3,6 +3,7 @@ var player
 @export var num_attacks: int = 3
 @export var telegraph_time: float = 1.0
 @export var attack_area_scene: PackedScene = preload("res://Scene/Monster_Scene/Boss_attack/boss_attack.tscn")
+@export var fall_attack_scene: PackedScene = preload("res://Scene/Monster_Scene/Boss_attack/boss_attack_fall.tscn")
 @export var attack_interval: float = 2.0  
 var player_in = false
 
@@ -20,12 +21,12 @@ func _ready():
 func random_multi_attack():
 	if player_in :
 		for i in range(num_attacks):
-			var pos = player.global_position - $AnimatedSprite2D.global_position
-			var warning = attack_area_scene.instantiate()
-			warning.global_position = pos
-			add_child(warning)
-			warning.show_warning(telegraph_time)
-		
+				var pos = player.global_position - $AnimatedSprite2D.global_position
+				var warning = attack_area_scene.instantiate()
+				warning.global_position = pos
+				add_child(warning)
+				warning.show_warning(telegraph_time)
+
 func start_attack_cycle():
 	if player_in:
 		random_multi_attack()

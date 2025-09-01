@@ -22,7 +22,7 @@
 [ext_resource type="Texture2D" uid="uid://byicixnbvtqhe" path="res://Asset_Midterm/UI/UI/MenusBox_34x34.png" id="18_hy2jh"]
 [ext_resource type="Texture2D" uid="uid://v7p21xrmkms4" path="res://Asset_Midterm/UI/UI/MenusIcons_34x34.png" id="19_dba68"]
 [ext_resource type="Texture2D" uid="uid://dkyfygbi0dekj" path="res://Asset_Midterm/UI/UI/Button_52x14.png" id="20_lq0cq"]
-[ext_resource type="Script" path="res://Scene/puzzle.gd" id="21_cx44h"]
+[ext_resource type="Script" uid="uid://dndvdrc5asdq3" path="res://Scene/puzzle.gd" id="21_cx44h"]
 [ext_resource type="Texture2D" uid="uid://cwo8kf15e6ubg" path="res://Asset_Midterm/UI/UI/BottomPatternBG_128x112.png" id="21_uuy1w"]
 [ext_resource type="Texture2D" uid="uid://bg53hghq0u36n" path="res://Asset_Midterm/UI/UI/PatternMiddleBottomBG_199x48.png" id="22_cx44h"]
 [ext_resource type="Texture2D" uid="uid://bhmhd4fyqm4g" path="res://Asset_Midterm/UI/UI/CoinIcon_16x18.png" id="22_lq0cq"]
@@ -3375,9 +3375,9 @@ theme_override_styles/normal = SubResource("StyleBoxTexture_lq0cq")
 [node name="Spawn" type="Marker2D" parent="."]
 position = Vector2(89, -133)
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="next" type="Area2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="next"]
 position = Vector2(2654, 1718)
 shape = SubResource("RectangleShape2D_2h62j")
 
@@ -3462,3 +3462,4 @@ text = "Beware Toixc ...."
 [connection signal="pressed" from="CanvasUI/Setting_UI/Setting_Panel_Bg/Exit_Button" to="CanvasUI/Setting" method="_on_exit_button_pressed"]
 [connection signal="pressed" from="CanvasUI/Buff_Debuff_Status/Info_buff" to="." method="_on_info_buff_pressed"]
 [connection signal="pressed" from="Puzzle/Control/Exit" to="Puzzle" method="_on_exit_pressed"]
+[connection signal="area_entered" from="next" to="." method="_on_next_area_entered"]

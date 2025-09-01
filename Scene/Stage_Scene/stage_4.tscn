@@ -1,4 +1,4 @@
-[gd_scene load_steps=67 format=4 uid="uid://i8edr6jev5a4"]
+[gd_scene load_steps=69 format=4 uid="uid://i8edr6jev5a4"]
 
 [ext_resource type="Script" uid="uid://2576lnk1ie8" path="res://Script/Stage/stage_4.gd" id="1_0rdgp"]
 [ext_resource type="Texture2D" uid="uid://skwubifcy71r" path="res://Asset_Midterm/Tile_Map/Fantasy Swamp Forest/Free/BG_3/BG_3.png" id="1_2vi4a"]
@@ -2450,6 +2450,11 @@ size = Vector2(1027, 97)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wih7g"]
 size = Vector2(146, 105)
 
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_rqm5k"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_wih7g"]
+normal = Vector2(0.99999, 0.00446203)
+
 [sub_resource type="Animation" id="Animation_etu1s"]
 resource_name = "Close"
 tracks/0/type = "value"
@@ -2757,6 +2762,7 @@ tile_set = SubResource("TileSet_8oy5t")
 metadata/_edit_lock_ = true
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
+visible = false
 color = Color(0.230315, 0.230315, 0.230315, 1)
 
 [node name="Coins" type="Node" parent="."]
@@ -2832,6 +2838,20 @@ position = Vector2(4876, 297)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Map_limit/Next"]
 position = Vector2(-79, 20.5)
 shape = SubResource("RectangleShape2D_wih7g")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Map_limit"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Map_limit/StaticBody2D"]
+position = Vector2(-55, 147)
+rotation = 1.57079
+shape = SubResource("WorldBoundaryShape2D_rqm5k")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="Map_limit"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Map_limit/StaticBody2D2"]
+position = Vector2(4841, 70)
+rotation = -3.14159
+shape = SubResource("WorldBoundaryShape2D_wih7g")
 
 [node name="CanvasUI" type="CanvasLayer" parent="."]
 
