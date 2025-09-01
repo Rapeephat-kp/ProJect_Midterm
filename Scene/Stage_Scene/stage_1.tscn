@@ -1,4 +1,4 @@
-[gd_scene load_steps=69 format=4 uid="uid://nu3hhcc1jbow"]
+[gd_scene load_steps=75 format=4 uid="uid://nu3hhcc1jbow"]
 
 [ext_resource type="Texture2D" uid="uid://csm1chwn2sopr" path="res://Asset_Midterm/Tile_Map/New GothicVania/PNG/environment/layers/background.png" id="1_5cgel"]
 [ext_resource type="Script" uid="uid://8nqm0564pcu5" path="res://Script/Stage/stage_1.gd" id="1_r715p"]
@@ -1602,6 +1602,22 @@ sources/0 = SubResource("TileSetAtlasSource_kb0xx")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_olkyh"]
 size = Vector2(243.334, 65)
 
+[sub_resource type="Curve2D" id="Curve2D_sfvhj"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 6, 2, 0, 0, 0, 0, 6, -84, 0, 0, 0, 0, 6, 2)
+}
+point_count = 3
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r715p"]
+size = Vector2(71, 67)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_uddwt"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sfvhj"]
+size = Vector2(220, 181.75)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_olkyh"]
+
 [sub_resource type="Animation" id="Animation_etu1s"]
 resource_name = "Close"
 tracks/0/type = "value"
@@ -1654,19 +1670,46 @@ _data = {
 &"RESET": SubResource("Animation_pt3qq")
 }
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_615tf"]
+[sub_resource type="LabelSettings" id="LabelSettings_dm2j0"]
+font = ExtResource("25_3af3u")
+font_size = 50
+font_color = Color(0.729412, 0.568627, 0.345098, 1)
+shadow_size = 10
+shadow_color = Color(0.2, 0.180392, 0.14902, 1)
+shadow_offset = Vector2(7, 0)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4n54j"]
 texture = ExtResource("23_13ueo")
 region_rect = Rect2(110, 7, 20, 20)
-modulate_color = Color(0.654232, 0.654232, 0.654232, 1)
+modulate_color = Color(0.517647, 0.517647, 0.517647, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_13ueo"]
+texture = ExtResource("23_13ueo")
+region_rect = Rect2(110, 7, 20, 20)
+modulate_color = Color(0.517184, 0.517184, 0.517184, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_70iyf"]
+texture = ExtResource("23_13ueo")
+region_rect = Rect2(110, 7, 20, 20)
+modulate_color = Color(0.698039, 0.698039, 0.698039, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_3af3u"]
+font = ExtResource("25_3af3u")
+font_size = 100
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_615tf"]
+texture = ExtResource("23_13ueo")
+region_rect = Rect2(37, 0, 27, 32)
+modulate_color = Color(0.517647, 0.517647, 0.517647, 1)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_548y2"]
 texture = ExtResource("23_13ueo")
-region_rect = Rect2(110, 7, 20, 20)
-modulate_color = Color(0.654902, 0.654902, 0.654902, 1)
+region_rect = Rect2(37, 0, 27, 32)
+modulate_color = Color(0.517647, 0.517647, 0.517647, 1)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mycrp"]
 texture = ExtResource("23_13ueo")
-region_rect = Rect2(110, 7, 20, 20)
+region_rect = Rect2(37, 0, 27, 32)
 modulate_color = Color(0.698039, 0.698039, 0.698039, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bjimi"]
@@ -1708,21 +1751,8 @@ texture = ExtResource("24_70iyf")
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vvgsp"]
 bg_color = Color(0.69462, 0.554322, 0.367857, 1)
 
-[sub_resource type="Curve2D" id="Curve2D_sfvhj"]
-_data = {
-"points": PackedVector2Array(0, 0, 0, 0, 6, 2, 0, 0, 0, 0, 6, -84, 0, 0, 0, 0, 6, 2)
-}
-point_count = 3
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_r715p"]
-size = Vector2(71, 67)
-
-[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_uddwt"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_sfvhj"]
-size = Vector2(220, 181.75)
-
-[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_olkyh"]
+[sub_resource type="LabelSettings" id="LabelSettings_y4s67"]
+font_size = 100
 
 [node name="stage 1" type="Node2D"]
 script = ExtResource("1_r715p")
@@ -1815,248 +1845,6 @@ position = Vector2(2091, 222)
 
 [node name="Flying_eye" parent="Monsters" instance=ExtResource("13_ogdj4")]
 position = Vector2(1894, -79)
-
-[node name="CanvasUI" type="CanvasLayer" parent="."]
-
-[node name="Setting" type="Node2D" parent="CanvasUI"]
-position = Vector2(556, 628)
-script = ExtResource("14_vfq1l")
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasUI"]
-root_node = NodePath("../Setting")
-libraries = {
-&"": SubResource("AnimationLibrary_etu1s")
-}
-
-[node name="Inventory" type="Control" parent="CanvasUI"]
-layout_mode = 3
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -20.0
-offset_top = -40.0
-offset_right = 20.0
-grow_horizontal = 2
-grow_vertical = 0
-
-[node name="Inventory" parent="CanvasUI/Inventory" instance=ExtResource("15_qn63c")]
-position = Vector2(-228, -44)
-scale = Vector2(1.5, 1.5)
-
-[node name="Player_show" type="Control" parent="CanvasUI"]
-layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-scale = Vector2(3, 3)
-
-[node name="TextureProgressBar" type="TextureProgressBar" parent="CanvasUI/Player_show"]
-layout_mode = 0
-offset_left = 42.3333
-offset_top = 11.0
-offset_right = 170.333
-offset_bottom = 27.0
-value = 100.0
-texture_under = ExtResource("16_r715p")
-texture_progress = ExtResource("17_uddwt")
-texture_progress_offset = Vector2(4, 4)
-tint_under = Color(0.666569, 0.666569, 0.666569, 1)
-tint_progress = Color(0.825381, 0.446303, 0.441366, 1)
-script = ExtResource("18_sfvhj")
-
-[node name="TextureRect" type="TextureRect" parent="CanvasUI/Player_show"]
-modulate = Color(0.666667, 0.666667, 0.666667, 1)
-layout_mode = 0
-offset_left = 5.0
-offset_top = 4.0
-offset_right = 51.0
-offset_bottom = 49.0
-texture = ExtResource("19_olkyh")
-metadata/_edit_lock_ = true
-
-[node name="Nymera" type="TextureRect" parent="CanvasUI/Player_show"]
-visible = false
-modulate = Color(0.787759, 0.787759, 0.787759, 1)
-layout_mode = 0
-offset_left = -75.6667
-offset_top = -22.0
-offset_right = 4644.33
-offset_bottom = 3258.0
-scale = Vector2(0.0434777, 0.0434777)
-texture = ExtResource("20_ckld8")
-metadata/_edit_lock_ = true
-
-[node name="Elendros" type="TextureRect" parent="CanvasUI/Player_show"]
-modulate = Color(0.788235, 0.788235, 0.788235, 1)
-layout_mode = 0
-offset_left = -99.3334
-offset_top = -35.3332
-offset_right = 4620.67
-offset_bottom = 3244.67
-scale = Vector2(0.0508095, 0.0508095)
-texture = ExtResource("21_dm2j0")
-metadata/_edit_lock_ = true
-
-[node name="Setting_Bar" type="TextureRect" parent="CanvasUI/Player_show"]
-layout_mode = 0
-offset_left = 6.66667
-offset_right = 46.6667
-offset_bottom = 40.0
-
-[node name="Coins" type="TextureRect" parent="CanvasUI/Player_show"]
-layout_mode = 0
-offset_left = 51.6667
-offset_top = 29.3333
-offset_right = 67.6667
-offset_bottom = 47.3333
-texture = ExtResource("25_ckld8")
-
-[node name="Label" type="Label" parent="CanvasUI/Player_show/Coins"]
-layout_mode = 0
-offset_left = 16.0
-offset_top = -4.33333
-offset_right = 56.0
-offset_bottom = 18.6667
-theme_override_colors/font_color = Color(0.572549, 0.454902, 0.254902, 1)
-text = ": "
-
-[node name="Coin_Amount" type="Label" parent="CanvasUI/Player_show/Coins"]
-layout_mode = 0
-offset_left = 23.0
-offset_right = 116.0
-offset_bottom = 16.0
-theme_override_colors/font_color = Color(0.729412, 0.568627, 0.345098, 1)
-theme_override_colors/font_shadow_color = Color(0.2, 0.180392, 0.14902, 1)
-theme_override_fonts/font = ExtResource("25_3af3u")
-theme_override_font_sizes/font_size = 12
-text = "144"
-
-[node name="Setting_Button" type="Control" parent="CanvasUI"]
-layout_mode = 3
-anchors_preset = 1
-anchor_left = 1.0
-anchor_right = 1.0
-offset_left = -49.0
-offset_top = 11.0
-offset_right = -9.0
-offset_bottom = 51.0
-grow_horizontal = 0
-
-[node name="MenusBox34x34" type="Sprite2D" parent="CanvasUI/Setting_Button"]
-modulate = Color(0.698039, 0.698039, 0.698039, 1)
-position = Vector2(8.49994, 29.5)
-scale = Vector2(2, 2)
-texture = ExtResource("22_4n54j")
-
-[node name="Setting_Button" type="Button" parent="CanvasUI/Setting_Button"]
-layout_mode = 0
-offset_left = -22.0
-offset_top = 2.0
-offset_right = 8.0
-offset_bottom = 31.0
-scale = Vector2(2, 2)
-focus_mode = 0
-theme_override_styles/hover = SubResource("StyleBoxTexture_615tf")
-theme_override_styles/pressed = SubResource("StyleBoxTexture_548y2")
-theme_override_styles/normal = SubResource("StyleBoxTexture_mycrp")
-
-[node name="Setting_UI" type="Control" parent="CanvasUI"]
-layout_mode = 3
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -20.0
-offset_top = -20.0
-offset_right = 20.0
-offset_bottom = 20.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="Setting_Panel_Bg" type="Panel" parent="CanvasUI/Setting_UI"]
-layout_mode = 0
-offset_left = -143.0
-offset_top = 620.0
-offset_right = -47.0
-offset_bottom = 705.0
-scale = Vector2(3, 3)
-theme_override_styles/panel = SubResource("StyleBoxFlat_bjimi")
-
-[node name="Setting_panel_Bg2" type="Panel" parent="CanvasUI/Setting_UI/Setting_Panel_Bg"]
-layout_mode = 0
-offset_left = 4.66678
-offset_top = 4.33333
-offset_right = 91.6668
-offset_bottom = 81.3333
-theme_override_styles/panel = SubResource("StyleBoxFlat_7irg8")
-
-[node name="Resume_Button" type="Button" parent="CanvasUI/Setting_UI/Setting_Panel_Bg"]
-modulate = Color(0.666667, 0.666667, 0.666667, 1)
-layout_mode = 0
-offset_left = 22.6668
-offset_top = 36.0003
-offset_right = 71.6668
-offset_bottom = 48.0003
-focus_mode = 0
-theme_override_styles/hover = SubResource("StyleBoxTexture_jiutf")
-theme_override_styles/pressed = SubResource("StyleBoxTexture_mmxex")
-theme_override_styles/normal = SubResource("StyleBoxTexture_tu2fs")
-
-[node name="Label" type="Label" parent="CanvasUI/Setting_UI/Setting_Panel_Bg/Resume_Button"]
-layout_mode = 0
-offset_left = 10.3335
-offset_top = 1.99966
-offset_right = 87.3335
-offset_bottom = 21.9997
-scale = Vector2(0.387, 0.387)
-theme_override_fonts/font = ExtResource("25_3af3u")
-text = "Resume"
-
-[node name="Exit_Button" type="Button" parent="CanvasUI/Setting_UI/Setting_Panel_Bg"]
-modulate = Color(0.666667, 0.666667, 0.666667, 1)
-layout_mode = 0
-offset_left = 22.6668
-offset_top = 52.6664
-offset_right = 71.6668
-offset_bottom = 64.6664
-focus_mode = 0
-theme_override_styles/hover = SubResource("StyleBoxTexture_eitnu")
-theme_override_styles/pressed = SubResource("StyleBoxTexture_i76rq")
-theme_override_styles/normal = SubResource("StyleBoxTexture_3ylw0")
-
-[node name="Label3" type="Label" parent="CanvasUI/Setting_UI/Setting_Panel_Bg/Exit_Button"]
-layout_mode = 0
-offset_left = 14.667
-offset_top = 2.00003
-offset_right = 66.667
-offset_bottom = 25.0
-scale = Vector2(0.387, 0.387)
-theme_override_fonts/font = ExtResource("25_3af3u")
-text = "Exit"
-
-[node name="Panel" type="Panel" parent="CanvasUI/Setting_UI/Setting_Panel_Bg"]
-modulate = Color(0.698039, 0.698039, 0.698039, 1)
-layout_mode = 0
-offset_left = 17.3817
-offset_top = 27.333
-offset_right = 78.3817
-offset_bottom = 28.333
-theme_override_styles/panel = SubResource("StyleBoxFlat_vvgsp")
-
-[node name="Label2" type="Label" parent="CanvasUI/Setting_UI/Setting_Panel_Bg"]
-modulate = Color(0.698039, 0.698039, 0.698039, 1)
-layout_mode = 0
-offset_left = 22.0
-offset_top = 10.3333
-offset_right = 112.0
-offset_bottom = 30.3333
-scale = Vector2(0.55, 0.55)
-theme_override_fonts/font = ExtResource("25_3af3u")
-text = "Setting"
-vertical_alignment = 1
 
 [node name="Moving platform" type="Node2D" parent="."]
 
@@ -2250,12 +2038,365 @@ position = Vector2(2110, -32)
 [node name="Coin6" parent="Coins" instance=ExtResource("32_dm2j0")]
 position = Vector2(3046, 63)
 
+[node name="CanvasUI" type="CanvasLayer" parent="."]
+
+[node name="Setting" type="Node2D" parent="CanvasUI"]
+position = Vector2(556, 628)
+script = ExtResource("14_vfq1l")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasUI"]
+root_node = NodePath("../Setting")
+libraries = {
+&"": SubResource("AnimationLibrary_etu1s")
+}
+
+[node name="Inventory" type="Control" parent="CanvasUI"]
+layout_mode = 3
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -20.0
+offset_top = -40.0
+offset_right = 20.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="Inventory" parent="CanvasUI/Inventory" instance=ExtResource("15_qn63c")]
+position = Vector2(-228, -44)
+scale = Vector2(1.5, 1.5)
+
+[node name="Player_show" type="Control" parent="CanvasUI"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(3, 3)
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="CanvasUI/Player_show"]
+layout_mode = 0
+offset_left = 42.3333
+offset_top = 11.0
+offset_right = 170.333
+offset_bottom = 27.0
+value = 100.0
+texture_under = ExtResource("16_r715p")
+texture_progress = ExtResource("17_uddwt")
+texture_progress_offset = Vector2(4, 4)
+tint_under = Color(0.666569, 0.666569, 0.666569, 1)
+tint_progress = Color(0.825381, 0.446303, 0.441366, 1)
+script = ExtResource("18_sfvhj")
+metadata/_edit_lock_ = true
+
+[node name="TextureRect" type="TextureRect" parent="CanvasUI/Player_show"]
+modulate = Color(0.666667, 0.666667, 0.666667, 1)
+layout_mode = 0
+offset_left = 5.0
+offset_top = 4.0
+offset_right = 51.0
+offset_bottom = 49.0
+texture = ExtResource("19_olkyh")
+metadata/_edit_lock_ = true
+
+[node name="Nymera" type="TextureRect" parent="CanvasUI/Player_show"]
+visible = false
+modulate = Color(0.787759, 0.787759, 0.787759, 1)
+layout_mode = 0
+offset_left = -75.6667
+offset_top = -22.0
+offset_right = 4644.33
+offset_bottom = 3258.0
+scale = Vector2(0.0434777, 0.0434777)
+texture = ExtResource("20_ckld8")
+metadata/_edit_lock_ = true
+
+[node name="Elendros" type="TextureRect" parent="CanvasUI/Player_show"]
+modulate = Color(0.788235, 0.788235, 0.788235, 1)
+layout_mode = 0
+offset_left = -99.3334
+offset_top = -35.3332
+offset_right = 4620.67
+offset_bottom = 3244.67
+scale = Vector2(0.0508095, 0.0508095)
+texture = ExtResource("21_dm2j0")
+metadata/_edit_lock_ = true
+
+[node name="Setting_Bar" type="TextureRect" parent="CanvasUI/Player_show"]
+layout_mode = 0
+offset_left = 6.66667
+offset_right = 46.6667
+offset_bottom = 40.0
+
+[node name="Coins" type="TextureRect" parent="CanvasUI/Player_show"]
+layout_mode = 0
+offset_left = 51.6667
+offset_top = 29.3333
+offset_right = 67.6667
+offset_bottom = 47.3333
+texture = ExtResource("25_ckld8")
+
+[node name="Label" type="Label" parent="CanvasUI/Player_show/Coins"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = -4.33333
+offset_right = 56.0
+offset_bottom = 18.6667
+theme_override_colors/font_color = Color(0.729412, 0.568627, 0.345098, 1)
+theme_override_colors/font_shadow_color = Color(0.2, 0.180392, 0.14902, 1)
+text = ": "
+
+[node name="Coin_Amount" type="Label" parent="CanvasUI/Player_show/Coins"]
+layout_mode = 0
+offset_left = 23.3333
+offset_right = 143.333
+offset_bottom = 60.0
+scale = Vector2(0.291646, 0.291646)
+theme_override_colors/font_color = Color(0.729412, 0.568627, 0.345098, 1)
+theme_override_colors/font_shadow_color = Color(0.2, 0.180392, 0.14902, 1)
+theme_override_fonts/font = ExtResource("25_3af3u")
+theme_override_font_sizes/font_size = 12
+text = "144"
+label_settings = SubResource("LabelSettings_dm2j0")
+
+[node name="Setting_Button" type="Control" parent="CanvasUI"]
+layout_mode = 3
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -49.0
+offset_top = 11.0
+offset_right = -9.0
+offset_bottom = 51.0
+grow_horizontal = 0
+
+[node name="MenusBox34x34" type="Sprite2D" parent="CanvasUI/Setting_Button"]
+modulate = Color(0.698039, 0.698039, 0.698039, 1)
+position = Vector2(8.49994, 29.5)
+scale = Vector2(2, 2)
+texture = ExtResource("22_4n54j")
+
+[node name="Setting_Button" type="Button" parent="CanvasUI/Setting_Button"]
+layout_mode = 0
+offset_left = -22.0
+offset_top = 2.0
+offset_right = 8.0
+offset_bottom = 31.0
+scale = Vector2(2, 2)
+focus_mode = 0
+theme_override_styles/hover = SubResource("StyleBoxTexture_4n54j")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_13ueo")
+theme_override_styles/normal = SubResource("StyleBoxTexture_70iyf")
+
+[node name="Label" type="Label" parent="CanvasUI/Setting_Button"]
+modulate = Color(0.698039, 0.698039, 0.698039, 1)
+layout_mode = 0
+offset_left = -246.0
+offset_top = 16.0
+offset_right = 634.0
+offset_bottom = 136.0
+scale = Vector2(0.234848, 0.234848)
+text = "Setting"
+label_settings = SubResource("LabelSettings_3af3u")
+horizontal_alignment = 2
+
+[node name="Achievement_Button" type="Control" parent="CanvasUI"]
+layout_mode = 3
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -40.0
+offset_bottom = 40.0
+grow_horizontal = 0
+
+[node name="MenusBox34x34" type="Sprite2D" parent="CanvasUI/Achievement_Button"]
+modulate = Color(0.698039, 0.698039, 0.698039, 1)
+position = Vector2(-1.00006, 118)
+scale = Vector2(2, 2)
+texture = ExtResource("22_4n54j")
+
+[node name="Achievement_Button" type="Button" parent="CanvasUI/Achievement_Button"]
+layout_mode = 0
+offset_left = -32.0
+offset_top = 84.0
+offset_right = -2.0
+offset_bottom = 117.0
+scale = Vector2(2, 2)
+focus_mode = 0
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_615tf")
+theme_override_styles/hover = SubResource("StyleBoxTexture_548y2")
+theme_override_styles/normal = SubResource("StyleBoxTexture_mycrp")
+
+[node name="Label" type="Label" parent="CanvasUI/Achievement_Button"]
+modulate = Color(0.698039, 0.698039, 0.698039, 1)
+layout_mode = 0
+offset_left = -255.0
+offset_top = 105.0
+offset_right = 625.0
+offset_bottom = 225.0
+scale = Vector2(0.234848, 0.234848)
+text = "Achievement"
+label_settings = SubResource("LabelSettings_3af3u")
+horizontal_alignment = 2
+
+[node name="Setting_UI" type="Control" parent="CanvasUI"]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Setting_Panel_Bg" type="Panel" parent="CanvasUI/Setting_UI"]
+layout_mode = 0
+offset_left = -143.0
+offset_top = 620.0
+offset_right = -47.0
+offset_bottom = 705.0
+scale = Vector2(3, 3)
+theme_override_styles/panel = SubResource("StyleBoxFlat_bjimi")
+
+[node name="Setting_panel_Bg2" type="Panel" parent="CanvasUI/Setting_UI/Setting_Panel_Bg"]
+layout_mode = 0
+offset_left = 4.66678
+offset_top = 4.33333
+offset_right = 91.6668
+offset_bottom = 81.3333
+theme_override_styles/panel = SubResource("StyleBoxFlat_7irg8")
+
+[node name="Resume_Button" type="Button" parent="CanvasUI/Setting_UI/Setting_Panel_Bg"]
+modulate = Color(0.666667, 0.666667, 0.666667, 1)
+layout_mode = 0
+offset_left = 22.6668
+offset_top = 36.0003
+offset_right = 71.6668
+offset_bottom = 48.0003
+focus_mode = 0
+theme_override_styles/hover = SubResource("StyleBoxTexture_jiutf")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_mmxex")
+theme_override_styles/normal = SubResource("StyleBoxTexture_tu2fs")
+
+[node name="Label" type="Label" parent="CanvasUI/Setting_UI/Setting_Panel_Bg/Resume_Button"]
+layout_mode = 0
+offset_left = 10.3335
+offset_top = 1.99966
+offset_right = 87.3335
+offset_bottom = 21.9997
+scale = Vector2(0.387, 0.387)
+theme_override_fonts/font = ExtResource("25_3af3u")
+text = "Resume"
+
+[node name="Exit_Button" type="Button" parent="CanvasUI/Setting_UI/Setting_Panel_Bg"]
+modulate = Color(0.666667, 0.666667, 0.666667, 1)
+layout_mode = 0
+offset_left = 22.6668
+offset_top = 52.6664
+offset_right = 71.6668
+offset_bottom = 64.6664
+focus_mode = 0
+theme_override_styles/hover = SubResource("StyleBoxTexture_eitnu")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_i76rq")
+theme_override_styles/normal = SubResource("StyleBoxTexture_3ylw0")
+
+[node name="Label3" type="Label" parent="CanvasUI/Setting_UI/Setting_Panel_Bg/Exit_Button"]
+layout_mode = 0
+offset_left = 14.667
+offset_top = 2.00003
+offset_right = 66.667
+offset_bottom = 25.0
+scale = Vector2(0.387, 0.387)
+theme_override_fonts/font = ExtResource("25_3af3u")
+text = "Exit"
+
+[node name="Panel" type="Panel" parent="CanvasUI/Setting_UI/Setting_Panel_Bg"]
+modulate = Color(0.698039, 0.698039, 0.698039, 1)
+layout_mode = 0
+offset_left = 17.3817
+offset_top = 27.333
+offset_right = 78.3817
+offset_bottom = 28.333
+theme_override_styles/panel = SubResource("StyleBoxFlat_vvgsp")
+
+[node name="Label2" type="Label" parent="CanvasUI/Setting_UI/Setting_Panel_Bg"]
+modulate = Color(0.698039, 0.698039, 0.698039, 1)
+layout_mode = 0
+offset_left = 23.6667
+offset_top = 10.3333
+offset_right = 113.667
+offset_bottom = 30.3333
+scale = Vector2(0.55, 0.55)
+theme_override_fonts/font = ExtResource("25_3af3u")
+text = "Setting"
+vertical_alignment = 1
+
+[node name="Achievement_UI" type="Control" parent="CanvasUI"]
+visible = false
+layout_mode = 3
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -40.0
+offset_top = -20.0
+offset_bottom = 20.0
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="Setting_Panel_Bg" type="Panel" parent="CanvasUI/Achievement_UI"]
+layout_mode = 0
+offset_left = -1229.0
+offset_top = -362.0
+offset_right = -836.0
+offset_bottom = -212.0
+scale = Vector2(3, 3)
+theme_override_styles/panel = SubResource("StyleBoxFlat_bjimi")
+
+[node name="Setting_panel_Bg2" type="Panel" parent="CanvasUI/Achievement_UI/Setting_Panel_Bg"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 4.0
+offset_right = 389.0
+offset_bottom = 146.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_7irg8")
+
+[node name="Label2" type="Label" parent="CanvasUI/Achievement_UI/Setting_Panel_Bg"]
+modulate = Color(0.698039, 0.698039, 0.698039, 1)
+layout_mode = 0
+offset_left = 59.3333
+offset_top = 18.6667
+offset_right = 1179.33
+offset_bottom = 753.667
+scale = Vector2(0.0910987, 0.0910987)
+theme_override_fonts/font = ExtResource("25_3af3u")
+text = "Achievement I : 
+details :
+
+
+
+Achievement II :
+details :"
+label_settings = SubResource("LabelSettings_y4s67")
+vertical_alignment = 1
+
 [connection signal="area_entered" from="NPC/Explorer 1/Interact1" to="." method="_on_interact_1_area_entered"]
 [connection signal="area_entered" from="NPC/Explorer 2/Interact2" to="." method="_on_interact_2_area_entered"]
-[connection signal="pressed" from="CanvasUI/Setting_Button/Setting_Button" to="CanvasUI/Setting" method="_on_setting_button_pressed"]
-[connection signal="pressed" from="CanvasUI/Setting_UI/Setting_Panel_Bg/Resume_Button" to="CanvasUI/Setting" method="_on_resume_button_pressed"]
-[connection signal="pressed" from="CanvasUI/Setting_UI/Setting_Panel_Bg/Exit_Button" to="CanvasUI/Setting" method="_on_exit_button_pressed"]
 [connection signal="area_entered" from="End stage" to="." method="_on_collision_area_entered"]
 [connection signal="area_entered" from="map bounds/fallzone" to="." method="_on_fallzone_area_entered"]
 [connection signal="area_entered" from="map bounds/left" to="." method="_on_left_area_entered"]
 [connection signal="area_exited" from="map bounds/left" to="." method="_on_left_area_exited"]
+[connection signal="mouse_entered" from="CanvasUI/Setting_Button/Setting_Button" to="CanvasUI/Setting" method="_on_setting_button_mouse_entered"]
+[connection signal="mouse_exited" from="CanvasUI/Setting_Button/Setting_Button" to="CanvasUI/Setting" method="_on_setting_button_mouse_exited"]
+[connection signal="pressed" from="CanvasUI/Setting_Button/Setting_Button" to="CanvasUI/Setting" method="_on_setting_button_pressed"]
+[connection signal="button_down" from="CanvasUI/Achievement_Button/Achievement_Button" to="CanvasUI/Setting" method="_on_achievement_button_button_down"]
+[connection signal="button_up" from="CanvasUI/Achievement_Button/Achievement_Button" to="CanvasUI/Setting" method="_on_achievement_button_button_up"]
+[connection signal="mouse_entered" from="CanvasUI/Achievement_Button/Achievement_Button" to="CanvasUI/Setting" method="_on_achievement_button_mouse_entered"]
+[connection signal="mouse_exited" from="CanvasUI/Achievement_Button/Achievement_Button" to="CanvasUI/Setting" method="_on_achievement_button_mouse_exited"]
+[connection signal="pressed" from="CanvasUI/Setting_UI/Setting_Panel_Bg/Resume_Button" to="CanvasUI/Setting" method="_on_resume_button_pressed"]
+[connection signal="pressed" from="CanvasUI/Setting_UI/Setting_Panel_Bg/Exit_Button" to="CanvasUI/Setting" method="_on_exit_button_pressed"]
