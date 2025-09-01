@@ -28,7 +28,7 @@
 [ext_resource type="Texture2D" uid="uid://dkyfygbi0dekj" path="res://Asset_Midterm/UI/UI/Button_52x14.png" id="19_sfbgj"]
 [ext_resource type="Texture2D" uid="uid://cphn5s5t5dlce" path="res://Asset_Midterm/UI/UI/ValueBlue_120x8.png" id="21_mmwch"]
 [ext_resource type="Texture2D" uid="uid://bg53hghq0u36n" path="res://Asset_Midterm/UI/UI/PatternMiddleBottomBG_199x48.png" id="22_js130"]
-[ext_resource type="Script" uid="uid://cehioggct0ygu" path="res://Scene/Stage_Scene/Boss_hp_Bar.gd" id="22_o55fe"]
+[ext_resource type="Script" path="res://Scene/Stage_Scene/Boss_hp_Bar.gd" id="22_o55fe"]
 [ext_resource type="Texture2D" uid="uid://bhj8y8hjedetd" path="res://Asset_Midterm/UI/UI/TopPatternPanel_02_33x15.png" id="23_o55fe"]
 [ext_resource type="FontFile" uid="uid://dbydje27os4iv" path="res://Fonts/AncientModernTales-a7Po.ttf" id="24_iup2u"]
 [ext_resource type="PackedScene" uid="uid://1rxar2jmae1o" path="res://Scene/torch.tscn" id="32_emqxx"]
@@ -2207,9 +2207,9 @@ grow_vertical = 2
 [node name="Setting_Panel_Bg" type="Panel" parent="CanvasUI/Setting_UI"]
 layout_mode = 0
 offset_left = -143.0
-offset_top = -82.0
+offset_top = 620.0
 offset_right = -47.0
-offset_bottom = 3.0
+offset_bottom = 705.0
 scale = Vector2(3, 3)
 theme_override_styles/panel = SubResource("StyleBoxFlat_lpnye")
 
@@ -2513,6 +2513,9 @@ position = Vector2(219, 259)
 position = Vector2(123, 429)
 rotation = 1.5708
 shape = SubResource("WorldBoundaryShape2D_g6qds")
+
+[node name="SpawnPoint" type="Marker2D" parent="."]
+position = Vector2(444, 641)
 
 [connection signal="area_entered" from="Boss/Area_attack_check" to="." method="_on_area_attack_check_area_entered"]
 [connection signal="area_entered" from="Boss/Area_attack_check" to="Boss" method="_on_area_attack_check_area_entered"]

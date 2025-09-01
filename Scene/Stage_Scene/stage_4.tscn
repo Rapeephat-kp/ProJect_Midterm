@@ -1,4 +1,4 @@
-[gd_scene load_steps=75 format=4 uid="uid://i8edr6jev5a4"]
+[gd_scene load_steps=79 format=4 uid="uid://i8edr6jev5a4"]
 
 [ext_resource type="Script" uid="uid://2576lnk1ie8" path="res://Script/Stage/stage_4.gd" id="1_0rdgp"]
 [ext_resource type="Texture2D" uid="uid://skwubifcy71r" path="res://Asset_Midterm/Tile_Map/Fantasy Swamp Forest/Free/BG_3/BG_3.png" id="1_2vi4a"]
@@ -33,6 +33,8 @@
 [ext_resource type="PackedScene" uid="uid://boli25irinxgk" path="res://Scene/Monster_Scene/goblin.tscn" id="30_wih7g"]
 [ext_resource type="PackedScene" uid="uid://b1b5ylcgaaepd" path="res://Scene/Monster_Scene/skeleton_knight.tscn" id="31_bttkr"]
 [ext_resource type="PackedScene" uid="uid://cfygwol8blgbs" path="res://Scene/Monster_Scene/mushroom.tscn" id="32_ti4s0"]
+[ext_resource type="PackedScene" uid="uid://bufdadlu37p7q" path="res://Scene/NPC/merchant.tscn" id="34_bttkr"]
+[ext_resource type="PackedScene" uid="uid://2fjun6uswfsc" path="res://Scene/NPC/explorer.tscn" id="35_ti4s0"]
 
 [sub_resource type="Curve2D" id="Curve2D_gyy0o"]
 _data = {
@@ -76,17 +78,17 @@ _data = {
 }
 point_count = 3
 
-[sub_resource type="Gradient" id="Gradient_epkhr"]
+[sub_resource type="Gradient" id="Gradient_rqm5k"]
 offsets = PackedFloat32Array(0.0433071, 1)
 colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 0)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_gyy0o"]
-gradient = SubResource("Gradient_epkhr")
+gradient = SubResource("Gradient_rqm5k")
 fill = 1
 fill_from = Vector2(0.487179, 0.525641)
 fill_to = Vector2(0.666667, 0)
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tyw1r"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wih7g"]
 texture = ExtResource("5_epkhr")
 0:0/0 = 0
 4:0/0 = 0
@@ -377,7 +379,7 @@ texture = ExtResource("5_epkhr")
 8:33/0 = 0
 9:33/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0rdgp"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bttkr"]
 texture = ExtResource("6_ogmt2")
 0:0/0 = 0
 6:0/0 = 0
@@ -849,7 +851,7 @@ texture = ExtResource("6_ogmt2")
 8:33/0 = 0
 9:33/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kiotg"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ti4s0"]
 texture = ExtResource("7_tyw1r")
 2:0/0 = 0
 3:0/0 = 0
@@ -2320,7 +2322,7 @@ texture = ExtResource("12_5culk")
 62:60/0 = 0
 56:61/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wih7g"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7shup"]
 texture = ExtResource("13_rqm5k")
 2:0/0 = 0
 3:0/0 = 0
@@ -2438,11 +2440,11 @@ texture = ExtResource("13_rqm5k")
 
 [sub_resource type="TileSet" id="TileSet_8oy5t"]
 physics_layer_0/collision_layer = 1
-sources/0 = SubResource("TileSetAtlasSource_tyw1r")
-sources/1 = SubResource("TileSetAtlasSource_0rdgp")
-sources/2 = SubResource("TileSetAtlasSource_kiotg")
+sources/0 = SubResource("TileSetAtlasSource_wih7g")
+sources/1 = SubResource("TileSetAtlasSource_bttkr")
+sources/2 = SubResource("TileSetAtlasSource_ti4s0")
 sources/3 = SubResource("TileSetAtlasSource_4tqdm")
-sources/4 = SubResource("TileSetAtlasSource_wih7g")
+sources/4 = SubResource("TileSetAtlasSource_7shup")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rqm5k"]
 size = Vector2(1027, 97)
@@ -2590,6 +2592,12 @@ bg_color = Color(0.69462, 0.554322, 0.367857, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_n4f7o"]
 font_size = 100
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4tqdm"]
+size = Vector2(243.334, 65)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7shup"]
+size = Vector2(243.334, 65)
 
 [node name="stage_4" type="Node2D"]
 script = ExtResource("1_0rdgp")
@@ -3230,6 +3238,27 @@ details :"
 label_settings = SubResource("LabelSettings_n4f7o")
 vertical_alignment = 1
 
+[node name="NPC" type="Node2D" parent="."]
+
+[node name="merchant" parent="NPC" instance=ExtResource("34_bttkr")]
+position = Vector2(846, -53)
+scale = Vector2(0.6, 0.6)
+
+[node name="InteractMer" type="Area2D" parent="NPC/merchant"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NPC/merchant/InteractMer"]
+position = Vector2(0.00012207, 4.1666)
+shape = SubResource("RectangleShape2D_4tqdm")
+
+[node name="Explorer" parent="NPC" instance=ExtResource("35_ti4s0")]
+position = Vector2(611, -53)
+
+[node name="Interact" type="Area2D" parent="NPC/Explorer"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NPC/Explorer/Interact"]
+position = Vector2(0.00012207, 4.1666)
+shape = SubResource("RectangleShape2D_7shup")
+
 [connection signal="area_entered" from="Map_limit/water" to="." method="_on_water_area_entered"]
 [connection signal="area_entered" from="Map_limit/Next" to="." method="_on_next_area_entered"]
 [connection signal="mouse_entered" from="CanvasUI/Setting_Button/Setting_Button" to="CanvasUI/Setting" method="_on_setting_button_mouse_entered"]
@@ -3241,3 +3270,5 @@ vertical_alignment = 1
 [connection signal="mouse_exited" from="CanvasUI/Achievement_Button/Achievement_Button" to="CanvasUI/Setting" method="_on_achievement_button_mouse_exited"]
 [connection signal="pressed" from="CanvasUI/Setting_UI/Setting_Panel_Bg/Resume_Button" to="CanvasUI/Setting" method="_on_resume_button_pressed"]
 [connection signal="pressed" from="CanvasUI/Setting_UI/Setting_Panel_Bg/Exit_Button" to="CanvasUI/Setting" method="_on_exit_button_pressed"]
+[connection signal="area_entered" from="NPC/merchant/InteractMer" to="." method="_on_interact_mer_area_entered"]
+[connection signal="area_entered" from="NPC/Explorer/Interact" to="." method="_on_interact_area_entered"]
