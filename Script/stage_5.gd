@@ -2,7 +2,7 @@ extends Node2D
 var button_check = true
 var player
 func _ready() -> void:
-
+	Gamemanager.set_scene_spawn("stage_5")
 	#PlayerInventory.add_item("Healing Potion", 1) 
 	#PlayerInventory.add_item("Antidote Potion", 1)
 	$CanvasUI/Player_show/Elendros.visible = true
@@ -17,6 +17,9 @@ func _ready() -> void:
 		$CanvasUI/Player_show/Elendros.visible = false
 		$CanvasUI/Player_show/Nymera.visible = true
 		player = $"Main Character/Nymera"
+		
+	player.position = $Spawn.position
+	
 func _process(delta: float):
 	$CanvasUI/Inventory/Inventory.refresh_inventory()
 	$CanvasUI/Player_show/Coins/Coin_Amount.text = str(Gamemanager.get_coin())
@@ -66,7 +69,3 @@ func _on_area_2d_area_exited(area: Area2D) -> void:
 func _on_next_area_entered(area: Area2D) -> void:
 	SceneTransition.change_scene("res://Scene/Stage_Scene/stage_6.tscn")
 	#get_tree().change_scene_to_file("res://Scene/Stage_Scene/stage_6.tscn")
-
-
-func _on_setting_button_mouse_entered() -> void:
-	pass # Replace with function body.

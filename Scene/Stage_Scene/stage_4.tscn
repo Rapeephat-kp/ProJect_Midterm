@@ -78,7 +78,7 @@ point_count = 3
 
 [sub_resource type="Gradient" id="Gradient_epkhr"]
 offsets = PackedFloat32Array(0.0433071, 1)
-colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 0)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_gyy0o"]
 gradient = SubResource("Gradient_epkhr")

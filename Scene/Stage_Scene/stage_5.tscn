@@ -22,7 +22,7 @@
 [ext_resource type="Texture2D" uid="uid://byicixnbvtqhe" path="res://Asset_Midterm/UI/UI/MenusBox_34x34.png" id="18_hy2jh"]
 [ext_resource type="Texture2D" uid="uid://v7p21xrmkms4" path="res://Asset_Midterm/UI/UI/MenusIcons_34x34.png" id="19_dba68"]
 [ext_resource type="Texture2D" uid="uid://dkyfygbi0dekj" path="res://Asset_Midterm/UI/UI/Button_52x14.png" id="20_lq0cq"]
-[ext_resource type="Script" path="res://Scene/puzzle.gd" id="21_cx44h"]
+[ext_resource type="Script" uid="uid://dndvdrc5asdq3" path="res://Scene/puzzle.gd" id="21_cx44h"]
 [ext_resource type="Texture2D" uid="uid://cwo8kf15e6ubg" path="res://Asset_Midterm/UI/UI/BottomPatternBG_128x112.png" id="21_uuy1w"]
 [ext_resource type="Texture2D" uid="uid://bg53hghq0u36n" path="res://Asset_Midterm/UI/UI/PatternMiddleBottomBG_199x48.png" id="22_cx44h"]
 [ext_resource type="Texture2D" uid="uid://bhmhd4fyqm4g" path="res://Asset_Midterm/UI/UI/CoinIcon_16x18.png" id="22_lq0cq"]
@@ -2603,24 +2603,6 @@ rotation = -0.000445164
 tile_map_data = PackedByteArray("AAA/AAsAAwA8AAAAAAA/AAwAAwA8AAEAAABAAAsAAwA9AAAAAABAAAwAAwA9AAEAAAAaAAsAAwA8AAAAAAAaAAwAAwA8AAEAAAAbAAsAAwA9AAAAAAAbAAwAAwA9AAEAAAAHABoAAwA8AAAAAAAHABsAAwA8AAEAAAAIABoAAwA9AAAAAAAIABsAAwA9AAEAAAAxAC0AAwA8AAAAAAAxAC4AAwA8AAEAAAAyAC0AAwA9AAAAAAAyAC4AAwA9AAEAAABhAC0AAwA8AAAAAABhAC4AAwA8AAEAAABiAC0AAwA9AAAAAABiAC4AAwA9AAEAAABbABYAAwA8AAAAAABbABcAAwA8AAEAAABcABYAAwA9AAAAAABcABcAAwA9AAEAAABqAB8AAwA8AAAAAABqACAAAwA8AAEAAABrAB8AAwA9AAAAAABrACAAAwA9AAEAAAAbAFAAAwA8AAAAAAAbAFEAAwA8AAEAAAAcAFAAAwA9AAAAAAAcAFEAAwA9AAEAAAAWAG8AAwA8AAAAAAAWAHAAAwA8AAEAAAAXAG8AAwA9AAAAAAAXAHAAAwA9AAEAAAA3AG8AAwA8AAAAAAA3AHAAAwA8AAEAAAA4AG8AAwA9AAAAAAA4AHAAAwA9AAEAAABwAFAAAwA8AAAAAABwAFEAAwA8AAEAAABxAFAAAwA9AAAAAABxAFEAAwA9AAEAAAAyAAkAAwAgAAkAAAAyAAoAAwAgAAoAAAAyAAsAAwAgAAsAAAAzAAkAAwAhAAkAAAAzAAoAAwAhAAoAAAAzAAsAAwAhAAsAAAA0AAsAAwAiAAsAAAAOABkAAwAcAAoAAAAOABoAAwAcAAsAAAAPABkAAwAdAAoAAAAPABoAAwAdAAsAAABeAFEAAwAtACkAAABfAFAAAwAuACgAAABfAFEAAwAuACkAAABgAE8AAwAvACcAAABgAFAAAwAvACgAAABgAFEAAwAvACkAAABhAE8AAwAwACcAAABhAFAAAwAwACgAAABhAFEAAwAwACkAAABiAE8AAwAxACcAAABiAFAAAwAxACgAAABiAFEAAwAxACkAAABjAE8AAwAyACcAAABjAFAAAwAyACgAAABjAFEAAwAyACkAAABkAE8AAwAzACcAAABkAFAAAwAzACgAAABkAFEAAwAzACkAAABlAE8AAwA0ACcAAABlAFAAAwA0ACgAAABlAFEAAwA0ACkAAABmAE8AAwA1ACcAAABmAFAAAwA1ACgAAABmAFEAAwA1ACkAAABnAFAAAwA2ACgAAABnAFEAAwA2ACkAAABWAE8AAQAAABMAAABWAFAAAQAAABQAAABWAFEAAQAAABUAAABXAE8AAQABABMAAABXAFAAAQABABQAAABXAFEAAQABABUAAABDACgAAQABAB8AADBDACkAAQABAB4AADBDACoAAQABAB0AADBCACcAAQACACAAADBCACgAAQACAB8AADBCACkAAQACAB4AADBCACoAAQACAB0AADBBACYAAQADACEAADBBACcAAQADACAAADBBACgAAQADAB8AADBBACkAAQADAB4AADBBACoAAQADAB0AADBAACYAAQAEACEAADBAACcAAQAEACAAADBAACgAAQAEAB8AADBAACkAAQAEAB4AADBAACoAAQAEAB0AADA/ACYAAQAFACEAADA/ACcAAQAFACAAADA/ACgAAQAFAB8AADA/ACkAAQAFAB4AADA/ACoAAQAFAB0AADA+ACgAAQAGAB8AADA+ACkAAQAGAB4AADA+ACoAAQAGAB0AADAaABQAAQABAB8AADAaABUAAQABAB4AADAaABYAAQABAB0AADAZABMAAQACACAAADAZABQAAQACAB8AADAZABUAAQACAB4AADAZABYAAQACAB0AADAYABIAAQADACEAADAYABMAAQADACAAADAYABQAAQADAB8AADAYABUAAQADAB4AADAYABYAAQADAB0AADAXABIAAQAEACEAADAXABMAAQAEACAAADAXABQAAQAEAB8AADAXABUAAQAEAB4AADAXABYAAQAEAB0AADAWABIAAQAFACEAADAWABMAAQAFACAAADAWABQAAQAFAB8AADAWABUAAQAFAB4AADAWABYAAQAFAB0AADAVABQAAQAGAB8AADAVABUAAQAGAB4AADAVABYAAQAGAB0AADA7AAUAAQABAB8AADA7AAYAAQABAB4AADA7AAcAAQABAB0AADA6AAQAAQACACAAADA6AAUAAQACAB8AADA6AAYAAQACAB4AADA6AAcAAQACAB0AADA5AAMAAQADACEAADA5AAQAAQADACAAADA5AAUAAQADAB8AADA5AAYAAQADAB4AADA5AAcAAQADAB0AADA4AAMAAQAEACEAADA4AAQAAQAEACAAADA4AAUAAQAEAB8AADA4AAYAAQAEAB4AADA4AAcAAQAEAB0AADA3AAMAAQAFACEAADA3AAQAAQAFACAAADA3AAUAAQAFAB8AADA3AAYAAQAFAB4AADA3AAcAAQAFAB0AADA2AAUAAQAGAB8AADA2AAYAAQAGAB4AADA2AAcAAQAGAB0AADBSAB0AAQAGAB0AAABSAB4AAQAGAB4AAABSAB8AAQAGAB8AAABRAB0AAQAFAB0AAABRAB4AAQAFAB4AAABRAB8AAQAFAB8AAABRACAAAQAFACAAAABRACEAAQAFACEAAABQAB0AAQAEAB0AAABQAB4AAQAEAB4AAABQAB8AAQAEAB8AAABQACAAAQAEACAAAABQACEAAQAEACEAAABPAB0AAQADAB0AAABPAB4AAQADAB4AAABPAB8AAQADAB8AAABPACAAAQADACAAAABPACEAAQADACEAAABOAB0AAQACAB0AAABOAB4AAQACAB4AAABOAB8AAQACAB8AAABOACAAAQACACAAAABNAB0AAQABAB0AAABNAB4AAQABAB4AAABNAB8AAQABAB8AAAB3ABgAAQAJACEAAGB3ABkAAQAIACEAAGB2ABYAAQALACAAAGB2ABcAAQAKACAAAGB2ABgAAQAJACAAAGB2ABkAAQAIACAAAGB2ABoAAQAHACAAAGB1ABYAAQALAB8AAGB1ABcAAQAKAB8AAGB1ABgAAQAJAB8AAGB1ABkAAQAIAB8AAGB1ABoAAQAHAB8AAGB0ABcAAQAKAB4AAGB0ABgAAQAJAB4AAGB0ABkAAQAIAB4AAGBDAFoAAQAJACEAAGBDAFsAAQAIACEAAGBCAFgAAQALACAAAGBCAFkAAQAKACAAAGBCAFoAAQAJACAAAGBCAFsAAQAIACAAAGBCAFwAAQAHACAAAGBBAFgAAQALAB8AAGBBAFkAAQAKAB8AAGBBAFoAAQAJAB8AAGBBAFsAAQAIAB8AAGBBAFwAAQAHAB8AAGBAAFkAAQAKAB4AAGBAAFoAAQAJAB4AAGBAAFsAAQAIAB4AAGA8AEIAAQAIAB4AAFA8AEMAAQAJAB4AAFA8AEQAAQAKAB4AAFA7AEEAAQAHAB8AAFA7AEIAAQAIAB8AAFA7AEMAAQAJAB8AAFA7AEQAAQAKAB8AAFA7AEUAAQALAB8AAFA6AEEAAQAHACAAAFA6AEIAAQAIACAAAFA6AEMAAQAJACAAAFA6AEQAAQAKACAAAFA6AEUAAQALACAAAFA5AEIAAQAIACEAAFA5AEMAAQAJACEAAFAZAGoAAQAHACAAADAZAGsAAQAHAB8AADAYAGkAAQAIACEAADAYAGoAAQAIACAAADAYAGsAAQAIAB8AADAYAGwAAQAIAB4AADAXAGkAAQAJACEAADAXAGoAAQAJACAAADAXAGsAAQAJAB8AADAXAGwAAQAJAB4AADAWAGoAAQAKACAAADAWAGsAAQAKAB8AADAWAGwAAQAKAB4AADAVAGoAAQALACAAADAVAGsAAQALAB8AADBQABMAAQAHABwAAFBQABQAAQAIABwAAFBQABUAAQAJABwAAFBPABMAAQAHAB0AAFBPABQAAQAIAB0AAFBPABUAAQAJAB0AAFAKABkAAQAHABwAAAAKABoAAQAHAB0AAAALABkAAQAIABwAAAALABoAAQAIAB0AAAAMABkAAQAJABwAAAAMABoAAQAJAB0AAAAoACcAAQAHAB0AADAoACgAAQAHABwAADAnACcAAQAIAB0AADAnACgAAQAIABwAADAmACcAAQAJAB0AADAmACgAAQAJABwAADBDADMAAQAJAB0AAGBDADQAAQAIAB0AAGBDADUAAQAHAB0AAGBCADMAAQAJABwAAGBCADQAAQAIABwAAGBCADUAAQAHABwAAGBSAFAAAQAJABwAAABSAFEAAQAJAB0AAABRAFAAAQAIABwAAABRAFEAAQAIAB0AAABQAFAAAQAHABwAAABQAFEAAQAHAB0AAABRAGkAAQAHAB0AADBRAGoAAQAHABwAADBQAGkAAQAIAB0AADBQAGoAAQAIABwAADBPAGkAAQAJAB0AADBPAGoAAQAJABwAADBKAG8AAQAJABwAAABKAHAAAQAJAB0AAABJAG8AAQAIABwAAABJAHAAAQAIAB0AAABIAG8AAQAHABwAAABIAHAAAQAHAB0AAAAzAGkAAQAHAB0AADAzAGoAAQAHABwAADAyAGkAAQAIAB0AADAyAGoAAQAIABwAADAxAGkAAQAJAB0AADAxAGoAAQAJABwAADAPAFYAAQAHABwAAFAPAFcAAQAIABwAAFAPAFgAAQAJABwAAFAOAFYAAQAHAB0AAFAOAFcAAQAIAB0AAFAOAFgAAQAJAB0AAFAmAAUAAQAHAB0AADAmAAYAAQAHABwAADAlAAUAAQAIAB0AADAlAAYAAQAIABwAADAkAAUAAQAJAB0AADAkAAYAAQAJABwAADA=")
 tile_set = SubResource("TileSet_rcg4y")
 
-[node name="Main Character" type="Node2D" parent="."]
-
-[node name="Nymera" parent="Main Character" instance=ExtResource("4_ph7ax")]
-position = Vector2(82, -14)
-
-[node name="PointLight2D" type="PointLight2D" parent="Main Character/Nymera"]
-position = Vector2(13, 16)
-scale = Vector2(2.60938, 1.96809)
-texture = SubResource("GradientTexture2D_kem2i")
-metadata/_edit_lock_ = true
-
-[node name="Elendros" parent="Main Character" instance=ExtResource("22_nv2tu")]
-position = Vector2(84, 0)
-
-[node name="PointLight2D2" type="PointLight2D" parent="Main Character/Elendros"]
-scale = Vector2(2.60938, 1.96809)
-texture = SubResource("GradientTexture2D_kem2i")
-
 [node name="Hint" type="Node2D" parent="."]
 metadata/_edit_lock_ = true
 
@@ -2652,6 +2634,22 @@ theme_override_fonts/font = ExtResource("6_rcg4y")
 theme_override_font_sizes/font_size = 39
 text = "2"
 
+[node name="Star2" type="Sprite2D" parent="Hint/Star"]
+modulate = Color(0.12549, 0.109804, 0.172549, 1)
+position = Vector2(1384, 1739)
+scale = Vector2(0.304166, 0.304166)
+texture = ExtResource("28_hy2jh")
+region_enabled = true
+region_rect = Rect2(40, 56, 120, 120)
+
+[node name="Star3" type="Sprite2D" parent="Hint/Star"]
+modulate = Color(0.12549, 0.109804, 0.172549, 1)
+position = Vector2(1506, 1741)
+scale = Vector2(0.304166, 0.304166)
+texture = ExtResource("28_hy2jh")
+region_enabled = true
+region_rect = Rect2(40, 56, 120, 120)
+
 [node name="Cloud" type="Node2D" parent="Hint"]
 
 [node name="Cloud" type="Sprite2D" parent="Hint/Cloud"]
@@ -2682,6 +2680,14 @@ theme_override_font_sizes/font_size = 39
 text = "4"
 metadata/_edit_use_anchors_ = true
 
+[node name="Cloud2" type="Sprite2D" parent="Hint/Cloud"]
+modulate = Color(0.12549, 0.109804, 0.172549, 1)
+position = Vector2(1422, 1741)
+scale = Vector2(0.304166, 0.304166)
+texture = ExtResource("28_hy2jh")
+region_enabled = true
+region_rect = Rect2(176, 64, 112, 112)
+
 [node name="Sun" type="Node2D" parent="Hint"]
 
 [node name="Sun" type="Sprite2D" parent="Hint/Sun"]
@@ -2710,6 +2716,14 @@ theme_override_fonts/font = ExtResource("6_rcg4y")
 theme_override_font_sizes/font_size = 39
 text = "1"
 
+[node name="Sun2" type="Sprite2D" parent="Hint/Sun"]
+modulate = Color(0.12549, 0.109804, 0.172549, 1)
+position = Vector2(1465, 1741)
+scale = Vector2(0.304166, 0.304166)
+texture = ExtResource("28_hy2jh")
+region_enabled = true
+region_rect = Rect2(304, 48, 128, 136)
+
 [node name="Human" type="Node2D" parent="Hint"]
 
 [node name="Human" type="Sprite2D" parent="Hint/Human"]
@@ -2720,9 +2734,27 @@ texture = ExtResource("28_hy2jh")
 region_enabled = true
 region_rect = Rect2(328, 224, 88, 128)
 
+[node name="Label" type="Label" parent="Hint/Human/Human"]
+offset_left = 72.3289
+offset_top = -26.3014
+offset_right = 162.329
+offset_bottom = 27.6986
+theme_override_fonts/font = ExtResource("6_rcg4y")
+theme_override_font_sizes/font_size = 39
+text = "="
+
+[node name="Label2" type="Label" parent="Hint/Human/Human"]
+offset_left = 115.069
+offset_top = -23.0137
+offset_right = 205.069
+offset_bottom = 30.9863
+theme_override_fonts/font = ExtResource("6_rcg4y")
+theme_override_font_sizes/font_size = 39
+text = "5q"
+
 [node name="Human2" type="Sprite2D" parent="Hint/Human"]
 modulate = Color(0.12549, 0.109804, 0.172549, 1)
-position = Vector2(1442, 335)
+position = Vector2(1286, 1741)
 scale = Vector2(0.304166, 0.304166)
 texture = ExtResource("28_hy2jh")
 region_enabled = true
@@ -2730,23 +2762,7 @@ region_rect = Rect2(328, 224, 88, 128)
 
 [node name="Human3" type="Sprite2D" parent="Hint/Human"]
 modulate = Color(0.12549, 0.109804, 0.172549, 1)
-position = Vector2(1418, 335)
-scale = Vector2(0.304166, 0.304166)
-texture = ExtResource("28_hy2jh")
-region_enabled = true
-region_rect = Rect2(328, 224, 88, 128)
-
-[node name="Human4" type="Sprite2D" parent="Hint/Human"]
-modulate = Color(0.12549, 0.109804, 0.172549, 1)
-position = Vector2(1395, 335)
-scale = Vector2(0.304166, 0.304166)
-texture = ExtResource("28_hy2jh")
-region_enabled = true
-region_rect = Rect2(328, 224, 88, 128)
-
-[node name="Human5" type="Sprite2D" parent="Hint/Human"]
-modulate = Color(0.12549, 0.109804, 0.172549, 1)
-position = Vector2(1373, 335)
+position = Vector2(1313, 1741)
 scale = Vector2(0.304166, 0.304166)
 texture = ExtResource("28_hy2jh")
 region_enabled = true
@@ -2778,6 +2794,32 @@ offset_bottom = 60.5754
 theme_override_fonts/font = ExtResource("6_rcg4y")
 theme_override_font_sizes/font_size = 39
 text = "3"
+
+[node name="Mushroom2" type="Sprite2D" parent="Hint/Mushroom"]
+modulate = Color(0.12549, 0.109804, 0.172549, 1)
+position = Vector2(1343.2, 1738.61)
+scale = Vector2(0.311618, 0.311618)
+texture = ExtResource("28_hy2jh")
+region_enabled = true
+region_rect = Rect2(448, 56, 104, 120)
+
+[node name="Main Character" type="Node2D" parent="."]
+
+[node name="Nymera" parent="Main Character" instance=ExtResource("4_ph7ax")]
+position = Vector2(82, -14)
+
+[node name="PointLight2D" type="PointLight2D" parent="Main Character/Nymera"]
+position = Vector2(13, 16)
+scale = Vector2(2.60938, 1.96809)
+texture = SubResource("GradientTexture2D_kem2i")
+metadata/_edit_lock_ = true
+
+[node name="Elendros" parent="Main Character" instance=ExtResource("22_nv2tu")]
+position = Vector2(84, 0)
+
+[node name="PointLight2D2" type="PointLight2D" parent="Main Character/Elendros"]
+scale = Vector2(2.60938, 1.96809)
+texture = SubResource("GradientTexture2D_kem2i")
 
 [node name="Fog" type="Node2D" parent="."]
 modulate = Color(1, 1, 1, 0.231373)
@@ -2834,6 +2876,7 @@ position = Vector2(2, 2)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Tile_Map/Sprite2D/Area2D"]
 position = Vector2(-19.5, -42.5)
 shape = SubResource("RectangleShape2D_rcg4y")
+metadata/_edit_lock_ = true
 
 [node name="Button" type="Button" parent="Tile_Map/Sprite2D"]
 offset_left = -6.0
@@ -2852,7 +2895,6 @@ text = "E"
 [node name="Path2D" parent="Tile_Map/Platform" instance=ExtResource("5_lkejh")]
 position = Vector2(995, 1323)
 curve = SubResource("Curve2D_lkejh")
-speed = 5.0
 
 [node name="Path2D2" parent="Tile_Map/Platform" instance=ExtResource("5_lkejh")]
 position = Vector2(278, 1312)
@@ -2887,6 +2929,7 @@ tile_set = SubResource("TileSet_rcg4y")
 metadata/_edit_lock_ = true
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
+visible = false
 position = Vector2(103, 155)
 scale = Vector2(2.60938, 1.96809)
 color = Color(0.230315, 0.230315, 0.230315, 1)
@@ -3479,6 +3522,7 @@ offset_top = 47.0
 offset_right = 193.0
 offset_bottom = 68.0
 scale = Vector2(5.48, 6.08)
+theme_override_colors/font_color = Color(0.65098, 0.639216, 0.627451, 1)
 theme_override_fonts/font = ExtResource("6_rcg4y")
 
 [node name="Confirm" type="Button" parent="Puzzle/Control"]
@@ -3600,5 +3644,7 @@ text = "Beware Toixc ...."
 [connection signal="button_up" from="CanvasUI/Achievement_Button/Achievement_Button" to="CanvasUI/Setting" method="_on_achievement_button_button_up"]
 [connection signal="mouse_entered" from="CanvasUI/Achievement_Button/Achievement_Button" to="CanvasUI/Setting" method="_on_achievement_button_mouse_entered"]
 [connection signal="mouse_exited" from="CanvasUI/Achievement_Button/Achievement_Button" to="CanvasUI/Setting" method="_on_achievement_button_mouse_exited"]
+[connection signal="pressed" from="CanvasUI/Setting_UI/Setting_Panel_Bg/Resume_Button" to="CanvasUI/Setting" method="_on_resume_button_pressed"]
+[connection signal="pressed" from="CanvasUI/Setting_UI/Setting_Panel_Bg/Exit_Button" to="CanvasUI/Setting" method="_on_exit_button_pressed"]
 [connection signal="pressed" from="Puzzle/Control/Exit" to="Puzzle" method="_on_exit_pressed"]
 [connection signal="area_entered" from="next" to="." method="_on_next_area_entered"]

@@ -14,6 +14,7 @@ func _ready() -> void:
 		player = $"Main Character/Elendros"
 		$CanvasUI/Player_show/Elendros.visible = false
 		$CanvasUI/Player_show/Nymera.visible = true
+		
 	player.position = $Spawn.position
 func _process(delta: float):
 	$CanvasUI/Inventory/Inventory.refresh_inventory()
@@ -29,4 +30,4 @@ func _on_water_area_entered(area: Area2D) -> void:
 
 func _on_next_area_entered(area: Area2D) -> void:
 	if area.is_in_group("Player"):
-		get_tree().change_scene_to_file("res://Scene/Stage_Scene/stage_5.tscn")
+		SceneTransition.change_scene("res://Scene/Stage_Scene/stage_5.tscn")

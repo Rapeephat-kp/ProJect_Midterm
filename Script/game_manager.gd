@@ -13,6 +13,18 @@ var currentscene = ""
 var player_debuff = false
 var player_buff = false
 
+var scene_spawn_point = ""
+var checkpoint_coin = 0
+var checkpoint_player_hp = 0
+var checkpoint_player_damage = 0
+@onready var checkpoint_item_list = { }
+
+var played_time: float = 0.0
+var is_timer_running: bool = true
+
+func _process(delta: float) -> void:
+	if is_timer_running:
+		played_time += delta
 			
 func all_reset():
 	current_main_player_hp = 0
@@ -80,3 +92,36 @@ func get_player_debuff():
 
 func _on_player_buff():
 	player_buff = true
+
+func set_scene_spawn(scene: String):
+	scene_spawn_point = scene
+	checkpoint_coin = coins
+	checkpoint_player_damage = player_dmg
+	checkpoint_player_hp = current_main_player_hp
+	
+	checkpoint_item_list = {}
+	for key in PlayerInventory.inventory.keys():
+		checkpoint_item_list[key] = [PlayerInventory.inventory[key][0], PlayerInventory.inventory[key][1]]
+
+func load_checkpoint_inventory(inventory: Dictionary):
+	inventory.clear()
+	for key in checkpoint_item_list.keys():
+		inventory[key] = [checkpoint_item_list[key][0], checkpoint_item_list[key][1]]
+		
+func reset_played_time():
+	played_time = 0.0
+
+func pause_timer():
+	is_timer_running = false
+	
+func resume_timer():
+	is_timer_running = true
+	
+func get_played_time() -> float:
+	return played_time
+
+func get_played_time_string() -> String:
+	var hours = int(played_time) / 3600
+	var minutes = (int(played_time) % 3600) / 60
+	var seconds = int(played_time) % 60
+	return "%02d hrs %02d mins %02d secs" % [hours, minutes, seconds]

@@ -20,6 +20,8 @@ var current_item: Node = null
 
 
 func _ready() -> void:
+	Gamemanager.reset_played_time()
+	Gamemanager.resume_timer()
 	PlayerInventory.add_item("Healing Potion",5) 
 	print(Gamemanager.get_p())
 	var p_value = Gamemanager.get_p()
@@ -127,6 +129,7 @@ func _process(delta: float):
 		free_all_spawned()
 		stop_fall_attacks()
 		print("cancel")
+		SceneTransition.change_scene("res://Scene/win_scene.tscn")
 		
 func _on_button_pressed() -> void:
 	get_tree().change_scene_to_file("res://Scene/stage_1_in_the_city.tscn")
