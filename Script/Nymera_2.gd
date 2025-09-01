@@ -45,6 +45,8 @@ func _process(delta: float) -> void:
 				print("Poison ended")
 		else:
 			in_fog = false
+	if Gamemanager.get_player_health() <= 0:
+		SceneTransition.change_scene("res://Scene/game_over.tscn")
 func _physics_process(delta: float) -> void:
 	if not is_on_floor():
 		velocity += get_gravity() * delta

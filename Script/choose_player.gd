@@ -4,6 +4,7 @@ extends Node2D
 @onready var nymera_name_label: Label = $CanvasLayer/Control/NymeraNameLabel
 
 func _ready() -> void:
+	Gamemanager.reset_dead_time()
 	elendros_name_label.visible = false
 	nymera_name_label.visible = false
 

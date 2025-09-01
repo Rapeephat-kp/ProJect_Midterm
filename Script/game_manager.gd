@@ -19,10 +19,13 @@ var checkpoint_player_hp = 100
 var checkpoint_player_max_hp = 100
 var checkpoint_player_damage = 15
 @onready var checkpoint_item_list = { }
+var player_dead_time = 0
 
 var played_time: float = 0.0
 var is_timer_running: bool = true
 
+var achievement_1 = false
+var achievement_2 = false
 func _process(delta: float) -> void:
 	if is_timer_running:
 		played_time += delta
@@ -137,5 +140,30 @@ func spawn_detail_load():
 	max_player_health = checkpoint_player_max_hp
 	load_checkpoint_inventory(checkpoint_item_list)
 	
+func set_dead_time(amount : int):
+	player_dead_time += amount
 	
+func reset_dead_time():
+	player_dead_time = 0
 	
+func reset_all():
+	reset_dead_time()
+	current_main_player_hp = 0
+	max_player_health = 100 
+	coins = 200
+	player_dmg = 15
+	Boss_Hp = 100
+	currentscene = ""
+	player_debuff = false
+	player_buff = false
+	scene_spawn_point = "stage_1"
+	checkpoint_coin = 0
+	checkpoint_player_hp = 100
+	checkpoint_player_max_hp = 100
+	checkpoint_player_damage = 15
+	checkpoint_item_list = { }
+	player_dead_time = 0
+	played_time = 0.0
+	is_timer_running = true
+	achievement_1 = false
+	achievement_2 = false
