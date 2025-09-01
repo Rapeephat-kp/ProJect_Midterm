@@ -238,8 +238,9 @@ func buyFail2():
 func display_Ending(player):
 	if player == 1:
 		animation_player.play("Elendros Ending")
+
 	if player == 2:
 		animation_player.play("Nymera Ending")
-	
+		
 func toWinScene():
 	SceneTransition.change_scene("res://Scene/win_scene.tscn")

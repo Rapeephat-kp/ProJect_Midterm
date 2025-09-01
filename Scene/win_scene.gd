@@ -7,7 +7,6 @@ var player_check = 0
 
 
 func _ready() -> void:
-	Gamemanager.pause_timer()
 	player_check = Gamemanager.get_p()
 	info_time.text = Gamemanager.get_played_time_string()
 	if player_check == 1:

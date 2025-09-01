@@ -91,6 +91,7 @@ theme_override_styles/normal = ExtResource("3_70qnk")
 metadata/_edit_use_anchors_ = true
 
 [node name="ElendrosNameLabel" type="Label" parent="CanvasLayer/Control"]
+layout_mode = 0
 offset_left = -369.0
 offset_top = -433.0
 offset_right = 310.0
@@ -139,6 +140,7 @@ theme_override_styles/normal = SubResource("StyleBoxTexture_70qnk")
 metadata/_edit_use_anchors_ = true
 
 [node name="NymeraNameLabel" type="Label" parent="CanvasLayer/Control"]
+layout_mode = 0
 offset_left = -90.0
 offset_top = 355.0
 offset_right = 589.0

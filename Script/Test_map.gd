@@ -9,7 +9,8 @@ var fade_speed: float = 0.5
 @onready var player
 
 var curPlayer
-var gameEnd
+var gameEnd = true
+var check_cut_scene_played = 1
 var allow_fall_attack: bool = true
 
 var spawn_points: Array = []         
@@ -127,14 +128,10 @@ func _process(delta: float):
 		var new_b = max(0, current_color.b - fade_speed * delta)
 		
 		canva.color = Color(new_r, new_g, new_b, 1.0)
-		all_invisible()
-		free_all_spawned()
-		stop_fall_attacks()
-		print("cancel")
-		#SceneTransition.change_scene("res://Scene/win_scene.tscn")
 		gameEnd = true
-		curPlayer = Gamemanager.get_p()
-		CutSceneManager.display_Ending(curPlayer)
+		
+		end_game()
+		
 		
 func _on_button_pressed() -> void:
 	get_tree().change_scene_to_file("res://Scene/stage_1_in_the_city.tscn")
@@ -167,3 +164,13 @@ func free_all_spawned():
 
 func stop_fall_attacks():
 	allow_fall_attack = false
+
+func end_game():
+	if check_cut_scene_played != 0:
+		check_cut_scene_played = 0
+		all_invisible()
+		free_all_spawned()
+		stop_fall_attacks()
+		curPlayer = Gamemanager.get_p()
+		Gamemanager.pause_timer()
+		CutSceneManager.display_Ending(curPlayer)
