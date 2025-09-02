@@ -2997,7 +2997,7 @@ metadata/_edit_lock_ = true
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 position = Vector2(103, 155)
 scale = Vector2(2.60938, 1.96809)
-color = Color(0.230315, 0.230315, 0.230315, 1)
+color = Color(0.359069, 0.359069, 0.359069, 1)
 
 [node name="CanvasUI" type="CanvasLayer" parent="."]
 

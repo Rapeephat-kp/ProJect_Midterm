@@ -4361,7 +4361,7 @@ tile_map_data = PackedByteArray("AAA6AQsAAwA0ACEAAAA8AQYAAwA2ABwAAAA8AQcAAwA2AB0
 tile_set = SubResource("TileSet_dcfbb")
 
 [node name="spawn point" type="Marker2D" parent="."]
-position = Vector2(517, 58)
+position = Vector2(517, 183)
 
 [node name="MovingPlatforms" type="Node2D" parent="."]
 
@@ -4572,7 +4572,7 @@ position = Vector2(-1539, 230)
 position = Vector2(-2255, 226)
 
 [node name="Necromancer" parent="Monsters" instance=ExtResource("37_1klxm")]
-position = Vector2(219, 254)
+position = Vector2(420, 212)
 
 [node name="CanvasUI" type="CanvasLayer" parent="."]
 
@@ -4971,6 +4971,35 @@ offset_right = 259.667
 offset_bottom = 313.667
 scale = Vector2(0.317793, 0.317793)
 theme_override_styles/panel = SubResource("StyleBoxTexture_42xf4")
+
+[node name="Guide Massage" type="Node2D" parent="."]
+z_index = 4
+
+[node name="water warning" type="Label" parent="Guide Massage"]
+offset_left = 581.0
+offset_top = 155.0
+offset_right = 2173.0
+offset_bottom = 559.0
+scale = Vector2(0.1, 0.1)
+theme_override_colors/font_color = Color(0.849036, 0.395968, 1.92523e-07, 1)
+theme_override_fonts/font = ExtResource("28_6hwyn")
+theme_override_font_sizes/font_size = 100
+text = "Beware Deep water"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="MissionMassage" type="Label" parent="Guide Massage"]
+offset_left = 4166.0
+offset_top = 128.0
+offset_right = 5758.0
+offset_bottom = 532.0
+scale = Vector2(0.1, 0.1)
+theme_override_colors/font_color = Color(0.849036, 0.395968, 1.92523e-07, 1)
+theme_override_fonts/font = ExtResource("28_6hwyn")
+theme_override_font_sizes/font_size = 100
+text = "Build the Bridge"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
 
 [connection signal="area_entered" from="map bounds/water" to="." method="_on_water_area_entered"]
 [connection signal="area_entered" from="map bounds/left" to="." method="_on_left_area_entered"]

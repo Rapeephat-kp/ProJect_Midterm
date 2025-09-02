@@ -253,3 +253,7 @@ func _on_skip_button_pressed() -> void:
 	AudioManager.play_press_sfx()
 	toWinScene()
 	
+func game_end():
+	SceneTransition.change_scene("res://Scene/cut_scene.tscn")
+	display_Ending(Gamemanager.get_p())
+	

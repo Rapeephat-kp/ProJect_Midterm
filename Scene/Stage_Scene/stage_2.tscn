@@ -2009,6 +2009,7 @@ texture = ExtResource("40_nullh")
 script = ExtResource("1_wm8jf")
 
 [node name="parallax bg" type="Node2D" parent="."]
+modulate = Color(0.61339, 0.61339, 0.61339, 1)
 z_index = -10
 position = Vector2(559, 0)
 
@@ -2141,7 +2142,7 @@ position = Vector2(1499, 16)
 [node name="NPC" type="Node2D" parent="."]
 
 [node name="Explorer" parent="NPC" instance=ExtResource("19_8irac")]
-position = Vector2(696, 228)
+position = Vector2(496, 228)
 
 [node name="Interact" type="Area2D" parent="NPC/Explorer"]
 

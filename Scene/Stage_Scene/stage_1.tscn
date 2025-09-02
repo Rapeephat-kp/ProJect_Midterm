@@ -1887,7 +1887,7 @@ position = Vector2(1306, 124)
 position = Vector2(2091, 222)
 
 [node name="Flying_eye" parent="Monsters" instance=ExtResource("13_ogdj4")]
-position = Vector2(1914, -41)
+position = Vector2(1920, -68)
 
 [node name="Moving platform" type="Node2D" parent="."]
 
@@ -1957,6 +1957,7 @@ text = "Press \"A\" \"D\" to Walk
 
 \"S\" to Jump"
 horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
 
 [node name="Attack" type="Label" parent="Guide Massage"]
 offset_left = 946.0
@@ -2017,6 +2018,18 @@ theme_override_colors/font_color = Color(0.849036, 0.395968, 1.92523e-07, 1)
 theme_override_fonts/font = ExtResource("25_3af3u")
 theme_override_font_sizes/font_size = 100
 text = "Seem like it not this way"
+horizontal_alignment = 1
+
+[node name="monster detail" type="Label" parent="Guide Massage"]
+offset_left = 1834.0
+offset_top = 269.0
+offset_right = 5390.0
+offset_bottom = 673.0
+scale = Vector2(0.1, 0.1)
+theme_override_colors/font_color = Color(0.849036, 0.395968, 1.92523e-07, 1)
+theme_override_fonts/font = ExtResource("25_3af3u")
+theme_override_font_sizes/font_size = 100
+text = "Some \"under\" are enter an invulnerable state"
 horizontal_alignment = 1
 
 [node name="Main Character" type="Node2D" parent="."]

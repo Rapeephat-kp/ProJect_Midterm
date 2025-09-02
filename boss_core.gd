@@ -13,4 +13,4 @@ func _process(delta: float) -> void:
 func _on_hit_box_area_entered(area: Area2D) -> void:
 	if area.is_in_group("Player_hit"):
 		health -= Gamemanager.get_player_dmg()
-	AudioManager.set_and_play_sfx_volume("res://SFX/InScene/hit-core.ogg",0)
+		AudioManager.set_and_play_sfx_volume("res://SFX/InScene/hit-core.ogg",0)

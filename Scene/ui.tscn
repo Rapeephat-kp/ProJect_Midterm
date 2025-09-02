@@ -517,6 +517,7 @@ label_settings = SubResource("LabelSettings_rd0yu")
 
 [node name="detail1" type="Label" parent="CanvasUI/Achievement_UI/Setting_Panel_Bg"]
 modulate = Color(0.698039, 0.698039, 0.698039, 1)
+layout_mode = 0
 offset_left = 98.6667
 offset_top = 36.0
 offset_right = 3521.67
@@ -529,6 +530,7 @@ label_settings = SubResource("LabelSettings_3flpx")
 
 [node name="Ac2" type="Label" parent="CanvasUI/Achievement_UI/Setting_Panel_Bg"]
 modulate = Color(0.698039, 0.698039, 0.698039, 1)
+layout_mode = 0
 offset_left = 82.0
 offset_top = 76.0
 offset_right = 2378.0
@@ -540,6 +542,7 @@ label_settings = SubResource("LabelSettings_rd0yu")
 
 [node name="detail2" type="Label" parent="CanvasUI/Achievement_UI/Setting_Panel_Bg"]
 modulate = Color(0.698039, 0.698039, 0.698039, 1)
+layout_mode = 0
 offset_left = 100.0
 offset_top = 97.6667
 offset_right = 3523.0
@@ -552,6 +555,7 @@ label_settings = SubResource("LabelSettings_xwu8j")
 
 [node name="achievement1" type="Panel" parent="CanvasUI/Achievement_UI/Setting_Panel_Bg"]
 modulate = Color(0.698039, 0.698039, 0.698039, 1)
+layout_mode = 0
 offset_left = 16.3333
 offset_top = 7.0
 offset_right = 204.333
@@ -561,6 +565,7 @@ theme_override_styles/panel = SubResource("StyleBoxTexture_x1q7n")
 
 [node name="achievement2" type="Panel" parent="CanvasUI/Achievement_UI/Setting_Panel_Bg"]
 modulate = Color(0.698039, 0.698039, 0.698039, 1)
+layout_mode = 0
 offset_left = 5.66666
 offset_top = 59.6667
 offset_right = 259.667

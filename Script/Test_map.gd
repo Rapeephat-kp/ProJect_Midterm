@@ -175,4 +175,4 @@ func end_game():
 		stop_fall_attacks()
 		curPlayer = Gamemanager.get_p()
 		Gamemanager.pause_timer()
-		CutSceneManager.display_Ending(curPlayer)
+		CutSceneManager.game_end()

@@ -35,7 +35,7 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
 		await get_tree().create_timer(0.5).timeout
 		$AnimatedSprite2D.visible = false
 		$Body_static/Body.disabled = true
-
+		queue_free()
 func spawn_coin():
 	var coin = CoinScene.instantiate()
 	

@@ -67,7 +67,7 @@ func movement():
 			velocity.y += gravity
 			move_and_slide()
 			
-		if is_on_wall() or (!can_forward and status == 1) or (!can_backward and status == -1) or time_run > randi_range(5, 10):
+		if is_on_wall() or (!can_forward and status == 1) or (!can_backward and status == -1) or time_run > randi_range(3, 5):
 			status *= -1  # สลับทาง
 			velocity.x = speed * status
 			time_run = 0

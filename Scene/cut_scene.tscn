@@ -4027,6 +4027,7 @@ visible_characters = 0
 visible_ratio = 0.0
 
 [node name="Store" type="Node2D" parent="CanvasLayer"]
+visible = false
 
 [node name="Inventory" type="Control" parent="CanvasLayer/Store"]
 visible = false

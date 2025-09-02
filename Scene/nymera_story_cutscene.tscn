@@ -160,8 +160,8 @@ tracks/9/path = NodePath(".")
 tracks/9/interp = 1
 tracks/9/loop_wrap = true
 tracks/9/keys = {
-"times": PackedFloat32Array(2.83333, 6.06667, 7.83333, 10.1444, 11.5, 12.2667, 14.6333, 17.9, 19.3395, 21.7667, 24.5, 26.8, 30.5333, 34.3333, 35.9667, 41.4667, 47.0667, 52.5333, 56.5096, 60.6, 62.6667, 66.3333, 69.9783, 74.7),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(2.83333, 6.06667, 7.83333, 10.1444, 11.5, 12.2667, 14.6333, 17.9, 19.3395, 21.7667, 24.5, 26.8, 30.5333, 34.3333, 35.9667, 41.4667, 47.0667, 52.5333, 56.5096, 60.6, 62.6667, 66.3333, 69.9783, 74.7, 75.6333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "values": [{
 "args": [],
 "method": &"pause"
@@ -234,6 +234,9 @@ tracks/9/keys = {
 }, {
 "args": [],
 "method": &"pause"
+}, {
+"args": [],
+"method": &"end"
 }]
 }
 tracks/10/type = "value"
@@ -285,7 +288,7 @@ tracks/13/keys = {
 }
 tracks/14/type = "value"
 tracks/14/imported = false
-tracks/14/enabled = true
+tracks/14/enabled = false
 tracks/14/path = NodePath("AudioStreamPlayer:volume_db")
 tracks/14/interp = 1
 tracks/14/loop_wrap = true
@@ -764,6 +767,7 @@ libraries = {
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("9_a0elx")
+volume_db = 5.0
 
 [node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("9_jefor")

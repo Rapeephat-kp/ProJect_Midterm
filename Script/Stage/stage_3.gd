@@ -11,7 +11,9 @@ extends Node2D
 #Mission
 @onready var bridge: TileMapLayer = $TileMap/Bridge
 var logs_quantity_require = 3
-
+@onready var mission_massage: Label = $"Guide Massage/MissionMassage"
+var logs_amount_massage1 = "Need"
+var logs_amount_massage2 = "/" + str(logs_quantity_require) +" Logs to build the bridge"
 
 @onready var elendros: Elendros = $"Main Character/Elendros"
 @onready var nymera: Nymera = $"Main Character/Nymera"
@@ -41,27 +43,14 @@ func _ready() -> void:
 	UI.visible = true
 	player.position = spawn_point.position
 	AudioManager.set_and_play_music("res://BG Music/Bg Stage3.ogg")
+	mission_massage.visible = true
+	
 func _process(delta: float):
 	inventory.refresh_inventory()
 	coin_amount.text = str(Gamemanager.get_coin())
 	missionCheck()
+	mission_massage.text = logs_amount_massage1 + " " + str(PlayerInventory.get_item_quantity("Logs")) + logs_amount_massage2
 
-
-
-'''
-func _on_fallzone_area_entered(area: Area2D) -> void:
-	if area.is_in_group("Player"):
-		elendros.position = spawn_point.position
-		nymera.position = spawn_point.position
-
-
-func _on_interact_1_area_entered(area: Area2D) -> void:
-	Gamemanager.set_currentScene("Stage 1-1")
-	print(Gamemanager.get_currentScene())
-
-func _on_interact_2_area_entered(area: Area2D) -> void:
-	Gamemanager.set_currentScene("Stage 1-2")
-'''
 
 func _on_interact_mer_area_entered(area: Area2D) -> void:
 	if area.is_in_group("Player"):
@@ -79,13 +68,11 @@ func _on_water_area_entered(area: Area2D) -> void:
 
 func _on_left_area_entered(area: Area2D) -> void:
 	if area.is_in_group("Player"):
-		#$"map bounds/left/Label".visible = true
 		left_bound.visible = true
 
 
 func _on_left_area_exited(area: Area2D) -> void:
 	if area.is_in_group("Player"):
-		#$"map bounds/left/Label".visible = false
 		left_bound.visible = false
 
 func _on_right_area_entered(area: Area2D) -> void:
@@ -96,6 +83,7 @@ func _on_right_area_entered(area: Area2D) -> void:
 func missionCheck():
 	if PlayerInventory.get_item_quantity("Logs") == logs_quantity_require:
 		return true
+		
 	else:
 		return false
 
@@ -107,9 +95,10 @@ func _on_build_bridge_area_entered(area: Area2D) -> void:
 		bridge.collision_enabled = true
 		bridge.modulate = "ffffff"
 		PlayerInventory.remove_item("Logs",logs_quantity_require)
+		mission_massage.visible = false
 	#mission fail
 	elif missionCheck() == false:
-		print("fail")
+		pass
 
 
 func _on_interact_area_entered(area: Area2D) -> void:
