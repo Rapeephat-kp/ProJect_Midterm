@@ -8,6 +8,7 @@ var max_player_health = 100
 var coins = 200
 var player_dmg = 15
 var Boss_Hp = 100
+var day_state = true
 #Manage Cutscene
 var currentscene = ""
 var player_debuff = false
@@ -171,3 +172,9 @@ func reset_all():
 	is_timer_running = true
 	achievement_1 = true
 	achievement_2 = true
+
+func set_day_state(state: bool):
+	day_state = state
+
+func get_day_state():
+	return day_state

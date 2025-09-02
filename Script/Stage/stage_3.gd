@@ -22,6 +22,7 @@ var logs_quantity_require = 3
 var player
 
 func _ready() -> void:
+	Gamemanager.set_day_state(true)
 	Gamemanager.set_currentScene("Stage 3")
 	Gamemanager.set_scene_spawn("stage_3")
 	bridge.collision_enabled = false

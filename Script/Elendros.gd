@@ -121,7 +121,10 @@ func _on_elendros_hit_box_area_entered(area: Area2D) -> void:
 		await get_tree().create_timer(0.3).timeout
 		velocity = Vector2.ZERO
 
-		Gamemanager.set_player_health(-15)
+		if Gamemanager.get_day_state():
+			Gamemanager.set_player_health(-15)
+		elif !Gamemanager.get_day_state():
+			Gamemanager.set_player_health(-25)
 
 		await get_tree().create_timer(0.3).timeout
 		is_hurt = false

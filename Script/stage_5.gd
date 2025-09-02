@@ -2,6 +2,7 @@ extends Node2D
 var button_check = true
 var player
 func _ready() -> void:
+	Gamemanager.set_day_state(true)
 	Gamemanager.set_currentScene("Stage 5")
 	Gamemanager.set_scene_spawn("stage_5")
 	#PlayerInventory.add_item("Healing Potion", 1) 

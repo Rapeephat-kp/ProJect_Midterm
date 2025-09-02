@@ -1,5 +1,5 @@
 extends CharacterBody2D
-@export var health = 10
+@export var health = 30
 @export var speed = 40
 @export var gravity : float = 30
 @export var sprite = "Idle"

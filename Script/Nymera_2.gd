@@ -149,7 +149,10 @@ func movement():
 
 func _on_hit_box_area_entered(area: Area2D) -> void:
 	if area.is_in_group("Mon_hit"):
-		Gamemanager.set_player_health(-15)
+		if Gamemanager.get_day_state():
+			Gamemanager.set_player_health(-15)
+		elif !Gamemanager.get_day_state():
+			Gamemanager.set_player_health(-25)
 		Idle_Sprite.visible = false
 		Action_Sprite.visible = true
 		Jump_Sprite.visible = false

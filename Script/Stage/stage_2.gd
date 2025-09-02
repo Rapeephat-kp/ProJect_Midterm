@@ -14,6 +14,7 @@ extends Node2D
 var player
 
 func _ready() -> void:
+	Gamemanager.set_day_state(false)
 	Gamemanager.set_currentScene("Stage 2")
 	print(Gamemanager.get_p())
 	var p_value = Gamemanager.get_p()

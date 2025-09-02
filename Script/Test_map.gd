@@ -24,6 +24,7 @@ var current_item: Node = null
 
 
 func _ready() -> void:
+	Gamemanager.set_day_state(true)
 	Gamemanager.set_currentScene("Stage 6")
 	Gamemanager.set_scene_spawn("stage_6")
 	#PlayerInventory.add_item("Healing Potion",5) 

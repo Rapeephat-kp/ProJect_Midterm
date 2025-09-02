@@ -19,6 +19,7 @@ extends Node2D
 var player
 
 func _ready() -> void:
+	Gamemanager.set_day_state(true)
 	Gamemanager.set_currentScene("Stage 1")
 	Gamemanager.set_scene_spawn("stage_1")
 	$"Guide Massage/left".visible = false

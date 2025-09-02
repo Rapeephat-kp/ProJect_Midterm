@@ -24,7 +24,7 @@ func _process(delta: float) -> void:
 func _on_area_2d_area_entered(area: Area2D) -> void:
 	print(type)
 	if area.is_in_group("Player"):
-		AudioManager.set_and_play_sfx_volume("res://SFX/InScene/get coin.mp3",0)
+		AudioManager.set_and_play_sfx_volume("res://SFX/InScene/get coin.mp3",-10)
 		Gamemanager.set_coin(value)
 		queue_free()
 		
