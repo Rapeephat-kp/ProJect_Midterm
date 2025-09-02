@@ -1953,9 +1953,9 @@ scale = Vector2(0.1, 0.1)
 theme_override_colors/font_color = Color(0.849036, 0.395968, 1.92523e-07, 1)
 theme_override_fonts/font = ExtResource("25_3af3u")
 theme_override_font_sizes/font_size = 100
-text = "Press \"A\" \"D\" to Walk
+text = "Press A D to Walk
 
-\"S\" to Jump"
+S to Jump"
 horizontal_alignment = 1
 metadata/_edit_use_anchors_ = true
 
@@ -1968,7 +1968,7 @@ scale = Vector2(0.1, 0.1)
 theme_override_colors/font_color = Color(0.849036, 0.395968, 1.92523e-07, 1)
 theme_override_fonts/font = ExtResource("25_3af3u")
 theme_override_font_sizes/font_size = 100
-text = "Press \"Q\" 
+text = "Press Q
 to attack"
 
 [node name="LeaveCutScene" type="Label" parent="Guide Massage"]
@@ -2029,7 +2029,7 @@ scale = Vector2(0.1, 0.1)
 theme_override_colors/font_color = Color(0.849036, 0.395968, 1.92523e-07, 1)
 theme_override_fonts/font = ExtResource("25_3af3u")
 theme_override_font_sizes/font_size = 100
-text = "Some \"under\" are enter an invulnerable state"
+text = "Some under are enter an invulnerable state"
 horizontal_alignment = 1
 
 [node name="Main Character" type="Node2D" parent="."]

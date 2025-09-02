@@ -149,10 +149,10 @@ func spawn_multiple_fall_attacks(amount: int):
 	for i in range(amount):
 		spawn_fall_attack()
 	await get_tree().create_timer(2).timeout
-	spawn_multiple_fall_attacks(10)
+	spawn_multiple_fall_attacks(4)
 func _on_area_attack_check_area_entered(area: Area2D) -> void:
 	if area.is_in_group("Player"):
-		spawn_multiple_fall_attacks(10)
+		spawn_multiple_fall_attacks(4)
 
 func all_invisible():
 	$Boss.visible = false

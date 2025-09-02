@@ -1,10 +1,11 @@
-[gd_scene load_steps=56 format=3 uid="uid://b3o40bijrx1ou"]
+[gd_scene load_steps=57 format=3 uid="uid://b3o40bijrx1ou"]
 
 [ext_resource type="Texture2D" uid="uid://dkyfygbi0dekj" path="res://Asset_Midterm/UI/UI/Button_52x14.png" id="1_kxtd3"]
 [ext_resource type="Script" uid="uid://dkr4a1gyp0ljc" path="res://Script/cut_scene.gd" id="1_w1y33"]
 [ext_resource type="Texture2D" uid="uid://ckrv13bc0dr4r" path="res://Asset_Midterm/BG/ending scene elendros.png" id="2_0only"]
 [ext_resource type="FontFile" uid="uid://bdl4qpamcrivq" path="res://Fonts/OBGB.TTF" id="2_f3ubt"]
 [ext_resource type="Texture2D" uid="uid://dtuygsym3wo03" path="res://Asset_Midterm/BG/ending scene.png" id="2_tkbrc"]
+[ext_resource type="FontFile" uid="uid://dbydje27os4iv" path="res://Fonts/AncientModernTales-a7Po.ttf" id="3_6ctqn"]
 [ext_resource type="FontFile" uid="uid://c4vaek1i4ujie" path="res://Fonts/PRIMAHANDWRITE.ttf" id="4_f3ubt"]
 [ext_resource type="Texture2D" uid="uid://b1fwdb7wh2oxr" path="res://Asset_Midterm/BG/Merchant Scene.jpg" id="5_ipotq"]
 [ext_resource type="Texture2D" uid="uid://cprtxbqccylxo" path="res://Asset_Midterm/BG/Blur Merchant.jpg" id="6_kxtd3"]
@@ -1444,8 +1445,7 @@ tracks/3/keys = {
 "times": PackedFloat32Array(0, 3.19525, 5.70411, 7.93894, 8.74884, 16.093, 18.5973, 20.3107, 23.7633, 26.2606, 29.1581, 31.633),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 1,
-"values": ["There are too many of them! If we keep running without a plan, we’ll be surrounded!", "Then we fight our way through—until none are left!", "Listen! The sun’s almost down.", "…Damn it.", "At night, the Unders get stronger. Their bodies harden, their reflexes sharpen, and they can sense movement better in the dark.", "If we push on now, we won’t last a minute.", "I can’t just stop here…", "You won’t reach your goal if you don’t survive 
-the night.", "…Fine. We’ll hide. Just until dawn.", "Good. I saw an old chapel at the edge of town—it might hold.", "Then let’s go. But once the sun rises… we move.", "Agreed. Tomorrow, the hunt begins."]
+"values": ["There are too many of them! If we keep running without a plan, we’ll be surrounded!", "Then we fight our way through—until none are left!", "Listen! The sun’s almost down.", "…Damn it.", "At night, the Unders get stronger. Their bodies harden, their reflexes sharpen, and they can sense movement better in the dark.", "If we push on now, we won’t last a minute.", "I can’t just stop here…", "You won’t reach your goal if you don’t survive the night.", "…Fine. We’ll hide. Just until dawn.", "Good. I saw an old chapel at the edge of town—it might hold.", "Then let’s go. But once the sun rises… we move.", "Agreed. Tomorrow, the hunt begins."]
 }
 tracks/4/type = "value"
 tracks/4/imported = false
@@ -1592,8 +1592,7 @@ tracks/3/keys = {
 "times": PackedFloat32Array(0, 3.19525, 5.70411, 7.93894, 8.74884, 16.093, 18.5973, 20.3107, 23.7633, 26.2606, 29.1581, 31.633),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 1,
-"values": ["There are too many of them! If we keep running without a plan, we’ll be surrounded!", "Then we fight our way through—until none are left!", "Listen! The sun’s almost down.", "…Damn it.", "At night, the Unders get stronger. Their bodies harden, their reflexes sharpen, and they can sense movement better in the dark.", "If we push on now, we won’t last a minute.", "I can’t just stop here…", "You won’t reach your goal if you don’t survive 
-the night.", "…Fine. We’ll hide. Just until dawn.", "Good. I saw an old chapel at the edge of town—it might hold.", "Then let’s go. But once the sun rises… we move.", "Agreed. Tomorrow, the hunt begins."]
+"values": ["There are too many of them! If we keep running without a plan, we’ll be surrounded!", "Then we fight our way through—until none are left!", "Listen! The sun’s almost down.", "…Damn it.", "At night, the Unders get stronger. Their bodies harden, their reflexes sharpen, and they can sense movement better in the dark.", "If we push on now, we won’t last a minute.", "I can’t just stop here…", "You won’t reach your goal if you don’t survive the night.", "…Fine. We’ll hide. Just until dawn.", "Good. I saw an old chapel at the edge of town—it might hold.", "Then let’s go. But once the sun rises… we move.", "Agreed. Tomorrow, the hunt begins."]
 }
 tracks/4/type = "value"
 tracks/4/imported = false
@@ -3777,8 +3776,8 @@ offset_right = 807.0
 offset_bottom = 79.0
 scale = Vector2(0.387, 0.387)
 theme_override_colors/font_color = Color(0.756863, 0.607843, 0.447059, 1)
-theme_override_fonts/font = ExtResource("2_f3ubt")
-theme_override_font_sizes/font_size = 200
+theme_override_fonts/font = ExtResource("3_6ctqn")
+theme_override_font_sizes/font_size = 300
 text = "Elendros"
 
 [node name="Sentence" type="Label" parent="CanvasLayer/Ending cutscene/Words"]
@@ -3992,35 +3991,35 @@ horizontal_alignment = 1
 [node name="Line" type="Panel" parent="CanvasLayer/stage cutscene/Setting_Panel_Bg"]
 modulate = Color(0.698039, 0.698039, 0.698039, 1)
 layout_mode = 0
-offset_left = 17.0
-offset_top = 27.0
-offset_right = 134.0
-offset_bottom = 28.0
+offset_left = 17.3333
+offset_top = 29.0
+offset_right = 134.333
+offset_bottom = 30.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_tse6q")
 
 [node name="CharacterName" type="Label" parent="CanvasLayer/stage cutscene/Setting_Panel_Bg"]
 modulate = Color(0.698039, 0.698039, 0.698039, 1)
 layout_mode = 0
-offset_left = 17.0
-offset_top = 10.3333
-offset_right = 113.0
-offset_bottom = 34.3333
-scale = Vector2(0.55, 0.55)
-theme_override_fonts/font = ExtResource("2_f3ubt")
-theme_override_font_sizes/font_size = 20
+offset_left = 17.3333
+offset_top = 8.33333
+offset_right = 314.333
+offset_bottom = 118.333
+scale = Vector2(0.200673, 0.200673)
+theme_override_fonts/font = ExtResource("3_6ctqn")
+theme_override_font_sizes/font_size = 100
 text = "Nymera"
 vertical_alignment = 1
 
 [node name="Phase" type="RichTextLabel" parent="CanvasLayer/stage cutscene/Setting_Panel_Bg"]
 modulate = Color(0.698039, 0.698039, 0.698039, 1)
 layout_mode = 0
-offset_left = 29.0
-offset_top = 33.0
-offset_right = 694.0
-offset_bottom = 101.0
-scale = Vector2(0.55, 0.55)
-theme_override_fonts/normal_font = ExtResource("2_f3ubt")
-theme_override_font_sizes/normal_font_size = 15
+offset_left = 29.3333
+offset_top = 35.0
+offset_right = 3423.33
+offset_bottom = 387.0
+scale = Vector2(0.107937, 0.107937)
+theme_override_fonts/normal_font = ExtResource("3_6ctqn")
+theme_override_font_sizes/normal_font_size = 100
 text = "Whoa there!"
 scroll_active = false
 visible_characters = 0
