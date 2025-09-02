@@ -22,3 +22,63 @@
   คุณ คือหนึ่งในไม่กี่คนที่ยังเหลือรอด ท่ามกลางฝูงมอนสเตอร์ที่ลุกล้ำเข้ามาเพื่อล่าเหยื่อ กับความจริงที่ถูกฝังไว้ใต้ชั้นดินลึก คุณต้องต่อสู้ ไม่ใช่แค่เพื่อมีชีวิตรอด แต่เพื่อหาคำตอบว่า “เห็ดเหล่านี้คืออะไร... และพวกมันต้องการอะไรจากเรา?”
 
 # ทดลองเล่น
+
+# ตัวละคร
+
+**ตัวละครหลัก**
+
+Nymera:
+
+![Nymera](https://drive.google.com/uc?export=view&id=1zmxfZgtyab-k7ShYK-WzwW3_e8SOtdtN)
+
+Elendros:
+
+![Elendros](https://drive.google.com/uc?export=view&id=1t5ZoQ5FzHR9vB2VTSJ0yhFbI34HNi6D1)
+
+------------------------------------------------------------------------------------
+
+**NPC**
+
+Explorer : นักสำรวจ ผู้อัธยาศัยดี ไม่เกรงกลัวที่จะพูดคุยกับคนแปลกหน้า เชี่ยวชาญเส้นทางในเมือง Champignon และสถานที่โดยรอบ
+
+![Explorer](https://drive.google.com/uc?export=view&id=1-Tp8PAyT-YAKuJS5se2mMH1TKMj0ny3C)
+
+Merchant : พ่อค้าที่คลั่งไคล้เห็ดอย่างมาก คอยทำหน้าที่แลกเปลี่ยนสิ่งของกับเหรียญ และให้คำแนะนำเกี่ยวกับเห็ดที่ตนชอบแก่ผู้ที่ผ่านทางมา 
+
+![Merchant](https://drive.google.com/uc?export=view&id=1chwf8jZQF2Ecp2Kv4TBQTeFH7K12rbFH)
+
+**Monster**
+-The Unders-
+มอนสเตอร์ที่มาจากเมืองพิษใต้ดิน ลุกลานเมือง Champignon หลังจากเกิดวิกฤติการณ์เห็ดยักษ์ โดยเหล่า The Unders มีดังนี้
+
+
+
+Skeleton
+
+![skeleton](https://drive.google.com/uc?export=view&id=1LnW3EkWCsFo-r0lTQo3rChSzBCpi_EUQ)
+
+Flying eye
+
+![Flying_eye](https://drive.google.com/uc?export=view&id=1ojQmCAvNL7J029Tfz0RRZG37x9kubMxF)
+
+Goblin
+
+![Goblin](https://drive.google.com/uc?export=view&id=1xJGofIpOV8sFi-YuXLnRSc6Prioot3i-)
+
+Necromancer
+
+![Goblin](https://drive.google.com/uc?export=view&id=14193-ZJiswKyxhOnTktt5tMbDDguhkZS)
+
+Mushroom
+
+![Mushroom](https://drive.google.com/uc?export=view&id=1fXsJMXGTj36niX-CkVVIdPUfCUkwvV6K)
+
+Priest
+
+![Priest](https://drive.google.com/uc?export=view&id=1gJ_xijL9X0gS3GecfSiRZQYtbvLDJeIk)
+
+The Agis : มอนสเตอร์ผู้ปกครองเมืองพิษใต้ดิน มีพลังแกร่งกล้า เป็นราชาแห่งเหล่า The Under (มอนสเตอร์) ทั้งปวง 
+
+![The Agis](https://drive.google.com/uc?export=view&id=1Hju_SFkpgCr4l5xjOfVVDQux8DKJTsoe)
+
+# Credits
