@@ -23,6 +23,22 @@
 [ext_resource type="Texture2D" uid="uid://csm5r4ioaxj6w" path="res://Asset_Midterm/Main_character/Nymera/sliced_frames/frame_17.png" id="21_wmhfl"]
 [ext_resource type="Texture2D" uid="uid://ba72mbsrgmatv" path="res://Asset_Midterm/Main_character/Nymera/Red hood free (zipped) Folder/red hood itch free Copy-Sheet.png" id="22_1vdyt"]
 
+[sub_resource type="Gradient" id="Gradient_cnoqx"]
+colors = PackedColorArray(0.631373, 0.262745, 0.235294, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_cnoqx"]
+gradient = SubResource("Gradient_cnoqx")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_bylnv"]
+particle_flag_disable_z = true
+spread = 180.0
+initial_velocity_max = 40.0
+gravity = Vector3(0, 0, 0)
+scale_min = 0.0
+scale_max = 2.0
+color = Color(0.831274, 0.790142, 0.737809, 1)
+color_ramp = SubResource("GradientTexture1D_cnoqx")
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_y3opc"]
 atlas = ExtResource("1_4jw1g")
 region = Rect2(0, 0, 80, 80)
@@ -1048,24 +1064,14 @@ _data = {
 &"RESET": SubResource("Animation_kbxhg")
 }
 
-[sub_resource type="Gradient" id="Gradient_cnoqx"]
-colors = PackedColorArray(0.631373, 0.262745, 0.235294, 1, 1, 1, 1, 0)
-
-[sub_resource type="GradientTexture1D" id="GradientTexture1D_kbxhg"]
-gradient = SubResource("Gradient_cnoqx")
-
-[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_bylnv"]
-particle_flag_disable_z = true
-spread = 60.0
-initial_velocity_max = 40.0
-gravity = Vector3(0, 200, 0)
-scale_min = 0.0
-scale_max = 2.0
-color = Color(0.831274, 0.790142, 0.737809, 1)
-color_ramp = SubResource("GradientTexture1D_kbxhg")
-
 [node name="Nymera" type="CharacterBody2D" groups=["Player"]]
 script = ExtResource("1_cnoqx")
+
+[node name="Dust Trail" type="GPUParticles2D" parent="."]
+position = Vector2(0, 18)
+amount = 40
+lifetime = 0.3
+process_material = SubResource("ParticleProcessMaterial_bylnv")
 
 [node name="Jump_Sprite" type="AnimatedSprite2D" parent="."]
 visible = false
@@ -1141,11 +1147,5 @@ shape = SubResource("RectangleShape2D_bylnv")
 libraries = {
 &"": SubResource("AnimationLibrary_bylnv")
 }
-
-[node name="Dust Trail" type="GPUParticles2D" parent="."]
-position = Vector2(0, 12)
-amount = 40
-lifetime = 0.3
-process_material = SubResource("ParticleProcessMaterial_bylnv")
 
 [connection signal="area_entered" from="Hit_box" to="." method="_on_hit_box_area_entered"]

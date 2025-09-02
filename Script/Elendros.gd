@@ -19,8 +19,13 @@ var poison_timer: float = 0.0
 @export var poison_damage: int = 1
 var _poison_tick: float = 0.0
 
+@onready var dust_trail: GPUParticles2D = $"Dust Trail"
 
 func _process(delta: float) -> void:
+	if is_on_floor() and abs(velocity.x) > 20:
+		dust_trail.emitting = true
+	else:
+		dust_trail.emitting = false
 	if !Gamemanager.get_player_buff():
 		if in_fog:
 			is_poisoned = true

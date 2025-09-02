@@ -5,6 +5,22 @@
 [ext_resource type="Texture2D" uid="uid://da8iovc2p4sgp" path="res://Asset_Midterm/Main_character/Elendros/Sprite Sheet/1. Idle 48 x 48.png" id="3_wr4vd"]
 [ext_resource type="Texture2D" uid="uid://ypo8fdu7lluv" path="res://Asset_Midterm/Main_character/Elendros/Sprite Sheet/2. Run 48 x 48.png" id="4_poemn"]
 
+[sub_resource type="Gradient" id="Gradient_2ncla"]
+colors = PackedColorArray(0.631373, 0.262745, 0.235294, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_kbxhg"]
+gradient = SubResource("Gradient_2ncla")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_l8ul0"]
+particle_flag_disable_z = true
+spread = 180.0
+initial_velocity_max = 40.0
+gravity = Vector3(0, 0, 0)
+scale_min = 0.0
+scale_max = 2.0
+color = Color(0.831274, 0.790142, 0.737809, 1)
+color_ramp = SubResource("GradientTexture1D_kbxhg")
+
 [sub_resource type="Animation" id="Animation_j207b"]
 length = 0.001
 tracks/0/type = "value"
@@ -259,30 +275,20 @@ size = Vector2(8, 36)
 size = Vector2(30.9997, 90)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_l8ul0"]
-size = Vector2(31.0002, 88.9999)
+size = Vector2(31.6311, 88.9999)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_so822"]
 size = Vector2(10, 36)
 
-[sub_resource type="Gradient" id="Gradient_2ncla"]
-colors = PackedColorArray(0.631373, 0.262745, 0.235294, 1, 1, 1, 1, 0)
-
-[sub_resource type="GradientTexture1D" id="GradientTexture1D_kbxhg"]
-gradient = SubResource("Gradient_2ncla")
-
-[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_l8ul0"]
-particle_flag_disable_z = true
-spread = 60.0
-initial_velocity_max = 40.0
-gravity = Vector3(0, 200, 0)
-scale_min = 0.0
-scale_max = 2.0
-color = Color(0.831274, 0.790142, 0.737809, 1)
-color_ramp = SubResource("GradientTexture1D_kbxhg")
-
 [node name="CharacterBody2D" type="CharacterBody2D" groups=["Player"]]
 scale = Vector2(0.8059, 0.8059)
 script = ExtResource("1_214lb")
+
+[node name="Dust Trail" type="GPUParticles2D" parent="."]
+position = Vector2(0, 15.7225)
+amount = 40
+lifetime = 0.3
+process_material = SubResource("ParticleProcessMaterial_l8ul0")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 root_node = NodePath("../Idel_Sprite")
@@ -322,6 +328,7 @@ drag_horizontal_enabled = true
 drag_vertical_enabled = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." groups=["Player"]]
+visible = false
 position = Vector2(1, 0)
 shape = SubResource("RectangleShape2D_ly00p")
 metadata/_edit_lock_ = true
@@ -329,6 +336,7 @@ metadata/_edit_lock_ = true
 [node name="Attack_Zone_Elendros_right" type="Area2D" parent="." groups=["Player_hit"]]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Attack_Zone_Elendros_right" groups=["Player_hit"]]
+visible = false
 position = Vector2(-43, -0.500131)
 rotation = -1.5708
 shape = SubResource("RectangleShape2D_2ncla")
@@ -337,7 +345,8 @@ disabled = true
 [node name="Attack_Zone_Elendros" type="Area2D" parent="." groups=["Player_hit"]]
 
 [node name="Attack_Zone_col" type="CollisionShape2D" parent="Attack_Zone_Elendros" groups=["Player_hit"]]
-position = Vector2(46, 0)
+visible = false
+position = Vector2(46, -0.315467)
 rotation = -1.5708
 shape = SubResource("RectangleShape2D_l8ul0")
 disabled = true
@@ -350,11 +359,5 @@ metadata/_edit_lock_ = true
 position = Vector2(0, 1)
 shape = SubResource("RectangleShape2D_so822")
 metadata/_edit_lock_ = true
-
-[node name="Dust Trail" type="GPUParticles2D" parent="."]
-position = Vector2(0, 10.7592)
-amount = 40
-lifetime = 0.3
-process_material = SubResource("ParticleProcessMaterial_l8ul0")
 
 [connection signal="area_entered" from="Elendros_hitBox" to="." method="_on_elendros_hit_box_area_entered"]
