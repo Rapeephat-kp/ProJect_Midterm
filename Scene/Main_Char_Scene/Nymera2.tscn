@@ -1,4 +1,4 @@
-[gd_scene load_steps=166 format=3 uid="uid://dkshrpsvngsmf"]
+[gd_scene load_steps=169 format=3 uid="uid://dkshrpsvngsmf"]
 
 [ext_resource type="Texture2D" uid="uid://d3e1g02l1dm3r" path="res://Asset_Midterm/Main_character/Nymera/idle and  alter/itch jump sheet-Sheet.png" id="1_4jw1g"]
 [ext_resource type="Script" uid="uid://csgbyw0tc4t2i" path="res://Script/Nymera_2.gd" id="1_cnoqx"]
@@ -1048,12 +1048,28 @@ _data = {
 &"RESET": SubResource("Animation_kbxhg")
 }
 
+[sub_resource type="Gradient" id="Gradient_cnoqx"]
+colors = PackedColorArray(0.631373, 0.262745, 0.235294, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_kbxhg"]
+gradient = SubResource("Gradient_cnoqx")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_bylnv"]
+particle_flag_disable_z = true
+spread = 60.0
+initial_velocity_max = 40.0
+gravity = Vector3(0, 200, 0)
+scale_min = 0.0
+scale_max = 2.0
+color = Color(0.831274, 0.790142, 0.737809, 1)
+color_ramp = SubResource("GradientTexture1D_kbxhg")
+
 [node name="Nymera" type="CharacterBody2D" groups=["Player"]]
 script = ExtResource("1_cnoqx")
 
 [node name="Jump_Sprite" type="AnimatedSprite2D" parent="."]
 visible = false
-position = Vector2(19, 12)
+position = Vector2(11, 0)
 sprite_frames = SubResource("SpriteFrames_ntrtc")
 animation = &"Jump"
 frame = 18
@@ -1061,7 +1077,6 @@ frame_progress = 1.0
 metadata/_edit_lock_ = true
 
 [node name="Idle_Sprite" type="AnimatedSprite2D" parent="."]
-position = Vector2(13, 11)
 sprite_frames = SubResource("SpriteFrames_j1uka")
 animation = &"Idle_2"
 frame = 17
@@ -1080,7 +1095,7 @@ drag_vertical_enabled = true
 
 [node name="Action_Sprite" type="AnimatedSprite2D" parent="."]
 visible = false
-position = Vector2(13, 2)
+position = Vector2(2, -11)
 sprite_frames = SubResource("SpriteFrames_4vgj3")
 animation = &"Attack 1"
 flip_h = true
@@ -1088,12 +1103,12 @@ metadata/_edit_lock_ = true
 
 [node name="Body" type="CollisionShape2D" parent="." groups=["Player"]]
 visible = false
-position = Vector2(14, 14.25)
+position = Vector2(0, 2)
 shape = SubResource("RectangleShape2D_bn6tl")
 
 [node name="Jump2_Sprite" type="AnimatedSprite2D" parent="."]
 visible = false
-position = Vector2(8, 12)
+position = Vector2(-6, 0)
 sprite_frames = SubResource("SpriteFrames_bjf3f")
 animation = &"Jump"
 flip_h = true
@@ -1102,26 +1117,35 @@ metadata/_edit_lock_ = true
 [node name="attack_zone_right" type="Area2D" parent="." groups=["Player_hit"]]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="attack_zone_right" groups=["Player_hit"]]
-position = Vector2(0.5, 16)
+visible = false
+position = Vector2(-14, 2)
 shape = SubResource("RectangleShape2D_cnoqx")
 disabled = true
 
 [node name="attack_zone_left" type="Area2D" parent="." groups=["Player_hit"]]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="attack_zone_left" groups=["Player_hit"]]
-position = Vector2(27.5, 16)
+visible = false
+position = Vector2(13, 2)
 shape = SubResource("RectangleShape2D_kbxhg")
 disabled = true
 
 [node name="Hit_box" type="Area2D" parent="." groups=["Player"]]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hit_box" groups=["Player"]]
-position = Vector2(14, 15)
+visible = false
+position = Vector2(0, 2)
 shape = SubResource("RectangleShape2D_bylnv")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
 &"": SubResource("AnimationLibrary_bylnv")
 }
+
+[node name="Dust Trail" type="GPUParticles2D" parent="."]
+position = Vector2(0, 12)
+amount = 40
+lifetime = 0.3
+process_material = SubResource("ParticleProcessMaterial_bylnv")
 
 [connection signal="area_entered" from="Hit_box" to="." method="_on_hit_box_area_entered"]

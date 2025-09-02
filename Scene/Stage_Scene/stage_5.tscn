@@ -1,4 +1,4 @@
-[gd_scene load_steps=94 format=4 uid="uid://c8e7xlnmjjcpb"]
+[gd_scene load_steps=101 format=4 uid="uid://c8e7xlnmjjcpb"]
 
 [ext_resource type="Script" uid="uid://basg1pfe5ph52" path="res://Script/stage_5.gd" id="1_hbu84"]
 [ext_resource type="Texture2D" uid="uid://bjoc2gctj3hdg" path="res://Asset_Midterm/Tile_Map/Fantasy Swamp Forest/Free/Terrain-and-Props-OLD.png" id="1_kem2i"]
@@ -11,6 +11,7 @@
 [ext_resource type="FontFile" uid="uid://bdl4qpamcrivq" path="res://Fonts/OBGB.TTF" id="6_rcg4y"]
 [ext_resource type="Texture2D" uid="uid://m8j48x433ipv" path="res://Asset_Midterm/UI/UI/HotkeyBox_34x34.png" id="7_2uvru"]
 [ext_resource type="Script" uid="uid://chtw2cfquxn21" path="res://Script/setting.gd" id="10_puiax"]
+[ext_resource type="Texture2D" uid="uid://dnw3ntagjsypa" path="res://Shader/Png/white-circle-png-removebg-preview.png" id="11_3bghf"]
 [ext_resource type="Script" uid="uid://cpx0nmduoq4e0" path="res://Scene/Stage_Scene/fog.gd" id="11_dba68"]
 [ext_resource type="PackedScene" uid="uid://bal4y7qsf3yqg" path="res://Scene/inventory.tscn" id="11_hbu84"]
 [ext_resource type="Texture2D" uid="uid://c02hk8gklv3yv" path="res://Asset_Midterm/UI/UI/ValueBar_128x16.png" id="12_nv2tu"]
@@ -2333,6 +2334,35 @@ size = Vector2(575.323, 293.064)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5gbto"]
 size = Vector2(664.5, 111.5)
 
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_puchm"]
+
+[sub_resource type="Gradient" id="Gradient_7s4ym"]
+colors = PackedColorArray(0.0352, 0.22, 0.17996, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_25yi7"]
+gradient = SubResource("Gradient_7s4ym")
+
+[sub_resource type="Curve" id="Curve_25yi7"]
+_limits = [0.0, 2.5, 0.0, 2.5]
+_data = [Vector2(0.00505051, 0.498589), 0.0, 0.0, 0, 0, Vector2(2.5, 2.5), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_5x5rv"]
+curve = SubResource("Curve_25yi7")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_81t4h"]
+particle_flag_disable_z = true
+emission_shape = 3
+emission_box_extents = Vector3(1100, 2700, 1)
+direction = Vector3(0, 0, 0)
+initial_velocity_min = 10.0
+initial_velocity_max = 10.0
+gravity = Vector3(0, 0, 0)
+scale_min = 0.01
+scale_max = 0.1
+scale_curve = SubResource("CurveTexture_5x5rv")
+color_ramp = SubResource("GradientTexture1D_25yi7")
+
 [sub_resource type="Gradient" id="Gradient_rcg4y"]
 offsets = PackedFloat32Array(0.145669, 1)
 colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
@@ -2835,10 +2865,10 @@ position = Vector2(15, -919)
 script = ExtResource("11_dba68")
 
 [node name="Fog1" type="ColorRect" parent="Fog" groups=["Toxic"]]
-offset_left = -173.0
-offset_top = -322.0
-offset_right = 400.0
-offset_bottom = -29.0
+offset_left = -181.0
+offset_top = -335.0
+offset_right = 392.0
+offset_bottom = -42.0
 scale = Vector2(3.72, 3.72)
 color = Color(0.235294, 0.32549, 0.207843, 1)
 
@@ -2856,6 +2886,15 @@ position = Vector2(1136, 1624)
 [node name="CollisionShape" type="CollisionShape2D" parent="Fog/detect_1"]
 position = Vector2(-775.25, -317.75)
 shape = SubResource("RectangleShape2D_5gbto")
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="Fog"]
+material = SubResource("CanvasItemMaterial_puchm")
+position = Vector2(854, -1900)
+amount = 10000
+texture = ExtResource("11_3bghf")
+lifetime = 3.0
+visibility_rect = Rect2(-1000, -100, 2000, 5000)
+process_material = SubResource("ParticleProcessMaterial_81t4h")
 
 [node name="Tile_Map" type="Node2D" parent="."]
 

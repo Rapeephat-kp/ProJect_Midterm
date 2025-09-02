@@ -18,7 +18,7 @@ func _process(delta: float) -> void:
 		Fog1_size += Vector2(0,delta*2)
 		$Fog1.size = Fog1_size
 		$Fog1/Area2D/CollisionShape2D.shape.size += Vector2(0,delta*2) * 2
-		
+		$GPUParticles2D.position += Vector2(0.0,delta*2) * 3.8
 	
 		
 func _on_detect_1_area_entered(area: Area2D) -> void:

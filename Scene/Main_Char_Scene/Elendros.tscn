@@ -1,4 +1,4 @@
-[gd_scene load_steps=41 format=3 uid="uid://ckk8xxea62en7"]
+[gd_scene load_steps=44 format=3 uid="uid://ckk8xxea62en7"]
 
 [ext_resource type="Script" uid="uid://bbwr0euxqhcsm" path="res://Script/Elendros.gd" id="1_214lb"]
 [ext_resource type="Texture2D" uid="uid://dv55he42b0ri5" path="res://Asset_Midterm/Main_character/Elendros/Sprite Sheet/5. Attack 131 x 56.png" id="2_vkvai"]
@@ -264,6 +264,22 @@ size = Vector2(31.0002, 88.9999)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_so822"]
 size = Vector2(10, 36)
 
+[sub_resource type="Gradient" id="Gradient_2ncla"]
+colors = PackedColorArray(0.631373, 0.262745, 0.235294, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_kbxhg"]
+gradient = SubResource("Gradient_2ncla")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_l8ul0"]
+particle_flag_disable_z = true
+spread = 60.0
+initial_velocity_max = 40.0
+gravity = Vector3(0, 200, 0)
+scale_min = 0.0
+scale_max = 2.0
+color = Color(0.831274, 0.790142, 0.737809, 1)
+color_ramp = SubResource("GradientTexture1D_kbxhg")
+
 [node name="CharacterBody2D" type="CharacterBody2D" groups=["Player"]]
 scale = Vector2(0.8059, 0.8059)
 script = ExtResource("1_214lb")
@@ -334,5 +350,11 @@ metadata/_edit_lock_ = true
 position = Vector2(0, 1)
 shape = SubResource("RectangleShape2D_so822")
 metadata/_edit_lock_ = true
+
+[node name="Dust Trail" type="GPUParticles2D" parent="."]
+position = Vector2(0, 10.7592)
+amount = 40
+lifetime = 0.3
+process_material = SubResource("ParticleProcessMaterial_l8ul0")
 
 [connection signal="area_entered" from="Elendros_hitBox" to="." method="_on_elendros_hit_box_area_entered"]

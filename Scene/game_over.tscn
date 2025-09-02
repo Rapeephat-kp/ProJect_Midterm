@@ -98,6 +98,7 @@ texture = ExtResource("3_3p3j6")
 metadata/_edit_lock_ = true
 
 [node name="info" type="Label" parent="CanvasLayer/Control"]
+layout_mode = 0
 offset_left = -695.0
 offset_top = -432.0
 offset_right = 3587.0
@@ -124,6 +125,7 @@ theme_override_styles/pressed = SubResource("StyleBoxTexture_up0eu")
 theme_override_styles/normal = SubResource("StyleBoxTexture_6ly0m")
 
 [node name="Label2" type="Label" parent="CanvasLayer/Control/Respawn"]
+layout_mode = 0
 offset_left = 5.51746
 offset_top = -0.168945
 offset_right = 565.517
@@ -148,6 +150,7 @@ theme_override_styles/pressed = SubResource("StyleBoxTexture_53g77")
 theme_override_styles/normal = SubResource("StyleBoxTexture_6oh06")
 
 [node name="Label2" type="Label" parent="CanvasLayer/Control/Main Menu"]
+layout_mode = 0
 offset_left = 5.96847
 offset_top = 0.506758
 offset_right = 725.968

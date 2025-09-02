@@ -4,6 +4,8 @@ class_name Nymera
 const SPEED = 200
 const JUMP_VELOCITY = -325.0
 
+@onready var dust_trail: GPUParticles2D = $"Dust Trail"
+
 @onready var Idle_Sprite = $Idle_Sprite
 @onready var Action_Sprite = $Action_Sprite
 @onready var Jump_Sprite = $Jump_Sprite
@@ -25,6 +27,10 @@ var poison_timer: float = 0.0
 var _poison_tick: float = 0.0
 
 func _process(delta: float) -> void:
+	if is_on_floor() and abs(velocity.x) > 20:
+		dust_trail.emitting = true
+	else:
+		dust_trail.emitting = false
 	if !Gamemanager.get_player_buff():
 		if in_fog:
 			is_poisoned = true

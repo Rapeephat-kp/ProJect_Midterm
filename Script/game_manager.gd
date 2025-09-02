@@ -2,8 +2,8 @@ extends Node2D
 
 class_name GameManager
 var Wood = 0
-var player = 1
-var current_main_player_hp = 0
+var player = 2
+var current_main_player_hp = 100
 var max_player_health = 100 
 var coins = 200
 var player_dmg = 15
