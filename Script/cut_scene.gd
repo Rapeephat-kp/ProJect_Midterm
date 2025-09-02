@@ -31,7 +31,7 @@ var buy_text = " Buy"
 var healPotion = 100
 var maxHpPotion = 350
 var atkPotion = 250
-var antidotePotion = 150
+var antidotePotion = 400
 
 
 
@@ -66,8 +66,8 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if visible_character != phase.visible_characters:
 		visible_character = phase.visible_characters
-		AudioManager.set_stream("res://SFX/keyboard-typing-one-short.mp3")
-		AudioManager.play_stream()
+		AudioManager.set_and_play_sfx("res://SFX/keyboard-typing-one-short.mp3")
+		#AudioManager.play_sfx()
 		
 	if autoplay == false:
 		timer.start()
@@ -96,11 +96,11 @@ func _input(event: InputEvent) -> void:
 func _on_next_button_pressed() -> void:
 	if not animation_player.is_playing():
 		animation_player.play()
-		
+	AudioManager.play_press_sfx()
 func _on_auto_button_pressed() -> void:
 	autoplay = not autoplay
 	print(autoplay)
-
+	AudioManager.play_press_sfx()
 
 func _on_timer_timeout() -> void:
 	print("timeout")
@@ -126,7 +126,7 @@ func stage1(Character : int):
 
 func _on_store_button_pressed() -> void:
 		set_store()
-			
+		AudioManager.play_press_sfx()	
 			
 
 
@@ -172,18 +172,18 @@ func set_store():
 			info1_des.text = "Increase HP (+50 HP for each)"
 			item_1_price.text = str(healPotion)+buy_text
 			item2_name.text = "Antiodote Potion"
-			info2_des.text = "Protect from poisson gas (duration 1 minute)"
+			info2_des.text = "Protect from poisson gas"
 			item_2_price.text = str(antidotePotion)+buy_text
 func _on_hp_buy_pressed() -> void:
 	if Gamemanager.get_coin() >= 100:
 		inventory.buy_item("Healing Potion", 1)
 		Gamemanager.set_coin(-100)
 		print("Buyyyy")
-
+	AudioManager.play_press_sfx()
 
 func _on_exit_pressed() -> void:
 	store.visible = false
-
+	AudioManager.play_press_sfx()
 
 func _on_item_1_buy_pressed() -> void:
 	if curScene == "Stage 3":
@@ -204,7 +204,7 @@ func _on_item_1_buy_pressed() -> void:
 			Gamemanager.set_coin(-1*healPotion)
 		else:
 			buyFail1()
-		
+	AudioManager.play_press_sfx()	
 func _on_item_2_buy_pressed() -> void:
 	if curScene == "Stage 3":
 		if Gamemanager.get_coin() >= maxHpPotion:
@@ -224,7 +224,7 @@ func _on_item_2_buy_pressed() -> void:
 			Gamemanager.set_coin(-1*antidotePotion)
 		else:
 			buyFail2()
-			
+	AudioManager.play_press_sfx()	
 func buyFail1():
 	buy_fail_label_1.visible = true
 	await get_tree().create_timer(5).timeout
@@ -237,6 +237,7 @@ func buyFail2():
 	
 
 func display_Ending(player):
+	AudioManager.set_and_play_music("res://BG Music/Ending.ogg")
 	if player == 1:
 		animation_player.play("Elendros Ending")
 
@@ -249,4 +250,6 @@ func toWinScene():
 
 
 func _on_skip_button_pressed() -> void:
+	AudioManager.play_press_sfx()
 	toWinScene()
+	

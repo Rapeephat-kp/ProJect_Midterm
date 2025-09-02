@@ -1,10 +1,19 @@
-[gd_scene load_steps=3 format=3 uid="uid://y2k6vypt0cs6"]
+[gd_scene load_steps=4 format=3 uid="uid://y2k6vypt0cs6"]
 
 [ext_resource type="Script" uid="uid://bn3of4qf8xhpy" path="res://Script/audio_manager.gd" id="1_uux71"]
 [ext_resource type="AudioStream" uid="uid://xpfhp547m7l3" path="res://SFX/keyboard-typing-one-short.mp3" id="2_fmqd6"]
+[ext_resource type="AudioStream" uid="uid://cu8llf4r4m77j" path="res://BG Music/Bg Stage1.ogg" id="3_ucjau"]
 
 [node name="AudioManager" type="Node2D"]
 script = ExtResource("1_uux71")
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+[node name="SFX" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("2_fmqd6")
+bus = &"SFX"
+
+[node name="SFX2" type="AudioStreamPlayer" parent="."]
+
+[node name="BG Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_ucjau")
+
+[node name="walk" type="AudioStreamPlayer" parent="."]

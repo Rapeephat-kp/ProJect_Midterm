@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://c17gxuusjhucp"
-path="res://.godot/imported/Seraphine DEMO VERSION.ttf-e721300a83d17c2c2fd0690b1ff16848.fontdata"
+path="res://.godot/imported/Seraphine DEMO VERSION.ttf-98c8057c84f55adc0f2b5700fd7fa01c.fontdata"
 
 [deps]
 
-source_file="res://Font/Seraphine DEMO VERSION.ttf"
-dest_files=["res://.godot/imported/Seraphine DEMO VERSION.ttf-e721300a83d17c2c2fd0690b1ff16848.fontdata"]
+source_file="res://Fonts/Seraphine DEMO VERSION.ttf"
+dest_files=["res://.godot/imported/Seraphine DEMO VERSION.ttf-98c8057c84f55adc0f2b5700fd7fa01c.fontdata"]
 
 [params]
 

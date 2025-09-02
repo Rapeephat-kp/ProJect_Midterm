@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://by6dc0ksi34x7"
+path="res://.godot/imported/get coin.mp3-55ff4d1e18184e8516d150f32b00ed2a.mp3str"
+
+[deps]
+
+source_file="res://SFX/InScene/get coin.mp3"
+dest_files=["res://.godot/imported/get coin.mp3-55ff4d1e18184e8516d150f32b00ed2a.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

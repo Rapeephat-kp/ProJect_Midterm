@@ -117,6 +117,7 @@ func attack():
 		if get_hit or not is_alive:
 			_cancel_attack()
 			return
+		AudioManager.set_and_play_sfx_volume("res://SFX/Monster Attack/flying-eye atk.mp3",-10)
 		$attack_zone_left/CollisionShape2D.disabled = false
 		await get_tree().create_timer(0.5).timeout
 		if get_hit or not is_alive:
@@ -133,6 +134,7 @@ func attack():
 		if get_hit or not is_alive:
 			_cancel_attack()
 			return
+		AudioManager.set_and_play_sfx_volume("res://SFX/Monster Attack/flying-eye atk.mp3",-10)
 		$attack_zone_right/CollisionShape2D.disabled = false
 		await get_tree().create_timer(0.5).timeout
 		if get_hit or not is_alive:

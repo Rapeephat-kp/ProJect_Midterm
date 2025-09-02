@@ -24,6 +24,7 @@ var current_item: Node = null
 
 
 func _ready() -> void:
+	Gamemanager.set_currentScene("Stage 6")
 	Gamemanager.set_scene_spawn("stage_6")
 	#PlayerInventory.add_item("Healing Potion",5) 
 	print(Gamemanager.get_p())
@@ -52,7 +53,7 @@ func _ready() -> void:
 			attack_spawn_point.append(marker.global_position)
 	spawn_random_item()
 	gameEnd = false
-
+	AudioManager.set_and_play_music("res://BG Music/Bg Stage6.ogg")
 func spawn_random_item():
 	if spawn_points.is_empty():
 		return
@@ -69,7 +70,7 @@ func spawn_random_item():
 
 func _on_item_destroyed():
 	# ลดเลือดบอส
-	Gamemanager.set_Boss_Hp(-100)
+	Gamemanager.set_Boss_Hp(-10)
 	current_item = null
 	if Gamemanager.get_Boss_health() <= hp_phase:
 		spawn_monster()
@@ -135,11 +136,11 @@ func _process(delta: float):
 		
 func _on_button_pressed() -> void:
 	get_tree().change_scene_to_file("res://Scene/stage_1_in_the_city.tscn")
-
+	AudioManager.play_press_sfx()
 
 func _on_button_2_pressed() -> void:
 	get_tree().change_scene_to_file("res://Scene/store.tscn")
-	
+	AudioManager.play_press_sfx()
 
 func spawn_multiple_fall_attacks(amount: int):
 	if not allow_fall_attack:

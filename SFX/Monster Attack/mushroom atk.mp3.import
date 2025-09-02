@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cbos2qvt6v1rd"
+path="res://.godot/imported/mushroom atk.mp3-27a3e532cad480358201ffbae1e9413a.mp3str"
+
+[deps]
+
+source_file="res://SFX/Monster Attack/mushroom atk.mp3"
+dest_files=["res://.godot/imported/mushroom atk.mp3-27a3e532cad480358201ffbae1e9413a.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

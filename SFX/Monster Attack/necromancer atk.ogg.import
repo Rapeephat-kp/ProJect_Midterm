@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dn3mdsdudfsvi"
+path="res://.godot/imported/necromancer atk.ogg-ef469514500e4bcf266e11fd3447f167.oggvorbisstr"
+
+[deps]
+
+source_file="res://SFX/Monster Attack/necromancer atk.ogg"
+dest_files=["res://.godot/imported/necromancer atk.ogg-ef469514500e4bcf266e11fd3447f167.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

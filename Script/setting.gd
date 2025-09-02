@@ -15,7 +15,7 @@ func _on_setting_button_pressed() -> void:
 	if status != 1:
 		status = 1
 		$"../AnimationPlayer".play("Open")
-
+	AudioManager.play_press_sfx()
 func _on_exit_button_pressed() -> void:
 	get_tree().change_scene_to_file("res://Scene/main.tscn")
 
@@ -23,7 +23,7 @@ func _on_exit_button_pressed() -> void:
 func _on_resume_button_pressed() -> void:
 	status = 0
 	$"../AnimationPlayer".play("Close")
-
+	AudioManager.play_press_sfx()
 
 
 func _on_achievement_button_button_down() -> void:

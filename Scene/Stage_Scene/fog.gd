@@ -25,4 +25,5 @@ func _on_detect_1_area_entered(area: Area2D) -> void:
 	if area.is_in_group("Player"):
 		condition_1 = true
 		$Fog1.visible = true
+		AudioManager.set_and_play_music("res://BG Music/Bg Stage5-2.ogg")
 		print("in detect")

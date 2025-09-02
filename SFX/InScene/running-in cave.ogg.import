@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cuoxakohjcmtq"
+path="res://.godot/imported/running-in cave.ogg-c65bce90b337802513df79eb1b145966.oggvorbisstr"
+
+[deps]
+
+source_file="res://SFX/InScene/running-in cave.ogg"
+dest_files=["res://.godot/imported/running-in cave.ogg-c65bce90b337802513df79eb1b145966.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -7,7 +7,7 @@ func _on_hp_potion_pressed() -> void:
 	click_check = !click_check   
 	cam.enabled = click_check
 	$CanvasLayer.visible = !click_check
-	
+	AudioManager.play_press_sfx()
 	
 func _on_max_hp_potion_pressed() -> void:
 	var cam = $Control/Max_HP_Potion/Camera2D

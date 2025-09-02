@@ -116,10 +116,11 @@ func attack():
 		if player_in_l == true && is_attack == true && get_hit != true:
 			is_attacking = true
 			$AnimatedSprite2D.play("Attack_near")
+			#AudioManager.set_and_play_sfx("res://SFX/Monster Attack/necromancer atk.mp3")
 			velocity.x = 0
 			move_and_slide()
 
-			var wait_time = attack_delay - 2
+			var wait_time = attack_delay - 1.5
 			var elapsed = 0.0
 			var step = 0.1
 			while elapsed < wait_time && dis_check != true:
@@ -128,11 +129,12 @@ func attack():
 					return
 				await get_tree().create_timer(step).timeout
 				elapsed += step
-			
+			AudioManager.set_and_play_sfx_volume("res://SFX/Monster Attack/necromancer atk.mp3",5)
 			$attack_zone_left/CollisionShape2D.disabled = false
-			
+			$AnimatedSprite2D.stop()
+			await get_tree().create_timer(0.05).timeout
 			elapsed = 0.0
-			while elapsed < 2 && dis_check != true :
+			while elapsed < 0.5 && dis_check != true :
 				if get_hit == true:
 					$attack_zone_left/CollisionShape2D.disabled = true
 					is_attacking = false
@@ -145,6 +147,7 @@ func attack():
 		
 		elif player_in_r == true && is_attack == true && get_hit != true:
 			is_attacking = true
+			#
 			$AnimatedSprite2D.play("Attack_near")
 			velocity.x = 0
 			move_and_slide()
@@ -158,11 +161,12 @@ func attack():
 					return
 				await get_tree().create_timer(step).timeout
 				elapsed += step
-			
+			AudioManager.set_and_play_sfx_volume("res://SFX/Monster Attack/necromancer atk.mp3",2)
 			$attack_zone_right/CollisionShape2D.disabled = false
-			
+			$AnimatedSprite2D.stop()
+			await get_tree().create_timer(0.05).timeout
 			elapsed = 0.0
-			while elapsed < 2 && dis_check != true:
+			while elapsed < 0.5 && dis_check != true:
 				if get_hit == true:
 					$attack_zone_right/CollisionShape2D.disabled = true
 					is_attacking = false

@@ -119,6 +119,7 @@ func attack():
 		if not is_alive or get_hit :
 			_cancel_attack()
 			return
+		AudioManager.set_and_play_sfx_volume("res://SFX/Monster Attack/priest atk.mp3",0)
 		$attack_zone_left/CollisionShape2D.disabled = false
 		$AnimatedSprite2D.play("Idle")
 		await get_tree().create_timer(1).timeout
@@ -133,6 +134,7 @@ func attack():
 		if not is_alive or get_hit :
 			_cancel_attack()
 			return
+		AudioManager.set_and_play_sfx_volume("res://SFX/Monster Attack/priest atk.mp3",0)
 		$attack_zone_right/CollisionShape2D.disabled = false
 		$AnimatedSprite2D.play("Idle")
 		await get_tree().create_timer(1).timeout

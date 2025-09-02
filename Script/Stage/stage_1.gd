@@ -19,6 +19,7 @@ extends Node2D
 var player
 
 func _ready() -> void:
+	Gamemanager.set_currentScene("Stage 1")
 	Gamemanager.set_scene_spawn("stage_1")
 	$"Guide Massage/left".visible = false
 	var p_value = Gamemanager.get_p()
@@ -32,6 +33,7 @@ func _ready() -> void:
 		nymeraProfile.visible = true
 	player.position = spawn_point.position
 	UI.visible = true
+	AudioManager.set_and_play_music("res://BG Music/Bg Stage1.ogg")
 	#CutSceneManager.stage1_part1()
 func _process(delta: float):
 	inventory.refresh_inventory()

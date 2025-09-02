@@ -2,6 +2,7 @@ extends Node2D
 var button_check = true
 var player
 func _ready() -> void:
+	Gamemanager.set_currentScene("Stage 5")
 	Gamemanager.set_scene_spawn("stage_5")
 	#PlayerInventory.add_item("Healing Potion", 1) 
 	#PlayerInventory.add_item("Antidote Potion", 1)
@@ -19,7 +20,7 @@ func _ready() -> void:
 		player = $"Main Character/Nymera"
 		
 	player.position = $Spawn.position
-	
+	AudioManager.set_and_play_music("res://BG Music/Bg Stage5-1.ogg")
 func _process(delta: float):
 	$CanvasUI/Inventory/Inventory.refresh_inventory()
 	$CanvasUI/Player_show/Coins/Coin_Amount.text = str(Gamemanager.get_coin())
@@ -53,7 +54,7 @@ func _on_info_buff_pressed() -> void:
 		$CanvasUI/Buff_Debuff_Status/Panel.visible = button_check
 		$CanvasUI/Buff_Debuff_Status/Name.visible = button_check
 		button_check = !button_check
-
+	AudioManager.play_press_sfx()
 
 func _on_area_2d_area_entered(area: Area2D) -> void:
 	if area.is_in_group("Player"):

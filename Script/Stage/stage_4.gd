@@ -2,7 +2,7 @@ extends Node2D
 
 var player
 func _ready() -> void:
-	
+	Gamemanager.set_currentScene("Stage 4")
 	print(Gamemanager.get_p())
 	var p_value = Gamemanager.get_p()
 	
@@ -16,6 +16,7 @@ func _ready() -> void:
 		$CanvasUI/Player_show/Nymera.visible = true
 		
 	player.position = $Spawn.position
+	AudioManager.set_and_play_music("res://BG Music/Bg Stage4.ogg")
 func _process(delta: float):
 	$CanvasUI/Inventory/Inventory.refresh_inventory()
 	$CanvasUI/Player_show/Coins/Coin_Amount.text = str(Gamemanager.get_coin())

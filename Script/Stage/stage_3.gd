@@ -22,6 +22,7 @@ var logs_quantity_require = 3
 var player
 
 func _ready() -> void:
+	Gamemanager.set_currentScene("Stage 3")
 	Gamemanager.set_scene_spawn("stage_3")
 	bridge.collision_enabled = false
 	bridge.modulate = "ffffff39"
@@ -38,7 +39,7 @@ func _ready() -> void:
 		nymeraProfile.visible = true
 	UI.visible = true
 	player.position = spawn_point.position
-	
+	AudioManager.set_and_play_music("res://BG Music/Bg Stage3.ogg")
 func _process(delta: float):
 	inventory.refresh_inventory()
 	coin_amount.text = str(Gamemanager.get_coin())

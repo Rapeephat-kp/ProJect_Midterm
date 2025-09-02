@@ -33,3 +33,4 @@ func _ready() -> void:
 		achievement_2.modulate = "860124"
 func _on_main_menu_pressed() -> void:
 	SceneTransition.change_scene("res://Scene/main.tscn")
+	AudioManager.play_press_sfx()

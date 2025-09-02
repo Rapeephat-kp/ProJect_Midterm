@@ -38,12 +38,14 @@ func _on_NumberButton_pressed(number):
 		display_text += " "
 		display_text += str(x)
 		DisplayLabel.text = display_text
-	
+	AudioManager.play_press_sfx()
 
 func _on_ConfirmButton_pressed():
 	if input_sequence == correct_sequence:
 		DisplayLabel.modulate = "#007a28"
+		AudioManager.set_and_play_sfx_volume("res://SFX/InScene/correct-answer.mp3",0)
 		await get_tree().create_timer(0.25).timeout
+		AudioManager.set_and_play_sfx_volume("res://SFX/InScene/small-rock-break-194553.mp3",0)
 		$".".visible = false
 		$"../CanvasUI".visible = true
 		$"../Tile_Map/Sprite2D/Sprite2D".visible = true
@@ -51,11 +53,14 @@ func _on_ConfirmButton_pressed():
 	else:
 		DisplayLabel.modulate = "7a0028"
 		input_sequence.clear()
+		AudioManager.set_and_play_sfx_volume("res://SFX/InScene/wrong-answer.ogg",0)
 		await get_tree().create_timer(0.25).timeout
 		DisplayLabel.modulate = "ffffff" 
 		DisplayLabel.text = ""
-
+		
+	AudioManager.play_press_sfx()
 
 func _on_exit_pressed() -> void:
 	$".".visible = false
 	$"../CanvasUI".visible = true
+	AudioManager.play_press_sfx()

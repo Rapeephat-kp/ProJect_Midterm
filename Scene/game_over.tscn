@@ -26,9 +26,11 @@ font_size = 100
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vw1tr"]
 texture = ExtResource("5_t757r")
+modulate_color = Color(0.666667, 0.666667, 0.666667, 1)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_53g77"]
 texture = ExtResource("5_t757r")
+modulate_color = Color(0.666667, 0.666667, 0.666667, 1)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6oh06"]
 texture = ExtResource("5_t757r")

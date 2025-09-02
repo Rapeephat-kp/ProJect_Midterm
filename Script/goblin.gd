@@ -123,6 +123,7 @@ func attack():
 	if player_in_l and is_attack :
 		is_attacking = true
 		$AnimatedSprite2D.play("attack")
+		
 		velocity.x = 0
 		move_and_slide()
 		await get_tree().create_timer(attack_delay).timeout
@@ -130,7 +131,7 @@ func attack():
 		if not is_alive:  
 			is_attacking = false
 			return
-
+		AudioManager.set_and_play_sfx("res://SFX/Monster Attack/goblin atk.mp3")
 		$attack_zone_left/CollisionShape2D.disabled = false
 		await get_tree().create_timer(0.25).timeout
 
@@ -145,14 +146,15 @@ func attack():
 	elif player_in_r and is_attack :
 		is_attacking = true
 		$AnimatedSprite2D.play("attack")
+		
 		velocity.x = 0
 		move_and_slide()
 		await get_tree().create_timer(attack_delay).timeout
-
+	
 		if not is_alive:
 			is_attacking = false
 			return
-
+		AudioManager.set_and_play_sfx("res://SFX/Monster Attack/goblin atk.mp3")
 		$attack_zone_right/CollisionShape2D.disabled = false
 		await get_tree().create_timer(0.25).timeout
 

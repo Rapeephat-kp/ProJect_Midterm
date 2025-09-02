@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://c2j5xlpu04ruo" path="res://Elendros Story/Elendros Scene 3.JPG" id="3_7j5sg"]
 [ext_resource type="Texture2D" uid="uid://v835a1c3r1td" path="res://Elendros Story/Elendros Scene 4.JPG" id="4_ahpng"]
 [ext_resource type="Texture2D" uid="uid://b2w2qi5ed2rft" path="res://Elendros Story/Elendros Scene 5.JPG" id="5_b813g"]
-[ext_resource type="FontFile" uid="uid://c17gxuusjhucp" path="res://SFX/Seraphine DEMO VERSION.ttf" id="7_3581o"]
+[ext_resource type="FontFile" uid="uid://c17gxuusjhucp" path="res://Fonts/Seraphine DEMO VERSION.ttf" id="7_nln4g"]
 [ext_resource type="AudioStream" uid="uid://cvp75pe1mnx2i" path="res://SFX/run.ogg" id="8_6e4ey"]
 [ext_resource type="AudioStream" uid="uid://bhon07bgqsgb7" path="res://SFX/crowd-panic-scream.ogg" id="9_nln4g"]
 [ext_resource type="AudioStream" uid="uid://dap7lxt1grq0e" path="res://SFX/earth-rumble.ogg" id="10_7j5sg"]
@@ -711,7 +711,7 @@ offset_right = 73.5
 offset_bottom = 17.5
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_fonts/font = ExtResource("7_3581o")
+theme_override_fonts/font = ExtResource("7_nln4g")
 theme_override_font_sizes/font_size = 60
 text = "Ten Years Ago........"
 horizontal_alignment = 1
@@ -753,7 +753,7 @@ offset_bottom = -226.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
 theme_override_constants/outline_size = 3
-theme_override_fonts/font = ExtResource("7_3581o")
+theme_override_fonts/font = ExtResource("7_nln4g")
 theme_override_font_sizes/font_size = 60
 visible_characters = 0
 visible_ratio = 0.0
@@ -775,7 +775,7 @@ grow_vertical = 2
 focus_mode = 0
 theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 0
-theme_override_fonts/font = ExtResource("7_3581o")
+theme_override_fonts/font = ExtResource("7_nln4g")
 theme_override_font_sizes/font_size = 50
 action_mode = 0
 text = "  Next"
@@ -789,7 +789,7 @@ offset_left = -770.0
 offset_top = -208.0
 offset_right = 605.0
 offset_bottom = -69.0
-theme_override_fonts/normal_font = ExtResource("7_3581o")
+theme_override_fonts/normal_font = ExtResource("7_nln4g")
 theme_override_font_sizes/normal_font_size = 40
 scroll_active = false
 visible_characters = 0
@@ -812,7 +812,7 @@ grow_vertical = 2
 focus_mode = 0
 theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 0
-theme_override_fonts/font = ExtResource("7_3581o")
+theme_override_fonts/font = ExtResource("7_nln4g")
 theme_override_font_sizes/font_size = 50
 text = "Auto Play"
 icon_alignment = 1
@@ -834,7 +834,7 @@ grow_vertical = 2
 focus_mode = 0
 theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 0
-theme_override_fonts/font = ExtResource("7_3581o")
+theme_override_fonts/font = ExtResource("7_nln4g")
 theme_override_font_sizes/font_size = 50
 text = " Skip"
 alignment = 0

@@ -2740,10 +2740,10 @@ tracks/4/path = NodePath("CanvasLayer/stage cutscene/Setting_Panel_Bg/Phase:visi
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
-"times": PackedFloat32Array(0, 4.15728, 4.25023, 4.36667, 5.00705, 5.1, 5.21266, 12.4277, 12.5207, 12.6207, 20.5285, 20.6214, 20.7333, 22.2559, 22.3489, 22.4333, 29.9559, 30.0489, 30.2105, 41.6165, 41.7095, 41.8, 42.6401, 42.733, 42.8, 45, 45.093, 45.1988, 49.1, 49.1929, 49.3, 54.5343, 54.6273, 54.7333),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0, 1.19, 1.69, 4.15728, 4.25023, 4.36667, 5.00705, 5.1, 5.21266, 12.4277, 12.5207, 12.6207, 20.5285, 20.6214, 20.7333, 22.2559, 22.3489, 22.4333, 29.9559, 30.0489, 30.2105, 41.6165, 41.7095, 41.8, 42.6401, 42.733, 42.8, 45, 45.093, 45.1988, 49.1, 49.1929, 49.3, 54.5343, 54.6273, 54.7333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 0,
-"values": [0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0]
+"values": [0.0, 0.286245, 0.286245, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0]
 }
 tracks/5/type = "method"
 tracks/5/imported = false
@@ -2752,12 +2752,9 @@ tracks/5/path = NodePath(".")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
-"times": PackedFloat32Array(1.07141, 4.18989, 5.03967, 12.4603, 20.5611, 22.2886, 30, 41.6726, 42.6962, 45.0561, 49.1561, 54.5905, 57.1667),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(4.18989, 5.03967, 12.4603, 20.5611, 22.2886, 30, 41.6726, 42.6962, 45.0561, 49.1561, 54.5905, 57.1667),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "values": [{
-"args": [],
-"method": &"pause"
-}, {
 "args": [],
 "method": &"pause"
 }, {
@@ -3030,10 +3027,10 @@ tracks/4/path = NodePath("CanvasLayer/stage cutscene/Setting_Panel_Bg/Phase:visi
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
-"times": PackedFloat32Array(0, 4.15728, 4.25023, 4.36667, 5.00705, 5.1, 5.21266, 12.4277, 12.5207, 12.6207, 20.5285, 20.6214, 20.7333, 22.2559, 22.3489, 22.4333, 29.9559, 30.0489, 30.2105, 41.6165, 41.7095, 41.8, 42.6401, 42.733, 42.8, 45, 45.093, 45.1988, 49.1, 49.1929, 49.3, 54.5343, 54.6273, 54.7333),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0, 1.17, 1.71, 4.15728, 4.25023, 4.36667, 5.00705, 5.1, 5.21266, 12.4277, 12.5207, 12.6207, 20.5285, 20.6214, 20.7333, 22.2559, 22.3489, 22.4333, 29.9559, 30.0489, 30.2105, 41.6165, 41.7095, 41.8, 42.6401, 42.733, 42.8, 45, 45.093, 45.1988, 49.1, 49.1929, 49.3, 54.5343, 54.6273, 54.7333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 0,
-"values": [0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0]
+"values": [0.0, 0.281434, 0.281434, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0]
 }
 tracks/5/type = "method"
 tracks/5/imported = false
@@ -3042,12 +3039,9 @@ tracks/5/path = NodePath(".")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
-"times": PackedFloat32Array(1.07141, 4.18989, 5.03967, 12.4603, 20.5611, 22.2886, 30, 41.6726, 42.6962, 45.0561, 49.1561, 54.5905, 57.6333),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(4.18989, 5.03967, 12.4603, 20.5611, 22.2886, 30, 41.6726, 42.6962, 45.0561, 49.1561, 54.5905, 57.6333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "values": [{
-"args": [],
-"method": &"pause"
-}, {
 "args": [],
 "method": &"pause"
 }, {
@@ -4033,7 +4027,6 @@ visible_characters = 0
 visible_ratio = 0.0
 
 [node name="Store" type="Node2D" parent="CanvasLayer"]
-visible = false
 
 [node name="Inventory" type="Control" parent="CanvasLayer/Store"]
 visible = false
@@ -4147,9 +4140,9 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_tse6q")
 
 [node name="BuyFailLabel1" type="Label" parent="CanvasLayer/Store/Details/Panel"]
 layout_mode = 0
-offset_left = -44.0
+offset_left = -54.0
 offset_top = 245.0
-offset_right = 148.0
+offset_right = 151.0
 offset_bottom = 268.0
 theme_override_colors/font_color = Color(0.556863, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_f3ubt")
@@ -4214,9 +4207,9 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_tse6q")
 
 [node name="BuyFailLabel2" type="Label" parent="CanvasLayer/Store/Details/Panel2"]
 layout_mode = 0
-offset_left = -45.0
+offset_left = -56.0
 offset_top = 245.0
-offset_right = 147.0
+offset_right = 149.0
 offset_bottom = 268.0
 theme_override_colors/font_color = Color(0.556863, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_f3ubt")

@@ -25,8 +25,8 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if visible_character != phase.visible_characters:
 		visible_character = phase.visible_characters
-		AudioManager.set_stream("res://SFX/keyboard-typing-one-short.mp3")
-		AudioManager.play_stream()
+		AudioManager.set_and_play_sfx("res://SFX/keyboard-typing-one-short.mp3")
+		
 	
 	#change style of auto button
 	var style = StyleBoxFlat.new()
@@ -54,11 +54,11 @@ func _input(event: InputEvent) -> void:
 func _on_next_button_pressed() -> void:
 	if not animation_player.is_playing():
 		animation_player.play()
-		
+	AudioManager.play_press_sfx()
 func _on_auto_button_pressed() -> void:
 	autoplay = not autoplay
 	print(autoplay)
-
+	AudioManager.play_press_sfx()
 '''
 func transition_scene() -> void:
 	SceneTransition.play1s()
@@ -73,3 +73,4 @@ func _on_timer_timeout() -> void:
 
 func _on_skip_button_pressed() -> void:
 	end()
+	AudioManager.play_press_sfx()

@@ -1,4 +1,4 @@
-[gd_scene load_steps=84 format=4 uid="uid://vie4pnvbwyuv"]
+[gd_scene load_steps=90 format=4 uid="uid://vie4pnvbwyuv"]
 
 [ext_resource type="Script" uid="uid://dovacsfio8kkv" path="res://Script/Test_map.gd" id="1_5yno8"]
 [ext_resource type="Texture2D" uid="uid://b6bs3h20360a8" path="res://Asset_Midterm/Tile_Map/Fantasy Swamp Forest/Free/Terrain_and_Props.png" id="1_87644"]
@@ -28,9 +28,11 @@
 [ext_resource type="Texture2D" uid="uid://dkyfygbi0dekj" path="res://Asset_Midterm/UI/UI/Button_52x14.png" id="19_sfbgj"]
 [ext_resource type="Texture2D" uid="uid://cphn5s5t5dlce" path="res://Asset_Midterm/UI/UI/ValueBlue_120x8.png" id="21_mmwch"]
 [ext_resource type="Texture2D" uid="uid://bg53hghq0u36n" path="res://Asset_Midterm/UI/UI/PatternMiddleBottomBG_199x48.png" id="22_js130"]
-[ext_resource type="Script" uid="uid://cehioggct0ygu" path="res://Scene/Stage_Scene/Boss_hp_Bar.gd" id="22_o55fe"]
+[ext_resource type="Script" path="res://Scene/Stage_Scene/Boss_hp_Bar.gd" id="22_o55fe"]
 [ext_resource type="Texture2D" uid="uid://bhj8y8hjedetd" path="res://Asset_Midterm/UI/UI/TopPatternPanel_02_33x15.png" id="23_o55fe"]
 [ext_resource type="FontFile" uid="uid://dbydje27os4iv" path="res://Fonts/AncientModernTales-a7Po.ttf" id="24_iup2u"]
+[ext_resource type="Texture2D" uid="uid://dcwmmeumqrkse" path="res://Asset_Midterm/Achievement icon/Crown1.png" id="30_ugnlh"]
+[ext_resource type="Texture2D" uid="uid://mnocfx3oqu5e" path="res://Asset_Midterm/Achievement icon/Chest2.png" id="31_uyf8x"]
 [ext_resource type="PackedScene" uid="uid://1rxar2jmae1o" path="res://Scene/torch.tscn" id="32_emqxx"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sfbgj"]
@@ -1867,8 +1869,23 @@ texture = ExtResource("19_sfbgj")
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6v1iu"]
 bg_color = Color(0.69462, 0.554322, 0.367857, 1)
 
-[sub_resource type="LabelSettings" id="LabelSettings_pqj8l"]
-font_size = 100
+[sub_resource type="LabelSettings" id="LabelSettings_bv3aw"]
+font = ExtResource("24_iup2u")
+font_size = 200
+
+[sub_resource type="LabelSettings" id="LabelSettings_k8bou"]
+font = ExtResource("24_iup2u")
+font_size = 150
+
+[sub_resource type="LabelSettings" id="LabelSettings_bdu3b"]
+font = ExtResource("24_iup2u")
+font_size = 150
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_lpnye"]
+texture = ExtResource("30_ugnlh")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_y40wa"]
+texture = ExtResource("31_uyf8x")
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_g6qds"]
 distance = 52.0
@@ -2317,24 +2334,75 @@ offset_right = 389.0
 offset_bottom = 146.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_y40wa")
 
-[node name="Label2" type="Label" parent="CanvasUI/Achievement_UI/Setting_Panel_Bg"]
+[node name="Ac1" type="Label" parent="CanvasUI/Achievement_UI/Setting_Panel_Bg/Setting_panel_Bg2"]
 modulate = Color(0.698039, 0.698039, 0.698039, 1)
 layout_mode = 0
-offset_left = 59.3333
-offset_top = 18.6667
-offset_right = 1179.33
-offset_bottom = 753.667
+offset_left = 82.0
+offset_top = 14.6667
+offset_right = 3505.0
+offset_bottom = 749.667
 scale = Vector2(0.0910987, 0.0910987)
 theme_override_fonts/font = ExtResource("16_o55fe")
-text = "Achievement I : 
-details :
+text = "Acchievement I : Untouched"
+label_settings = SubResource("LabelSettings_bv3aw")
 
+[node name="detail1" type="Label" parent="CanvasUI/Achievement_UI/Setting_Panel_Bg/Setting_panel_Bg2"]
+modulate = Color(0.698039, 0.698039, 0.698039, 1)
+layout_mode = 0
+offset_left = 98.6667
+offset_top = 36.0
+offset_right = 3521.67
+offset_bottom = 771.0
+scale = Vector2(0.0910987, 0.0910987)
+theme_override_fonts/font = ExtResource("16_o55fe")
+text = "End the game without getting damage from monsters
+( Including the Unders and damage from Big Boss )"
+label_settings = SubResource("LabelSettings_k8bou")
 
+[node name="Ac2" type="Label" parent="CanvasUI/Achievement_UI/Setting_Panel_Bg/Setting_panel_Bg2"]
+modulate = Color(0.698039, 0.698039, 0.698039, 1)
+layout_mode = 0
+offset_left = 82.0
+offset_top = 76.0
+offset_right = 2378.0
+offset_bottom = 654.0
+scale = Vector2(0.0910987, 0.0910987)
+theme_override_fonts/font = ExtResource("16_o55fe")
+text = "Achievement II : Noble's Treasury"
+label_settings = SubResource("LabelSettings_bv3aw")
 
-Achievement II :
-details :"
-label_settings = SubResource("LabelSettings_pqj8l")
-vertical_alignment = 1
+[node name="detail2" type="Label" parent="CanvasUI/Achievement_UI/Setting_Panel_Bg/Setting_panel_Bg2"]
+modulate = Color(0.698039, 0.698039, 0.698039, 1)
+layout_mode = 0
+offset_left = 100.0
+offset_top = 97.6667
+offset_right = 3523.0
+offset_bottom = 832.667
+scale = Vector2(0.0910987, 0.0910987)
+theme_override_fonts/font = ExtResource("16_o55fe")
+text = "In the end have amount of coins greater than 
+or equal to 200 coins"
+label_settings = SubResource("LabelSettings_bdu3b")
+
+[node name="achievement1" type="Panel" parent="CanvasUI/Achievement_UI/Setting_Panel_Bg/Setting_panel_Bg2"]
+modulate = Color(0.698039, 0.698039, 0.698039, 1)
+layout_mode = 0
+offset_left = 16.3333
+offset_top = 7.0
+offset_right = 204.333
+offset_bottom = 195.0
+scale = Vector2(0.317793, 0.317793)
+theme_override_styles/panel = SubResource("StyleBoxTexture_lpnye")
+
+[node name="achievement2" type="Panel" parent="CanvasUI/Achievement_UI/Setting_Panel_Bg/Setting_panel_Bg2"]
+modulate = Color(0.698039, 0.698039, 0.698039, 1)
+layout_mode = 0
+offset_left = 5.66666
+offset_top = 59.6667
+offset_right = 259.667
+offset_bottom = 313.667
+scale = Vector2(0.317793, 0.317793)
+theme_override_styles/panel = SubResource("StyleBoxTexture_y40wa")
 
 [node name="Main Character" type="Node2D" parent="."]
 

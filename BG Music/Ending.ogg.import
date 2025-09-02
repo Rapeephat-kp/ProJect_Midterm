@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bup2efevfqkhb"
+path="res://.godot/imported/Ending.ogg-069d93839ca4c2f4ebb86462b48bb819.oggvorbisstr"
+
+[deps]
+
+source_file="res://BG Music/Ending.ogg"
+dest_files=["res://.godot/imported/Ending.ogg-069d93839ca4c2f4ebb86462b48bb819.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

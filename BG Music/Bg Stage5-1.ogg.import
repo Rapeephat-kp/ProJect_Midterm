@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://d4gvl8u2levxg"
+path="res://.godot/imported/Bg Stage5-1.ogg-25e9830f1eca4d57faa8f490976d0881.oggvorbisstr"
+
+[deps]
+
+source_file="res://BG Music/Bg Stage5-1.ogg"
+dest_files=["res://.godot/imported/Bg Stage5-1.ogg-25e9830f1eca4d57faa8f490976d0881.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

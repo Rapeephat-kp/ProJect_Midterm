@@ -1,7 +1,7 @@
 extends CharacterBody2D
 class_name Nymera
 
-const SPEED = 200
+const SPEED = 150
 const JUMP_VELOCITY = -325.0
 
 @onready var dust_trail: GPUParticles2D = $"Dust Trail"
@@ -27,6 +27,7 @@ var poison_timer: float = 0.0
 var _poison_tick: float = 0.0
 
 func _process(delta: float) -> void:
+	
 	if is_on_floor() and abs(velocity.x) > 20:
 		dust_trail.emitting = true
 	else:
@@ -75,6 +76,8 @@ func movement():
 			Action_Sprite.visible = true
 			Jump2_Sprite.visible = false
 			Action_Sprite.play("run")
+			#AudioManager.set_walk_status(true)
+			#AudioManager.set_walk_sfx(Gamemanager.get_currentScene())
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 		if not is_attacking and is_on_floor() and not is_jumping:
@@ -83,7 +86,7 @@ func movement():
 			Jump_Sprite.visible = false
 			Jump2_Sprite.visible = false
 			Idle_Sprite.play("Idle_2")
-
+			#AudioManager.set_walk_status(false)
 	if Input.is_action_just_pressed("jump") and is_on_floor():
 		if $Idle_Sprite.flip_h == true:
 			velocity.y = JUMP_VELOCITY
@@ -92,6 +95,7 @@ func movement():
 			Jump_Sprite.visible = false
 			Jump2_Sprite.visible = true
 			Jump2_Sprite.play("Jump")
+			AudioManager.set_and_play_sfx2_volume("res://SFX/InScene/jump.mp3",0)
 		else:
 			velocity.y = JUMP_VELOCITY
 			Idle_Sprite.visible = false
@@ -99,6 +103,7 @@ func movement():
 			Jump2_Sprite.visible = false
 			Jump_Sprite.visible = true
 			Jump_Sprite.play("Jump")
+			AudioManager.set_and_play_sfx2_volume("res://SFX/InScene/jump.mp3",0)
 
 		is_jumping = true
 		await get_tree().create_timer(0.45).timeout
@@ -111,6 +116,7 @@ func movement():
 		Action_Sprite.visible = true
 		Jump2_Sprite.visible = false
 		Action_Sprite.play("Attack 1")
+		AudioManager.set_and_play_sfx2_volume("res://SFX/InScene/attack.mp3",0)
 		$attack_zone_right/CollisionShape2D.disabled = false
 		await get_tree().create_timer(0.35).timeout
 		$attack_zone_right/CollisionShape2D.disabled = true
@@ -128,6 +134,7 @@ func movement():
 		Action_Sprite.visible = true
 		Jump2_Sprite.visible = false
 		Action_Sprite.play("Attack 1")
+		AudioManager.set_and_play_sfx2_volume("res://SFX/InScene/attack.mp3",0)
 		$attack_zone_left/CollisionShape2D.disabled = false
 		await get_tree().create_timer(0.35).timeout
 		$attack_zone_left/CollisionShape2D.disabled = true
@@ -169,3 +176,10 @@ func set_in_fog(state: bool):
 		print("Player entered fog")
 	else:
 		print("Player left fog")
+
+#func display_run_sfx():
+	#if Gamemanager.get_currentScene() == "Stage 5" || Gamemanager.get_currentScene() == "Stage 6":
+		#AudioManager.set_walk_sfx("res://SFX/InScene/running-in cave.ogg",20)
+		#AudioManager.play_walk_sfx()
+	#else:
+		#AudioManager.set_walk_sfx("res://SFX/InScene/running-on-gravel.ogg",20)

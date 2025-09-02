@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bx4yuyidd2kg3"
+path="res://.godot/imported/choose charater sfx.ogg-37949e8480f47507b63bd093e4f4afd7.oggvorbisstr"
+
+[deps]
+
+source_file="res://SFX/InScene/choose charater sfx.ogg"
+dest_files=["res://.godot/imported/choose charater sfx.ogg-37949e8480f47507b63bd093e4f4afd7.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -14,6 +14,7 @@ extends Node2D
 var player
 
 func _ready() -> void:
+	Gamemanager.set_currentScene("Stage 2")
 	print(Gamemanager.get_p())
 	var p_value = Gamemanager.get_p()
 	if p_value == 1:
@@ -26,6 +27,7 @@ func _ready() -> void:
 		nymeraProfile.visible = true
 	player.position = spawn_point.position
 	checkpoint_ani.visible = false
+	AudioManager.set_and_play_music("res://BG Music/Bg Stage2.ogg")
 func _process(delta: float):
 	inventory.refresh_inventory()
 	coin_amount.text = str(Gamemanager.get_coin())

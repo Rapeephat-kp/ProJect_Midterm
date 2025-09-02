@@ -57,7 +57,7 @@ func _physics_process(delta: float) -> void:
 	# Handle jump.
 	if Input.is_action_just_pressed("jump") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
-		
+		AudioManager.set_and_play_sfx2_volume("res://SFX/InScene/jump.mp3",0)
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
 	var direction := Input.get_axis("left", "right")
@@ -74,6 +74,7 @@ func _physics_process(delta: float) -> void:
 	
 	if Input.is_action_just_pressed("attack") and is_on_floor() and is_attacking == false:
 		if Action_Sprite.flip_h == false:
+			AudioManager.set_and_play_sfx2_volume("res://SFX/InScene/attack.mp3",0)
 			$Attack_Zone_Elendros_right/CollisionShape2D.disabled = false
 			#position.x -= 62 
 		#print("attack")
@@ -86,6 +87,7 @@ func _physics_process(delta: float) -> void:
 			$Action2_Sprite.visible = false
 			$Attack_Zone_Elendros_right/CollisionShape2D.disabled = true
 		else :
+			AudioManager.set_and_play_sfx2_volume("res://SFX/InScene/attack.mp3",0)
 			$Attack_Zone_Elendros/Attack_Zone_col.disabled = false
 			Action_Sprite.visible = true
 			Idel_E.visible = false
