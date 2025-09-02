@@ -1955,7 +1955,7 @@ theme_override_fonts/font = ExtResource("25_3af3u")
 theme_override_font_sizes/font_size = 100
 text = "Press A D to Walk
 
-S to Jump"
+W to Jump"
 horizontal_alignment = 1
 metadata/_edit_use_anchors_ = true
 
