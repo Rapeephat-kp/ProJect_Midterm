@@ -59,11 +59,6 @@ func _on_interact_1_area_entered(area: Area2D) -> void:
 func _on_interact_2_area_entered(area: Area2D) -> void:
 	Gamemanager.set_currentScene("Stage 1-2")
 
-'''
-func _on_interact_mer_area_entered(area: Area2D) -> void:
-	Gamemanager.set_currentScene("Stage 3")
-'''
-
 
 func _on_left_area_entered(area: Area2D) -> void:
 	$"Guide Massage/left".visible = true

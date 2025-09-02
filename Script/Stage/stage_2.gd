@@ -34,12 +34,6 @@ func _process(delta: float):
 	coin_amount.text = str(Gamemanager.get_coin())
 	
 
-'''
-func _on_collision_area_entered(area: Area2D) -> void:
-	await get_tree().create_timer(0.5).timeout
-	SceneTransition.change_scene("res://Scene/Stage_Scene/stage_2.tscn")
-'''
-
 
 func _on_fallzone_area_entered(area: Area2D) -> void:
 	if area.is_in_group("Player"):

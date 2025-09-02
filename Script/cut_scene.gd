@@ -115,11 +115,6 @@ func stopAni():
 	autoplay_button.modulate = "aaaaaa"
 	autoplay = false
 func stage1(Character : int):
-	#Elendros
-	#if Character == 1:
-	#	animation_player.play("Stage 1 1-2 Elendros")
-	#if Character == 2:
-	#	animation_player.play("Stage 1 1-2 Elendros")
 	pass
 # Ending Scene
 

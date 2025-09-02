@@ -91,14 +91,15 @@ func missionCheck():
 
 func _on_build_bridge_area_entered(area: Area2D) -> void:
 	#mission complete
-	if missionCheck() == true:
-		bridge.collision_enabled = true
-		bridge.modulate = "ffffff"
-		PlayerInventory.remove_item("Logs",logs_quantity_require)
-		mission_massage.visible = false
-	#mission fail
-	elif missionCheck() == false:
-		pass
+	if area.is_in_group("Player"):
+		if missionCheck() == true:
+			bridge.collision_enabled = true
+			bridge.modulate = "ffffff"
+			PlayerInventory.remove_item("Logs",logs_quantity_require)
+			mission_massage.visible = false
+		#mission fail
+		elif missionCheck() == false:
+			pass
 
 
 func _on_interact_area_entered(area: Area2D) -> void:
