@@ -23,6 +23,20 @@
 
 # ทดลองเล่น
 
+# ตัวอย่างด่าน
+
+![ตัวอย่างเกม2](https://drive.google.com/uc?export=view&id=18bTYWWpgXIr79dGzDe1Tp1DNMpZQigWt)
+
+ตัวอย่างด่าน 1
+
+![ตัวอย่างเกม3](https://drive.google.com/uc?export=view&id=1FfVbSEyOG37ehOCHhbD3DJZByjkuZJIa)
+
+ตัวอย่างด่าน 2
+
+![ตัวอย่างเกม3](https://drive.google.com/uc?export=view&id=15KGy-0I9J12-m4sXjlgr8DPM0GDe59Ue)
+
+ตัวอย่างด่าน 3
+
 # ตัวละคร
 
 **ตัวละครหลัก**
@@ -82,3 +96,82 @@ The Agis : มอนสเตอร์ผู้ปกครองเมือง
 ![The Agis](https://drive.google.com/uc?export=view&id=1Hju_SFkpgCr4l5xjOfVVDQux8DKJTsoe)
 
 # Credits
+**UI Asset:**
+
+https://etahoshi.itch.io/minimal-fantasy-gui-by-eta
+
+
+
+**Effect Asset:**
+
+https://bdragon1727.itch.io/effect-and-fx-pixel-part-12
+
+
+
+**Map Asset:**
+
+https://theflavare.itch.io/forest-nature-fantasy-tileset
+
+https://oco.itch.io/medieval-fantasy-props-pack
+
+https://sanctumpixel.itch.io/medieval-village-house-pixel-art
+
+https://ansimuz.itch.io/gothicvania-town
+
+https://cainos.itch.io/pixel-art-platformer-village-props
+
+https://nyknck.itch.io/wood-set
+
+
+
+**Item Asset:**
+
+Wood : https://frostwindz.itch.io/pixel-art-wood
+
+Potion : https://arexxuru.itch.io/pixel-art-potions-sprite-pack
+
+
+
+**Character Asset:**
+
+Elendros : https://escape-pixel.itch.io/shadow-series-the-blind-huntress
+
+Nymera : https://legnops.itch.io/red-hood-character
+
+
+
+ **NPC Asset:**
+ 
+https://craftpix.net/freebies/free-city-trader-character-sprite-sheets-pixel-art/?num=1&count=8&sq=merchant&pos=3
+
+
+
+**Monster Asset:**
+
+Skeleton , Flying Eye , Goblin , Mushroom : https://luizmelo.itch.io/monsters-creatures-fantasy
+
+Necromancer : colab.research.google.com/drive/1bMs8v4Q1FlHk4IFmOFjj2oz_qO3LVeTn#scrollTo=XsCM9N6C9xh9
+
+Priest : https://rili-xl.itch.io/cultist-priest-pack
+
+The Agis : https://papoycore.itch.io/free-agis
+
+
+
+**Fonts :**
+
+https://www.fontspace.com/ancient-modern-tales-font-f28700
+
+https://www.dafont.com/old-block.font
+
+https://www.dafont.com/primahandwrite.font
+
+
+
+**Idea Code :**
+
+Inventory System: https://youtu.be/FHYb63ppHmk?feature=shared
+
+Moving Platform : https://youtu.be/iwNQ2sqH2cw?si=-yB0XJSyCBOxWJqH
+
+Scene Transition : https://youtu.be/yZQStB6nHuI?si=kq-MutiBLbHGybJr
