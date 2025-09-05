@@ -1894,7 +1894,7 @@ position = Vector2(1920, -68)
 [node name="Path2D" parent="Moving platform" instance=ExtResource("28_uddwt")]
 position = Vector2(1530, 240)
 curve = SubResource("Curve2D_sfvhj")
-speed_scale = 0.2
+speed = 1.0
 
 [node name="End stage" type="Area2D" parent="."]
 

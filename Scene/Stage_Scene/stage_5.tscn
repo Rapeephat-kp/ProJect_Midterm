@@ -2678,7 +2678,7 @@ offset_left = 65.754
 offset_top = -16.4384
 offset_right = 155.754
 offset_bottom = 37.5616
-theme_override_fonts/font = ExtResource("6_rcg4y")
+theme_override_fonts/font = ExtResource("28_5x5rv")
 theme_override_font_sizes/font_size = 39
 text = "="
 
@@ -2722,7 +2722,7 @@ offset_left = 69.0412
 offset_top = -19.7261
 offset_right = 159.041
 offset_bottom = 34.2739
-theme_override_fonts/font = ExtResource("6_rcg4y")
+theme_override_fonts/font = ExtResource("28_5x5rv")
 theme_override_font_sizes/font_size = 39
 text = "="
 metadata/_edit_use_anchors_ = true
@@ -2760,7 +2760,7 @@ offset_left = 72.3289
 offset_top = -26.3014
 offset_right = 162.329
 offset_bottom = 27.6986
-theme_override_fonts/font = ExtResource("6_rcg4y")
+theme_override_fonts/font = ExtResource("28_5x5rv")
 theme_override_font_sizes/font_size = 39
 text = "="
 
@@ -2796,7 +2796,7 @@ offset_left = 72.3289
 offset_top = -26.3014
 offset_right = 162.329
 offset_bottom = 27.6986
-theme_override_fonts/font = ExtResource("6_rcg4y")
+theme_override_fonts/font = ExtResource("28_5x5rv")
 theme_override_font_sizes/font_size = 39
 text = "="
 
@@ -2807,7 +2807,7 @@ offset_right = 205.069
 offset_bottom = 30.9863
 theme_override_fonts/font = ExtResource("6_rcg4y")
 theme_override_font_sizes/font_size = 39
-text = "5q"
+text = "5"
 
 [node name="Human2" type="Sprite2D" parent="Hint/Human"]
 modulate = Color(0.12549, 0.109804, 0.172549, 1)
@@ -2839,7 +2839,7 @@ region_rect = Rect2(448, 56, 104, 120)
 offset_left = 55.8905
 offset_right = 145.891
 offset_bottom = 54.0
-theme_override_fonts/font = ExtResource("6_rcg4y")
+theme_override_fonts/font = ExtResource("28_5x5rv")
 theme_override_font_sizes/font_size = 39
 text = "="
 
@@ -2995,6 +2995,7 @@ tile_set = SubResource("TileSet_rcg4y")
 metadata/_edit_lock_ = true
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
+visible = false
 position = Vector2(103, 155)
 scale = Vector2(2.60938, 1.96809)
 color = Color(0.359069, 0.359069, 0.359069, 1)

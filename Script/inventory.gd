@@ -32,12 +32,13 @@ func slot_gui_input(event: InputEvent, slot: SlotClass):
 		# คลิกซ้าย → ใช้ไอเท็ม
 		if event.button_index == MOUSE_BUTTON_LEFT:
 			if slot.item:
-				use_item(slot.item)
-				PlayerInventory.remove_item(slot.item.item_name, 1)
-				slot.item.decrease_item_quantity(1)
-				if slot.item.item_quantity <= 0:
-					PlayerInventory.remove_item(slot.item.item_name, 0) # ลบ slot เลย
-					slot.clear_slot()
+				if slot.item.item_name != "Logs":
+					use_item(slot.item)
+					PlayerInventory.remove_item(slot.item.item_name, 1)
+					slot.item.decrease_item_quantity(1)
+					if slot.item.item_quantity <= 0:
+						PlayerInventory.remove_item(slot.item.item_name, 0) # ลบ slot เลย
+						slot.clear_slot()
 		
 		# คลิกขวา → ย้าย / Drag & Drop
 		elif event.button_index == MOUSE_BUTTON_RIGHT:
